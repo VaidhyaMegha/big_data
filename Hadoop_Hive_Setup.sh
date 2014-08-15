@@ -1,4 +1,16 @@
-# References : http://raseshmori.wordpress.com/2012/09/23/install-hadoop-2-0-1-yarn-nextgen/
+# References : 
+# http://raseshmori.wordpress.com/2012/09/23/install-hadoop-2-0-1-yarn-nextgen/
+# https://cwiki.apache.org/confluence/display/Hive/AdminManual+Installation
+# http://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/ClusterSetup.html
+# http://stackoverflow.com/questions/12160304/hadoop-hive-split-a-single-row-into-multiple-rows
+# https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF#LanguageManualUDF-Built-inTable-GeneratingFunctions(UDTF)
+# https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SubQueries
+# https://cwiki.apache.org/confluence/display/Hive/LanguageManual+LateralView
+# http://stackoverflow.com/questions/10039949/word-count-program-in-hive
+# http://stackoverflow.com/questions/8039751/hadoop-hive-query-to-split-one-column-into-several-ones
+# http://stackoverflow.com/questions/17212623/project-array-to-columns-in-hive
+# http://stackoverflow.com/questions/11373543/explode-the-array-of-struct-in-hive
+# 
 #
 # steps to install Hadoop 2.x release on single node cluster setup
 
@@ -244,8 +256,52 @@ $HIVE_HOME/bin/hive -e "select * from page_view;"
 
 $HIVE_HOME/bin/hive -e "drop table page_view;"
 
-# 10. Stop the processes
 
+# UDTF
+
+$HIVE_HOME/bin/hive -e "CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r')
+ ROW FORMAT DELIMITED;"
+
+echo "a:d:e|z:y:q|1:s:p|6:6:r" >> input/strange_string.csv
+echo "f:q:l|m:j:p|3:r:b|a:9:o" >> input/strange_string.csv
+
+$HIVE_HOME/bin/hive -e "LOAD DATA LOCAL INPATH '$HADOOP_YARN_HOME/input/strange_string.csv' OVERWRITE INTO TABLE strange_string;"
+
+$HIVE_HOME/bin/hive -e 'select explode(split(strange, "\\|")) as entry from strange_string;'
+#a:d:e
+#z:y:q
+#1:s:p
+#6:6:r
+#f:q:l
+#m:j:p
+#3:r:b
+#a:9:o
+
+$HIVE_HOME/bin/hive -e ' SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]  FROM (select explode(split(strange, "\\|")) as entry from strange_string) as t1'
+#a	d	e
+#z	y	q
+#1	s	p
+#6	6	r
+#f	q	l
+#m	j	p
+#3	r	b
+#a	9	o
+
+$HIVE_HOME/bin/hive -e ' SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2]  FROM strange_string LATERAL VIEW explode(split(strange, "\\|")) entryTable AS entry; '
+#a	d	e
+#z	y	q
+#1	s	p
+#6	6	r
+#f	q	l
+#m	j	p
+#3	r	b
+#a	9	o
+
+$HIVE_HOME/bin/hive -e "drop table strange_string;"
+
+#######
+# 10. Stop the processes
+#######
 sbin/hadoop-daemon.sh stop namenode
 sbin/hadoop-daemon.sh stop datanode
 sbin/yarn-daemon.sh stop resourcemanager
