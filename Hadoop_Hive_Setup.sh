@@ -11,6 +11,8 @@ export HDP_VER=2.4.1
 export HIVE_VER=0.13.1
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export HADOOP_ROOT=/home/$USER/tools/hadoop
+export PROJECT_HOME=/home/$USER/projects/big_data
+export MAVEN_HOME=/home/sandeep/tools/maven
 
 cd $HADOOP_ROOT
 sudo chown -R $USER $HDP_VER
@@ -225,66 +227,27 @@ xdg-open http://localhost:8088
 # HIVE
 #######
 
-$HIVE_HOME/bin/hive -e "CREATE TABLE page_view(viewTime INT, userid BIGINT,
-     page_url STRING, referrer_url STRING,
-     ip STRING COMMENT 'IP Address of the User')
- COMMENT 'This is the page view table'
- ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';"
-
 echo "1321314314,4,http://www.page.com,http://www.referrer.com,10.200.13.110" >> input/page_view.csv
 
-$HIVE_HOME/bin/hive -e "LOAD DATA LOCAL INPATH '$HADOOP_YARN_HOME/input/page_view.csv' OVERWRITE INTO TABLE page_view;"
+$HIVE_HOME/bin/hive -f $PROJECT_HOME/Hive_Test_Simple.sql
 
-$HIVE_HOME/bin/hive -e "show tables;"
-
-$HIVE_HOME/bin/hive -e "select count(*) from page_view;"
-
-$HIVE_HOME/bin/hive -e "select * from page_view;"
-
-$HIVE_HOME/bin/hive -e "drop table page_view;"
-
-
-# UDTF
-
-$HIVE_HOME/bin/hive -e "CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r')
- ROW FORMAT DELIMITED;"
+# UDTF and custom udf
 
 echo "a:d:e|z:y:q|1:s:p|6:6:r" >> input/strange_string.csv
-echo "f:q:l|m:j:p|3:r:b|a:9:o" >> input/strange_string.csv
+echo "f:q:l|m:j:p|3:r:b" >> input/strange_string.csv
 
-$HIVE_HOME/bin/hive -e "LOAD DATA LOCAL INPATH '$HADOOP_YARN_HOME/input/strange_string.csv' OVERWRITE INTO TABLE strange_string;"
+$HIVE_HOME/bin/hive -f $PROJECT_HOME/Hive_Test_UDTF.sql
 
-$HIVE_HOME/bin/hive -e 'select explode(split(strange, "\\|")) as entry from strange_string;'
-#a:d:e
-#z:y:q
-#1:s:p
-#6:6:r
-#f:q:l
-#m:j:p
-#3:r:b
-#a:9:o
+cd $PROJECT_HOME/udf/
 
-$HIVE_HOME/bin/hive -e ' SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]  FROM (select explode(split(strange, "\\|")) as entry from strange_string) as t1'
-#a	d	e
-#z	y	q
-#1	s	p
-#6	6	r
-#f	q	l
-#m	j	p
-#3	r	b
-#a	9	o
+$MAVEN_HOME/bin/mvn clean assembly:assembly
 
-$HIVE_HOME/bin/hive -e ' SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2]  FROM strange_string LATERAL VIEW explode(split(strange, "\\|")) entryTable AS entry; '
-#a	d	e
-#z	y	q
-#1	s	p
-#6	6	r
-#f	q	l
-#m	j	p
-#3	r	b
-#a	9	o
+cd $HADOOP_YARN_HOME
+
+$HIVE_HOME/bin/hive -f $PROJECT_HOME/Hive_Custom_UDF.sql
 
 $HIVE_HOME/bin/hive -e "drop table strange_string;"
+
 
 #######
 # 10. Stop the processes

@@ -22,3 +22,7 @@ References
 * http://stackoverflow.com/questions/8039751/hadoop-hive-query-to-split-one-column-into-several-ones
 * http://stackoverflow.com/questions/17212623/project-array-to-columns-in-hive
 * http://stackoverflow.com/questions/11373543/explode-the-array-of-struct-in-hive
+
+* https://github.com/rathboma/hive-extension-examples
+* https://cwiki.apache.org/confluence/display/Hive/HivePlugins
+* https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-PermanentFunctions
