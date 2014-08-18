@@ -1,5 +1,4 @@
-CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r')
- ROW FORMAT DELIMITED;
+CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r') ROW FORMAT DELIMITED;
 
 LOAD DATA LOCAL INPATH '/home/sandeep/tools/hadoop/2.4.1/input/strange_string.csv' OVERWRITE INTO TABLE strange_string;
 
