@@ -17,8 +17,9 @@ Hive
     * Version : 0.13.1
 * DDL - Create, show, drop, alter
 * Ingestion - Load, CTAS, Insert into Select 
-* Select - count(*), nested select, filters
+* Select - count(*), distinct, nested select, filters
 * Function - UDF, UDTF, Custom UDF
+* Export - overwrite local
 * Unclassified Features - Lateral Views
 
 References
