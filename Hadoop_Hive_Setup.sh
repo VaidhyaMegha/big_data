@@ -167,6 +167,8 @@ xdg-open http://localhost:8088
 # HIVE
 #######
 #Simple
+$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Cleanup.sql
+
 echo "1321314314,4,http://www.page.com,http://www.referrer.com,10.200.13.110" >> input/page_view.csv
 $HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Test_Simple.sql
 
@@ -180,8 +182,8 @@ $MAVEN_HOME/bin/mvn clean assembly:assembly
 cd $HADOOP_YARN_HOME
 
 $HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Custom_UDF.sql
-$HIVE_HOME/bin/hive -v -e "drop table strange_string;"
 
+$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Cleanup.sql
 #######
 # 10. Stop the processes
 #######

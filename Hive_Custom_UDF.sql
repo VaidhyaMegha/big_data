@@ -27,5 +27,10 @@ INSERT OVERWRITE LOCAL DIRECTORY '/home/sandeep/projects/big_data/output' row fo
 SELECT distinct(t1.entry), split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]
 FROM  (select explode(split(strange, "\\|")) as entry from strange_string) as t1
 where t1.entry is not null and t1.entry <> '';
-
-drop table strange_string;
+-- 1:s:p,1,s,p
+-- 3:r:b,3,r,b
+-- 6:6:r,6,6,r
+-- a:d:e,a,d,e
+-- f:q:l,f,q,l
+-- m:j:p,m,j,p
+-- z:y:q,z,y,q
