@@ -47,6 +47,8 @@ References
 * Analytics - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+WindowingAndAnalytics
 * Analytics - http://www.slideshare.net/Hadoop_Summit/analytical-queries-with-hive
 * Parameterizing scripts - http://stackoverflow.com/questions/12464636/how-to-set-variables-in-hive-scripts
+* Permanent Functions - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-PermanentFunctions
 * Source shell scripts - http://bash.cyberciti.biz/guide/Source_command
 * Source shell scripts - http://stackoverflow.com/questions/670191/getting-a-source-not-found-error-when-using-source-in-a-bash-script
-* Permanent Functions - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-PermanentFunctions
+* Redirecting standard output, error to log - http://stackoverflow.com/questions/4721635/redirect-standard-output-error-to-log-file
+

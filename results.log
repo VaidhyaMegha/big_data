@@ -1,0 +1,1229 @@
+###############
+Setup
+###############
+14/08/27 11:51:32 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = sandeep-Latitude-6430U/127.0.1.1
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.4.1
+STARTUP_MSG:   classpath = /home/sandeep/tools/hadoop/2.4.1/etc/hadoop:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-configuration-1.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/xmlenc-0.52.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/httpcore-4.2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-el-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-net-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/stax-api-1.0-2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/hadoop-auth-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/httpclient-4.2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/junit-4.8.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/paranamer-2.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-jaxrs-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-xc-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-digester-1.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/avro-1.7.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/zookeeper-3.4.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsch-0.1.42.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-httpclient-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/hadoop-annotations-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jets3t-0.9.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/mockito-all-1.8.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-math3-3.1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/activation-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-json-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsp-api-2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-collections-3.2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jettison-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-common-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-nfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-el-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-nfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/aopalliance-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/javax.inject-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jline-0.9.94.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-jaxrs-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-xc-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/zookeeper-3.4.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guice-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/activation-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-json-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-client-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jettison-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-api-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-client-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-tests-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/javax.inject-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/hamcrest-core-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/hadoop-annotations-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/guice-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/junit-4.10.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/contrib/capacity-scheduler/*.jar
+STARTUP_MSG:   build = http://svn.apache.org/repos/asf/hadoop/common -r 1604318; compiled by 'jenkins' on 2014-06-21T05:43Z
+STARTUP_MSG:   java = 1.7.0_65
+************************************************************/
+14/08/27 11:51:32 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+14/08/27 11:51:32 INFO namenode.NameNode: createNameNode [-format]
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+14/08/27 11:51:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Formatting using clusterid: CID-482976d8-db05-4ce5-8ed2-39cfa6ed720a
+14/08/27 11:51:36 INFO namenode.FSNamesystem: fsLock is fair:true
+14/08/27 11:51:36 INFO namenode.HostFileManager: read includes:
+HostSet(
+)
+14/08/27 11:51:36 INFO namenode.HostFileManager: read excludes:
+HostSet(
+)
+14/08/27 11:51:36 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+14/08/27 11:51:36 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+14/08/27 11:51:36 INFO util.GSet: Computing capacity for map BlocksMap
+14/08/27 11:51:36 INFO util.GSet: VM type       = 64-bit
+14/08/27 11:51:36 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
+14/08/27 11:51:36 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: defaultReplication         = 1
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: maxReplication             = 512
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: minReplication             = 1
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+14/08/27 11:51:36 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+14/08/27 11:51:36 INFO namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
+14/08/27 11:51:36 INFO namenode.FSNamesystem: supergroup          = supergroup
+14/08/27 11:51:36 INFO namenode.FSNamesystem: isPermissionEnabled = true
+14/08/27 11:51:36 INFO namenode.FSNamesystem: HA Enabled: false
+14/08/27 11:51:36 INFO namenode.FSNamesystem: Append Enabled: true
+14/08/27 11:51:36 INFO util.GSet: Computing capacity for map INodeMap
+14/08/27 11:51:36 INFO util.GSet: VM type       = 64-bit
+14/08/27 11:51:36 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
+14/08/27 11:51:36 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+14/08/27 11:51:36 INFO namenode.NameNode: Caching file names occuring more than 10 times
+14/08/27 11:51:36 INFO util.GSet: Computing capacity for map cachedBlocks
+14/08/27 11:51:36 INFO util.GSet: VM type       = 64-bit
+14/08/27 11:51:36 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
+14/08/27 11:51:36 INFO util.GSet: capacity      = 2^18 = 262144 entries
+14/08/27 11:51:36 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+14/08/27 11:51:36 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+14/08/27 11:51:36 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+14/08/27 11:51:36 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+14/08/27 11:51:36 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+14/08/27 11:51:36 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+14/08/27 11:51:36 INFO util.GSet: VM type       = 64-bit
+14/08/27 11:51:36 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
+14/08/27 11:51:36 INFO util.GSet: capacity      = 2^15 = 32768 entries
+14/08/27 11:51:36 INFO namenode.AclConfigFlag: ACLs enabled? false
+14/08/27 11:51:37 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1655686264-127.0.1.1-1409154696871
+14/08/27 11:51:37 INFO common.Storage: Storage directory /home/sandeep/tools/hadoop/data/hdfs/namenode has been successfully formatted.
+14/08/27 11:51:38 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+14/08/27 11:51:38 INFO util.ExitUtil: Exiting with status 0
+14/08/27 11:51:38 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at sandeep-Latitude-6430U/127.0.1.1
+************************************************************/
+###############
+# Start HDFS processes
+###############
+starting namenode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-namenode-sandeep-Latitude-6430U.out
+7330 Jps
+7290 NameNode
+3206 DavGateway
+3077 Main
+starting datanode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-datanode-sandeep-Latitude-6430U.out
+7366 DataNode
+7290 NameNode
+3206 DavGateway
+7406 Jps
+3077 Main
+starting resourcemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-resourcemanager-sandeep-Latitude-6430U.out
+7366 DataNode
+7449 ResourceManager
+7290 NameNode
+3206 DavGateway
+7475 Jps
+3077 Main
+starting nodemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-nodemanager-sandeep-Latitude-6430U.out
+7366 DataNode
+7449 ResourceManager
+7290 NameNode
+3206 DavGateway
+7526 NodeManager
+3077 Main
+7580 Jps
+starting historyserver, logging to /home/sandeep/tools/hadoop/2.4.1/logs/mapred-sandeep-historyserver-sandeep-Latitude-6430U.out
+7366 DataNode
+7636 JobHistoryServer
+7449 ResourceManager
+7290 NameNode
+7664 Jps
+3206 DavGateway
+7526 NodeManager
+3077 Main
+###############
+# Web interface
+###############
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+Created new window in existing browser session.
+Created new window in existing browser session.
+##############
+# Map Reduce
+##############
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+14/08/27 11:52:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+14/08/27 11:52:45 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/08/27 11:52:49 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+14/08/27 11:52:52 INFO input.FileInputFormat: Total input paths to process : 1
+14/08/27 11:52:52 INFO mapreduce.JobSubmitter: number of splits:1
+14/08/27 11:52:53 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1409154734992_0001
+14/08/27 11:52:54 INFO impl.YarnClientImpl: Submitted application application_1409154734992_0001
+14/08/27 11:52:54 INFO mapreduce.Job: The url to track the job: http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0001/
+14/08/27 11:52:54 INFO mapreduce.Job: Running job: job_1409154734992_0001
+14/08/27 11:53:24 INFO mapreduce.Job: Job job_1409154734992_0001 running in uber mode : false
+14/08/27 11:53:24 INFO mapreduce.Job:  map 0% reduce 0%
+14/08/27 11:53:41 INFO mapreduce.Job:  map 100% reduce 0%
+14/08/27 11:53:59 INFO mapreduce.Job:  map 100% reduce 100%
+14/08/27 11:54:00 INFO mapreduce.Job: Job job_1409154734992_0001 completed successfully
+14/08/27 11:54:01 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=61
+		FILE: Number of bytes written=186345
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=135
+		HDFS: Number of bytes written=35
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=14695
+		Total time spent by all reduces in occupied slots (ms)=14860
+		Total time spent by all map tasks (ms)=14695
+		Total time spent by all reduce tasks (ms)=14860
+		Total vcore-seconds taken by all map tasks=14695
+		Total vcore-seconds taken by all reduce tasks=14860
+		Total megabyte-seconds taken by all map tasks=15047680
+		Total megabyte-seconds taken by all reduce tasks=15216640
+	Map-Reduce Framework
+		Map input records=2
+		Map output records=8
+		Map output bytes=70
+		Map output materialized bytes=61
+		Input split bytes=97
+		Combine input records=8
+		Combine output records=5
+		Reduce input groups=5
+		Reduce shuffle bytes=61
+		Reduce input records=5
+		Reduce output records=5
+		Spilled Records=10
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=302
+		CPU time spent (ms)=6600
+		Physical memory (bytes) snapshot=420745216
+		Virtual memory (bytes) snapshot=1682817024
+		Total committed heap usage (bytes)=354942976
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=38
+	File Output Format Counters 
+		Bytes Written=35
+Word Count Output
+-----------------
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+14/08/27 11:54:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+This	2
+another	1
+is	2
+line	2
+one	1
+#######
+# HIVE
+#######
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+drop table if exists page_view
+OK
+Time taken: 2.726 seconds
+
+drop table if exists strange_string
+OK
+Time taken: 0.047 seconds
+
+drop table if exists india_pow_gen
+OK
+Time taken: 0.054 seconds
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_url STRING,
+     ip STRING COMMENT 'IP Address of the User')
+     COMMENT 'This is the page view table'
+     ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 4.692 seconds
+
+
+LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/page_view.csv' OVERWRITE INTO TABLE page_view
+Copying data from file:/home/sandeep/tools/hadoop/2.4.1/input/page_view.csv
+Copying file: file:/home/sandeep/tools/hadoop/2.4.1/input/page_view.csv
+Loading data to table default.page_view
+rmr: DEPRECATED: Please use 'rm -r' instead.
+Deleted hdfs://localhost:9000/user/hive/warehouse/page_view
+Table default.page_view stats: [numFiles=1, numRows=0, totalSize=71, rawDataSize=0]
+OK
+Time taken: 3.352 seconds
+
+
+show tables
+OK
+page_view
+Time taken: 0.26 seconds, Fetched: 1 row(s)
+
+
+select count(*) from page_view
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0002, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0002/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0002
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 11:55:52,450 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 11:56:11,331 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.22 sec
+2014-08-27 11:56:30,032 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 12.07 sec
+MapReduce Total cumulative CPU time: 12 seconds 70 msec
+Ended Job = job_1409154734992_0002
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 12.07 sec   HDFS Read: 290 HDFS Write: 2 SUCCESS
+Total MapReduce CPU Time Spent: 12 seconds 70 msec
+OK
+1
+Time taken: 66.716 seconds, Fetched: 1 row(s)
+
+
+select * from page_view
+OK
+1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
+Time taken: 0.222 seconds, Fetched: 1 row(s)
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r') ROW FORMAT DELIMITED
+OK
+Time taken: 4.402 seconds
+
+
+LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/strange_string.csv' OVERWRITE INTO TABLE strange_string
+Copying data from file:/home/sandeep/tools/hadoop/2.4.1/input/strange_string.csv
+Copying file: file:/home/sandeep/tools/hadoop/2.4.1/input/strange_string.csv
+Loading data to table default.strange_string
+rmr: DEPRECATED: Please use 'rm -r' instead.
+Deleted hdfs://localhost:9000/user/hive/warehouse/strange_string
+Table default.strange_string stats: [numFiles=1, numRows=0, totalSize=42, rawDataSize=0]
+OK
+Time taken: 3.329 seconds
+
+
+select explode(split(strange, "\\|")) as entry from strange_string
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1409154734992_0003, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0003/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0003
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2014-08-27 11:57:37,386 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 11:57:57,474 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 8.41 sec
+MapReduce Total cumulative CPU time: 8 seconds 410 msec
+Ended Job = job_1409154734992_0003
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 8.41 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 8 seconds 410 msec
+OK
+a:d:e
+z:y:q
+1:s:p
+6:6:r
+f:q:l
+m:j:p
+3:r:b
+Time taken: 49.729 seconds, Fetched: 7 row(s)
+
+
+ SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]  FROM (select explode(split(strange, "\\|")) as entry from strange_string) as t1
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1409154734992_0004, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0004/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0004
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2014-08-27 11:58:24,373 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 11:58:39,897 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 8.08 sec
+MapReduce Total cumulative CPU time: 8 seconds 80 msec
+Ended Job = job_1409154734992_0004
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 8.08 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 8 seconds 80 msec
+OK
+a	d	e
+z	y	q
+1	s	p
+6	6	r
+f	q	l
+m	j	p
+3	r	b
+Time taken: 72.289 seconds, Fetched: 7 row(s)
+
+
+ SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2]  FROM strange_string LATERAL VIEW explode(split(strange, "\\|")) entryTable AS entry
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1409154734992_0005, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0005/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0005
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2014-08-27 11:59:36,823 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 11:59:56,415 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 8.0 sec
+MapReduce Total cumulative CPU time: 8 seconds 0 msec
+Ended Job = job_1409154734992_0005
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 8.0 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 8 seconds 0 msec
+OK
+a	d	e
+z	y	q
+1	s	p
+6	6	r
+f	q	l
+m	j	p
+3	r	b
+Time taken: 46.448 seconds, Fetched: 7 row(s)
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tingri_hive 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ tingri_hive ---
+[INFO] Deleting /home/sandeep/projects/big_data/udf/target
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tingri_hive 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-assembly-plugin:2.2-beta-5:assembly (default-cli) @ tingri_hive >>>
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ tingri_hive ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ tingri_hive ---
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to /home/sandeep/projects/big_data/udf/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ tingri_hive ---
+[debug] execute contextualize
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /home/sandeep/projects/big_data/udf/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ tingri_hive ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.8:test (default-test) @ tingri_hive ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: /home/sandeep/projects/big_data/udf/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+There are no tests to run.
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ tingri_hive ---
+[INFO] Building jar: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1.jar
+[INFO] 
+[INFO] <<< maven-assembly-plugin:2.2-beta-5:assembly (default-cli) @ tingri_hive <<<
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.2-beta-5:assembly (default-cli) @ tingri_hive ---
+[INFO] Building jar: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 19.513s
+[INFO] Finished at: Wed Aug 27 12:00:23 EDT 2014
+[INFO] Final Memory: 26M/217M
+[INFO] ------------------------------------------------------------------------
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+DROP FUNCTION IF EXISTS rowWithHeader
+OK
+Time taken: 3.887 seconds
+ADD JAR ${env:PROJECT_HOME}/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
+Added /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar to class path
+Added resource: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
+
+
+create temporary function rowWithHeader as 'me.tingri.hive.udf.TransformRowWithHeader'
+OK
+Time taken: 0.085 seconds
+
+
+SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2],split(entry, ":")[3],split(entry, ":")[4], split(entry, ":")[5]
+FROM strange_string LATERAL VIEW explode(rowWithHeader(split(strange, "\\|"), 0)) entryTable AS entry
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1409154734992_0006, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0006/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0006
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2014-08-27 12:01:29,135 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:01:49,425 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 8.57 sec
+MapReduce Total cumulative CPU time: 8 seconds 570 msec
+Ended Job = job_1409154734992_0006
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 8.57 sec   HDFS Read: 271 HDFS Write: 96 SUCCESS
+Total MapReduce CPU Time Spent: 8 seconds 570 msec
+OK
+NULL	NULL	NULL	NULL	NULL	NULL
+a	d	e	z	y	q
+a	d	e	1	s	p
+a	d	e	6	6	r
+NULL	NULL	NULL	NULL	NULL	NULL
+f	q	l	m	j	p
+f	q	l	3	r	b
+Time taken: 54.822 seconds, Fetched: 7 row(s)
+
+
+SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2], split(t1.entry, ":")[3],split(t1.entry, ":")[4], split(t1.entry, ":")[5]
+FROM  (select explode(rowWithHeader(split(strange, "\\|"), 0)) as entry from strange_string) as t1
+where t1.entry is not null and t1.entry <> ''
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1409154734992_0007, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0007/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0007
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
+2014-08-27 12:02:17,964 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:02:37,425 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 8.83 sec
+MapReduce Total cumulative CPU time: 8 seconds 830 msec
+Ended Job = job_1409154734992_0007
+MapReduce Jobs Launched: 
+Job 0: Map: 1   Cumulative CPU: 8.83 sec   HDFS Read: 271 HDFS Write: 60 SUCCESS
+Total MapReduce CPU Time Spent: 8 seconds 830 msec
+OK
+a	d	e	z	y	q
+a	d	e	1	s	p
+a	d	e	6	6	r
+f	q	l	m	j	p
+f	q	l	3	r	b
+Time taken: 46.565 seconds, Fetched: 5 row(s)
+
+
+INSERT OVERWRITE LOCAL DIRECTORY '${env:PROJECT_HOME}/output' row format delimited fields terminated by ','
+SELECT distinct(t1.entry), split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]
+FROM  (select explode(split(strange, "\\|")) as entry from strange_string) as t1
+where t1.entry is not null and t1.entry <> ''
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0008, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0008/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0008
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 12:03:05,497 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:03:24,853 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 7.94 sec
+2014-08-27 12:03:43,458 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 14.63 sec
+MapReduce Total cumulative CPU time: 14 seconds 630 msec
+Ended Job = job_1409154734992_0008
+Copying data to local directory /home/sandeep/projects/big_data/output
+Copying data to local directory /home/sandeep/projects/big_data/output
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 14.63 sec   HDFS Read: 271 HDFS Write: 84 SUCCESS
+Total MapReduce CPU Time Spent: 14 seconds 630 msec
+OK
+Time taken: 67.168 seconds
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+create table india_pow_gen (REGION_ID STRING, MONTH STRING, REGION STRING,
+  STATE STRING,SECTOR STRING,CATEGORY STRING,FUEL STRING,UTILITY STRING,
+  STATION STRING,INSTALLED_CAPACITY INT ,PROGRAM_GENERATION INT ,ACTUAL_GENERATION INT )
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 4.681 seconds
+
+
+
+
+LOAD DATA LOCAL INPATH '${env:PROJECT_HOME}/datafile.csv' OVERWRITE INTO TABLE india_pow_gen
+Copying data from file:/home/sandeep/projects/big_data/datafile.csv
+Copying file: file:/home/sandeep/projects/big_data/datafile.csv
+Loading data to table default.india_pow_gen
+rmr: DEPRECATED: Please use 'rm -r' instead.
+Deleted hdfs://localhost:9000/user/hive/warehouse/india_pow_gen
+Table default.india_pow_gen stats: [numFiles=1, numRows=0, totalSize=37408, rawDataSize=0]
+OK
+Time taken: 3.463 seconds
+
+
+
+select state, sum(actual_generation) as gen
+from india_pow_gen
+group by state order by gen desc limit 3
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0009, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0009/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0009
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 12:04:48,848 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:05:06,931 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.33 sec
+2014-08-27 12:05:25,898 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 12.12 sec
+MapReduce Total cumulative CPU time: 12 seconds 120 msec
+Ended Job = job_1409154734992_0009
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0010, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0010/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0010
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2014-08-27 12:05:55,085 Stage-2 map = 0%,  reduce = 0%
+2014-08-27 12:06:12,258 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 4.7 sec
+2014-08-27 12:06:32,341 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 11.36 sec
+MapReduce Total cumulative CPU time: 11 seconds 360 msec
+Ended Job = job_1409154734992_0010
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 12.12 sec   HDFS Read: 37630 HDFS Write: 993 SUCCESS
+Job 1: Map: 1  Reduce: 1   Cumulative CPU: 11.36 sec   HDFS Read: 1356 HDFS Write: 49 SUCCESS
+Total MapReduce CPU Time Spent: 23 seconds 480 msec
+OK
+UTTAR PRADESH	8155
+GUJARAT	7449
+MAHARASHTRA	6899
+Time taken: 133.638 seconds, Fetched: 3 row(s)
+
+
+select state, sum(actual_generation)/sum(program_generation) as ratio
+from india_pow_gen
+group by state order by ratio  desc limit 3
+Total jobs = 2
+Launching Job 1 out of 2
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0011, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0011/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0011
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 12:06:58,553 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:07:16,063 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.25 sec
+2014-08-27 12:07:36,858 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 13.73 sec
+MapReduce Total cumulative CPU time: 13 seconds 730 msec
+Ended Job = job_1409154734992_0011
+Launching Job 2 out of 2
+Number of reduce tasks determined at compile time: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0012, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0012/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0012
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
+2014-08-27 12:08:03,916 Stage-2 map = 0%,  reduce = 0%
+2014-08-27 12:08:21,099 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 4.81 sec
+2014-08-27 12:08:39,386 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 11.21 sec
+MapReduce Total cumulative CPU time: 11 seconds 210 msec
+Ended Job = job_1409154734992_0012
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 13.73 sec   HDFS Read: 37630 HDFS Write: 1161 SUCCESS
+Job 1: Map: 1  Reduce: 1   Cumulative CPU: 11.21 sec   HDFS Read: 1524 HDFS Write: 90 SUCCESS
+Total MapReduce CPU Time Spent: 24 seconds 940 msec
+OK
+ANDAMAN NICOBAR	1.7142857142857142
+KARNATAKA	1.0199947382267824
+GUJARAT	1.019572953736655
+Time taken: 126.946 seconds, Fetched: 3 row(s)
+
+
+select state, station, actual_generation, rank() over(partition by state order by actual_generation desc)
+from india_pow_gen
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0013, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0013/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0013
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 12:09:06,904 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:09:26,055 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.33 sec
+2014-08-27 12:09:45,556 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 14.83 sec
+MapReduce Total cumulative CPU time: 14 seconds 830 msec
+Ended Job = job_1409154734992_0013
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 14.83 sec   HDFS Read: 37630 HDFS Write: 13339 SUCCESS
+Total MapReduce CPU Time Spent: 14 seconds 830 msec
+OK
+ANDAMAN NICOBAR	AND. NICOBAR DG	12	1
+ANDHRA PRADESH	RAMAGUNDEM STPS	1688	1
+ANDHRA PRADESH	SIMHADRI	1101	2
+ANDHRA PRADESH	Dr. N.TATA RAO TPS	1079	3
+ANDHRA PRADESH	RAYALASEEMA TPS	641	4
+ANDHRA PRADESH	KOTHAGUDEM TPS (NEW)	630	5
+ANDHRA PRADESH	KOTHAGUDEM TPS	390	6
+ANDHRA PRADESH	KAKATIYA TPS	324	7
+ANDHRA PRADESH	SIMHAPURI TPS	161	8
+ANDHRA PRADESH	KONDAPALLI CCPP	110	9
+ANDHRA PRADESH	LOWER SILERU  HPS	110	9
+ANDHRA PRADESH	VIJESWARAN CCPP	77	11
+ANDHRA PRADESH	JEGURUPADU CCPP	73	12
+ANDHRA PRADESH	GODAVARI CCPP	71	13
+ANDHRA PRADESH	MACHKUND  HPS	61	14
+ANDHRA PRADESH	THAMMINAPATNAM TPS	56	15
+ANDHRA PRADESH	UPPER SILERU  HPS	54	16
+ANDHRA PRADESH	RAMAGUNDEM - B TPS	40	17
+ANDHRA PRADESH	SRISAILAM  HPS	38	18
+ANDHRA PRADESH	PEDDAPURAM CCPP	37	19
+ANDHRA PRADESH	VEMAGIRI CCPP	15	20
+ANDHRA PRADESH	NAGARJUN SGR  HPS	11	21
+ANDHRA PRADESH	GAUTAMI CCPP	11	21
+ANDHRA PRADESH	KONASEEMA CCPP	9	23
+ANDHRA PRADESH	SRISAILAM LB  HPS	7	24
+ANDHRA PRADESH	POCHAMPAD  HPS	6	25
+ANDHRA PRADESH	KONDAPALLI  EXTN CCPP .	5	26
+ANDHRA PRADESH	GMR Energy Ltd - Kakinada	4	27
+ANDHRA PRADESH	HAMPI  HPS	3	28
+ANDHRA PRADESH	LVS POWER DG	0	29
+ANDHRA PRADESH	T B   DAM  HPS	0	29
+ANDHRA PRADESH	NAGARJUN SGR  LBC  HPS	0	29
+ANDHRA PRADESH	NAGARJUN SGR  TPD	0	29
+ANDHRA PRADESH	NAGARJUN SGR RBC   HPS	0	29
+ANDHRA PRADESH	NAGARJUN SGR RBC EXTN. HPS	0	29
+ANDHRA PRADESH	PRIYADARSHNI  JURALA  HPS	0	29
+ANDHRA PRADESH	PULICHINTALA HPS	0	29
+ANDHRA PRADESH	LOWER JURALA HPS	0	29
+ARUNACHAL PRADESH	RANGANADI  HPS.	30	1
+ASSAM	KATHALGURI CCPP	135	1
+ASSAM	LAKWA GT	75	2
+ASSAM	NAMRUP CCPP	38	3
+ASSAM	KOPILI  HPS.	36	4
+ASSAM	KARBI LANGPI  HPS.	10	5
+ASSAM	NAMRUP ST	6	6
+ASSAM	CHANDRAPUR(ASSAM) TPS	0	7
+BIHAR	KAHALGAON TPS	1181	1
+BIHAR	BARAUNI TPS	0	2
+BIHAR	MUZAFFARPUR TPS	0	2
+BIHAR	BARH II	0	2
+CHHATTISGARH	KORBA STPS	1629	1
+CHHATTISGARH	SIPAT STPS	1411	2
+CHHATTISGARH	OP JINDAL TPS	667	3
+CHHATTISGARH	KORBA-WEST TPS	536	4
+CHHATTISGARH	BHILAI TPS	320	5
+CHHATTISGARH	PATHADI TPP	225	6
+CHHATTISGARH	DSPM TPS	221	7
+CHHATTISGARH	KASAIPALLI TPP	119	8
+CHHATTISGARH	KORBA-II	101	9
+CHHATTISGARH	KORBA-III	56	10
+CHHATTISGARH	HASDEOBANGO  HPS	18	11
+CHHATTISGARH	RATIJA TPS	9	12
+CHHATTISGARH	AKALTARA TPS	0	13
+CHHATTISGARH	AVANTHA BHANDAR	0	13
+CHHATTISGARH	BALCO TPS	0	13
+CHHATTISGARH	BARADARHA	0	13
+CHHATTISGARH	KATGHORA TPP	0	13
+CHHATTISGARH	VANDANA VIDYUT TPS	0	13
+CHHATTISGARH	SVPL TPP	0	13
+CHHATTISGARH	MARWA TPS	0	13
+DELHI	BADARPUR TPS	289	1
+DELHI	PRAGATI CCPP	202	2
+DELHI	PRAGATI CCGT-III	145	3
+DELHI	I.P.CCPP	79	4
+DELHI	RAJGHAT TPS	72	5
+DELHI	RITHALA CCPP	1	6
+GOA	GOA CCPP (Liq.)	16	1
+GUJARAT	MUNDRA UMTPP	1986	1
+GUJARAT	MUNDRA TPS	1822	2
+GUJARAT	WANAKBORI TPS	698	3
+GUJARAT	SALAYA TPP	561	4
+GUJARAT	UKAI TPS	381	5
+GUJARAT	KAKRAPARA	297	6
+GUJARAT	SURAT LIG. TPS	272	7
+GUJARAT	GANDHAR CCPP	182	8
+GUJARAT	GANDHI NAGAR TPS	180	9
+GUJARAT	ESSAR CCPP	160	10
+GUJARAT	SUGEN CCPP	150	11
+GUJARAT	SABARMATI (D-F STATIONS)	147	12
+GUJARAT	KUTCH LIG. TPS	133	13
+GUJARAT	KAWAS CCPP	101	14
+GUJARAT	S SAROVAR CHPH  HPS	51	15
+GUJARAT	UKAI  HPS	49	16
+GUJARAT	UNOSUGEN CCPP	45	17
+GUJARAT	SIKKA REP. TPS	36	18
+GUJARAT	SABARMATI (C STATION)	35	19
+GUJARAT	HAZIRA CCPP	35	19
+GUJARAT	DHUVARAN CCPP	30	21
+GUJARAT	UTRAN CCPP	23	22
+GUJARAT	PEGUTHAN CCPP	17	23
+GUJARAT	S SAROVAR RBPH  HPS	17	23
+GUJARAT	AKRIMOTA LIG TPS	16	25
+GUJARAT	GIPCL. GT IMP	15	26
+GUJARAT	BARODA CCPP	8	27
+GUJARAT	KADANA  HPS	2	28
+GUJARAT	HAZIRA CCPP EXT	0	29
+GUJARAT	VATWA CCPP	0	29
+GUJARAT	PIPAVAV CCPP	0	29
+HARYANA	PANIPAT TPS	367	1
+HARYANA	MAHATMA GANDHI TPS	341	2
+HARYANA	INDIRA GANDHI STPP	294	3
+HARYANA	YAMUNA NAGAR TPS	269	4
+HARYANA	RAJIV GANDHI TPS	184	5
+HARYANA	FARIDABAD CCPP	42	6
+HIMACHAL PRADESH	NATHPA JHAKRI HPS	173	1
+HIMACHAL PRADESH	CHAMERA- I  HPS	69	2
+HIMACHAL PRADESH	KARCHAM WANGTOO HPS	65	3
+HIMACHAL PRADESH	CHAMERA- II  HPS	38	4
+HIMACHAL PRADESH	BAIRA SIUL  HPS	26	5
+HIMACHAL PRADESH	GIRI BATA HPS	25	6
+HIMACHAL PRADESH	BASPA  HPS	25	6
+HIMACHAL PRADESH	LARJI  HPS	22	8
+HIMACHAL PRADESH	CHAMERA-III HPS	20	9
+HIMACHAL PRADESH	SANJAY  HPS	11	10
+HIMACHAL PRADESH	BASSI  HPS	9	11
+HIMACHAL PRADESH	ALLAIN DUHANGAN  HPS	7	12
+HIMACHAL PRADESH	MALANA  HPS	5	13
+HIMACHAL PRADESH	MALANA-II  HPS	3	14
+HIMACHAL PRADESH	UHL-III HPS	0	15
+HIMACHAL PRADESH	SORANG HPS	0	15
+HIMACHAL PRADESH	BUDHIL HPS	0	15
+HIMACHAL PRADESH	RAMPUR HPS	0	15
+HIMACHAL PRADESH	PARBATI-III HPS	0	15
+JAMMU AND KASHMIR	URI-I HPS	180	1
+JAMMU AND KASHMIR	SALAL  HPS	139	2
+JAMMU AND KASHMIR	BAGLIHAR  HPS	100	3
+JAMMU AND KASHMIR	SEWA-II  HPS	50	4
+JAMMU AND KASHMIR	LOWER JHELUM  HPS	39	5
+JAMMU AND KASHMIR	UPPER SINDH-II HPS	9	6
+JAMMU AND KASHMIR	CHUTAK HPS	3	7
+JAMMU AND KASHMIR	DULHASTI  HPS	0	8
+JAMMU AND KASHMIR	PAMPORE GPS (Liq.)	0	8
+JAMMU AND KASHMIR	NIMBOO BAZDO HPS	0	8
+JAMMU AND KASHMIR	URI-II HPS	0	8
+JHARKHAND	CHANDRAPURA(DVC) TPS	464	1
+JHARKHAND	MAITHON RB TPP	452	2
+JHARKHAND	TENUGHAT TPS	254	3
+JHARKHAND	BOKARO `B` TPS	231	4
+JHARKHAND	JOJOBERA TPS	150	5
+JHARKHAND	MAHADEV PRASAD STPP	93	6
+JHARKHAND	PATRATU TPS	78	7
+JHARKHAND	MAITHON  HPS.	5	8
+JHARKHAND	SUBERNREKHA  HPS.	2	9
+JHARKHAND	KODARMA TPP	2	9
+JHARKHAND	MAITRISHI USHA TPS	0	11
+JHARKHAND	PANCHET  HPS.	0	11
+JHARKHAND	MAITHON GT (Liq.)	0	11
+KARNATAKA	RAICHUR TPS	878	1
+KARNATAKA	UDUPI TPP	607	2
+KARNATAKA	KAIGA	450	3
+KARNATAKA	BELLARY TPS	447	4
+KARNATAKA	SHARAVATHI  HPS	435	5
+KARNATAKA	TORANGALLU TPS(SBU-II)	422	6
+KARNATAKA	KALINADI  HPS	200	7
+KARNATAKA	TORANGALLU TPS(SBU-I)	175	8
+KARNATAKA	VARAHI  HPS	77	9
+KARNATAKA	GERUSUPPA  HPS	41	10
+KARNATAKA	KALINADI SUPA  HPS	40	11
+KARNATAKA	LIGANAMAKKI  HPS	22	12
+KARNATAKA	KODASALI  HPS	18	13
+KARNATAKA	KADRA  HPS	16	14
+KARNATAKA	JOG  HPS	15	15
+KARNATAKA	SIVASAMUNDRUM  HPS	11	16
+KARNATAKA	YELHANKA (DG)	9	17
+KARNATAKA	BHADRA  HPS	6	18
+KARNATAKA	ALMATTI DPH  HPS	3	19
+KARNATAKA	GHAT PRABHA  HPS	3	19
+KARNATAKA	MUNIRABAD  HPS	2	21
+KARNATAKA	BELGAUM DG	0	22
+KARNATAKA	BELLARY DG	0	22
+KERALA	R. GANDHI CCPP (Liq.)	124	1
+KERALA	IDUKKI  HPS.	55	2
+KERALA	SABARIGIRI  HPS.	43	3
+KERALA	KOZHIKODE DG	38	4
+KERALA	KUTTIYADI  HPS.	30	5
+KERALA	SHOLAYAR  HPS.	19	6
+KERALA	IDAMALAYAR  HPS.	14	7
+KERALA	PORINGALKUTTU  HPS.	9	8
+KERALA	KAKKAD  HPS.	6	9
+KERALA	PALLIVASAL  HPS.	5	10
+KERALA	BRAMHAPURAM DG	4	11
+KERALA	NARIAMANGLAM  HPS	4	11
+KERALA	LOWER PERIYAR  HPS.	3	13
+KERALA	PANNIAR  HPS.	2	14
+KERALA	SENGULAM  HPS.	2	14
+KERALA	COCHIN CCPP (Liq.)	0	16
+KERALA	KUTTIYADI ADDL. EXTN.	0	16
+MADHYA PRADESH	VINDHYACHAL STPS	2179	1
+MADHYA PRADESH	SANJAY GANDHI TPS	714	2
+MADHYA PRADESH	SATPURA TPS	420	3
+MADHYA PRADESH	AMARKANTAK EXT TPS	221	4
+MADHYA PRADESH	INDIRA SAGAR  HPS	120	5
+MADHYA PRADESH	BANSAGAR TONS-1  HPS	81	6
+MADHYA PRADESH	OMKARESHWAR  HPS	68	7
+MADHYA PRADESH	BINA TPS	63	8
+MADHYA PRADESH	PENCH  HPS	39	9
+MADHYA PRADESH	GANDHI SAGAR  HPS	31	10
+MADHYA PRADESH	MAHAN TPP	23	11
+MADHYA PRADESH	BARGI  HPS	20	12
+MADHYA PRADESH	MADHIKHERA  HPS	10	13
+MADHYA PRADESH	BANSAGAR TONS-III  HPS	9	14
+MADHYA PRADESH	BANSAGAR TONS-II  HPS	6	15
+MADHYA PRADESH	RAJGHAT  HPS	3	16
+MADHYA PRADESH	SHREE SINGAJI TPP	0	17
+MADHYA PRADESH	MAHESHWAR HPS	0	17
+MADHYA PRADESH	SASAN UMTPP	0	17
+MAHARASHTRA	CHANDRAPUR(MAHARASHTRA) STPS	1203	1
+MAHARASHTRA	TARAPUR	741	2
+MAHARASHTRA	JSW RATNAGIRI TPP	703	3
+MAHARASHTRA	KHAPARKHEDA TPS	642	4
+MAHARASHTRA	TROMBAY TPS	453	5
+MAHARASHTRA	BHUSAWAL TPS	416	6
+MAHARASHTRA	NASIK TPS	361	7
+MAHARASHTRA	DAHANU TPS	342	8
+MAHARASHTRA	URAN CCPP	308	9
+MAHARASHTRA	PARAS TPS	291	10
+MAHARASHTRA	WARDHA WARORA TPP	263	11
+MAHARASHTRA	KORADI TPS	190	12
+MAHARASHTRA	PARLI TPS	177	13
+MAHARASHTRA	TROMBAY CCPP	128	14
+MAHARASHTRA	KOYNA-IV  HPS	110	15
+MAHARASHTRA	GEPL TPP Ph-I	72	16
+MAHARASHTRA	BHIRA PSS  HPS	49	17
+MAHARASHTRA	KOYNA-I  HPS	45	18
+MAHARASHTRA	KOYNA-II  HPS	45	18
+MAHARASHTRA	KOYNA-III  HPS	43	20
+MAHARASHTRA	RATNAGIRI CCPP II	41	21
+MAHARASHTRA	GHATGHAR  PSS  HPS	39	22
+MAHARASHTRA	EMCO WARORA TPS	34	23
+MAHARASHTRA	MIHAN TPS	32	24
+MAHARASHTRA	BHIVPURI  HPS	32	24
+MAHARASHTRA	BHIRA   HPS	30	26
+MAHARASHTRA	RATNAGIRI CCPP III	28	27
+MAHARASHTRA	KHOPOLI  HPS	20	28
+MAHARASHTRA	VAITARNA  HPS	20	28
+MAHARASHTRA	KOYNA DPH  HPS	13	30
+MAHARASHTRA	BHANDARDHARA  HPS ST-II	12	31
+MAHARASHTRA	BHIRA TAIL RACE  HPS	7	32
+MAHARASHTRA	TILLARI  HPS	7	32
+MAHARASHTRA	MAUDA TPS	1	34
+MAHARASHTRA	TIRORA TPS	1	34
+MAHARASHTRA	BUTIBORI TPP	0	36
+MAHARASHTRA	DHARIWAL TPP	0	36
+MAHARASHTRA	NASIK (P) TPS	0	36
+MAHARASHTRA	RATNAGIRI CCPP I	0	36
+MAHARASHTRA	AMARAVATI TPS	0	36
+MAHARASHTRA	BELA TPS	0	36
+MANIPUR	LOKTAK  HPS.	26	1
+MANIPUR	LEIMAKHONG DG	0	2
+MEGHALAYA	UMIAM HPS ST-IV	8	1
+MEGHALAYA	KYRDEMKULAI  HPS.	7	2
+MEGHALAYA	UMIAM  HPS ST-I	6	3
+MEGHALAYA	MYNTDU(LESHKA) St-1 HPS	5	4
+MEGHALAYA	KHONDONG  HPS.	2	5
+NAGALAND	DOYANG  HPS.	5	1
+ORISSA	TALCHER STPS	1810	1
+ORISSA	STERLITE TPP	694	2
+ORISSA	TALCHER (OLD) TPS	308	3
+ORISSA	IB VALLEY TPS	258	4
+ORISSA	UPPER  INDRAVATI  HPS.	144	5
+ORISSA	BALIMELA  HPS.	62	6
+ORISSA	UPPER KOLAB  HPS.	59	7
+ORISSA	HIRAKUD HPS	46	8
+ORISSA	NALCO IMP	23	9
+ORISSA	RENGALI  HPS.	17	10
+ORISSA	ICCL IMP	15	11
+ORISSA	KAMALANGA TPS	0	12
+ORISSA	DERANG TPP	0	12
+ORISSA	IND BARATH TPP	0	12
+PUDUCHERRY	KARAIKAL CCPP	19	1
+PUNJAB	ROPAR TPS	477	1
+PUNJAB	GH TPS (LEH.MOH.)	378	2
+PUNJAB	BHAKRA H  P S	244	3
+PUNJAB	DEHAR H P S	125	4
+PUNJAB	PONG H P S	120	5
+PUNJAB	MUKERIAN  HPS	108	6
+PUNJAB	RANJIT SAGAR  HPS	93	7
+PUNJAB	GND TPS(BHATINDA)	89	8
+PUNJAB	GANGUWAL  HPS	41	9
+PUNJAB	KOTLA  HPS	40	10
+PUNJAB	ANANDPUR SAHIB HPS	16	11
+PUNJAB	SHANAN  HPS	15	12
+PUNJAB	GOINDWAL SAHIB	0	13
+RAJASTHAN	KOTA TPS	787	1
+RAJASTHAN	RAJASTHAN  A.P.S.	775	2
+RAJASTHAN	SURATGARH TPS	690	3
+RAJASTHAN	JALIPA KAPURDI TPP	360	4
+RAJASTHAN	CHHABRA TPP	243	5
+RAJASTHAN	BARSINGSAR LIGNITE	134	6
+RAJASTHAN	ANTA CCPP	116	7
+RAJASTHAN	DHOLPUR CCPP	79	8
+RAJASTHAN	R P SAGAR  HPS	53	9
+RAJASTHAN	JAWAHAR SAGAR  HPS	35	10
+RAJASTHAN	GIRAL TPS	33	11
+RAJASTHAN	RAMGARH CCPP	25	12
+RAJASTHAN	MAHI BAJAJ  HPS	22	13
+RAJASTHAN	KAWAI TPS	0	14
+RAJASTHAN	KALISINDH TPS	0	14
+SIKKIM	TEESTA V HPS	47	1
+SIKKIM	RANGIT HPS	11	2
+SIKKIM	CHUZACHEN HPS	0	3
+TAMIL NADU	NEYVELI TPS-II	945	1
+TAMIL NADU	TUTICORIN TPS	701	2
+TAMIL NADU	METTUR TPS	632	3
+TAMIL NADU	NORTH CHENNAI TPS	378	4
+TAMIL NADU	NEYVELI TPS- I	374	5
+TAMIL NADU	NEYVELI ( EXT) TPS	286	6
+TAMIL NADU	MADRAS  A.P.S.	230	7
+TAMIL NADU	VALLUR TPP	176	8
+TAMIL NADU	P.NALLUR CCPP	152	9
+TAMIL NADU	NEYVELI TPS(Z)	116	10
+TAMIL NADU	VALUTHUR CCPP	110	11
+TAMIL NADU	KUNDAH  HPS.	107	12
+TAMIL NADU	ENNORE TPS	69	13
+TAMIL NADU	KARUPPUR CCPP	65	14
+TAMIL NADU	KOVIKALPAL CCPP	53	15
+TAMIL NADU	B. BRIDGE D.G	47	16
+TAMIL NADU	VALANTARVY CCPP	31	17
+TAMIL NADU	PYKARA ULTMATE  HPS.	28	18
+TAMIL NADU	SAMALPATTI DG	22	19
+TAMIL NADU	SHOLAYAR  HPS.	13	20
+TAMIL NADU	MOYAR  HPS	10	21
+TAMIL NADU	KUTTALAM CCPP	8	22
+TAMIL NADU	SAMAYANALLUR DG	8	22
+TAMIL NADU	KADAMPARI  HPS.	6	24
+TAMIL NADU	PAPANASAM  HPS.	5	25
+TAMIL NADU	LOWER METTUR  HPS.	4	26
+TAMIL NADU	PARSON`S VALLEY  HPS.	4	26
+TAMIL NADU	SURULIYAR  HPS.	3	28
+TAMIL NADU	PYKARA  HPS.	3	28
+TAMIL NADU	SARKARPATHY  HPS.	3	28
+TAMIL NADU	METTUR DAM  HPS.	1	31
+TAMIL NADU	ALIYAR  HPS.	1	31
+TAMIL NADU	NEYVELI TPS-II EXP	0	33
+TAMIL NADU	TUTICORIN (P) TPP	0	33
+TAMIL NADU	KUNDAKULLAM	0	33
+TAMIL NADU	BHAWANI BARRAGE III HPS	0	33
+TAMIL NADU	BHAWANI BARRAGE-II HPS	0	33
+TAMIL NADU	BHAWANI KATTAL	0	33
+TAMIL NADU	BASIN BRIDGE GT (Liq.)	0	33
+TAMIL NADU	METTUR TUNNEL  HPS.	0	33
+TAMIL NADU	PERIYAR  HPS.	0	33
+TAMIL NADU	KODAYAR  HPS.	0	33
+TRIPURA	AGARTALA GT	50	1
+TRIPURA	ROKHIA GT	36	2
+TRIPURA	BARAMURA GT	27	3
+UTTAR PRADESH	RIHAND STPS	1475	1
+UTTAR PRADESH	SINGRAULI STPS	1277	2
+UTTAR PRADESH	DADRI (NCTPP)	1049	3
+UTTAR PRADESH	ANPARA TPS	843	4
+UTTAR PRADESH	UNCHAHAR TPS	615	5
+UTTAR PRADESH	ROSA TPP Ph-I	514	6
+UTTAR PRADESH	PARICHHA TPS	401	7
+UTTAR PRADESH	OBRA TPS	307	8
+UTTAR PRADESH	TANDA TPS	291	9
+UTTAR PRADESH	DADRI CCPP	233	10
+UTTAR PRADESH	ANPARA C TPS	231	11
+UTTAR PRADESH	NARORA  A.P.S.	204	12
+UTTAR PRADESH	AURAIYA CCPP	175	13
+UTTAR PRADESH	HARDUAGANJ TPS	153	14
+UTTAR PRADESH	RIHAND  HPS	53	15
+UTTAR PRADESH	KUNDARKI TPS	53	15
+UTTAR PRADESH	MAQSOODPUR TPS	53	15
+UTTAR PRADESH	UTRAULA TPS	52	18
+UTTAR PRADESH	KHAMBARKHERA TPS	47	19
+UTTAR PRADESH	PANKI TPS	40	20
+UTTAR PRADESH	BARKHERA TPS	39	21
+UTTAR PRADESH	KHARA  HPS	28	22
+UTTAR PRADESH	OBRA  HPS	21	23
+UTTAR PRADESH	MATATILA  HPS	1	24
+UTTARAKHAND	TEHRI ST-1  HPS	190	1
+UTTARAKHAND	KOTESHWAR HPS	73	2
+UTTARAKHAND	CHIBRO (YAMUNA)  HPS	72	3
+UTTARAKHAND	CHILLA  HPS	58	4
+UTTARAKHAND	VISHNU PRAYAG  HPS	45	5
+UTTARAKHAND	MANERI BHALI - II  HPS	40	6
+UTTARAKHAND	KHODRI  HPS	32	7
+UTTARAKHAND	DHAULI GANGA  HPS	26	8
+UTTARAKHAND	MANERI BHALI - I  HPS	25	9
+UTTARAKHAND	TANAKPUR  HPS	25	9
+UTTARAKHAND	DHALIPUR  HPS	17	11
+UTTARAKHAND	KULHAL  HPS	12	12
+UTTARAKHAND	DHAKRANI  HPS	11	13
+UTTARAKHAND	KHATIMA  HPS	7	14
+UTTARAKHAND	RAMGANGA  HPS	0	15
+UTTARAKHAND	SHRINAGAR HPS	0	15
+WEST BENGAL	FARAKKA STPS	997	1
+WEST BENGAL	MEJIA TPS	960	2
+WEST BENGAL	BAKRESWAR TPS	643	3
+WEST BENGAL	KOLAGHAT TPS	622	4
+WEST BENGAL	BUDGE BUDGE TPS	322	5
+WEST BENGAL	DURGAPUR STEEL TPS	317	6
+WEST BENGAL	SAGARDIGHI TPS	271	7
+WEST BENGAL	SANTALDIH TPS	198	8
+WEST BENGAL	DURGAPUR TPS	194	9
+WEST BENGAL	D.P.L. TPS	175	10
+WEST BENGAL	BANDEL TPS	139	11
+WEST BENGAL	TITAGARH TPS	103	12
+WEST BENGAL	SOUTHERN REPL. TPS	77	13
+WEST BENGAL	PURULIA PSS  HPS.	33	14
+WEST BENGAL	NEW COSSIPORE TPS	13	15
+WEST BENGAL	RAMMAM  HPS.	8	16
+WEST BENGAL	JALDHAKA  HPS ST-I	2	17
+WEST BENGAL	TEESTA-III HPS	0	18
+WEST BENGAL	TEESTA LOW DAM-IV HPS	0	18
+WEST BENGAL	RAGHUNATHPUR TPP	0	18
+WEST BENGAL	KASBA GT (Liq.)	0	18
+WEST BENGAL	HALDIA GT (Liq.)	0	18
+WEST BENGAL	TEESTA LOW DAM-III HPS	0	18
+WEST BENGAL	CHINAKURI TPS	0	18
+Time taken: 66.122 seconds, Fetched: 420 row(s)
+
+
+select t.* from (
+  select state, station, actual_generation, rank() over(partition by state order by actual_generation desc) as rank
+  from india_pow_gen
+  ) t
+where t.rank <=3
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1409154734992_0014, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1409154734992_0014/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1409154734992_0014
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2014-08-27 12:10:13,920 Stage-1 map = 0%,  reduce = 0%
+2014-08-27 12:10:31,293 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 5.16 sec
+2014-08-27 12:10:53,177 Stage-1 map = 100%,  reduce = 74%, Cumulative CPU 16.1 sec
+2014-08-27 12:10:54,296 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 17.59 sec
+MapReduce Total cumulative CPU time: 17 seconds 590 msec
+Ended Job = job_1409154734992_0014
+MapReduce Jobs Launched: 
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 17.59 sec   HDFS Read: 37630 HDFS Write: 2423 SUCCESS
+Total MapReduce CPU Time Spent: 17 seconds 590 msec
+OK
+ANDAMAN NICOBAR	AND. NICOBAR DG	12	1
+ANDHRA PRADESH	RAMAGUNDEM STPS	1688	1
+ANDHRA PRADESH	SIMHADRI	1101	2
+ANDHRA PRADESH	Dr. N.TATA RAO TPS	1079	3
+ARUNACHAL PRADESH	RANGANADI  HPS.	30	1
+ASSAM	KATHALGURI CCPP	135	1
+ASSAM	LAKWA GT	75	2
+ASSAM	NAMRUP CCPP	38	3
+BIHAR	KAHALGAON TPS	1181	1
+BIHAR	BARAUNI TPS	0	2
+BIHAR	MUZAFFARPUR TPS	0	2
+BIHAR	BARH II	0	2
+CHHATTISGARH	KORBA STPS	1629	1
+CHHATTISGARH	SIPAT STPS	1411	2
+CHHATTISGARH	OP JINDAL TPS	667	3
+DELHI	BADARPUR TPS	289	1
+DELHI	PRAGATI CCPP	202	2
+DELHI	PRAGATI CCGT-III	145	3
+GOA	GOA CCPP (Liq.)	16	1
+GUJARAT	MUNDRA UMTPP	1986	1
+GUJARAT	MUNDRA TPS	1822	2
+GUJARAT	WANAKBORI TPS	698	3
+HARYANA	PANIPAT TPS	367	1
+HARYANA	MAHATMA GANDHI TPS	341	2
+HARYANA	INDIRA GANDHI STPP	294	3
+HIMACHAL PRADESH	NATHPA JHAKRI HPS	173	1
+HIMACHAL PRADESH	CHAMERA- I  HPS	69	2
+HIMACHAL PRADESH	KARCHAM WANGTOO HPS	65	3
+JAMMU AND KASHMIR	URI-I HPS	180	1
+JAMMU AND KASHMIR	SALAL  HPS	139	2
+JAMMU AND KASHMIR	BAGLIHAR  HPS	100	3
+JHARKHAND	CHANDRAPURA(DVC) TPS	464	1
+JHARKHAND	MAITHON RB TPP	452	2
+JHARKHAND	TENUGHAT TPS	254	3
+KARNATAKA	RAICHUR TPS	878	1
+KARNATAKA	UDUPI TPP	607	2
+KARNATAKA	KAIGA	450	3
+KERALA	R. GANDHI CCPP (Liq.)	124	1
+KERALA	IDUKKI  HPS.	55	2
+KERALA	SABARIGIRI  HPS.	43	3
+MADHYA PRADESH	VINDHYACHAL STPS	2179	1
+MADHYA PRADESH	SANJAY GANDHI TPS	714	2
+MADHYA PRADESH	SATPURA TPS	420	3
+MAHARASHTRA	CHANDRAPUR(MAHARASHTRA) STPS	1203	1
+MAHARASHTRA	TARAPUR	741	2
+MAHARASHTRA	JSW RATNAGIRI TPP	703	3
+MANIPUR	LOKTAK  HPS.	26	1
+MANIPUR	LEIMAKHONG DG	0	2
+MEGHALAYA	UMIAM HPS ST-IV	8	1
+MEGHALAYA	KYRDEMKULAI  HPS.	7	2
+MEGHALAYA	UMIAM  HPS ST-I	6	3
+NAGALAND	DOYANG  HPS.	5	1
+ORISSA	TALCHER STPS	1810	1
+ORISSA	STERLITE TPP	694	2
+ORISSA	TALCHER (OLD) TPS	308	3
+PUDUCHERRY	KARAIKAL CCPP	19	1
+PUNJAB	ROPAR TPS	477	1
+PUNJAB	GH TPS (LEH.MOH.)	378	2
+PUNJAB	BHAKRA H  P S	244	3
+RAJASTHAN	KOTA TPS	787	1
+RAJASTHAN	RAJASTHAN  A.P.S.	775	2
+RAJASTHAN	SURATGARH TPS	690	3
+SIKKIM	TEESTA V HPS	47	1
+SIKKIM	RANGIT HPS	11	2
+SIKKIM	CHUZACHEN HPS	0	3
+TAMIL NADU	NEYVELI TPS-II	945	1
+TAMIL NADU	TUTICORIN TPS	701	2
+TAMIL NADU	METTUR TPS	632	3
+TRIPURA	AGARTALA GT	50	1
+TRIPURA	ROKHIA GT	36	2
+TRIPURA	BARAMURA GT	27	3
+UTTAR PRADESH	RIHAND STPS	1475	1
+UTTAR PRADESH	SINGRAULI STPS	1277	2
+UTTAR PRADESH	DADRI (NCTPP)	1049	3
+UTTARAKHAND	TEHRI ST-1  HPS	190	1
+UTTARAKHAND	KOTESHWAR HPS	73	2
+UTTARAKHAND	CHIBRO (YAMUNA)  HPS	72	3
+WEST BENGAL	FARAKKA STPS	997	1
+WEST BENGAL	MEJIA TPS	960	2
+WEST BENGAL	BAKRESWAR TPS	643	3
+Time taken: 68.481 seconds, Fetched: 80 row(s)
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+drop table if exists page_view
+OK
+Time taken: 9.265 seconds
+
+drop table if exists strange_string
+OK
+Time taken: 0.436 seconds
+
+drop table if exists india_pow_gen
+OK
+Time taken: 0.452 seconds
+########################
+# Stop the processes
+########################
+stopping namenode
+stopping datanode
+stopping resourcemanager
+stopping nodemanager
+nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+stopping historyserver
