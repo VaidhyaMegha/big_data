@@ -1,0 +1,63 @@
+Formatting using clusterid: CID-712ee0a4-f0e3-4165-943c-444609e3bbea
+starting namenode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-namenode-sandeep-Latitude-6430U.out
+20285 Jps
+3206 DavGateway
+20247 NameNode
+3077 Main
+starting datanode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-datanode-sandeep-Latitude-6430U.out
+20389 Jps
+3206 DavGateway
+20247 NameNode
+20320 DataNode
+3077 Main
+starting resourcemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-resourcemanager-sandeep-Latitude-6430U.out
+20549 ResourceManager
+20582 Jps
+3206 DavGateway
+20247 NameNode
+20320 DataNode
+3077 Main
+starting nodemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-nodemanager-sandeep-Latitude-6430U.out
+20549 ResourceManager
+3206 DavGateway
+20691 Jps
+20660 NodeManager
+20247 NameNode
+20320 DataNode
+3077 Main
+starting historyserver, logging to /home/sandeep/tools/hadoop/2.4.1/logs/mapred-sandeep-historyserver-sandeep-Latitude-6430U.out
+20549 ResourceManager
+20755 JobHistoryServer
+3206 DavGateway
+20787 Jps
+20660 NodeManager
+20247 NameNode
+20320 DataNode
+3077 Main
+This	2
+another	1
+is	2
+line	2
+one	1
+Created new window in existing browser session.
+Created new window in existing browser session.
+drop table if exists page_view
+
+drop table if exists strange_string
+
+drop table if exists india_pow_gen
+CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_url STRING,
+     ip STRING COMMENT 'IP Address of the User')
+     COMMENT 'This is the page view table'
+     ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+
+
+LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/page_view.csv' OVERWRITE INTO TABLE page_view
+Deleted hdfs://localhost:9000/user/hive/warehouse/page_view
+
+
+show tables
+page_view
+
+
+select count(*) from page_view
