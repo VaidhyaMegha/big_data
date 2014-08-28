@@ -63,24 +63,24 @@ echo "#######"
 echo "# HIVE"
 echo "#######"
 # Setup
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Cleanup.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/cleanup.sql
 #Simple
 echo "1321314314,4,http://www.page.com,http://www.referrer.com,10.200.13.110" >> input/page_view.csv
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_Simple.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/simple_test.sql
 # UDTF
 echo "a:d:e|z:y:q|1:s:p|6:6:r" >> input/strange_string.csv
 echo "f:q:l|m:j:p|3:r:b" >> input/strange_string.csv
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_UDTF.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/udtf.sql
 # Maven build
 cd $PROJECT_HOME/udf/
 $MAVEN_HOME/bin/mvn clean assembly:assembly
 cd $HADOOP_YARN_HOME
 # Custom UDF
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Custom_UDF.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/custom_udf.sql
 # Analytics
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_Analytics.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/analytics.sql
 # Teardown
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Cleanup.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/cleanup.sql
 
 echo "########################"
 echo "# Stop the processes"
