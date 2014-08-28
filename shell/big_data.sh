@@ -10,8 +10,10 @@ echo "###############"
 # Add these to your ~/.bashrc or other shell start-up script
 export USER=sandeep
 export PROJECT_HOME=/home/$USER/projects/big_data
+export SHELL_HOME=$PROJECT_HOME/shell
+export HQL_HOME=$PROJECT_HOME/hql
 
-source $PROJECT_HOME/env.sh
+source $SHELL_HOME/env.sh
 
 cd $HADOOP_ROOT
 sudo chown -R $USER $HDP_VER
@@ -25,12 +27,12 @@ mkdir -p $DATA_NODE_DATA_DIR
 
 # Set up config files
 cd $HADOOP_YARN_HOME
-source $PROJECT_HOME/config.sh
+source $SHELL_HOME/config.sh
 
 echo "###############"
 echo "# Start HDFS processes"
 echo "###############"
-source $PROJECT_HOME/start.sh
+source $SHELL_HOME/start.sh
 
 echo "###############"
 echo "# Web interface"
@@ -61,26 +63,26 @@ echo "#######"
 echo "# HIVE"
 echo "#######"
 # Setup
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Cleanup.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Cleanup.sql
 #Simple
 echo "1321314314,4,http://www.page.com,http://www.referrer.com,10.200.13.110" >> input/page_view.csv
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Test_Simple.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_Simple.sql
 # UDTF
 echo "a:d:e|z:y:q|1:s:p|6:6:r" >> input/strange_string.csv
 echo "f:q:l|m:j:p|3:r:b" >> input/strange_string.csv
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Test_UDTF.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_UDTF.sql
 # Maven build
 cd $PROJECT_HOME/udf/
 $MAVEN_HOME/bin/mvn clean assembly:assembly
 cd $HADOOP_YARN_HOME
 # Custom UDF
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Custom_UDF.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Custom_UDF.sql
 # Analytics
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Test_Analytics.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Test_Analytics.sql
 # Teardown
-$HIVE_HOME/bin/hive -v -f $PROJECT_HOME/Hive_Cleanup.sql
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/Hive_Cleanup.sql
 
 echo "########################"
 echo "# Stop the processes"
 echo "########################"
-source $PROJECT_HOME/stop.sh
+source $SHELL_HOME/stop.sh
