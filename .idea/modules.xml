@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hql/hive.iml" filepath="$PROJECT_DIR$/hql/hive.iml" />
       <module fileurl="file://$PROJECT_DIR$/shell/shell.iml" filepath="$PROJECT_DIR$/shell/shell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/udaf/udaf.iml" filepath="$PROJECT_DIR$/udaf/udaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/udf/udf.iml" filepath="$PROJECT_DIR$/udf/udf.iml" />
     </modules>
   </component>

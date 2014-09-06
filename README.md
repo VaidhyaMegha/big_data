@@ -1,10 +1,14 @@
 Big Data
 ========
-* Configuration
-    * OS Version : Ubuntu utopic(14.10)
-* Scope 
+* Problem Scope 
+    * connected components of a graph (udaf) - module udf, hql/custom_udaf.sql  
+    * Handling rows with a header (udf) - module udaf, hql/custom_udf.sql
+    * rank within a group
+    * top 3 within a group
     * All hive features and techniques
     * Data warehouse patterns (and possibly anti-patterns)
+* Configuration
+    * OS Version : Ubuntu utopic(14.10)
     
 Hadoop
 ------
@@ -18,7 +22,7 @@ Hive
 * DDL - Create, show, drop, alter
 * Ingestion - Load, CTAS, Insert into Select 
 * Select - count(*), distinct, nested select, filters
-* Functions - UDF, UDTF, Custom UDF
+* Functions - UDF, UDTF, Custom UDF, Custom UDAF
 * Aggregation functions - count, sum
 * Windowing and analytic functions - row_number(), rank(), over with partition by and order by, 
 * Export - overwrite local
