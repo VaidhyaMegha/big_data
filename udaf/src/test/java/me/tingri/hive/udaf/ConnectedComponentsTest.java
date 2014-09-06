@@ -6,7 +6,7 @@ public class ConnectedComponentsTest {
 
     @Test
     public void testSetOfSets() throws Exception {
-          assert new ConnectedComponents.CCEvaluator.SetOfSets() != null;
+          assert new ConnectedComponents.CCEvaluator.Components() != null;
 
     }
 }

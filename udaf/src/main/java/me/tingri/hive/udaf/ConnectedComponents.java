@@ -11,11 +11,13 @@ import org.apache.hadoop.hive.ql.parse.SemanticException;
 import org.apache.hadoop.hive.ql.udf.generic.AbstractGenericUDAFResolver;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFEvaluator;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFParameterInfo;
+import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryArray;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
+import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
+import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 @Description(
         name = "ConnectedComponents",
@@ -30,10 +32,10 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
     }
 
     public static class CCEvaluator extends GenericUDAFEvaluator {
-        private SetOfSets ccs = null;
+        private Components ccs = null;
 
-        public static class SetOfSets implements AggregationBuffer {
-            Set<HashSet> buffer = new HashSet<HashSet>();
+        public static class Components implements AggregationBuffer {
+            List<List> buffer = new ArrayList<List>();
         }
 
         public CCEvaluator() {
@@ -41,8 +43,16 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             init();
         }
 
+        @Override
+        public ObjectInspector init(Mode m, ObjectInspector[] parameters) throws HiveException {
+            super.init(m, parameters);
+            // return type goes here
+            return ObjectInspectorFactory.getStandardListObjectInspector(
+                    ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.javaStringObjectInspector));
+        }
+
         public void init() {
-            ccs = new SetOfSets();
+            ccs = new Components();
         }
 
         @Override
@@ -53,65 +63,64 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
         @Override
         public void reset(AggregationBuffer aggregationBuffer) throws HiveException {
-            ((SetOfSets)aggregationBuffer).buffer = new HashSet<HashSet>();
+            ((Components) aggregationBuffer).buffer = new ArrayList<List>();
         }
 
         @Override
         public void iterate(AggregationBuffer aggregationBuffer, Object[] objects) throws HiveException {
-            System.out.println(Arrays.toString(objects));
-
-            Iterator<HashSet> iter = ccs.buffer.iterator();
-
-            for(Set s = iter.next();iter.hasNext(); s = iter.next()){
-                if(s.contains(objects[0])){
-                    s.add(objects[1]);
+            for (List s : ((Components)aggregationBuffer).buffer) {
+                if (s.contains(objects[0])) {
+                    addDistinct(s, objects[1]);
                     return;
-                } else if(s.contains(objects[1])){
-                    s.add(objects[0]);
+                } else if (s.contains(objects[1])) {
+                    addDistinct(s, objects[0]);
                     return;
                 }
             }
 
-            HashSet set = new HashSet();
+            List set = new ArrayList();
             set.add(objects[0]);
             set.add(objects[1]);
 
-            ccs.buffer.add(set);
+            ((Components)aggregationBuffer).buffer.add(set);
         }
 
         @Override
         public Object terminatePartial(AggregationBuffer aggregationBuffer) throws HiveException {
-            return ccs;
+            return ((Components)aggregationBuffer).buffer;
         }
 
         @Override
         public void merge(AggregationBuffer aggregationBuffer, Object partial) throws HiveException {
-            Iterator<HashSet> iter1 = ((SetOfSets)partial).buffer.iterator();
-
-            for(Set s1 = iter1.next();iter1.hasNext(); s1 = iter1.next()){
-                Iterator<HashSet> iter2 = ((SetOfSets)aggregationBuffer).buffer.iterator();
+            for (Object s: ((LazyBinaryArray) partial).getList()) {
+                List s1 = ((LazyBinaryArray) s).getList();
                 boolean intersect = false;
-
                 second:
-                for(Set s2 = iter2.next();iter2.hasNext(); s2 = iter2.next()){
-                    Iterator objIter = s2.iterator();
-
-                    for(Object obj = objIter.next();objIter.hasNext(); obj = objIter.next()) {
+                for (List s2 :((Components) aggregationBuffer).buffer) {
+                    for (Object obj : s2) {
                         if (s1.contains(obj)) {
-                            s2.addAll(s1);
+                            addDistinct(s2, s1);
                             intersect = true;
                             break second;
                         }
                     }
                 }
 
-                if(!intersect) ((SetOfSets) aggregationBuffer).buffer.add((HashSet)s1);
+                if (!intersect) ((Components) aggregationBuffer).buffer.add(s1);
             }
+        }
+
+        private void addDistinct(List s2, List s1) {
+            for(Object obj : s1) addDistinct(s2, obj);
+        }
+
+        private void addDistinct(List s, Object obj) {
+            if (!s.contains(obj)) s.add(obj);
         }
 
         @Override
         public Object terminate(AggregationBuffer aggregationBuffer) throws HiveException {
-            return ccs;
+            return ((Components) aggregationBuffer).buffer;
         }
     }
 }
