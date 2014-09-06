@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.051" errors="0" skipped="0" tests="1" name="me.tingri.hive.udaf.ConnectedComponentsTest">
+<testsuite failures="0" time="0.059" errors="0" skipped="0" tests="1" name="me.tingri.hive.udaf.ConnectedComponentsTest">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64"/>
@@ -19,7 +19,7 @@
     <property name="basedir" value="/home/sandeep/projects/big_data/udaf"/>
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="surefire.real.class.path" value="/home/sandeep/projects/big_data/udaf/target/surefire/surefirebooter4963316844516811122.jar"/>
+    <property name="surefire.real.class.path" value="/home/sandeep/projects/big_data/udaf/target/surefire/surefirebooter5785086158665892372.jar"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="
 "/>
@@ -42,7 +42,7 @@
     <property name="java.vm.specification.version" value="1.7"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-7-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="/home/sandeep/projects/big_data/udaf/target/surefire/surefirebooter4963316844516811122.jar /home/sandeep/projects/big_data/udaf/target/surefire/surefire6677189910109326237tmp /home/sandeep/projects/big_data/udaf/target/surefire/surefire1382200118161391758tmp"/>
+    <property name="sun.java.command" value="/home/sandeep/projects/big_data/udaf/target/surefire/surefirebooter5785086158665892372.jar /home/sandeep/projects/big_data/udaf/target/surefire/surefire5765061602838373695tmp /home/sandeep/projects/big_data/udaf/target/surefire/surefire7930454284427042562tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.004" classname="me.tingri.hive.udaf.ConnectedComponentsTest" name="testSetOfSets"/>
+  <testcase time="0.007" classname="me.tingri.hive.udaf.ConnectedComponentsTest" name="testSetOfSets"/>
 </testsuite>
