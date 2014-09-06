@@ -32,15 +32,8 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
     }
 
     public static class CCEvaluator extends GenericUDAFEvaluator {
-        private Components ccs = null;
-
         public static class Components implements AggregationBuffer {
             List<List> buffer = new ArrayList<List>();
-        }
-
-        public CCEvaluator() {
-            super();
-            init();
         }
 
         @Override
@@ -51,24 +44,19 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
                     ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.javaStringObjectInspector));
         }
 
-        public void init() {
-            ccs = new Components();
-        }
-
         @Override
         public AggregationBuffer getNewAggregationBuffer() throws HiveException {
-            init();
-            return ccs;
+            return new Components();
         }
 
         @Override
-        public void reset(AggregationBuffer aggregationBuffer) throws HiveException {
-            ((Components) aggregationBuffer).buffer = new ArrayList<List>();
+        public void reset(AggregationBuffer agg) throws HiveException {
+            ((Components) agg).buffer = new ArrayList<List>();
         }
 
         @Override
-        public void iterate(AggregationBuffer aggregationBuffer, Object[] objects) throws HiveException {
-            for (List s : ((Components)aggregationBuffer).buffer) {
+        public void iterate(AggregationBuffer agg, Object[] objects) throws HiveException {
+            for (List s : ((Components) agg).buffer) {
                 if (s.contains(objects[0])) {
                     addDistinct(s, objects[1]);
                     return;
@@ -82,21 +70,24 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             set.add(objects[0]);
             set.add(objects[1]);
 
-            ((Components)aggregationBuffer).buffer.add(set);
+            ((Components) agg).buffer.add(set);
         }
 
         @Override
-        public Object terminatePartial(AggregationBuffer aggregationBuffer) throws HiveException {
-            return ((Components)aggregationBuffer).buffer;
+        public Object terminatePartial(AggregationBuffer agg) throws HiveException {
+            return ((Components) agg).buffer;
         }
 
         @Override
-        public void merge(AggregationBuffer aggregationBuffer, Object partial) throws HiveException {
-            for (Object s: ((LazyBinaryArray) partial).getList()) {
-                List s1 = ((LazyBinaryArray) s).getList();
+        public void merge(AggregationBuffer agg, Object partial) throws HiveException {
+            List list = getList(partial);
+
+            for (Object s : list) {
+                List s1 = getList(s);
+
                 boolean intersect = false;
                 second:
-                for (List s2 :((Components) aggregationBuffer).buffer) {
+                for (List s2 : ((Components) agg).buffer) {
                     for (Object obj : s2) {
                         if (s1.contains(obj)) {
                             addDistinct(s2, s1);
@@ -106,12 +97,22 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
                     }
                 }
 
-                if (!intersect) ((Components) aggregationBuffer).buffer.add(s1);
+                if (!intersect) ((Components) agg).buffer.add(s1);
             }
         }
 
+        private List getList(Object partial) {
+            List list;
+            if (!(partial instanceof List)) {
+                list = ((LazyBinaryArray) partial).getList();
+            } else {
+                list = (List) partial;
+            }
+            return list;
+        }
+
         private void addDistinct(List s2, List s1) {
-            for(Object obj : s1) addDistinct(s2, obj);
+            for (Object obj : s1) addDistinct(s2, obj);
         }
 
         private void addDistinct(List s, Object obj) {
@@ -119,8 +120,8 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
         }
 
         @Override
-        public Object terminate(AggregationBuffer aggregationBuffer) throws HiveException {
-            return ((Components) aggregationBuffer).buffer;
+        public Object terminate(AggregationBuffer agg) throws HiveException {
+            return ((Components) agg).buffer;
         }
     }
 }

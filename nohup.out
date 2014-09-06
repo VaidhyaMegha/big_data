@@ -159,3 +159,7 @@ path.separator: :
 [  26260]   WARN - ellchecker.SpellCheckerManager - Couldn't load dictionary 'webrat.dic' with loader 'class org.jetbrains.plugins.ruby.spellchecker.dictionary.RubyBundledDictionaryProvider' 
 [  26260]   WARN - ellchecker.SpellCheckerManager - Couldn't load dictionary 'websocket.dic' with loader 'class org.jetbrains.plugins.ruby.spellchecker.dictionary.RubyBundledDictionaryProvider' 
 [  26260]   WARN - ellchecker.SpellCheckerManager - Couldn't load dictionary 'xpath.dic' with loader 'class org.jetbrains.plugins.ruby.spellchecker.dictionary.RubyBundledDictionaryProvider' 
+isFishEyeConfigured == false
+isFishEyeConfigured == false
+isFishEyeConfigured == false
+isFishEyeConfigured == false
