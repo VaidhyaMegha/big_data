@@ -26,8 +26,8 @@
       <file leaf-file-name="edges.csv" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/edges.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3448277" vertical-offset="0" max-vertical-offset="234">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="234">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -39,8 +39,18 @@
       <file leaf-file-name="results.log" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/results.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.032531824" vertical-offset="7501" max-vertical-offset="8208">
-              <caret line="418" column="15" selection-start-line="418" selection-start-column="15" selection-end-line="418" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.026392963" vertical-offset="24012" max-vertical-offset="24876">
+              <caret line="1335" column="24" selection-start-line="1335" selection-start-column="24" selection-end-line="1335" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -59,8 +69,8 @@
       <file leaf-file-name="big_data.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shell/big_data.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1746">
-              <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1746">
+              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -140,7 +150,6 @@
         <option value="$PROJECT_DIR$/udf/pom.xml" />
         <option value="$PROJECT_DIR$/Hive_Test1.sql" />
         <option value="$PROJECT_DIR$/udf/src/main/java/me/tingri/hive/udf/TransformRowWithHeader.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Hive_Tables.sql" />
         <option value="$PROJECT_DIR$/Hive_Cleanup.sql" />
         <option value="$PROJECT_DIR$/datafile.csv" />
@@ -166,10 +175,11 @@
         <option value="$PROJECT_DIR$/udaf/pom.xml" />
         <option value="$PROJECT_DIR$/hql/custom_udaf.sql" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/shell/big_data.sh" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java" />
+        <option value="$PROJECT_DIR$/shell/big_data.sh" />
         <option value="$PROJECT_DIR$/results.log" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -654,12 +664,12 @@
       <workItem from="1409932425437" duration="633000" />
       <workItem from="1409948130817" duration="16520000" />
       <workItem from="1410028514117" duration="9088000" />
-      <workItem from="1410037793993" duration="10337000" />
+      <workItem from="1410037793993" duration="13586000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102260000" />
+    <option name="totallyTimeSpent" value="105509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
@@ -967,13 +977,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="126">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datafile.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-22.758621" vertical-offset="744" max-vertical-offset="7668">
@@ -1083,14 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/big_data.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1746">
-          <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/0.12.0-cdh5.1.2/hive-exec-0.12.0-cdh5.1.2.jar!/org/apache/hadoop/hive/ql/udf/generic/GenericUDAFEvaluator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="347" max-vertical-offset="1152">
@@ -1141,8 +1136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/edges.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3448277" vertical-offset="0" max-vertical-offset="234">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="721">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1175,10 +1170,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shell/big_data.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1746">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="144">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/results.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.032531824" vertical-offset="7501" max-vertical-offset="8208">
-          <caret line="418" column="15" selection-start-line="418" selection-start-column="15" selection-end-line="418" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.026392963" vertical-offset="24012" max-vertical-offset="24876">
+          <caret line="1335" column="24" selection-start-line="1335" selection-start-column="24" selection-end-line="1335" selection-end-column="24" />
           <folding />
         </state>
       </provider>
