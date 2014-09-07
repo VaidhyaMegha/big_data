@@ -88,12 +88,12 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             Map<Text, Object> map1 = getMap(partial);
             Set<Text> set1 = map1.keySet();
 
-            Map<Text, List> map2 = ((Components) agg).buffer;
-            Set<Text> set2 = map2.keySet();
-
             for (Text key1 : set1) {
                 List list1 = getList(map1, key1);
                 boolean intersect = false;
+
+                Map<Text, List> map2 = ((Components) agg).buffer;
+                Set<Text> set2 = map2.keySet();
 
                 second:
                 for (Text key2 : set2) {

@@ -60,3 +60,4 @@ References
 * Source shell scripts - http://stackoverflow.com/questions/670191/getting-a-source-not-found-error-when-using-source-in-a-bash-script
 * Redirecting standard output, error to log - http://stackoverflow.com/questions/4721635/redirect-standard-output-error-to-log-file
 * source vs sh - http://stackoverflow.com/questions/13786499/source-vs-sh-in-linux-what-is-the-difference
+* Git - http://stackoverflow.com/questions/173919/is-there-a-theirs-version-of-git-merge-s-ours
