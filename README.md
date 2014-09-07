@@ -1,8 +1,8 @@
 Big Data
 ========
 * Problem Scope 
-    * connected components of a graph (udaf) - module udf, hql/custom_udaf.sql  
-    * Handling rows with a header (udf) - module udaf, hql/custom_udf.sql
+    * connected components of a graph (udaf) - module udaf, hql/custom_udaf.sql  
+    * Handling rows with a header (udf) - module udf, hql/custom_udf.sql
     * rank within a group
     * top 3 within a group
     * All hive features and techniques
@@ -53,6 +53,7 @@ References
 * Parameterizing scripts - http://stackoverflow.com/questions/12464636/how-to-set-variables-in-hive-scripts
 * Permanent Functions - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL#LanguageManualDDL-PermanentFunctions
 * Error logs - https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-ErrorLogs
+* UDAF - http://ragrawal.wordpress.com/2013/10/26/writing-hive-custom-aggregate-functions-udaf-part-ii/
 * UDAF - https://cwiki.apache.org/confluence/display/Hive/GenericUDAFCaseStudy#GenericUDAFCaseStudy-WritingGenericUDAFs:ATutorial
 * UDAF - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF#LanguageManualUDF-Built-inAggregateFunctions(UDAF)
 * Source shell scripts - http://bash.cyberciti.biz/guide/Source_command
