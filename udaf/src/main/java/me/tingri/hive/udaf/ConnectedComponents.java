@@ -15,6 +15,7 @@ import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryArray;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
+import org.apache.hadoop.io.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             super.init(m, parameters);
             // return type goes here
             return ObjectInspectorFactory.getStandardListObjectInspector(
-                    ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.javaStringObjectInspector));
+                    ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.writableStringObjectInspector));
         }
 
         @Override
@@ -67,8 +68,8 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             }
 
             List set = new ArrayList();
-            set.add(objects[0]);
-            set.add(objects[1]);
+            set.add(new Text(String.valueOf(objects[0])));
+            set.add(new Text(String.valueOf(objects[1])));
 
             ((Components) agg).buffer.add(set);
         }
