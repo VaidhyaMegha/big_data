@@ -12,13 +12,13 @@ import org.apache.hadoop.hive.ql.udf.generic.AbstractGenericUDAFResolver;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFEvaluator;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFParameterInfo;
 import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryArray;
+import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryMap;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 import org.apache.hadoop.io.Text;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Description(
         name = "ConnectedComponents",
@@ -34,14 +34,14 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
     public static class CCEvaluator extends GenericUDAFEvaluator {
         public static class Components implements AggregationBuffer {
-            List<List> buffer = new ArrayList<List>();
+            Map<Text, List> buffer = new HashMap<Text, List>();
         }
 
         @Override
         public ObjectInspector init(Mode m, ObjectInspector[] parameters) throws HiveException {
             super.init(m, parameters);
             // return type goes here
-            return ObjectInspectorFactory.getStandardListObjectInspector(
+            return ObjectInspectorFactory.getStandardMapObjectInspector(PrimitiveObjectInspectorFactory.writableStringObjectInspector,
                     ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.writableStringObjectInspector));
         }
 
@@ -52,26 +52,30 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
         @Override
         public void reset(AggregationBuffer agg) throws HiveException {
-            ((Components) agg).buffer = new ArrayList<List>();
+            ((Components) agg).buffer = new HashMap<Text, List>();
         }
 
         @Override
         public void iterate(AggregationBuffer agg, Object[] objects) throws HiveException {
-            for (List s : ((Components) agg).buffer) {
-                if (s.contains(objects[0])) {
-                    addDistinct(s, objects[1]);
-                    return;
-                } else if (s.contains(objects[1])) {
-                    addDistinct(s, objects[0]);
-                    return;
-                }
+            Text s0 = new Text(String.valueOf(objects[0]));
+            Text s1 = new Text(String.valueOf(objects[1]));
+
+            Map<Text, List> map = ((Components) agg).buffer;
+
+            if (map.containsKey(s0)) {
+                addDistinct(map.get(s0), s1);
+                return;
+            } else if (map.containsKey(s1)) {
+                addDistinct(map.get(s1), s0);
+                return;
+            } else {
+                List set = new ArrayList();
+                set.add(new Text(s0));
+                set.add(new Text(s1));
+
+                //s0 chosen as leader
+                map.put(new Text(s0), set);
             }
-
-            List set = new ArrayList();
-            set.add(new Text(String.valueOf(objects[0])));
-            set.add(new Text(String.valueOf(objects[1])));
-
-            ((Components) agg).buffer.add(set);
         }
 
         @Override
@@ -81,48 +85,52 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
         @Override
         public void merge(AggregationBuffer agg, Object partial) throws HiveException {
-            List list = getList(partial);
+            Map<Text, Object> map1 = getMap(partial);
+            Set<Text> set1 = map1.keySet();
 
-            for (Object s : list) {
-                List s1 = getList(s);
+            Map<Text, List> map2 = ((Components) agg).buffer;
+            Set<Text> set2 = map2.keySet();
 
+            for (Text key1 : set1) {
+                List list1 = getList(map1, key1);
                 boolean intersect = false;
+
                 second:
-                for (List s2 : ((Components) agg).buffer) {
-                    for (Object obj : s2) {
-                        if (s1.contains(obj)) {
-                            addDistinct(s2, s1);
+                for (Text key2 : set2) {
+                    List list2 = map2.get(key2);
+
+                    for (Object obj : list2) {
+                        if (list1.contains(obj)) {
+                            addDistinct(list2, list1);
                             intersect = true;
                             break second;
                         }
                     }
                 }
 
-                if (!intersect) ((Components) agg).buffer.add(s1);
+                if(!intersect) map2.put(key1, list1);
             }
-        }
-
-        private List getList(Object partial) {
-            List list;
-            if (!(partial instanceof List)) {
-                list = ((LazyBinaryArray) partial).getList();
-            } else {
-                list = (List) partial;
-            }
-            return list;
-        }
-
-        private void addDistinct(List s2, List s1) {
-            for (Object obj : s1) addDistinct(s2, obj);
-        }
-
-        private void addDistinct(List s, Object obj) {
-            if (!s.contains(obj)) s.add(obj);
         }
 
         @Override
         public Object terminate(AggregationBuffer agg) throws HiveException {
             return ((Components) agg).buffer;
+        }
+
+        private Map getMap(Object partial) {
+            return ((LazyBinaryMap) partial).getMap();
+        }
+
+        private List getList(Map<Text, Object> map1, Text key1) {
+            return ((LazyBinaryArray) map1.get(key1)).getList();
+        }
+
+        private void addDistinct(List s2, List s1) {
+            for (Object obj : s1) addDistinct(s2, (Text)obj);
+        }
+
+        private void addDistinct(List s, Text obj) {
+            if (!s.contains(obj)) s.add(obj);
         }
     }
 }
