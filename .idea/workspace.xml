@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="results.log" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="results.log" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/results.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.533333" vertical-offset="11612" max-vertical-offset="24768">
-              <caret line="681" column="0" selection-start-line="681" selection-start-column="0" selection-end-line="681" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8079179" vertical-offset="20815" max-vertical-offset="22626">
+              <caret line="1187" column="0" selection-start-line="1187" selection-start-column="0" selection-end-line="1187" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -93,22 +93,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectedComponents.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ConnectedComponents.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025280898" vertical-offset="630" max-vertical-offset="1980">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1998">
+              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
               <folding>
-                <element signature="e#4230#4231#0" expanded="true" />
-                <element signature="e#4286#4287#0" expanded="true" />
-                <element signature="e#4332#4333#0" expanded="true" />
-                <element signature="e#4397#4398#0" expanded="true" />
-                <element signature="e#4464#4465#0" expanded="true" />
-                <element signature="e#4539#4540#0" expanded="true" />
-                <element signature="e#4593#4594#0" expanded="true" />
-                <element signature="e#4665#4666#0" expanded="true" />
-                <element signature="e#4719#4720#0" expanded="true" />
-                <element signature="e#4775#4776#0" expanded="true" />
+                <element signature="e#4370#4371#0" expanded="true" />
+                <element signature="e#4426#4427#0" expanded="true" />
+                <element signature="e#4472#4473#0" expanded="true" />
+                <element signature="e#4537#4538#0" expanded="true" />
+                <element signature="e#4604#4605#0" expanded="true" />
+                <element signature="e#4679#4680#0" expanded="true" />
+                <element signature="e#4733#4734#0" expanded="true" />
+                <element signature="e#4805#4806#0" expanded="true" />
+                <element signature="e#4859#4860#0" expanded="true" />
+                <element signature="e#4915#4916#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -714,12 +714,12 @@
       <workItem from="1410037793993" duration="14145000" />
       <workItem from="1410082642351" duration="5673000" />
       <workItem from="1410105902882" duration="848000" />
-      <workItem from="1410201548421" duration="5040000" />
+      <workItem from="1410201548421" duration="6722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117629000" />
+    <option name="totallyTimeSpent" value="119311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1535" height="904" extended-state="6" />
@@ -1209,30 +1209,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/results.log">
+    <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.533333" vertical-offset="11612" max-vertical-offset="24768">
-          <caret line="681" column="0" selection-start-line="681" selection-start-column="0" selection-end-line="681" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="530" max-vertical-offset="1998">
+          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+          <folding>
+            <element signature="e#4370#4371#0" expanded="true" />
+            <element signature="e#4426#4427#0" expanded="true" />
+            <element signature="e#4472#4473#0" expanded="true" />
+            <element signature="e#4537#4538#0" expanded="true" />
+            <element signature="e#4604#4605#0" expanded="true" />
+            <element signature="e#4679#4680#0" expanded="true" />
+            <element signature="e#4733#4734#0" expanded="true" />
+            <element signature="e#4805#4806#0" expanded="true" />
+            <element signature="e#4859#4860#0" expanded="true" />
+            <element signature="e#4915#4916#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
+    <entry file="file://$PROJECT_DIR$/results.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025280898" vertical-offset="630" max-vertical-offset="1980">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4286#4287#0" expanded="true" />
-            <element signature="e#4332#4333#0" expanded="true" />
-            <element signature="e#4397#4398#0" expanded="true" />
-            <element signature="e#4464#4465#0" expanded="true" />
-            <element signature="e#4539#4540#0" expanded="true" />
-            <element signature="e#4593#4594#0" expanded="true" />
-            <element signature="e#4665#4666#0" expanded="true" />
-            <element signature="e#4719#4720#0" expanded="true" />
-            <element signature="e#4775#4776#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.8079179" vertical-offset="20815" max-vertical-offset="22626">
+          <caret line="1187" column="0" selection-start-line="1187" selection-start-column="0" selection-end-line="1187" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

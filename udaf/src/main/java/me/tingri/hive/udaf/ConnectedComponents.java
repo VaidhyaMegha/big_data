@@ -65,11 +65,9 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
             if (map.containsKey(s0) && !map.containsKey(s1)) {
                 addDistinct(map.get(s0), s1);
                 map.put(s1, map.get(s0));
-                return;
             } else if (map.containsKey(s1) && !map.containsKey(s0)) {
                 addDistinct(map.get(s1), s0);
                 map.put(s0, map.get(s1));
-                return;
             } else if (!map.containsKey(s1) && !map.containsKey(s0)){
                 List set = new ArrayList();
 
@@ -78,6 +76,9 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
                 map.put(s0, set);
                 map.put(s1, set);
+            } else { //if both keys already exist merge the lists and set it against both s0 and s1
+                addDistinct(map.get(s0), s1);
+                map.put(s1, map.get(s0));
             }
         }
 
