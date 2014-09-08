@@ -62,19 +62,22 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
             Map<Text, List> map = ((Components) agg).buffer;
 
-            if (map.containsKey(s0)) {
+            if (map.containsKey(s0) && !map.containsKey(s1)) {
                 addDistinct(map.get(s0), s1);
+                map.put(s1, map.get(s0));
                 return;
-            } else if (map.containsKey(s1)) {
+            } else if (map.containsKey(s1) && !map.containsKey(s0)) {
                 addDistinct(map.get(s1), s0);
+                map.put(s0, map.get(s1));
                 return;
-            } else {
+            } else if (!map.containsKey(s1) && !map.containsKey(s0)){
                 List set = new ArrayList();
-                set.add(new Text(s0));
-                set.add(new Text(s1));
 
-                //s0 chosen as leader
-                map.put(new Text(s0), set);
+                set.add(s0);
+                set.add(s1);
+
+                map.put(s0, set);
+                map.put(s1, set);
             }
         }
 
@@ -90,25 +93,14 @@ public class ConnectedComponents extends AbstractGenericUDAFResolver {
 
             for (Text key1 : set1) {
                 List list1 = getList(map1, key1);
-                boolean intersect = false;
 
                 Map<Text, List> map2 = ((Components) agg).buffer;
-                Set<Text> set2 = map2.keySet();
 
-                second:
-                for (Text key2 : set2) {
-                    List list2 = map2.get(key2);
-
-                    for (Object obj : list2) {
-                        if (list1.contains(obj)) {
-                            addDistinct(list2, list1);
-                            intersect = true;
-                            break second;
-                        }
-                    }
+                if(map2.containsKey(key1)){
+                    addDistinct(map2.get(key1), list1);
+                } else {
+                    map2.put(key1, list1);
                 }
-
-                if(!intersect) map2.put(key1, list1);
             }
         }
 

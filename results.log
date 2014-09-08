@@ -1,7 +1,7 @@
 ###############
 Setup
 ###############
-14/09/07 12:05:41 INFO namenode.NameNode: STARTUP_MSG: 
+14/09/08 16:00:16 INFO namenode.NameNode: STARTUP_MSG: 
 /************************************************************
 STARTUP_MSG: Starting NameNode
 STARTUP_MSG:   host = sandeep-Latitude-6430U/127.0.1.1
@@ -11,63 +11,63 @@ STARTUP_MSG:   classpath = /home/sandeep/tools/hadoop/2.4.1/etc/hadoop:/home/san
 STARTUP_MSG:   build = http://svn.apache.org/repos/asf/hadoop/common -r 1604318; compiled by 'jenkins' on 2014-06-21T05:43Z
 STARTUP_MSG:   java = 1.7.0_65
 ************************************************************/
-14/09/07 12:05:41 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
-14/09/07 12:05:41 INFO namenode.NameNode: createNameNode [-format]
+14/09/08 16:00:16 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+14/09/08 16:00:16 INFO namenode.NameNode: createNameNode [-format]
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-14/09/07 12:05:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-Formatting using clusterid: CID-fbb43528-611f-4ee7-8b02-dbb7e30a01fd
-14/09/07 12:05:42 INFO namenode.FSNamesystem: fsLock is fair:true
-14/09/07 12:05:42 INFO namenode.HostFileManager: read includes:
+14/09/08 16:00:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Formatting using clusterid: CID-3534ed39-8c95-4967-a867-c26cd64bfd39
+14/09/08 16:00:16 INFO namenode.FSNamesystem: fsLock is fair:true
+14/09/08 16:00:16 INFO namenode.HostFileManager: read includes:
 HostSet(
 )
-14/09/07 12:05:42 INFO namenode.HostFileManager: read excludes:
+14/09/08 16:00:16 INFO namenode.HostFileManager: read excludes:
 HostSet(
 )
-14/09/07 12:05:42 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
-14/09/07 12:05:42 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
-14/09/07 12:05:42 INFO util.GSet: Computing capacity for map BlocksMap
-14/09/07 12:05:42 INFO util.GSet: VM type       = 64-bit
-14/09/07 12:05:42 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
-14/09/07 12:05:42 INFO util.GSet: capacity      = 2^21 = 2097152 entries
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: defaultReplication         = 1
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: maxReplication             = 512
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: minReplication             = 1
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
-14/09/07 12:05:42 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
-14/09/07 12:05:42 INFO namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
-14/09/07 12:05:42 INFO namenode.FSNamesystem: supergroup          = supergroup
-14/09/07 12:05:42 INFO namenode.FSNamesystem: isPermissionEnabled = true
-14/09/07 12:05:42 INFO namenode.FSNamesystem: HA Enabled: false
-14/09/07 12:05:42 INFO namenode.FSNamesystem: Append Enabled: true
-14/09/07 12:05:42 INFO util.GSet: Computing capacity for map INodeMap
-14/09/07 12:05:42 INFO util.GSet: VM type       = 64-bit
-14/09/07 12:05:42 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
-14/09/07 12:05:42 INFO util.GSet: capacity      = 2^20 = 1048576 entries
-14/09/07 12:05:42 INFO namenode.NameNode: Caching file names occuring more than 10 times
-14/09/07 12:05:42 INFO util.GSet: Computing capacity for map cachedBlocks
-14/09/07 12:05:42 INFO util.GSet: VM type       = 64-bit
-14/09/07 12:05:42 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
-14/09/07 12:05:42 INFO util.GSet: capacity      = 2^18 = 262144 entries
-14/09/07 12:05:42 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
-14/09/07 12:05:42 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
-14/09/07 12:05:42 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
-14/09/07 12:05:42 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
-14/09/07 12:05:42 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
-14/09/07 12:05:42 INFO util.GSet: Computing capacity for map NameNodeRetryCache
-14/09/07 12:05:42 INFO util.GSet: VM type       = 64-bit
-14/09/07 12:05:42 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
-14/09/07 12:05:42 INFO util.GSet: capacity      = 2^15 = 32768 entries
-14/09/07 12:05:42 INFO namenode.AclConfigFlag: ACLs enabled? false
-14/09/07 12:05:42 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1424985879-127.0.1.1-1410105942450
-14/09/07 12:05:42 INFO common.Storage: Storage directory /home/sandeep/tools/hadoop/data/hdfs/namenode has been successfully formatted.
-14/09/07 12:05:42 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
-14/09/07 12:05:42 INFO util.ExitUtil: Exiting with status 0
-14/09/07 12:05:42 INFO namenode.NameNode: SHUTDOWN_MSG: 
+14/09/08 16:00:16 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+14/09/08 16:00:16 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+14/09/08 16:00:16 INFO util.GSet: Computing capacity for map BlocksMap
+14/09/08 16:00:16 INFO util.GSet: VM type       = 64-bit
+14/09/08 16:00:16 INFO util.GSet: 2.0% max memory 889 MB = 17.8 MB
+14/09/08 16:00:16 INFO util.GSet: capacity      = 2^21 = 2097152 entries
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: defaultReplication         = 1
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: maxReplication             = 512
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: minReplication             = 1
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+14/09/08 16:00:16 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+14/09/08 16:00:16 INFO namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
+14/09/08 16:00:16 INFO namenode.FSNamesystem: supergroup          = supergroup
+14/09/08 16:00:16 INFO namenode.FSNamesystem: isPermissionEnabled = true
+14/09/08 16:00:16 INFO namenode.FSNamesystem: HA Enabled: false
+14/09/08 16:00:16 INFO namenode.FSNamesystem: Append Enabled: true
+14/09/08 16:00:17 INFO util.GSet: Computing capacity for map INodeMap
+14/09/08 16:00:17 INFO util.GSet: VM type       = 64-bit
+14/09/08 16:00:17 INFO util.GSet: 1.0% max memory 889 MB = 8.9 MB
+14/09/08 16:00:17 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+14/09/08 16:00:17 INFO namenode.NameNode: Caching file names occuring more than 10 times
+14/09/08 16:00:17 INFO util.GSet: Computing capacity for map cachedBlocks
+14/09/08 16:00:17 INFO util.GSet: VM type       = 64-bit
+14/09/08 16:00:17 INFO util.GSet: 0.25% max memory 889 MB = 2.2 MB
+14/09/08 16:00:17 INFO util.GSet: capacity      = 2^18 = 262144 entries
+14/09/08 16:00:17 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+14/09/08 16:00:17 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+14/09/08 16:00:17 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
+14/09/08 16:00:17 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+14/09/08 16:00:17 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+14/09/08 16:00:17 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+14/09/08 16:00:17 INFO util.GSet: VM type       = 64-bit
+14/09/08 16:00:17 INFO util.GSet: 0.029999999329447746% max memory 889 MB = 273.1 KB
+14/09/08 16:00:17 INFO util.GSet: capacity      = 2^15 = 32768 entries
+14/09/08 16:00:17 INFO namenode.AclConfigFlag: ACLs enabled? false
+14/09/08 16:00:17 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1629943560-127.0.1.1-1410206417125
+14/09/08 16:00:17 INFO common.Storage: Storage directory /home/sandeep/tools/hadoop/data/hdfs/namenode has been successfully formatted.
+14/09/08 16:00:17 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+14/09/08 16:00:17 INFO util.ExitUtil: Exiting with status 0
+14/09/08 16:00:17 INFO namenode.NameNode: SHUTDOWN_MSG: 
 /************************************************************
 SHUTDOWN_MSG: Shutting down NameNode at sandeep-Latitude-6430U/127.0.1.1
 ************************************************************/
@@ -75,60 +75,56 @@ SHUTDOWN_MSG: Shutting down NameNode at sandeep-Latitude-6430U/127.0.1.1
 # Start HDFS processes
 ###############
 starting namenode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-namenode-sandeep-Latitude-6430U.out
-20234 RemoteMavenServer
-10118 DavGateway
-20135 Main
-11126 DavGateway
-20375 NameNode
-20444 Jps
+OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
+It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+20563 NameNode
+20631 Jps
+2741 DavGateway
+10912 Main
+11049 RemoteMavenServer
 starting datanode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-datanode-sandeep-Latitude-6430U.out
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-20234 RemoteMavenServer
-10118 DavGateway
-20135 Main
-11126 DavGateway
-20375 NameNode
-20555 Jps
-20479 DataNode
+20741 Jps
+20563 NameNode
+20666 DataNode
+2741 DavGateway
+10912 Main
+11049 RemoteMavenServer
 starting resourcemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-resourcemanager-sandeep-Latitude-6430U.out
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-20234 RemoteMavenServer
-20595 ResourceManager
-10118 DavGateway
-20135 Main
-11126 DavGateway
-20632 Jps
-20375 NameNode
-20479 DataNode
+20818 Jps
+20563 NameNode
+20666 DataNode
+20781 ResourceManager
+2741 DavGateway
+10912 Main
+11049 RemoteMavenServer
 starting nodemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-nodemanager-sandeep-Latitude-6430U.out
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-20234 RemoteMavenServer
-20595 ResourceManager
-20893 Jps
-10118 DavGateway
-20135 Main
-11126 DavGateway
-20375 NameNode
-20479 DataNode
-20675 NodeManager
+20563 NameNode
+20666 DataNode
+21075 Jps
+20781 ResourceManager
+2741 DavGateway
+20859 NodeManager
+10912 Main
+11049 RemoteMavenServer
 starting historyserver, logging to /home/sandeep/tools/hadoop/2.4.1/logs/mapred-sandeep-historyserver-sandeep-Latitude-6430U.out
-20234 RemoteMavenServer
-20595 ResourceManager
-10118 DavGateway
-20135 Main
-11126 DavGateway
-20943 JobHistoryServer
-20375 NameNode
-21071 Jps
-20479 DataNode
-20675 NodeManager
+20563 NameNode
+20666 DataNode
+21254 Jps
+20781 ResourceManager
+21121 JobHistoryServer
+2741 DavGateway
+20859 NodeManager
+10912 Main
+11049 RemoteMavenServer
 ###############
 # Web interface
 ###############
-ATTENTION: default value of option force_s3tc_enable overridden by environment.
 Created new window in existing browser session.
 ATTENTION: default value of option force_s3tc_enable overridden by environment.
 Created new window in existing browser session.
@@ -137,23 +133,23 @@ Created new window in existing browser session.
 ##############
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-14/09/07 12:05:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/09/08 16:00:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-14/09/07 12:06:01 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-14/09/07 12:06:01 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
-14/09/07 12:06:02 INFO input.FileInputFormat: Total input paths to process : 1
-14/09/07 12:06:02 INFO mapreduce.JobSubmitter: number of splits:1
-14/09/07 12:06:02 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1410105953028_0001
-14/09/07 12:06:03 INFO impl.YarnClientImpl: Submitted application application_1410105953028_0001
-14/09/07 12:06:03 INFO mapreduce.Job: The url to track the job: http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0001/
-14/09/07 12:06:03 INFO mapreduce.Job: Running job: job_1410105953028_0001
-14/09/07 12:06:10 INFO mapreduce.Job: Job job_1410105953028_0001 running in uber mode : false
-14/09/07 12:06:10 INFO mapreduce.Job:  map 0% reduce 0%
-14/09/07 12:06:15 INFO mapreduce.Job:  map 100% reduce 0%
-14/09/07 12:06:20 INFO mapreduce.Job:  map 100% reduce 100%
-14/09/07 12:06:21 INFO mapreduce.Job: Job job_1410105953028_0001 completed successfully
-14/09/07 12:06:21 INFO mapreduce.Job: Counters: 49
+14/09/08 16:00:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/09/08 16:00:37 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+14/09/08 16:00:37 INFO input.FileInputFormat: Total input paths to process : 1
+14/09/08 16:00:37 INFO mapreduce.JobSubmitter: number of splits:1
+14/09/08 16:00:37 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1410206427789_0001
+14/09/08 16:00:38 INFO impl.YarnClientImpl: Submitted application application_1410206427789_0001
+14/09/08 16:00:38 INFO mapreduce.Job: The url to track the job: http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0001/
+14/09/08 16:00:38 INFO mapreduce.Job: Running job: job_1410206427789_0001
+14/09/08 16:00:44 INFO mapreduce.Job: Job job_1410206427789_0001 running in uber mode : false
+14/09/08 16:00:44 INFO mapreduce.Job:  map 0% reduce 0%
+14/09/08 16:00:49 INFO mapreduce.Job:  map 100% reduce 0%
+14/09/08 16:00:54 INFO mapreduce.Job:  map 100% reduce 100%
+14/09/08 16:00:55 INFO mapreduce.Job: Job job_1410206427789_0001 completed successfully
+14/09/08 16:00:55 INFO mapreduce.Job: Counters: 49
 	File System Counters
 		FILE: Number of bytes read=61
 		FILE: Number of bytes written=186345
@@ -169,14 +165,14 @@ It's highly recommended that you fix the library with 'execstack -c <libfile>', 
 		Launched map tasks=1
 		Launched reduce tasks=1
 		Data-local map tasks=1
-		Total time spent by all maps in occupied slots (ms)=2817
-		Total time spent by all reduces in occupied slots (ms)=3304
-		Total time spent by all map tasks (ms)=2817
-		Total time spent by all reduce tasks (ms)=3304
-		Total vcore-seconds taken by all map tasks=2817
-		Total vcore-seconds taken by all reduce tasks=3304
-		Total megabyte-seconds taken by all map tasks=2884608
-		Total megabyte-seconds taken by all reduce tasks=3383296
+		Total time spent by all maps in occupied slots (ms)=2491
+		Total time spent by all reduces in occupied slots (ms)=2831
+		Total time spent by all map tasks (ms)=2491
+		Total time spent by all reduce tasks (ms)=2831
+		Total vcore-seconds taken by all map tasks=2491
+		Total vcore-seconds taken by all reduce tasks=2831
+		Total megabyte-seconds taken by all map tasks=2550784
+		Total megabyte-seconds taken by all reduce tasks=2898944
 	Map-Reduce Framework
 		Map input records=2
 		Map output records=8
@@ -193,10 +189,10 @@ It's highly recommended that you fix the library with 'execstack -c <libfile>', 
 		Shuffled Maps =1
 		Failed Shuffles=0
 		Merged Map outputs=1
-		GC time elapsed (ms)=51
-		CPU time spent (ms)=1590
-		Physical memory (bytes) snapshot=448143360
-		Virtual memory (bytes) snapshot=1682513920
+		GC time elapsed (ms)=49
+		CPU time spent (ms)=1160
+		Physical memory (bytes) snapshot=425193472
+		Virtual memory (bytes) snapshot=1694416896
 		Total committed heap usage (bytes)=354942976
 	Shuffle Errors
 		BAD_ID=0
@@ -213,7 +209,7 @@ Word Count Output
 -----------------
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
-14/09/07 12:06:22 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/09/08 16:00:56 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 This	2
 another	1
 is	2
@@ -228,7 +224,7 @@ OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/ha
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
 drop table if exists page_view
 OK
-Time taken: 0.463 seconds
+Time taken: 0.458 seconds
 
 drop table if exists strange_string
 OK
@@ -240,7 +236,7 @@ Time taken: 0.01 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.009 seconds
+Time taken: 0.01 seconds
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
@@ -250,7 +246,7 @@ CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_u
      COMMENT 'This is the page view table'
      ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.833 seconds
+Time taken: 0.865 seconds
 
 
 LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/page_view.csv' OVERWRITE INTO TABLE page_view
@@ -261,14 +257,14 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/page_view
 Table default.page_view stats: [numFiles=1, numRows=0, totalSize=71, rawDataSize=0]
 OK
-Time taken: 0.654 seconds
+Time taken: 0.637 seconds
 
 
 show tables
 OK
 lkp_device
 page_view
-Time taken: 0.056 seconds, Fetched: 2 row(s)
+Time taken: 0.052 seconds, Fetched: 2 row(s)
 
 
 select count(*) from page_view
@@ -281,33 +277,33 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0002, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0002/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0002
+Starting Job = job_1410206427789_0002, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0002/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0002
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:06:44,886 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:06:50,270 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.0 sec
-2014-09-07 12:06:56,562 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.45 sec
-MapReduce Total cumulative CPU time: 2 seconds 450 msec
-Ended Job = job_1410105953028_0002
+2014-09-08 16:01:17,042 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:01:21,252 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.91 sec
+2014-09-08 16:01:26,479 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.2 sec
+MapReduce Total cumulative CPU time: 2 seconds 200 msec
+Ended Job = job_1410206427789_0002
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.45 sec   HDFS Read: 290 HDFS Write: 2 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 450 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.2 sec   HDFS Read: 290 HDFS Write: 2 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 200 msec
 OK
 1
-Time taken: 19.632 seconds, Fetched: 1 row(s)
+Time taken: 17.112 seconds, Fetched: 1 row(s)
 
 
 select * from page_view
 OK
 1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-Time taken: 0.064 seconds, Fetched: 1 row(s)
+Time taken: 0.058 seconds, Fetched: 1 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
 CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r') ROW FORMAT DELIMITED
 OK
-Time taken: 0.972 seconds
+Time taken: 0.846 seconds
 
 
 LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/strange_string.csv' OVERWRITE INTO TABLE strange_string
@@ -318,23 +314,23 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/strange_string
 Table default.strange_string stats: [numFiles=1, numRows=0, totalSize=42, rawDataSize=0]
 OK
-Time taken: 0.762 seconds
+Time taken: 0.671 seconds
 
 
 select explode(split(strange, "\\|")) as entry from strange_string
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1410105953028_0003, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0003/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0003
+Starting Job = job_1410206427789_0003, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0003/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0003
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2014-09-07 12:07:13,124 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:07:18,395 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
-MapReduce Total cumulative CPU time: 1 seconds 500 msec
-Ended Job = job_1410105953028_0003
+2014-09-08 16:01:40,998 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:01:46,252 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.46 sec
+MapReduce Total cumulative CPU time: 1 seconds 460 msec
+Ended Job = job_1410206427789_0003
 MapReduce Jobs Launched: 
-Job 0: Map: 1   Cumulative CPU: 1.5 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 500 msec
+Job 0: Map: 1   Cumulative CPU: 1.46 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 460 msec
 OK
 a:d:e
 z:y:q
@@ -343,23 +339,23 @@ z:y:q
 f:q:l
 m:j:p
 3:r:b
-Time taken: 13.573 seconds, Fetched: 7 row(s)
+Time taken: 12.5 seconds, Fetched: 7 row(s)
 
 
  SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]  FROM (select explode(split(strange, "\\|")) as entry from strange_string) as t1
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1410105953028_0004, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0004/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0004
+Starting Job = job_1410206427789_0004, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0004/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0004
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2014-09-07 12:07:30,301 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:07:35,463 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.52 sec
-MapReduce Total cumulative CPU time: 1 seconds 520 msec
-Ended Job = job_1410105953028_0004
+2014-09-08 16:01:58,077 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:02:03,335 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.42 sec
+MapReduce Total cumulative CPU time: 1 seconds 420 msec
+Ended Job = job_1410206427789_0004
 MapReduce Jobs Launched: 
-Job 0: Map: 1   Cumulative CPU: 1.52 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 520 msec
+Job 0: Map: 1   Cumulative CPU: 1.42 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 420 msec
 OK
 a	d	e
 z	y	q
@@ -368,23 +364,23 @@ z	y	q
 f	q	l
 m	j	p
 3	r	b
-Time taken: 17.006 seconds, Fetched: 7 row(s)
+Time taken: 17.004 seconds, Fetched: 7 row(s)
 
 
  SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2]  FROM strange_string LATERAL VIEW explode(split(strange, "\\|")) entryTable AS entry
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1410105953028_0005, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0005/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0005
+Starting Job = job_1410206427789_0005, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0005/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0005
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2014-09-07 12:07:47,282 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:07:52,455 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.53 sec
-MapReduce Total cumulative CPU time: 1 seconds 530 msec
-Ended Job = job_1410105953028_0005
+2014-09-08 16:02:15,017 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:02:19,176 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.5 sec
+MapReduce Total cumulative CPU time: 1 seconds 500 msec
+Ended Job = job_1410206427789_0005
 MapReduce Jobs Launched: 
-Job 0: Map: 1   Cumulative CPU: 1.53 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 530 msec
+Job 0: Map: 1   Cumulative CPU: 1.5 sec   HDFS Read: 271 HDFS Write: 42 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 500 msec
 OK
 a	d	e
 z	y	q
@@ -393,7 +389,7 @@ z	y	q
 f	q	l
 m	j	p
 3	r	b
-Time taken: 18.053 seconds, Fetched: 7 row(s)
+Time taken: 16.858 seconds, Fetched: 7 row(s)
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -451,9 +447,9 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 4.078s
-[INFO] Finished at: Sun Sep 07 12:07:59 EDT 2014
-[INFO] Final Memory: 33M/346M
+[INFO] Total time: 3.487s
+[INFO] Finished at: Mon Sep 08 16:02:25 EDT 2014
+[INFO] Final Memory: 27M/339M
 [INFO] ------------------------------------------------------------------------
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
@@ -461,7 +457,7 @@ OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/ha
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
 DROP FUNCTION IF EXISTS rowWithHeader
 OK
-Time taken: 0.745 seconds
+Time taken: 0.73 seconds
 ADD JAR ${env:PROJECT_HOME}/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
 Added /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar to class path
 Added resource: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
@@ -477,16 +473,16 @@ FROM strange_string LATERAL VIEW explode(rowWithHeader(split(strange, "\\|"), 0)
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1410105953028_0006, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0006/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0006
+Starting Job = job_1410206427789_0006, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0006/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0006
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2014-09-07 12:08:15,121 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:08:20,404 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.58 sec
-MapReduce Total cumulative CPU time: 1 seconds 580 msec
-Ended Job = job_1410105953028_0006
+2014-09-08 16:02:38,385 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:02:43,662 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.47 sec
+MapReduce Total cumulative CPU time: 1 seconds 470 msec
+Ended Job = job_1410206427789_0006
 MapReduce Jobs Launched: 
-Job 0: Map: 1   Cumulative CPU: 1.58 sec   HDFS Read: 271 HDFS Write: 96 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 580 msec
+Job 0: Map: 1   Cumulative CPU: 1.47 sec   HDFS Read: 271 HDFS Write: 96 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 470 msec
 OK
 NULL	NULL	NULL	NULL	NULL	NULL
 a	d	e	z	y	q
@@ -495,7 +491,7 @@ a	d	e	6	6	r
 NULL	NULL	NULL	NULL	NULL	NULL
 f	q	l	m	j	p
 f	q	l	3	r	b
-Time taken: 14.565 seconds, Fetched: 7 row(s)
+Time taken: 12.375 seconds, Fetched: 7 row(s)
 
 
 SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2], split(t1.entry, ":")[3],split(t1.entry, ":")[4], split(t1.entry, ":")[5]
@@ -504,23 +500,23 @@ where t1.entry is not null and t1.entry <> ''
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1410105953028_0007, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0007/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0007
+Starting Job = job_1410206427789_0007, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0007/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0007
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 0
-2014-09-07 12:08:31,569 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:08:36,791 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.72 sec
-MapReduce Total cumulative CPU time: 1 seconds 720 msec
-Ended Job = job_1410105953028_0007
+2014-09-08 16:02:55,497 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:02:59,733 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.49 sec
+MapReduce Total cumulative CPU time: 1 seconds 490 msec
+Ended Job = job_1410206427789_0007
 MapReduce Jobs Launched: 
-Job 0: Map: 1   Cumulative CPU: 1.72 sec   HDFS Read: 271 HDFS Write: 60 SUCCESS
-Total MapReduce CPU Time Spent: 1 seconds 720 msec
+Job 0: Map: 1   Cumulative CPU: 1.49 sec   HDFS Read: 271 HDFS Write: 60 SUCCESS
+Total MapReduce CPU Time Spent: 1 seconds 490 msec
 OK
 a	d	e	z	y	q
 a	d	e	1	s	p
 a	d	e	6	6	r
 f	q	l	m	j	p
 f	q	l	3	r	b
-Time taken: 16.246 seconds, Fetched: 5 row(s)
+Time taken: 15.986 seconds, Fetched: 5 row(s)
 
 
 INSERT OVERWRITE LOCAL DIRECTORY '${env:PROJECT_HOME}/output' row format delimited fields terminated by ','
@@ -536,21 +532,21 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0008, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0008/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0008
+Starting Job = job_1410206427789_0008, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0008/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0008
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:08:48,696 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:08:53,886 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.37 sec
-2014-09-07 12:09:00,184 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.74 sec
-MapReduce Total cumulative CPU time: 2 seconds 740 msec
-Ended Job = job_1410105953028_0008
+2014-09-08 16:03:11,537 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:03:16,778 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.23 sec
+2014-09-08 16:03:22,023 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.48 sec
+MapReduce Total cumulative CPU time: 2 seconds 480 msec
+Ended Job = job_1410206427789_0008
 Copying data to local directory /home/sandeep/projects/big_data/output
 Copying data to local directory /home/sandeep/projects/big_data/output
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.74 sec   HDFS Read: 271 HDFS Write: 84 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 740 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.48 sec   HDFS Read: 271 HDFS Write: 84 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 480 msec
 OK
-Time taken: 24.447 seconds
+Time taken: 23.424 seconds
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -592,7 +588,7 @@ Time taken: 24.447 seconds
  T E S T S
 -------------------------------------------------------
 Running me.tingri.hive.udaf.ConnectedComponentsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 sec
 
 Results :
 
@@ -609,9 +605,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 5.911s
-[INFO] Finished at: Sun Sep 07 12:09:09 EDT 2014
-[INFO] Final Memory: 48M/347M
+[INFO] Total time: 4.806s
+[INFO] Finished at: Mon Sep 08 16:03:30 EDT 2014
+[INFO] Final Memory: 39M/346M
 [INFO] ------------------------------------------------------------------------
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
@@ -619,7 +615,7 @@ OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/ha
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
 DROP FUNCTION IF EXISTS components
 OK
-Time taken: 0.76 seconds
+Time taken: 0.751 seconds
 ADD JAR ${env:PROJECT_HOME}/udaf/target/connected_components-0.1-jar-with-dependencies.jar
 Added /home/sandeep/projects/big_data/udaf/target/connected_components-0.1-jar-with-dependencies.jar to class path
 Added resource: /home/sandeep/projects/big_data/udaf/target/connected_components-0.1-jar-with-dependencies.jar
@@ -627,13 +623,13 @@ Added resource: /home/sandeep/projects/big_data/udaf/target/connected_components
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents'
 OK
-Time taken: 0.016 seconds
+Time taken: 0.02 seconds
 
 
 CREATE TABLE edges(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.421 seconds
+Time taken: 0.466 seconds
 
 
 LOAD DATA LOCAL INPATH '${env:PROJECT_HOME}/edges.csv' OVERWRITE INTO TABLE edges
@@ -644,7 +640,7 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/edges
 Table default.edges stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
 OK
-Time taken: 0.692 seconds
+Time taken: 0.689 seconds
 
 
 SELECT components(node1, node2) from edges
@@ -657,20 +653,20 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0009, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0009/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0009
+Starting Job = job_1410206427789_0009, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0009/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0009
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:09:22,791 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:09:28,052 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.94 sec
-2014-09-07 12:09:34,342 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.31 sec
-MapReduce Total cumulative CPU time: 2 seconds 310 msec
-Ended Job = job_1410105953028_0009
+2014-09-08 16:03:44,432 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:03:49,717 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.86 sec
+2014-09-08 16:03:54,982 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.13 sec
+MapReduce Total cumulative CPU time: 2 seconds 130 msec
+Ended Job = job_1410206427789_0009
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.31 sec   HDFS Read: 261 HDFS Write: 52 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 310 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.13 sec   HDFS Read: 261 HDFS Write: 172 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 130 msec
 OK
-{"N9":["N9","N4","N20"],"N7":["N7","N8"],"N1":["N1","N3","N5","N2","N6"],"N10":["N10","N11"]}
-Time taken: 18.242 seconds, Fetched: 1 row(s)
+{"N9":["N20","N4","N9"],"N5":["N1","N3","N5","N2","N6"],"N6":["N1","N3","N5","N2","N6"],"N7":["N7","N8"],"N8":["N7","N8"],"N1":["N1","N3","N5","N2","N6"],"N2":["N1","N3","N5","N2","N6"],"N3":["N1","N3","N5","N2","N6"],"N20":["N20","N4","N9"],"N4":["N20","N4","N9"],"N10":["N10","N11"],"N11":["N10","N11"]}
+Time taken: 18.239 seconds, Fetched: 1 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
@@ -680,7 +676,7 @@ create table india_pow_gen (REGION_ID STRING, MONTH STRING, REGION STRING,
   STATION STRING,INSTALLED_CAPACITY INT ,PROGRAM_GENERATION INT ,ACTUAL_GENERATION INT )
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.826 seconds
+Time taken: 0.835 seconds
 
 
 
@@ -693,7 +689,7 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/india_pow_gen
 Table default.india_pow_gen stats: [numFiles=1, numRows=0, totalSize=37408, rawDataSize=0]
 OK
-Time taken: 0.675 seconds
+Time taken: 0.659 seconds
 
 
 
@@ -709,14 +705,14 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0010, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0010/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0010
+Starting Job = job_1410206427789_0010, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0010/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0010
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:09:49,300 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:09:53,479 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.0 sec
-2014-09-07 12:09:59,783 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.29 sec
-MapReduce Total cumulative CPU time: 2 seconds 290 msec
-Ended Job = job_1410105953028_0010
+2014-09-08 16:04:08,905 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:04:14,195 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.03 sec
+2014-09-08 16:04:19,415 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.32 sec
+MapReduce Total cumulative CPU time: 2 seconds 320 msec
+Ended Job = job_1410206427789_0010
 Launching Job 2 out of 2
 Number of reduce tasks determined at compile time: 1
 In order to change the average load for a reducer (in bytes):
@@ -725,23 +721,23 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0011, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0011/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0011
+Starting Job = job_1410206427789_0011, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0011/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0011
 Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2014-09-07 12:10:11,634 Stage-2 map = 0%,  reduce = 0%
-2014-09-07 12:10:15,809 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 0.92 sec
-2014-09-07 12:10:21,021 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.27 sec
-MapReduce Total cumulative CPU time: 2 seconds 270 msec
-Ended Job = job_1410105953028_0011
+2014-09-08 16:04:31,198 Stage-2 map = 0%,  reduce = 0%
+2014-09-08 16:04:36,414 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 0.83 sec
+2014-09-08 16:04:41,640 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.07 sec
+MapReduce Total cumulative CPU time: 2 seconds 70 msec
+Ended Job = job_1410206427789_0011
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.29 sec   HDFS Read: 37630 HDFS Write: 993 SUCCESS
-Job 1: Map: 1  Reduce: 1   Cumulative CPU: 2.27 sec   HDFS Read: 1356 HDFS Write: 49 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 560 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.32 sec   HDFS Read: 37630 HDFS Write: 993 SUCCESS
+Job 1: Map: 1  Reduce: 1   Cumulative CPU: 2.07 sec   HDFS Read: 1356 HDFS Write: 49 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 390 msec
 OK
 UTTAR PRADESH	8155
 GUJARAT	7449
 MAHARASHTRA	6899
-Time taken: 39.415 seconds, Fetched: 3 row(s)
+Time taken: 39.464 seconds, Fetched: 3 row(s)
 
 
 select state, sum(actual_generation)/sum(program_generation) as ratio
@@ -756,14 +752,14 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0012, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0012/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0012
+Starting Job = job_1410206427789_0012, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0012/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0012
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:10:33,020 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:10:38,241 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.0 sec
-2014-09-07 12:10:44,536 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.6 sec
-MapReduce Total cumulative CPU time: 2 seconds 600 msec
-Ended Job = job_1410105953028_0012
+2014-09-08 16:04:52,521 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:04:57,747 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.93 sec
+2014-09-08 16:05:02,980 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.46 sec
+MapReduce Total cumulative CPU time: 2 seconds 460 msec
+Ended Job = job_1410206427789_0012
 Launching Job 2 out of 2
 Number of reduce tasks determined at compile time: 1
 In order to change the average load for a reducer (in bytes):
@@ -772,23 +768,23 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0013, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0013/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0013
+Starting Job = job_1410206427789_0013, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0013/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0013
 Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 1
-2014-09-07 12:10:56,259 Stage-2 map = 0%,  reduce = 0%
-2014-09-07 12:11:01,451 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 0.95 sec
-2014-09-07 12:11:07,780 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.25 sec
-MapReduce Total cumulative CPU time: 2 seconds 250 msec
-Ended Job = job_1410105953028_0013
+2014-09-08 16:05:14,625 Stage-2 map = 0%,  reduce = 0%
+2014-09-08 16:05:18,799 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 0.83 sec
+2014-09-08 16:05:24,030 Stage-2 map = 100%,  reduce = 100%, Cumulative CPU 2.07 sec
+MapReduce Total cumulative CPU time: 2 seconds 70 msec
+Ended Job = job_1410206427789_0013
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.6 sec   HDFS Read: 37630 HDFS Write: 1161 SUCCESS
-Job 1: Map: 1  Reduce: 1   Cumulative CPU: 2.25 sec   HDFS Read: 1524 HDFS Write: 90 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 850 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.46 sec   HDFS Read: 37630 HDFS Write: 1161 SUCCESS
+Job 1: Map: 1  Reduce: 1   Cumulative CPU: 2.07 sec   HDFS Read: 1524 HDFS Write: 90 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 530 msec
 OK
 ANDAMAN NICOBAR	1.7142857142857142
 KARNATAKA	1.0199947382267824
 GUJARAT	1.019572953736655
-Time taken: 46.726 seconds, Fetched: 3 row(s)
+Time taken: 42.332 seconds, Fetched: 3 row(s)
 
 
 select state, station, actual_generation, rank() over(partition by state order by actual_generation desc)
@@ -802,17 +798,17 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0014, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0014/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0014
+Starting Job = job_1410206427789_0014, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0014/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0014
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:11:19,561 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:11:24,828 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.96 sec
-2014-09-07 12:11:30,059 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.64 sec
-MapReduce Total cumulative CPU time: 2 seconds 640 msec
-Ended Job = job_1410105953028_0014
+2014-09-08 16:05:35,738 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:05:40,949 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.93 sec
+2014-09-08 16:05:46,196 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.62 sec
+MapReduce Total cumulative CPU time: 2 seconds 620 msec
+Ended Job = job_1410206427789_0014
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.64 sec   HDFS Read: 37630 HDFS Write: 13339 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 640 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 2.62 sec   HDFS Read: 37630 HDFS Write: 13339 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 620 msec
 OK
 ANDAMAN NICOBAR	AND. NICOBAR DG	12	1
 ANDHRA PRADESH	RAMAGUNDEM STPS	1688	1
@@ -1234,7 +1230,7 @@ WEST BENGAL	KASBA GT (Liq.)	0	18
 WEST BENGAL	HALDIA GT (Liq.)	0	18
 WEST BENGAL	TEESTA LOW DAM-III HPS	0	18
 WEST BENGAL	CHINAKURI TPS	0	18
-Time taken: 23.338 seconds, Fetched: 420 row(s)
+Time taken: 22.157 seconds, Fetched: 420 row(s)
 
 
 select t.* from (
@@ -1251,17 +1247,17 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1410105953028_0015, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410105953028_0015/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410105953028_0015
+Starting Job = job_1410206427789_0015, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1410206427789_0015/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1410206427789_0015
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2014-09-07 12:11:41,983 Stage-1 map = 0%,  reduce = 0%
-2014-09-07 12:11:47,199 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.98 sec
-2014-09-07 12:11:53,517 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.15 sec
-MapReduce Total cumulative CPU time: 3 seconds 150 msec
-Ended Job = job_1410105953028_0015
+2014-09-08 16:05:57,020 Stage-1 map = 0%,  reduce = 0%
+2014-09-08 16:06:02,209 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 0.93 sec
+2014-09-08 16:06:07,428 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.01 sec
+MapReduce Total cumulative CPU time: 3 seconds 10 msec
+Ended Job = job_1410206427789_0015
 MapReduce Jobs Launched: 
-Job 0: Map: 1  Reduce: 1   Cumulative CPU: 3.15 sec   HDFS Read: 37630 HDFS Write: 2423 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 150 msec
+Job 0: Map: 1  Reduce: 1   Cumulative CPU: 3.01 sec   HDFS Read: 37630 HDFS Write: 2423 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 10 msec
 OK
 ANDAMAN NICOBAR	AND. NICOBAR DG	12	1
 ANDHRA PRADESH	RAMAGUNDEM STPS	1688	1
@@ -1343,26 +1339,26 @@ UTTARAKHAND	CHIBRO (YAMUNA)  HPS	72	3
 WEST BENGAL	FARAKKA STPS	997	1
 WEST BENGAL	MEJIA TPS	960	2
 WEST BENGAL	BAKRESWAR TPS	643	3
-Time taken: 22.358 seconds, Fetched: 80 row(s)
+Time taken: 21.197 seconds, Fetched: 80 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 OpenJDK 64-Bit Server VM warning: You have loaded library /home/sandeep/tools/hadoop/2.4.1/lib/native/libhadoop.so.1.0.0 which might have disabled stack guard. The VM will try to fix the stack guard now.
 It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
 drop table if exists page_view
 OK
-Time taken: 1.621 seconds
+Time taken: 1.613 seconds
 
 drop table if exists strange_string
 OK
-Time taken: 0.083 seconds
+Time taken: 0.082 seconds
 
 drop table if exists india_pow_gen
 OK
-Time taken: 0.092 seconds
+Time taken: 0.094 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.1 seconds
+Time taken: 0.095 seconds
 ########################
 # Stop the processes
 ########################
