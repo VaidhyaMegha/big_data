@@ -1,0 +1,74 @@
+$ sudo ./run.sh -tez
+[sudo] password for sandeep:
+$ grep "Time taken" results-tez.log
+Time taken: 2.715 seconds
+Time taken: 0.06 seconds
+Time taken: 0.068 seconds
+Time taken: 0.06 seconds
+Time taken: 4.544 seconds
+Time taken: 3.506 seconds
+Time taken: 0.257 seconds, Fetched: 2 row(s)
+Time taken: 45.663 seconds, Fetched: 1 row(s)
+Time taken: 0.233 seconds, Fetched: 1 row(s)
+Time taken: 5.829 seconds
+Time taken: 3.479 seconds
+Time taken: 42.778 seconds, Fetched: 7 row(s)
+Time taken: 40.844 seconds, Fetched: 7 row(s)
+Time taken: 39.159 seconds, Fetched: 7 row(s)
+Time taken: 4.128 seconds
+Time taken: 0.095 seconds
+Time taken: 43.937 seconds, Fetched: 7 row(s)
+Time taken: 40.523 seconds, Fetched: 5 row(s)
+Time taken: 41.438 seconds
+Time taken: 4.23 seconds
+Time taken: 0.098 seconds
+Time taken: 2.145 seconds
+Time taken: 3.618 seconds
+Time taken: 45.244 seconds, Fetched: 1 row(s)
+Time taken: 4.743 seconds
+Time taken: 3.553 seconds
+Time taken: 82.586 seconds, Fetched: 3 row(s)
+Time taken: 81.854 seconds, Fetched: 3 row(s)
+Time taken: 44.37 seconds, Fetched: 420 row(s)
+Time taken: 46.552 seconds, Fetched: 80 row(s)
+Time taken: 8.999 seconds
+Time taken: 0.464 seconds
+Time taken: 0.539 seconds
+Time taken: 0.472 seconds
+$ sudo ./run.sh
+[sudo] password for sandeep:
+$ grep "Time taken" results.log
+Time taken: 2.772 seconds
+Time taken: 0.069 seconds
+Time taken: 0.071 seconds
+Time taken: 0.066 seconds
+Time taken: 5.282 seconds
+Time taken: 3.473 seconds
+Time taken: 0.254 seconds, Fetched: 2 row(s)
+Time taken: 72.042 seconds, Fetched: 1 row(s)
+Time taken: 0.215 seconds, Fetched: 1 row(s)
+Time taken: 4.526 seconds
+Time taken: 3.484 seconds
+Time taken: 49.643 seconds, Fetched: 7 row(s)
+Time taken: 47.221 seconds, Fetched: 7 row(s)
+Time taken: 50.514 seconds, Fetched: 7 row(s)
+Time taken: 4.187 seconds
+Time taken: 0.089 seconds
+Time taken: 53.769 seconds, Fetched: 7 row(s)
+Time taken: 50.308 seconds, Fetched: 5 row(s)
+Time taken: 68.859 seconds
+Time taken: 4.253 seconds
+Time taken: 0.093 seconds
+Time taken: 2.078 seconds
+Time taken: 3.343 seconds
+Time taken: 67.23 seconds, Fetched: 1 row(s)
+Time taken: 4.563 seconds
+Time taken: 3.548 seconds
+Time taken: 135.174 seconds, Fetched: 3 row(s)
+Time taken: 135.07 seconds, Fetched: 3 row(s)
+Time taken: 75.974 seconds, Fetched: 420 row(s)
+Time taken: 75.911 seconds, Fetched: 80 row(s)
+Time taken: 9.362 seconds
+Time taken: 0.459 seconds
+Time taken: 0.519 seconds
+Time taken: 0.462 seconds

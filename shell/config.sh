@@ -1,4 +1,18 @@
 #!/bin/bash
+
+cd $HADOOP_ROOT
+sudo chown -R $USER $HDP_VER
+
+# Create two directories to be used by namenode and datanode.
+rm -rf $NAME_NODE_DATA_DIR
+rm -rf $DATA_NODE_DATA_DIR
+
+mkdir -p $NAME_NODE_DATA_DIR
+mkdir -p $DATA_NODE_DATA_DIR
+
+# Set up config files
+cd $HADOOP_YARN_HOME
+
 # Add the following properties under configuration tag in the files mentioned below:
 #  $HADOOP_CONF_DIR/yarn-site.xml
 rm  $HADOOP_CONF_DIR/yarn-site.xml
@@ -45,16 +59,45 @@ echo "<?xml version=\"1.0\"?>
  </property>
 </configuration>" >>  $HADOOP_CONF_DIR/hdfs-site.xml
 
-#  $HADOOP_CONF_DIR/mapred-site.xml:
-rm  $HADOOP_CONF_DIR/mapred-site.xml
-touch  $HADOOP_CONF_DIR/mapred-site.xml
-echo "<?xml version=\"1.0\"?>
-<configuration>
-   <property>
-      <name>mapreduce.framework.name</name>
-      <value>yarn</value>
-   </property>
-</configuration>" >>  $HADOOP_CONF_DIR/mapred-site.xml
+
+if [ "$1" == "-tez" ]; then
+    #  $HADOOP_CONF_DIR/mapred-site.xml:
+    rm  $HADOOP_CONF_DIR/mapred-site.xml
+    touch  $HADOOP_CONF_DIR/mapred-site.xml
+    echo "<?xml version=\"1.0\"?>
+    <configuration>
+       <property>
+          <name>mapreduce.framework.name</name>
+          <value>yarn-tez</value>
+       </property>
+    </configuration>" >>  $HADOOP_CONF_DIR/mapred-site.xml
+
+    #  $HADOOP_CONF_DIR/tez-site.xml:
+    rm  $HADOOP_CONF_DIR/tez-site.xml
+    touch  $HADOOP_CONF_DIR/tez-site.xml
+    echo "<?xml version=\"1.0\"?>
+    <configuration>
+       <property>
+          <name>tez.lib.uris</name>
+          <value>\${fs.defaultFS}/apps/tez-0.5.0/tez-0.5.0.tar.gz</value>
+       </property>
+    </configuration>" >>  $HADOOP_CONF_DIR/tez-site.xml
+
+    # Enabling Tez as execution engine after checkign for a flag here
+    $HIVE_HOME/bin/hive -v -e "set hive.execution.engine=tez;"
+else
+    #  $HADOOP_CONF_DIR/mapred-site.xml:
+    rm  $HADOOP_CONF_DIR/mapred-site.xml
+    touch  $HADOOP_CONF_DIR/mapred-site.xml
+    echo "<?xml version=\"1.0\"?>
+    <configuration>
+       <property>
+          <name>mapreduce.framework.name</name>
+          <value>yarn</value>
+       </property>
+    </configuration>" >>  $HADOOP_CONF_DIR/mapred-site.xml
+fi
+
 
 # 5. Format namenode
 # This step is needed only for the first time. Doing it every time will result in loss of content on HDFS.
