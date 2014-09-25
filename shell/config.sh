@@ -60,7 +60,7 @@ echo "<?xml version=\"1.0\"?>
 </configuration>" >>  $HADOOP_CONF_DIR/hdfs-site.xml
 
 
-if [ "$1" == "-tez" ]; then
+if [ "$3" == "tez" ]; then
     #  $HADOOP_CONF_DIR/mapred-site.xml:
     rm  $HADOOP_CONF_DIR/mapred-site.xml
     touch  $HADOOP_CONF_DIR/mapred-site.xml

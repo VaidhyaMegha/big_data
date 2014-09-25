@@ -21,38 +21,74 @@ export SHELL_HOME=$PROJECT_HOME/shell
 # Setup Environment Variables
 source $SHELL_HOME/env.sh
 
-echo "###############"
-echo "Configure"
-echo "###############"
-# configure hadoop services and libraries
-source $SHELL_HOME/config.sh
+# Move to HADOOP home
+cd $HADOOP_HOME
 
-echo "###############"
-echo "# Start HDFS processes"
-echo "###############"
-source $SHELL_HOME/start.sh
+if [ "$1" == "tutorial" ]; then
+    echo "###############"
+    echo "Configure"
+    echo "###############"
+    # configure hadoop services and libraries
+    source $SHELL_HOME/config.sh
 
-echo "###############"
-echo "# Setup Tez"
-echo "###############"
-source $SHELL_HOME/tez.sh
+    echo "###############"
+    echo "# Start HDFS processes"
+    echo "###############"
+    source $SHELL_HOME/start.sh
 
-echo "###############"
-echo "# Web interface"
-echo "###############"
-source $SHELL_HOME/ui.sh
+    echo "###############"
+    echo "# Setup Tez"
+    echo "###############"
+    source $SHELL_HOME/tez.sh
 
-echo "##############"
-echo "# Map Reduce"
-echo "##############"
-source $SHELL_HOME/mr.sh
+    echo "###############"
+    echo "# Web interface"
+    echo "###############"
+    source $SHELL_HOME/ui.sh
 
-echo "#######"
-echo "# HIVE"
-echo "#######"
-source $SHELL_HOME/hive.sh
+    echo "##############"
+    echo "# Map Reduce"
+    echo "##############"
+    source $SHELL_HOME/mr.sh
 
-echo "########################"
-echo "# Stop the processes"
-echo "########################"
-source $SHELL_HOME/stop.sh
+    echo "#######"
+    echo "# HIVE"
+    echo "#######"
+    source $SHELL_HOME/hive.sh
+
+    echo "########################"
+    echo "# Stop the processes"
+    echo "########################"
+    source $SHELL_HOME/stop.sh
+else
+    if [ "$1" == "server" ]; then
+        if [ "$2" == "start" ]; then
+            echo "###############"
+            echo "Configure"
+            echo "###############"
+            # configure hadoop services and libraries
+            source $SHELL_HOME/config.sh
+
+            echo "###############"
+            echo "# Start HDFS processes"
+            echo "###############"
+            source $SHELL_HOME/start.sh
+
+            if [ "$3" == "tez" ]; then
+                echo "###############"
+                echo "# Setup Tez"
+                echo "###############"
+                source $SHELL_HOME/tez.sh
+            fi
+        else
+            echo "########################"
+            echo "# Stop the processes"
+            echo "########################"
+            source $SHELL_HOME/stop.sh
+        fi
+    else
+        if [ "$1" == "client" ]; then
+            $HIVE_HOME/bin/hive -v
+        fi
+    fi
+fi
