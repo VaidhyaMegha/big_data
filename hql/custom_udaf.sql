@@ -1,5 +1,3 @@
-DROP FUNCTION IF EXISTS components;
-
 ADD JAR ${env:PROJECT_HOME}/udaf/target/connected_components-0.1-jar-with-dependencies.jar;
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents';

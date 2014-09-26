@@ -20,6 +20,5 @@ cd $HADOOP_YARN_HOME
 $HIVE_HOME/bin/hive -v -f $HQL_HOME/custom_udaf.sql
 # Analytics
 $HIVE_HOME/bin/hive -v -f $HQL_HOME/analytics.sql
-# Teardown
-$HIVE_HOME/bin/hive -v -f $HQL_HOME/cleanup.sql
+
 

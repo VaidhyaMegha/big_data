@@ -1,5 +1,3 @@
-DROP FUNCTION IF EXISTS rowWithHeader;
-
 ADD JAR ${env:PROJECT_HOME}/udf/target/tingri_hive-0.1-jar-with-dependencies.jar;
 
 create temporary function rowWithHeader as 'me.tingri.hive.udf.TransformRowWithHeader';

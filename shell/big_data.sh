@@ -88,6 +88,11 @@ else
         fi
     else
         if [ "$1" == "client" ]; then
+            echo "#######"
+            echo "# HIVE"
+            echo "#######"
+            source $SHELL_HOME/hive.sh
+
             $HIVE_HOME/bin/hive -v
         fi
     fi
