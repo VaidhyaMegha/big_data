@@ -5,6 +5,8 @@ References
 * Setup - http://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/ClusterSetup.html
 * Subqueries - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+SubQueries
 * Hive CLI - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+Cli
+* Hive Serde - https://cwiki.apache.org/confluence/display/Hive/GettingStarted#GettingStarted-ApacheWeblogData
+* Hive Compressed Storage - https://cwiki.apache.org/confluence/display/Hive/CompressedStorage
 * Hadoop Shell commands - http://hadoop.apache.org/docs/r2.4.1/hadoop-project-dist/hadoop-common/FileSystemShell.html#rm
 * Hadoop native library - http://stackoverflow.com/a/20242755/294552
 * Array Operations - http://stackoverflow.com/questions/8039751/hadoop-hive-query-to-split-one-column-into-several-ones

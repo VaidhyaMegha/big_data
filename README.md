@@ -20,6 +20,7 @@ Hive features
 -------------
 * DDL - Create, show, drop, alter
 * Ingestion - Load, CTAS, Insert into Select 
+* Serdes - Regular Expression ex: Apache log
 * Select - count(*), distinct, nested select, filters
 * Functions - UDF, UDTF, Custom UDF, Custom UDAF
 * Aggregation functions - count, sum
