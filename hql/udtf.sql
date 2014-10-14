@@ -1,6 +1,6 @@
 CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r') ROW FORMAT DELIMITED;
 
-LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/strange_string.csv' OVERWRITE INTO TABLE strange_string;
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/strange_string.csv' OVERWRITE INTO TABLE strange_string;
 
 select explode(split(strange, "\\|")) as entry from strange_string;
 -- a:d:e

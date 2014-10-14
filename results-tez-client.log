@@ -8,32 +8,32 @@ Setup
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 drop table if exists page_view
 OK
-Time taken: 3.82 seconds
+Time taken: 2.661 seconds
 
 drop table if exists apachelog
 OK
-Time taken: 6.182 seconds
+Time taken: 0.049 seconds
 
 drop table if exists strange_string
 OK
-Time taken: 0.05 seconds
+Time taken: 0.051 seconds
 
 drop table if exists india_pow_gen
 OK
-Time taken: 0.05 seconds
+Time taken: 0.059 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.05 seconds
+Time taken: 0.051 seconds
 
 
 DROP FUNCTION IF EXISTS rowWithHeader
 OK
-Time taken: 1.861 seconds
+Time taken: 2.054 seconds
 
 DROP FUNCTION IF EXISTS components
 OK
-Time taken: 0.032 seconds
+Time taken: 0.038 seconds
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_url STRING,
@@ -41,18 +41,18 @@ CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_u
      COMMENT 'This is the page view table'
      ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 4.226 seconds
+Time taken: 4.445 seconds
 
 
-LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/page_view.csv' OVERWRITE INTO TABLE page_view
-Copying data from file:/home/sandeep/tools/hadoop/2.4.1/input/page_view.csv
-Copying file: file:/home/sandeep/tools/hadoop/2.4.1/input/page_view.csv
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/page_view.csv' OVERWRITE INTO TABLE page_view
+Copying data from file:/home/sandeep/projects/big_data/datasets/page_view.csv
+Copying file: file:/home/sandeep/projects/big_data/datasets/page_view.csv
 Loading data to table default.page_view
 rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/page_view
-Table default.page_view stats: [numFiles=1, numRows=0, totalSize=2130, rawDataSize=0]
+Table default.page_view stats: [numFiles=1, numRows=0, totalSize=71, rawDataSize=0]
 OK
-Time taken: 3.378 seconds
+Time taken: 3.385 seconds
 
 
 show tables
@@ -63,7 +63,7 @@ et_blue_kai
 et_blue_kai_unc
 lkp_device
 page_view
-Time taken: 0.317 seconds, Fetched: 6 row(s)
+Time taken: 0.25 seconds, Fetched: 6 row(s)
 
 
 select count(*) from page_view
@@ -76,54 +76,25 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0001, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0001/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0001
+Starting Job = job_1413317421190_0001, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0001/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0001
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:23:49,950 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:24:07,446 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:24:10,857 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0001
+2014-10-14 16:14:42,779 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:15:02,196 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:15:05,573 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0001
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
 OK
-30
-Time taken: 51.259 seconds, Fetched: 1 row(s)
+1
+Time taken: 52.434 seconds, Fetched: 1 row(s)
 
 
 select * from page_view
 OK
 1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-1321314314	4	http://www.page.com	http://www.referrer.com	10.200.13.110
-Time taken: 0.205 seconds, Fetched: 30 row(s)
+Time taken: 0.208 seconds, Fetched: 1 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 CREATE TABLE apachelog (
@@ -143,25 +114,25 @@ WITH SERDEPROPERTIES (
 )
   STORED AS TEXTFILE
 OK
-Time taken: 4.363 seconds
+Time taken: 4.86 seconds
  -- TEXTFILE is the default storage format.
 
 LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/tingri' OVERWRITE INTO TABLE apachelog
-Copying data from file:/home/sandeep/datasets/tingri
-Copying file: file:/home/sandeep/datasets/tingri/access.log.5.gz
-Copying file: file:/home/sandeep/datasets/tingri/access.log.2.gz
-Copying file: file:/home/sandeep/datasets/tingri/access.log.1.gz
-Copying file: file:/home/sandeep/datasets/tingri/access.log.gz
-Copying file: file:/home/sandeep/datasets/tingri/nohup.out
-Copying file: file:/home/sandeep/datasets/tingri/access.log.3.gz
-Copying file: file:/home/sandeep/datasets/tingri/access.log.6.gz
-Copying file: file:/home/sandeep/datasets/tingri/access.log.4.gz
+Copying data from file:/home/sandeep/projects/big_data/datasets/tingri
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.5.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.2.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.1.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/nohup.out
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.3.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.6.gz
+Copying file: file:/home/sandeep/projects/big_data/datasets/tingri/access.log.4.gz
 Loading data to table default.apachelog
 rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/apachelog
 Table default.apachelog stats: [numFiles=8, numRows=0, totalSize=634187, rawDataSize=0]
 OK
-Time taken: 3.826 seconds
+Time taken: 3.899 seconds
 
 
 select distinct host from apachelog
@@ -174,18 +145,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0002, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0002/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0002
+Starting Job = job_1413317421190_0002, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0002/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0002
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:25:10,352 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:26:11,396 Stage-1 map = 13%,  reduce = 0%
-2014-10-14 15:26:12,738 Stage-1 map = 38%,  reduce = 0%
-2014-10-14 15:26:14,181 Stage-1 map = 50%,  reduce = 0%
-2014-10-14 15:26:15,453 Stage-1 map = 75%,  reduce = 0%
-2014-10-14 15:26:16,627 Stage-1 map = 88%,  reduce = 0%
-2014-10-14 15:26:17,786 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:26:18,845 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0002
+2014-10-14 16:16:04,751 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:16:57,948 Stage-1 map = 75%,  reduce = 0%
+2014-10-14 16:16:59,062 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0002
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -1362,7 +1328,7 @@ NULL
 98.148.47.14
 98.229.80.119
 ::1
-Time taken: 88.824 seconds, Fetched: 1172 row(s)
+Time taken: 74.376 seconds, Fetched: 1172 row(s)
 
 select distinct status from apachelog
 Total jobs = 1
@@ -1374,17 +1340,14 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0003, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0003/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0003
+Starting Job = job_1413317421190_0003, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0003/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0003
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:26:37,322 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:27:38,305 Stage-1 map = 13%,  reduce = 0%
-2014-10-14 15:27:39,644 Stage-1 map = 38%,  reduce = 0%
-2014-10-14 15:27:40,881 Stage-1 map = 63%,  reduce = 0%
-2014-10-14 15:27:42,118 Stage-1 map = 75%,  reduce = 0%
-2014-10-14 15:27:43,212 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:27:45,491 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0003
+2014-10-14 16:17:14,022 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:17:29,717 Stage-1 map = 75%,  reduce = 0%
+2014-10-14 16:17:30,817 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:17:31,911 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0003
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -1406,7 +1369,7 @@ NULL
 422
 500
 503
-Time taken: 86.569 seconds, Fetched: 17 row(s)
+Time taken: 32.395 seconds, Fetched: 17 row(s)
 
 select distinct agent from apachelog
 Total jobs = 1
@@ -1418,16 +1381,14 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0004, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0004/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0004
+Starting Job = job_1413317421190_0004, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0004/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0004
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:28:03,471 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:29:00,805 Stage-1 map = 13%,  reduce = 0%
-2014-10-14 15:29:02,210 Stage-1 map = 25%,  reduce = 0%
-2014-10-14 15:29:03,568 Stage-1 map = 63%,  reduce = 0%
-2014-10-14 15:29:06,100 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:29:08,422 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0004
+2014-10-14 16:17:50,052 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:18:27,625 Stage-1 map = 38%,  reduce = 0%
+2014-10-14 16:18:28,670 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:18:30,869 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0004
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -1654,7 +1615,7 @@ NULL
 "python-requests/2.4.1 CPython/2.7.2 Windows/2003Server"
 "rogerbot/1.0 (http://moz.com/help/pro/what-is-rogerbot-, rogerbot-wherecat@moz.com)"
 "shellshock-scan (http://blog.erratasec.com/2014/09/bash-shellshock-scan-of-internet.html)"
-Time taken: 82.857 seconds, Fetched: 222 row(s)
+Time taken: 58.853 seconds, Fetched: 222 row(s)
 
 select distinct referer from apachelog
 Total jobs = 1
@@ -1666,15 +1627,17 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0005, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0005/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0005
+Starting Job = job_1413317421190_0005, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0005/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0005
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:29:27,205 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:30:26,494 Stage-1 map = 25%,  reduce = 0%
-2014-10-14 15:30:29,124 Stage-1 map = 63%,  reduce = 0%
-2014-10-14 15:30:31,449 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:30:33,744 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0005
+2014-10-14 16:18:50,202 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:19:51,262 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:20:01,195 Stage-1 map = 25%,  reduce = 0%
+2014-10-14 16:20:02,474 Stage-1 map = 63%,  reduce = 0%
+2014-10-14 16:20:05,107 Stage-1 map = 75%,  reduce = 0%
+2014-10-14 16:20:06,219 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:20:08,591 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0005
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -1981,7 +1944,7 @@ NULL
 "https://www.google.al/"
 "https://www.google.co.in/"
 "https://www.google.com/"
-Time taken: 85.226 seconds, Fetched: 302 row(s)
+Time taken: 97.593 seconds, Fetched: 302 row(s)
 
 select distinct user from apachelog
 Total jobs = 1
@@ -1993,51 +1956,49 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0006, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0006/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0006
+Starting Job = job_1413317421190_0006, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0006/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0006
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:30:51,736 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:31:50,738 Stage-1 map = 38%,  reduce = 0%
-2014-10-14 15:31:51,940 Stage-1 map = 63%,  reduce = 0%
-2014-10-14 15:31:53,242 Stage-1 map = 75%,  reduce = 0%
-2014-10-14 15:31:54,495 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:31:56,702 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0006
+2014-10-14 16:20:27,771 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:20:49,716 Stage-1 map = 25%,  reduce = 0%
+2014-10-14 16:20:50,755 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:20:51,833 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0006
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
 OK
 NULL
 -
-Time taken: 82.815 seconds, Fetched: 2 row(s)
+Time taken: 43.073 seconds, Fetched: 2 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 CREATE TABLE strange_string(strange STRING COMMENT 'a:d:e|z:y:q|1:s:p|6:6:r') ROW FORMAT DELIMITED
 OK
-Time taken: 4.13 seconds
+Time taken: 4.425 seconds
 
 
-LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/strange_string.csv' OVERWRITE INTO TABLE strange_string
-Copying data from file:/home/sandeep/tools/hadoop/2.4.1/input/strange_string.csv
-Copying file: file:/home/sandeep/tools/hadoop/2.4.1/input/strange_string.csv
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/strange_string.csv' OVERWRITE INTO TABLE strange_string
+Copying data from file:/home/sandeep/projects/big_data/datasets/strange_string.csv
+Copying file: file:/home/sandeep/projects/big_data/datasets/strange_string.csv
 Loading data to table default.strange_string
 rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/strange_string
-Table default.strange_string stats: [numFiles=1, numRows=0, totalSize=1260, rawDataSize=0]
+Table default.strange_string stats: [numFiles=1, numRows=0, totalSize=42, rawDataSize=0]
 OK
-Time taken: 3.149 seconds
+Time taken: 3.144 seconds
 
 
 select explode(split(strange, "\\|")) as entry from strange_string
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1413314232210_0007, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0007/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0007
+Starting Job = job_1413317421190_0007, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0007/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0007
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:32:55,787 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:33:14,569 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1413314232210_0007
+2014-10-14 16:21:43,663 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:22:02,164 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_1413317421190_0007
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -2049,222 +2010,19 @@ z:y:q
 f:q:l
 m:j:p
 3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-a:d:e
-z:y:q
-1:s:p
-6:6:r
-f:q:l
-m:j:p
-3:r:b
-Time taken: 39.665 seconds, Fetched: 210 row(s)
+Time taken: 39.868 seconds, Fetched: 7 row(s)
 
 
  SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2]  FROM (select explode(split(strange, "\\|")) as entry from strange_string) as t1
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1413314232210_0008, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0008/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0008
+Starting Job = job_1413317421190_0008, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0008/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0008
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:33:32,819 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:33:51,687 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1413314232210_0008
+2014-10-14 16:22:20,443 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:22:38,872 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_1413317421190_0008
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -2276,222 +2034,19 @@ z	y	q
 f	q	l
 m	j	p
 3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-Time taken: 36.938 seconds, Fetched: 210 row(s)
+Time taken: 36.567 seconds, Fetched: 7 row(s)
 
 
  SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2]  FROM strange_string LATERAL VIEW explode(split(strange, "\\|")) entryTable AS entry
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1413314232210_0009, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0009/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0009
+Starting Job = job_1413317421190_0009, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0009/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0009
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:34:09,595 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:34:28,145 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1413314232210_0009
+2014-10-14 16:22:56,591 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:23:14,996 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_1413317421190_0009
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -2503,210 +2058,7 @@ z	y	q
 f	q	l
 m	j	p
 3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-a	d	e
-z	y	q
-1	s	p
-6	6	r
-f	q	l
-m	j	p
-3	r	b
-Time taken: 36.342 seconds, Fetched: 210 row(s)
+Time taken: 36.056 seconds, Fetched: 7 row(s)
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -2764,9 +2116,9 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 19.672s
-[INFO] Finished at: Tue Oct 14 15:34:53 EDT 2014
-[INFO] Final Memory: 28M/341M
+[INFO] Total time: 18.568s
+[INFO] Finished at: Tue Oct 14 16:23:39 EDT 2014
+[INFO] Final Memory: 27M/216M
 [INFO] ------------------------------------------------------------------------
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
@@ -2777,7 +2129,7 @@ Added resource: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-w
 
 create temporary function rowWithHeader as 'me.tingri.hive.udf.TransformRowWithHeader'
 OK
-Time taken: 3.87 seconds
+Time taken: 3.327 seconds
 
 
 SELECT split(entry, ":")[0],split(entry, ":")[1], split(entry, ":")[2],split(entry, ":")[3],split(entry, ":")[4], split(entry, ":")[5]
@@ -2785,12 +2137,12 @@ FROM strange_string LATERAL VIEW explode(rowWithHeader(split(strange, "\\|"), 0)
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1413314232210_0010, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0010/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0010
+Starting Job = job_1413317421190_0010, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0010/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0010
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:35:47,667 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:36:08,330 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1413314232210_0010
+2014-10-14 16:24:36,064 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:24:55,891 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_1413317421190_0010
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -2802,210 +2154,7 @@ a	d	e	6	6	r
 NULL	NULL	NULL	NULL	NULL	NULL
 f	q	l	m	j	p
 f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-NULL	NULL	NULL	NULL	NULL	NULL
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-NULL	NULL	NULL	NULL	NULL	NULL
-f	q	l	m	j	p
-f	q	l	3	r	b
-Time taken: 39.03 seconds, Fetched: 210 row(s)
+Time taken: 41.728 seconds, Fetched: 7 row(s)
 
 
 SELECT split(t1.entry, ":")[0],split(t1.entry, ":")[1], split(t1.entry, ":")[2], split(t1.entry, ":")[3],split(t1.entry, ":")[4], split(t1.entry, ":")[5]
@@ -3014,12 +2163,12 @@ where t1.entry is not null and t1.entry <> ''
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1413314232210_0011, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0011/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0011
+Starting Job = job_1413317421190_0011, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0011/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0011
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:36:27,429 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:36:45,812 Stage-1 map = 100%,  reduce = 0%
-Ended Job = job_1413314232210_0011
+2014-10-14 16:25:13,775 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:25:32,332 Stage-1 map = 100%,  reduce = 0%
+Ended Job = job_1413317421190_0011
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -3029,152 +2178,7 @@ a	d	e	1	s	p
 a	d	e	6	6	r
 f	q	l	m	j	p
 f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-a	d	e	z	y	q
-a	d	e	1	s	p
-a	d	e	6	6	r
-f	q	l	m	j	p
-f	q	l	3	r	b
-Time taken: 37.224 seconds, Fetched: 150 row(s)
+Time taken: 36.279 seconds, Fetched: 5 row(s)
 
 
 INSERT OVERWRITE LOCAL DIRECTORY '${env:PROJECT_HOME}/output' row format delimited fields terminated by ','
@@ -3190,20 +2194,20 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0012, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0012/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0012
+Starting Job = job_1413317421190_0012, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0012/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0012
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:37:04,477 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:37:22,836 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:37:25,048 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0012
+2014-10-14 16:25:50,576 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:26:08,879 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:26:11,079 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0012
 Copying data to local directory /home/sandeep/projects/big_data/output
 Copying data to local directory /home/sandeep/projects/big_data/output
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
 OK
-Time taken: 39.186 seconds
+Time taken: 38.761 seconds
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -3245,7 +2249,7 @@ Time taken: 39.186 seconds
  T E S T S
 -------------------------------------------------------
 Running me.tingri.hive.udaf.ConnectedComponentsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.309 sec
 
 Results :
 
@@ -3262,8 +2266,8 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 14.212s
-[INFO] Finished at: Tue Oct 14 15:37:45 EDT 2014
+[INFO] Total time: 22.957s
+[INFO] Finished at: Tue Oct 14 16:26:39 EDT 2014
 [INFO] Final Memory: 39M/291M
 [INFO] ------------------------------------------------------------------------
 
@@ -3275,24 +2279,24 @@ Added resource: /home/sandeep/projects/big_data/udaf/target/connected_components
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents'
 OK
-Time taken: 0.924 seconds
+Time taken: 3.274 seconds
 
 
 CREATE TABLE edges(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 1.175 seconds
+Time taken: 2.162 seconds
 
 
-LOAD DATA LOCAL INPATH '${env:PROJECT_HOME}/edges.csv' OVERWRITE INTO TABLE edges
-Copying data from file:/home/sandeep/projects/big_data/edges.csv
-Copying file: file:/home/sandeep/projects/big_data/edges.csv
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE edges
+Copying data from file:/home/sandeep/projects/big_data/datasets/edges.csv
+Copying file: file:/home/sandeep/projects/big_data/datasets/edges.csv
 Loading data to table default.edges
 rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/edges
 Table default.edges stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
 OK
-Time taken: 1.384 seconds
+Time taken: 3.337 seconds
 
 
 SELECT components(node1, node2) from edges
@@ -3305,19 +2309,19 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0013, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0013/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0013
+Starting Job = job_1413317421190_0013, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0013/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0013
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:38:36,385 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:39:03,719 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:39:08,695 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0013
+2014-10-14 16:27:38,776 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:27:56,928 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:28:00,224 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0013
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
 OK
 {"N9":["N20","N4","N9"],"N5":["N1","N3","N5","N2","N6"],"N6":["N1","N3","N5","N2","N6"],"N7":["N7","N8"],"N8":["N7","N8"],"N1":["N1","N3","N5","N2","N6"],"N2":["N1","N3","N5","N2","N6"],"N3":["N1","N3","N5","N2","N6"],"N20":["N20","N4","N9"],"N4":["N20","N4","N9"],"N10":["N10","N11"],"N11":["N10","N11"]}
-Time taken: 52.45 seconds, Fetched: 1 row(s)
+Time taken: 40.315 seconds, Fetched: 1 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 create table india_pow_gen (REGION_ID STRING, MONTH STRING, REGION STRING,
@@ -3325,20 +2329,20 @@ create table india_pow_gen (REGION_ID STRING, MONTH STRING, REGION STRING,
   STATION STRING,INSTALLED_CAPACITY INT ,PROGRAM_GENERATION INT ,ACTUAL_GENERATION INT )
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 1.421 seconds
+Time taken: 4.275 seconds
 
 
 
 
-LOAD DATA LOCAL INPATH '${env:PROJECT_HOME}/datafile.csv' OVERWRITE INTO TABLE india_pow_gen
-Copying data from file:/home/sandeep/projects/big_data/datafile.csv
-Copying file: file:/home/sandeep/projects/big_data/datafile.csv
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/datafile.csv' OVERWRITE INTO TABLE india_pow_gen
+Copying data from file:/home/sandeep/projects/big_data/datasets/datafile.csv
+Copying file: file:/home/sandeep/projects/big_data/datasets/datafile.csv
 Loading data to table default.india_pow_gen
 rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/india_pow_gen
 Table default.india_pow_gen stats: [numFiles=1, numRows=0, totalSize=37408, rawDataSize=0]
 OK
-Time taken: 0.916 seconds
+Time taken: 3.288 seconds
 
 
 
@@ -3354,13 +2358,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0014, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0014/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0014
+Starting Job = job_1413317421190_0014, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0014/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0014
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:39:52,119 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:40:00,245 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:40:01,368 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0014
+2014-10-14 16:29:00,076 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:29:18,134 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:29:21,498 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0014
 Launching Job 2 out of 2
 Number of reduce tasks determined at compile time: 1
 In order to change the average load for a reducer (in bytes):
@@ -3369,13 +2373,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0015, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0015/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0015
+Starting Job = job_1413317421190_0015, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0015/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0015
 Hadoop job information for Stage-2: number of mappers: 0; number of reducers: 0
-2014-10-14 15:40:22,383 Stage-2 map = 0%,  reduce = 0%
-2014-10-14 15:40:46,017 Stage-2 map = 100%,  reduce = 0%
-2014-10-14 15:40:49,580 Stage-2 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0015
+2014-10-14 16:29:39,344 Stage-2 map = 0%,  reduce = 0%
+2014-10-14 16:29:56,793 Stage-2 map = 100%,  reduce = 0%
+2014-10-14 16:30:00,162 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0015
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Job 1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
@@ -3384,7 +2388,7 @@ OK
 UTTAR PRADESH	8155
 GUJARAT	7449
 MAHARASHTRA	6899
-Time taken: 63.576 seconds, Fetched: 3 row(s)
+Time taken: 81.88 seconds, Fetched: 3 row(s)
 
 
 select state, sum(actual_generation)/sum(program_generation) as ratio
@@ -3399,13 +2403,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0016, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0016/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0016
+Starting Job = job_1413317421190_0016, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0016/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0016
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:41:11,377 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:41:29,078 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:41:31,346 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0016
+2014-10-14 16:30:18,303 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:30:35,681 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:30:39,082 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0016
 Launching Job 2 out of 2
 Number of reduce tasks determined at compile time: 1
 In order to change the average load for a reducer (in bytes):
@@ -3414,13 +2418,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0017, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0017/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0017
+Starting Job = job_1413317421190_0017, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0017/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0017
 Hadoop job information for Stage-2: number of mappers: 0; number of reducers: 0
-2014-10-14 15:41:52,601 Stage-2 map = 0%,  reduce = 0%
-2014-10-14 15:42:12,583 Stage-2 map = 100%,  reduce = 0%
-2014-10-14 15:42:13,609 Stage-2 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0017
+2014-10-14 16:30:57,429 Stage-2 map = 0%,  reduce = 0%
+2014-10-14 16:31:15,174 Stage-2 map = 100%,  reduce = 0%
+2014-10-14 16:31:17,532 Stage-2 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0017
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Job 1:  HDFS Read: 0 HDFS Write: 0 SUCCESS
@@ -3429,7 +2433,7 @@ OK
 ANDAMAN NICOBAR	1.7142857142857142
 KARNATAKA	1.0199947382267824
 GUJARAT	1.019572953736655
-Time taken: 83.685 seconds, Fetched: 3 row(s)
+Time taken: 77.251 seconds, Fetched: 3 row(s)
 
 
 select state, station, actual_generation, rank() over(partition by state order by actual_generation desc)
@@ -3443,13 +2447,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0018, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0018/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0018
+Starting Job = job_1413317421190_0018, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0018/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0018
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:42:25,858 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:42:48,946 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:42:55,002 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0018
+2014-10-14 16:31:36,101 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:31:53,512 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:31:57,966 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0018
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -3874,7 +2878,7 @@ WEST BENGAL	KASBA GT (Liq.)	0	18
 WEST BENGAL	HALDIA GT (Liq.)	0	18
 WEST BENGAL	TEESTA LOW DAM-III HPS	0	18
 WEST BENGAL	CHINAKURI TPS	0	18
-Time taken: 41.438 seconds, Fetched: 420 row(s)
+Time taken: 40.364 seconds, Fetched: 420 row(s)
 
 
 select t.* from (
@@ -3891,13 +2895,13 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1413314232210_0019, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413314232210_0019/
-Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413314232210_0019
+Starting Job = job_1413317421190_0019, Tracking URL = http://sandeep-Latitude-6430U:8088/proxy/application_1413317421190_0019/
+Kill Command = /home/sandeep/tools/hadoop/2.4.1/bin/hadoop job  -kill job_1413317421190_0019
 Hadoop job information for Stage-1: number of mappers: 0; number of reducers: 0
-2014-10-14 15:43:07,545 Stage-1 map = 0%,  reduce = 0%
-2014-10-14 15:43:22,793 Stage-1 map = 100%,  reduce = 0%
-2014-10-14 15:43:28,531 Stage-1 map = 100%,  reduce = 100%
-Ended Job = job_1413314232210_0019
+2014-10-14 16:32:15,574 Stage-1 map = 0%,  reduce = 0%
+2014-10-14 16:32:33,388 Stage-1 map = 100%,  reduce = 0%
+2014-10-14 16:32:38,915 Stage-1 map = 100%,  reduce = 100%
+Ended Job = job_1413317421190_0019
 MapReduce Jobs Launched: 
 Job 0:  HDFS Read: 0 HDFS Write: 0 SUCCESS
 Total MapReduce CPU Time Spent: 0 msec
@@ -3982,7 +2986,7 @@ UTTARAKHAND	CHIBRO (YAMUNA)  HPS	72	3
 WEST BENGAL	FARAKKA STPS	997	1
 WEST BENGAL	MEJIA TPS	960	2
 WEST BENGAL	BAKRESWAR TPS	643	3
-Time taken: 33.188 seconds, Fetched: 80 row(s)
+Time taken: 40.761 seconds, Fetched: 80 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 hive> 

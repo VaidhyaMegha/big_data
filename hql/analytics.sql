@@ -11,7 +11,7 @@ create table india_pow_gen (REGION_ID STRING, MONTH STRING, REGION STRING,
 -- Note: The Program Generation and Actual Generation are in Giga Watt Hour (GWH).
 -- The Installed Capacity is in Mega Watts (MW).
 
-LOAD DATA LOCAL INPATH '${env:PROJECT_HOME}/datafile.csv' OVERWRITE INTO TABLE india_pow_gen;
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/datafile.csv' OVERWRITE INTO TABLE india_pow_gen;
 
 
 -- Top 3 states in actual_generation

@@ -3,7 +3,7 @@ CREATE TABLE page_view(viewTime INT, userid BIGINT,  page_url STRING, referrer_u
      COMMENT 'This is the page view table'
      ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
 
-LOAD DATA LOCAL INPATH '${env:HADOOP_HOME}/input/page_view.csv' OVERWRITE INTO TABLE page_view;
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/page_view.csv' OVERWRITE INTO TABLE page_view;
 
 show tables;
 

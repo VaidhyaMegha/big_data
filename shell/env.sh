@@ -1,7 +1,7 @@
 #!/bin/bash
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export MAVEN_HOME=/home/$USER/tools/maven
-export DATA_SETS_FOLDER=/home/$USER/datasets
+export DATA_SETS_FOLDER=$PROJECT_HOME/datasets
 
 export HDP_VER=2.4.1
 export HIVE_VER=0.13.1
