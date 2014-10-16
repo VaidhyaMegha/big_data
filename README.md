@@ -6,7 +6,7 @@ Big Data
     * rank within a group
     * top 3 within a group
     * All hive features and techniques
-    * Leverage Tez execution engine library( use -tez option to run.sh to set tez)
+    * Leverage Tez execution engine library (use -tez option to run.sh to set tez)
     * Data warehouse patterns (and possibly anti-patterns)
     
 Technology Stack
@@ -18,7 +18,7 @@ Technology Stack
 
 Hive features
 -------------
-* DDL - Create, show, drop, alter, CTAS, Insert into select, Insert overwrite
+* DDL - Create, show, drop, alter
 * Ingestion - Load, CTAS, Insert into Select 
 * Serde - Regular Expression ex: Apache log
 * Columnar - ORC and Vectorized execution.
