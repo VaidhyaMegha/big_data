@@ -91,6 +91,9 @@ else
             echo "#######"
             echo "# HIVE"
             echo "#######"
+            if [ "$3" == "tez" ]; then
+                $HIVE_HOME/bin/hive -v -e "set hive.execution.engine=tez;"
+            fi
             source $SHELL_HOME/hive.sh
 
             $HIVE_HOME/bin/hive -v

@@ -18,9 +18,10 @@ Technology Stack
 
 Hive features
 -------------
-* DDL - Create, show, drop, alter
+* DDL - Create, show, drop, alter, CTAS, Insert into select, Insert overwrite
 * Ingestion - Load, CTAS, Insert into Select 
-* Serdes - Regular Expression ex: Apache log
+* Serde - Regular Expression ex: Apache log
+* Columnar - ORC and Vectorized execution.
 * Select - count(*), distinct, nested select, filters
 * Functions - UDF, UDTF, Custom UDF, Custom UDAF
 * Aggregation functions - count, sum

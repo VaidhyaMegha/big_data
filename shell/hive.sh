@@ -19,6 +19,7 @@ cd $HADOOP_YARN_HOME
 $HIVE_HOME/bin/hive -v -f $HQL_HOME/custom_udaf.sql
 # Analytics
 $HIVE_HOME/bin/hive -v -f $HQL_HOME/analytics.sql
-
+# columnar
+$HIVE_HOME/bin/hive -v -f $HQL_HOME/columnar.sql
 
 

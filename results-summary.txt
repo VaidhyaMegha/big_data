@@ -1,3 +1,22 @@
+******************************************************
+* Text vs ORC
+******************************************************
+--- Text
+4242:Time taken: 86.628 seconds, Fetched: 1172 row(s)
+4286:Time taken: 85.178 seconds, Fetched: 17 row(s)
+4536:Time taken: 90.053 seconds, Fetched: 222 row(s)
+4863:Time taken: 82.835 seconds, Fetched: 302 row(s)
+4889:Time taken: 36.416 seconds, Fetched: 2 row(s)
+--- ORC with Vectorized Query Execution
+6122:Time taken: 40.656 seconds, Fetched: 1172 row(s)
+6162:Time taken: 32.84 seconds, Fetched: 17 row(s)
+6407:Time taken: 35.199 seconds, Fetched: 222 row(s)
+6732:Time taken: 28.532 seconds, Fetched: 302 row(s)
+6757:Time taken: 25.025 seconds, Fetched: 2 row(s)
+
+******************************************************
+* Tez vs Default MR
+******************************************************
 $ sudo ./run.sh -tez
 [sudo] password for sandeep:
 $ grep "Time taken" results-tez.log
