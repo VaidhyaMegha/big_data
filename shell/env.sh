@@ -20,7 +20,8 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
 export TEZ_CONF_DIR=$HADOOP_CONF_DIR
 export TEZ_JARS=$PROJECT_HOME/tez_binaries/tez_jars
-export HADOOP_CLASSPATH=${TEZ_CONF_DIR}:${TEZ_JARS}/*:${TEZ_JARS}/lib/*
+export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${TEZ_CONF_DIR}:${TEZ_JARS}/*:${TEZ_JARS}/lib/*
+export PATH=$JAVA_HOME/bin:$PATH
 
 export NAME_NODE_DATA_DIR=/home/$USER/tools/hadoop/data/hdfs/namenode
 export DATA_NODE_DATA_DIR=/home/$USER/tools/hadoop/data/hdfs/datanode
