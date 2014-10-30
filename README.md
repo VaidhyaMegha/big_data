@@ -14,7 +14,7 @@ Technology Stack
 * OS Version : Ubuntu utopic(14.10)
 * Hadoop Version : 2.4.1
 * Hive Version : 0.13.1
-* Tez Version : 0.5.0
+* Tez Version : 0.5.1
 
 Hive features
 -------------
