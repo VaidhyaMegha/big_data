@@ -1,107 +1,50 @@
 ###############
 Setup
 ###############
-###############
-Configure
-###############
-14/10/18 15:30:42 INFO namenode.NameNode: STARTUP_MSG: 
-/************************************************************
-STARTUP_MSG: Starting NameNode
-STARTUP_MSG:   host = sandeep-Latitude-6430U/127.0.1.1
-STARTUP_MSG:   args = [-format]
-STARTUP_MSG:   version = 2.4.1
-STARTUP_MSG:   classpath = /home/sandeep/tools/hadoop/2.4.1/etc/hadoop:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-configuration-1.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-api-1.7.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/xmlenc-0.52.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/httpcore-4.2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-el-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-net-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/stax-api-1.0-2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/hadoop-auth-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/httpclient-4.2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/junit-4.8.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/paranamer-2.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-jaxrs-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-xc-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-digester-1.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/avro-1.7.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/zookeeper-3.4.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsch-0.1.42.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-httpclient-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/hadoop-annotations-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jets3t-0.9.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jasper-runtime-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/mockito-all-1.8.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-math3-3.1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/activation-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jersey-json-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsp-api-2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-collections-3.2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jasper-compiler-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/jettison-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-common-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/hadoop-nfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-el-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jasper-runtime-5.5.23.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jsp-api-2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-nfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/hdfs/hadoop-hdfs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/aopalliance-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jetty-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/javax.inject-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jline-0.9.94.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-lang-2.6.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/servlet-api-2.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-jaxrs-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-cli-1.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-xc-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/zookeeper-3.4.5.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guava-11.0.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-httpclient-3.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guice-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/activation-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-json-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-codec-1.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jsr305-1.3.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-collections-3.2.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jersey-client-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/lib/jettison-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-api-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-client-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-tests-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-common-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/javax.inject-1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/xz-1.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/hamcrest-core-1.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/hadoop-annotations-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/guice-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/jackson-core-asl-1.8.8.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/junit-4.10.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/asm-3.2.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.4.1-tests.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.4.1.jar:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.4.1.jar:/usr/lib/jvm/java-7-openjdk-amd64/lib/tools.jar:/home/sandeep/tools/hadoop/2.4.1/etc/hadoop:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-common-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-tests-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-examples-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-dag-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-runtime-internals-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-api-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-runtime-library-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-mapreduce-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/tez-yarn-timeline-history-0.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/jsr305-2.0.3.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-lang-2.6.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/log4j-1.2.17.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/protobuf-java-2.5.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-cli-1.2.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/hadoop-annotations-2.4.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/guava-11.0.2.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-collections4-4.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-io-2.4.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/jettison-1.3.4.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/hadoop-mapreduce-client-common-2.4.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-math3-3.1.1.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/hadoop-mapreduce-client-core-2.4.0.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-codec-1.4.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-logging-1.1.3.jar:/home/sandeep/projects/big_data/tez_binaries/tez_jars/lib/commons-collections-3.2.1.jar:/home/sandeep/tools/hadoop/2.4.1/contrib/capacity-scheduler/*.jar
-STARTUP_MSG:   build = http://svn.apache.org/repos/asf/hadoop/common -r 1604318; compiled by 'jenkins' on 2014-06-21T05:43Z
-STARTUP_MSG:   java = 1.7.0_65
-************************************************************/
-14/10/18 15:30:42 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
-14/10/18 15:30:42 INFO namenode.NameNode: createNameNode [-format]
-14/10/18 15:30:43 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-Formatting using clusterid: CID-75336537-ce17-4153-8760-05495f7a2692
-14/10/18 15:30:43 INFO namenode.FSNamesystem: fsLock is fair:true
-14/10/18 15:30:43 INFO namenode.HostFileManager: read includes:
-HostSet(
-)
-14/10/18 15:30:43 INFO namenode.HostFileManager: read excludes:
-HostSet(
-)
-14/10/18 15:30:43 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
-14/10/18 15:30:43 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
-14/10/18 15:30:43 INFO util.GSet: Computing capacity for map BlocksMap
-14/10/18 15:30:43 INFO util.GSet: VM type       = 64-bit
-14/10/18 15:30:43 INFO util.GSet: 2.0% max memory 2.6 GB = 53.3 MB
-14/10/18 15:30:43 INFO util.GSet: capacity      = 2^23 = 8388608 entries
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: defaultReplication         = 1
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: maxReplication             = 512
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: minReplication             = 1
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
-14/10/18 15:30:43 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
-14/10/18 15:30:43 INFO namenode.FSNamesystem: fsOwner             = root (auth:SIMPLE)
-14/10/18 15:30:43 INFO namenode.FSNamesystem: supergroup          = supergroup
-14/10/18 15:30:43 INFO namenode.FSNamesystem: isPermissionEnabled = true
-14/10/18 15:30:43 INFO namenode.FSNamesystem: HA Enabled: false
-14/10/18 15:30:43 INFO namenode.FSNamesystem: Append Enabled: true
-14/10/18 15:30:43 INFO util.GSet: Computing capacity for map INodeMap
-14/10/18 15:30:43 INFO util.GSet: VM type       = 64-bit
-14/10/18 15:30:43 INFO util.GSet: 1.0% max memory 2.6 GB = 26.7 MB
-14/10/18 15:30:43 INFO util.GSet: capacity      = 2^22 = 4194304 entries
-14/10/18 15:30:43 INFO namenode.NameNode: Caching file names occuring more than 10 times
-14/10/18 15:30:43 INFO util.GSet: Computing capacity for map cachedBlocks
-14/10/18 15:30:43 INFO util.GSet: VM type       = 64-bit
-14/10/18 15:30:43 INFO util.GSet: 0.25% max memory 2.6 GB = 6.7 MB
-14/10/18 15:30:43 INFO util.GSet: capacity      = 2^20 = 1048576 entries
-14/10/18 15:30:43 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
-14/10/18 15:30:43 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
-14/10/18 15:30:43 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 30000
-14/10/18 15:30:43 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
-14/10/18 15:30:43 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
-14/10/18 15:30:43 INFO util.GSet: Computing capacity for map NameNodeRetryCache
-14/10/18 15:30:43 INFO util.GSet: VM type       = 64-bit
-14/10/18 15:30:43 INFO util.GSet: 0.029999999329447746% max memory 2.6 GB = 819.3 KB
-14/10/18 15:30:43 INFO util.GSet: capacity      = 2^17 = 131072 entries
-14/10/18 15:30:43 INFO namenode.AclConfigFlag: ACLs enabled? false
-14/10/18 15:30:44 INFO namenode.FSImage: Allocated new BlockPoolId: BP-1974614314-127.0.1.1-1413660643966
-14/10/18 15:30:44 INFO common.Storage: Storage directory /home/sandeep/tools/hadoop/data/hdfs/namenode has been successfully formatted.
-14/10/18 15:30:44 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
-14/10/18 15:30:44 INFO util.ExitUtil: Exiting with status 0
-14/10/18 15:30:44 INFO namenode.NameNode: SHUTDOWN_MSG: 
-/************************************************************
-SHUTDOWN_MSG: Shutting down NameNode at sandeep-Latitude-6430U/127.0.1.1
-************************************************************/
-###############
-# Start HDFS processes
-###############
-starting namenode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-namenode-sandeep-Latitude-6430U.out
-30937 Jps
-14611 DavGateway
-30898 NameNode
-starting datanode, logging to /home/sandeep/tools/hadoop/2.4.1/logs/hadoop-sandeep-datanode-sandeep-Latitude-6430U.out
-14611 DavGateway
-31012 Jps
-30972 DataNode
-30898 NameNode
-starting resourcemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-resourcemanager-sandeep-Latitude-6430U.out
-14611 DavGateway
-31061 ResourceManager
-30972 DataNode
-31102 Jps
-30898 NameNode
-starting nodemanager, logging to /home/sandeep/tools/hadoop/2.4.1/logs/yarn-sandeep-nodemanager-sandeep-Latitude-6430U.out
-31166 NodeManager
-14611 DavGateway
-31061 ResourceManager
-30972 DataNode
-31199 Jps
-30898 NameNode
-starting historyserver, logging to /home/sandeep/tools/hadoop/2.4.1/logs/mapred-sandeep-historyserver-sandeep-Latitude-6430U.out
-31166 NodeManager
-14611 DavGateway
-31061 ResourceManager
-30972 DataNode
-31309 Jps
-31263 JobHistoryServer
-30898 NameNode
+########################
+# Stop the processes
+########################
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+drop table if exists page_view
+OK
+Time taken: 1.745 seconds
+
+drop table if exists apachelog
+OK
+Time taken: 0.118 seconds
+
+drop table if exists apachelog_text
+OK
+Time taken: 0.105 seconds
+
+drop table if exists apachelog_orc
+OK
+Time taken: 0.098 seconds
+
+drop table if exists strange_string
+OK
+Time taken: 0.078 seconds
+
+drop table if exists india_pow_gen
+OK
+Time taken: 0.099 seconds
+
+drop table if exists edges
+OK
+Time taken: 0.074 seconds
+
+
+DROP FUNCTION IF EXISTS rowWithHeader
+OK
+Time taken: 0.297 seconds
+
+DROP FUNCTION IF EXISTS components
+OK
+Time taken: 0.005 seconds
+stopping namenode
+stopping datanode
+stopping resourcemanager
+stopping nodemanager
+nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+stopping historyserver

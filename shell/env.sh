@@ -18,12 +18,23 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
-export TEZ_CONF_DIR=$HADOOP_CONF_DIR
-export TEZ_JARS=$PROJECT_HOME/tez_binaries/tez_jars
-export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${TEZ_CONF_DIR}:${TEZ_JARS}/*:${TEZ_JARS}/lib/*
+export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar
 export PATH=$JAVA_HOME/bin:$PATH
 
 export NAME_NODE_DATA_DIR=/home/$USER/tools/hadoop/data/hdfs/namenode
 export DATA_NODE_DATA_DIR=/home/$USER/tools/hadoop/data/hdfs/datanode
 
 export HQL_HOME=$PROJECT_HOME/hql
+
+if [ "$3" == "tez" ]; then
+    export TEZ_INSTALL_DIR=$PROJECT_HOME/tez_binaries
+    export TEZ_JARS=$(echo "$TEZ_INSTALL_DIR"/*.jar | tr ' ' ':'):$(echo "$TEZ_INSTALL_DIR"/lib/*.jar | tr ' ' ':')
+
+    if [ -z "$HIVE_AUX_JARS_PATH" ]; then
+        export HIVE_AUX_JARS_PATH="$TEZ_JARS"
+    else
+        export HIVE_AUX_JARS_PATH="$HIVE_AUX_JARS_PATH:$TEZ_JARS"
+    fi
+    export TEZ_CONF_DIR=$HADOOP_CONF_DIR
+    export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${TEZ_JARS}
+fi
