@@ -1,0 +1,91 @@
+###############
+Setup
+###############
+###############
+# Setup and execute Giraph
+###############
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+14/12/03 18:52:47 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+14/12/03 18:52:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+14/12/03 18:52:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+HADOOP_CONF_DIR=/home/sandeep/tools/hadoop/2.4.1/etc/hadoop
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+14/12/03 18:52:53 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/12/03 18:52:53 INFO utils.ConfigurationUtils: No edge input format specified. Ensure your InputFormat does not require one.
+14/12/03 18:52:53 INFO utils.ConfigurationUtils: No edge output format specified. Ensure your OutputFormat does not require one.
+14/12/03 18:52:53 INFO utils.ConfigurationUtils: Setting cException in thread "main" java.io.IOException: org.apache.hadoop.yarn.exceptions.ApplicationNotFoundException: Application with id 'application_1417627552645_0001' doesn't exist in RM.
+	at org.apache.hadoop.yarn.server.resourcemanager.ClientRMService.getApplicationReport(ClientRMService.java:284)
+	at org.apache.hadoop.yarn.api.impl.pb.service.ApplicationClientProtocolPBServiceImpl.getApplicationReport(ApplicationClientProtocolPBServiceImpl.java:145)
+	at org.apache.hadoop.yarn.proto.ApplicationClientProtocol$ApplicationClientProtocolService$2.callBlockingMethod(ApplicationClientProtocol.java:321)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:585)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:928)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2013)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2009)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1556)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2007)
+
+	at org.apache.hadoop.mapred.ClientServiceDelegate.invoke(ClientServiceDelegate.java:348)
+	at org.apache.hadoop.mapred.ClientServiceDelegate.getJobStatus(ClientServiceDelegate.java:419)
+	at org.apache.hadoop.mapred.YARNRunner.getJobStatus(YARNRunner.java:532)
+	at org.apache.hadoop.mapreduce.Job$1.run(Job.java:314)
+	at org.apache.hadoop.mapreduce.Job$1.run(Job.java:311)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:415)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1556)
+	at org.apache.hadoop.mapreduce.Job.updateStatus(Job.java:311)
+	at org.apache.hadoop.mapreduce.Job.ensureFreshStatus(Job.java:301)
+	at org.apache.hadoop.mapreduce.Job.mapProgress(Job.java:547)
+	at org.apache.hadoop.mapreduce.Job.monitorAndPrintJob(Job.java:1357)
+	at org.apache.hadoop.mapreduce.Job.waitForCompletion(Job.java:1306)
+	at org.apache.giraph.job.GiraphJob.run(GiraphJob.java:269)
+	at org.apache.giraph.GiraphRunner.run(GiraphRunner.java:94)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:84)
+	at org.apache.giraph.GiraphRunner.main(GiraphRunner.java:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:212)
+DEPRECATED: Use of this script to execute hdfs command is deprecated.
+Instead use the hdfs command for it.
+
+14/12/04 18:42:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+cat: `/giraph/shortestpaths': No such file or directory
+nch.java:81)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+Container exited with a non-zero exit code 1
+.Failing this attempt.. Failing the application.
+14/12/03 18:53:12 INFO mapreduce.Job: Counters: 0
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+14/12/03 18:53:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+cat: `/giraph/shortestpaths': No such file or directory

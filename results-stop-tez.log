@@ -1,0 +1,49 @@
+###############
+Setup
+###############
+########################
+# Stop the processes
+########################
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+drop table if exists page_view
+OK
+Time taken: 0.491 seconds
+
+drop table if exists apachelog
+OK
+Time taken: 0.012 seconds
+
+drop table if exists apachelog_text
+OK
+Time taken: 0.013 seconds
+
+drop table if exists apachelog_orc
+OK
+Time taken: 0.014 seconds
+
+drop table if exists strange_string
+OK
+Time taken: 0.013 seconds
+
+drop table if exists india_pow_gen
+OK
+Time taken: 0.014 seconds
+
+drop table if exists edges
+OK
+Time taken: 0.013 seconds
+
+
+DROP FUNCTION IF EXISTS rowWithHeader
+OK
+Time taken: 0.445 seconds
+
+DROP FUNCTION IF EXISTS components
+OK
+Time taken: 0.006 seconds
+stopping namenode
+stopping datanode
+stopping resourcemanager
+stopping nodemanager
+stopping historyserver

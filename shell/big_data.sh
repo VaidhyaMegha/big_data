@@ -8,8 +8,11 @@
 #           from  https://archive.apache.org/dist/hive/hive-0.13.1/
 #           and extract contents to say /home/sandeep/tools/hive/0.13.1
 #       Install protobuf - http://www.confusedcoders.com/random/how-to-install-protocol-buffer-2-5-0-on-ubuntu-13-04
-#       Clone Tez https://github.com/apache/tez, checkout branch-0.5.1
+#       Clone Tez - https://github.com/apache/tez, checkout branch-0.5.1
 #           and install it - http://tez.apache.org/install.html
+#       Clone Giraph  - git clone http://git-wip-us.apache.org/repos/asf/giraph.git
+#           build it - http://giraph.apache.org/build.html
+#           deploy it - http://giraph.apache.org/quick_start.html#qs_section_4
 echo "###############"
 echo "Setup"
 echo "###############"
@@ -88,12 +91,19 @@ else
         fi
     else
         if [ "$1" == "client" ]; then
-            echo "#######"
-            echo "# HIVE"
-            echo "#######"
-            source $SHELL_HOME/hive.sh
+            if [ "$2" == "giraph" ]; then
+                echo "###############"
+                echo "# Setup and execute Giraph"
+                echo "###############"
+                source $SHELL_HOME/giraph.sh
+            else
+                echo "#######"
+                echo "# HIVE"
+                echo "#######"
+                source $SHELL_HOME/hive.sh
 
-            $HIVE_HOME/bin/hive -v
+                $HIVE_HOME/bin/hive -v
+            fi
         fi
     fi
 fi

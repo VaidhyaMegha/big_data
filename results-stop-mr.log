@@ -1,0 +1,31 @@
+###############
+Setup
+###############
+########################
+# Stop the processes
+########################
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.input.dir.recursive is deprecated. Instead, use mapreduce.input.fileinputformat.input.dir.recursive
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.max.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.maxsize
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.min.split.size is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.min.split.size.per.rack is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize.per.rack
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.min.split.size.per.node is deprecated. Instead, use mapreduce.input.fileinputformat.split.minsize.per.node
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+14/12/03 18:46:42 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+14/12/03 18:46:42 WARN conf.Configuration: org.apache.hadoop.hive.conf.LoopingByteArrayInputStream@609acf2c:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+14/12/03 18:46:42 WARN conf.Configuration: org.apache.hadoop.hive.conf.LoopingByteArrayInputStream@609acf2c:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
+Hive history file=/tmp/root/hive_job_log_root_31547@sandeep-Latitude-6430U_201412031846_172509513.txt
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.4.1/share/hadoop/common/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+drop table if exists page_view
+FAILED: SemanticException [Error 10001]: Table not found page_view
+stopping namenode
+stopping datanode
+stopping resourcemanager
+stopping nodemanager
+nodemanager did not stop gracefully after 5 seconds: killing with kill -9
+stopping historyserver

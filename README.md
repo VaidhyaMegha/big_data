@@ -15,6 +15,7 @@ Technology Stack
 * Hadoop Version : 2.4.1
 * Hive Version : 0.13.1
 * Tez Version : 0.5.1
+* Giraph Version : 1.1.0
 
 Hive features
 -------------
