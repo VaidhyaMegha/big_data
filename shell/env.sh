@@ -19,8 +19,8 @@ export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
-export GIRAPH_HOME=$TOOLS_HOME/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.1.1-SNAPSHOT
-export GIRAPH_JARS=$(echo "$GIRAPH_HOME"/*.jar | tr ' ' ':'):$(echo "$GIRAPH_HOME"/lib/*.jar | tr ' ' ':')
+export GIRAPH_HOME=$TOOLS_HOME/giraph/giraph-dist/target/giraph-1.2.0-SNAPSHOT-for-hadoop-2.5.1-bin/giraph-1.2.0-SNAPSHOT-for-hadoop-2.5.1
+export GIRAPH_JARS=:$(echo "$GIRAPH_HOME"/*.jar | tr ' ' ':'):$(echo "$GIRAPH_HOME"/lib/*.jar | tr ' ' ':')
 
 export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${GIRAPH_JARS}:${HADOOP_CLASSPATH}
 
