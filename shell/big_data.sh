@@ -102,7 +102,11 @@ else
                 echo "#######"
                 source $SHELL_HOME/hive.sh
 
-                $HIVE_HOME/bin/hive -v
+                if [ "$3" == "tez" ]; then
+                    $HIVE_HOME/bin/hive -v --hiveconf hive.execution.engine=tez
+                else
+                    $HIVE_HOME/bin/hive -v
+                fi
             fi
         fi
     fi

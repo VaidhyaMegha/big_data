@@ -66,7 +66,7 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             LOG.info("Entering iterate Method");
 
             int node0 = Integer.valueOf(String.valueOf(objects[0]));
-            int node1 = Integer.valueOf(String.valueOf(objects[0]));
+            int node1 = Integer.valueOf(String.valueOf(objects[1]));
 
             int[][] list = ((Components) agg).buffer;
 
@@ -75,9 +75,6 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
             union(node0, node1, list);
 
-//            LOG.info("List as of now ************");
-//            for(int[] element: list)
-//                LOG.info(Arrays.toString(element));
             LOG.info("Exiting iterate Method");
         }
 
@@ -91,13 +88,13 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             int[][] cur_list = ((Components) agg).buffer;
 
             for (int i=0; i < size; i++) {
-                int par_s = ((IntWritable) partial_list.get(i)).get();
+                int par_root = ((IntWritable) partial_list.get(i)).get();
 
-                if (par_s != NULL_INDICATOR) {
-                    int[] cur_s = cur_list[i];
+                if (par_root != NULL_INDICATOR) {
+                    addNodeIfNotExists(i, cur_list);
+                    addNodeIfNotExists(par_root, cur_list);
 
-                    if (cur_s != null) union(cur_s[ROOT], par_s, cur_list);
-                    else cur_list[i] = new int[]{par_s, 1};
+                    union(i, par_root, cur_list);
                 }
             }
 
@@ -133,24 +130,32 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             // Weight the trees by their size
             // The larger tree's root becomes the root of the smaller tree
             // The larger tree's size is increased by the size of the smaller tree
-            if(tree1[SIZE] >= tree0[SIZE]){
-                tree1[SIZE] = tree1[SIZE] + tree0[SIZE];
+            if(tree1 == tree0) return;
+            else if(tree1[SIZE] >= tree0[SIZE]){
+                tree1[SIZE] += tree0[SIZE];
                 list[tree0[ROOT]] = tree1;
             } else {
-                tree0[SIZE] = tree1[SIZE] + tree0[SIZE];
+                tree0[SIZE] += tree1[SIZE];
                 list[tree1[ROOT]] = tree0;
             }
+
+            LOG.info("Tree0 After Union" + Arrays.toString(tree0));
+            LOG.info("Tree1 After Union" + Arrays.toString(tree1));
+
+            LOG.info("List After a Union ************");
+            for(int[] element: list)
+                LOG.info(Arrays.toString(element));
         }
 
-        private int[] findRoot(int[][] list, int node1){
-            if (list[node1][ROOT] == node1) return list[node1];
+        private int[] findRoot(int[][] list, int node){
+            if (list[node][ROOT] == node) return list[node];
             else {
-                int[] tree = findRoot(list, list[node1][ROOT]);
+                int[] tree = findRoot(list, list[node][ROOT]);
 
                 //Compress the path by making all descendants of the root in this path
                 //point to root directly.
                 //At the end of this recursion, this path will be fully compressed.
-                list[node1] = tree;
+                list[node] = tree;
 
                 return tree;
             }
@@ -163,11 +168,11 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
             //copy from current list of int[] data structure to list of roots data structure.
             for (int i=0; i < MAX_FILE_SIZE; i++) {
-                int[] cur_s = cur_list[i];
-
-                if(cur_s != null) list[i] = cur_s[ROOT];
+                if(cur_list[i] != null) list[i] = findRoot(cur_list, i)[ROOT];
                 else list[i] = NULL_INDICATOR;
             }
+
+            LOG.info("Result" + Arrays.toString(list));
 
             return list;
         }

@@ -8,6 +8,8 @@ drop table if exists nodes;
 drop table if exists nodes_string;
 drop table if exists edges;
 drop table if exists edges_string;
+drop table if exists components;
 
 DROP FUNCTION IF EXISTS rowWithHeader;
 DROP FUNCTION IF EXISTS components;
+DROP FUNCTION IF EXISTS components_wqupc;

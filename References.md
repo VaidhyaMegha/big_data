@@ -42,4 +42,5 @@ References
 * Hive Tez - java.io.FileNotFoundException - hdfs:/user/root - http://osdir.com/ml/general/2014-07/msg31819.html
 * Hive Tez - java.lang.NoSuchMethodError - https://mail-archives.apache.org/mod_mbox/tez-user/201408.mbox/%3C84672461-ED68-44DC-80BF-2CE5B4EF46E0@apache.org%3E
 * Giraph - Build - http://giraph.apache.org/build.html
-* Giraph - Run - http://giraph.apache.org/quick_start.html#qs_section_5 
+* Giraph - Run - http://giraph.apache.org/quick_start.html#qs_section_5
+* Algorithms - Union Find - http://algs4.cs.princeton.edu/15uf/

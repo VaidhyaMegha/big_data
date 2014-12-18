@@ -8,52 +8,60 @@ Setup
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 drop table if exists page_view
 OK
-Time taken: 3.26 seconds
+Time taken: 3.267 seconds
 
 drop table if exists apachelog
 OK
-Time taken: 0.072 seconds
+Time taken: 0.065 seconds
 
 drop table if exists apachelog_text
 OK
-Time taken: 0.071 seconds
+Time taken: 0.069 seconds
 
 drop table if exists apachelog_orc
 OK
-Time taken: 0.074 seconds
+Time taken: 0.086 seconds
 
 drop table if exists strange_string
 OK
-Time taken: 0.076 seconds
+Time taken: 0.088 seconds
 
 drop table if exists india_pow_gen
 OK
-Time taken: 0.08 seconds
+Time taken: 0.066 seconds
 
 drop table if exists nodes
 OK
-Time taken: 7.455 seconds
+Time taken: 0.071 seconds
 
 drop table if exists nodes_string
 OK
-Time taken: 0.496 seconds
+Time taken: 0.082 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.661 seconds
+Time taken: 0.068 seconds
 
 drop table if exists edges_string
 OK
-Time taken: 0.585 seconds
+Time taken: 0.072 seconds
+
+drop table if exists components
+OK
+Time taken: 0.087 seconds
 
 
 DROP FUNCTION IF EXISTS rowWithHeader
 OK
-Time taken: 2.054 seconds
+Time taken: 2.387 seconds
 
 DROP FUNCTION IF EXISTS components
 OK
-Time taken: 0.029 seconds
+Time taken: 0.01 seconds
+
+DROP FUNCTION IF EXISTS components_wqupc
+OK
+Time taken: 0.009 seconds
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -95,7 +103,7 @@ Time taken: 0.029 seconds
  T E S T S
 -------------------------------------------------------
 Running me.tingri.hive.udaf.ConnectedComponentsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.313 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.316 sec
 
 Results :
 
@@ -112,8 +120,8 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 23.341s
-[INFO] Finished at: Thu Dec 18 02:59:08 EST 2014
+[INFO] Total time: 25.091s
+[INFO] Finished at: Thu Dec 18 05:03:54 EST 2014
 [INFO] Final Memory: 39M/290M
 [INFO] ------------------------------------------------------------------------
 
@@ -125,35 +133,41 @@ Added resource: /home/sandeep/projects/big_data/udaf/target/connected_components
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents'
 OK
-Time taken: 4.175 seconds
+Time taken: 4.232 seconds
 
 create temporary function components_wqupc as 'me.tingri.hive.udaf.ConnectedComponentsWQUPC'
 OK
-Time taken: 0.053 seconds
+Time taken: 0.046 seconds
 
 
 CREATE TABLE edges_string(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 2.055 seconds
+Time taken: 2.443 seconds
 
 
 CREATE TABLE nodes_string(node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.206 seconds
+Time taken: 0.212 seconds
 
 
 CREATE TABLE edges(id1 INT, id2 INT)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.256 seconds
+Time taken: 0.21 seconds
 
 
 CREATE TABLE nodes(id INT, node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.201 seconds
+Time taken: 0.229 seconds
+
+
+CREATE TABLE components(root_array ARRAY<INT>)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 0.181 seconds
 
 
 LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE edges_string
@@ -164,7 +178,7 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/edges_string
 Table default.edges_string stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
 OK
-Time taken: 3.532 seconds
+Time taken: 3.51 seconds
 
 
 SELECT components(node1, node2) from edges_string
@@ -172,9 +186,10 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0041)
+Status: Running (application id: application_1418884283126_0078)
 
 Map 1: -/-	Reducer 2: 0/1	
+Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
@@ -185,7 +200,7 @@ Map 1: 1/1	Reducer 2: 1/1
 Status: Finished successfully
 OK
 {"N9":["N20","N4","N9"],"N5":["N1","N3","N5","N2","N6"],"N6":["N1","N3","N5","N2","N6"],"N7":["N7","N8"],"N8":["N7","N8"],"N1":["N1","N3","N5","N2","N6"],"N2":["N1","N3","N5","N2","N6"],"N3":["N1","N3","N5","N2","N6"],"N20":["N20","N4","N9"],"N4":["N20","N4","N9"],"N10":["N10","N11"],"N11":["N10","N11"]}
-Time taken: 35.713 seconds, Fetched: 1 row(s)
+Time taken: 38.34 seconds, Fetched: 1 row(s)
 
 
 INSERT  into table nodes_string
@@ -198,10 +213,15 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0041)
+Status: Running (application id: application_1418884283126_0078)
 
 Map 1: -/-	Map 4: -/-	Reducer 3: 0/1	
+Map 1: -/-	Map 4: 0/1	Reducer 3: 0/1	
 Map 1: 0/1	Map 4: 0/1	Reducer 3: 0/1	
+Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
+Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
+Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
+Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
 Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
 Map 1: 1/1	Map 4: 1/1	Reducer 3: 0/1	
 Map 1: 1/1	Map 4: 1/1	Reducer 3: 1/1	
@@ -209,7 +229,7 @@ Status: Finished successfully
 Loading data to table default.nodes_string
 Table default.nodes_string stats: [numFiles=1, numRows=12, totalSize=39, rawDataSize=27]
 OK
-Time taken: 7.096 seconds
+Time taken: 21.456 seconds
 
 
 Insert into table nodes
@@ -219,7 +239,7 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0041)
+Status: Running (application id: application_1418884283126_0078)
 
 Map 1: -/-	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
@@ -229,7 +249,7 @@ Status: Finished successfully
 Loading data to table default.nodes
 Table default.nodes stats: [numFiles=1, numRows=12, totalSize=66, rawDataSize=54]
 OK
-Time taken: 5.258 seconds
+Time taken: 5.249 seconds
 
 
 Insert into table edges
@@ -242,7 +262,7 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0041)
+Status: Running (application id: application_1418884283126_0078)
 
 Map 1: -/-	Map 2: -/-	Map 3: -/-	
 Map 1: -/-	Map 2: -/-	Map 3: 0/1	
@@ -255,91 +275,62 @@ Status: Finished successfully
 Loading data to table default.edges
 Table default.edges stats: [numFiles=1, numRows=8, totalSize=37, rawDataSize=29]
 OK
-Time taken: 10.304 seconds
+Time taken: 11.526 seconds
 
 
+insert into table components
 SELECT components_wqupc(id1, id2) as cluster
 from edges
 Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0041)
+Status: Running (application id: application_1418884283126_0078)
 
 Map 1: -/-	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 1/1	Reducer 2: 0/1	
 Map 1: 1/1	Reducer 2: 1/1	
 Status: Finished successfully
+Loading data to table default.components
+Table default.components stats: [numFiles=1, numRows=1, totalSize=46, rawDataSize=45]
 OK
-[0,1,0,3,0,0,0,0,8,9,0,11,12,0,0,0,0,0,0,0,0,0]
-Time taken: 2.334 seconds, Fetched: 1 row(s)
+Time taken: 2.257 seconds
+
+
+select table3.node, nodes.node as root from
+(select * from nodes LEFT OUTER JOIN
+  (select row_number() over() as node_id, root_id from
+    (select explode(root_array) as root_id from components) table1
+    where root_id!=0) table2
+  on nodes.id = table2.node_id) table3 JOIN nodes on (nodes.id = table3.root_id) 
+Total jobs = 1
+Launching Job 1 out of 1
+
+
+Status: Running (application id: application_1418884283126_0078)
+
+Map 1: -/-	Map 2: -/-	Map 4: -/-	Reducer 3: 0/1	
+Map 1: 0/1	Map 2: 0/1	Map 4: 0/1	Reducer 3: 0/1	
+Map 1: 1/1	Map 2: 0/1	Map 4: 0/1	Reducer 3: 0/1	
+Map 1: 1/1	Map 2: 1/1	Map 4: 0/1	Reducer 3: 0/1	
+Map 1: 1/1	Map 2: 1/1	Map 4: 0/1	Reducer 3: 1/1	
+Map 1: 1/1	Map 2: 1/1	Map 4: 1/1	Reducer 3: 1/1	
+Status: Finished successfully
+OK
+N9	N5
+N8	N11
+N7	N11
+N6	N5
+N5	N4
+N4	N5
+N3	N4
+N20	N5
+N2	N5
+N11	N8
+N10	N8
+N1	N4
+Time taken: 4.093 seconds, Fetched: 12 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
-hive> sekect    lect * from nodes;
-select * from nodes
-OK
-1	N9
-2	N8
-3	N7
-4	N6
-5	N5
-6	N4
-7	N3
-8	N20
-9	N2
-10	N11
-11	N10
-12	N1
-Time taken: 4.538 seconds, Fetched: 12 row(s)
-hive> select * from edges;
-select * from edges
-OK
-3	2
-9	4
-12	5
-1	6
-8	6
-12	7
-11	10
-9	12
-Time taken: 0.185 seconds, Fetched: 8 row(s)
-hive> select * from edges; )s  _string;
-select * from edges_string
-OK
-N1	N3
-N1	N5
-N2	N1
-N2	N6
-N7	N8
-N10	N11
-N20	N4
-N9	N4
-Time taken: 0.188 seconds, Fetched: 8 row(s)
-hive> exitl
-    > ;
-exitl
-
-NoViableAltException(26@[])
-	at org.apache.hadoop.hive.ql.parse.HiveParser.statement(HiveParser.java:999)
-	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:199)
-	at org.apache.hadoop.hive.ql.parse.ParseDriver.parse(ParseDriver.java:166)
-	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:404)
-	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:322)
-	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:975)
-	at org.apache.hadoop.hive.ql.Driver.runInternal(Driver.java:1040)
-	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:911)
-	at org.apache.hadoop.hive.ql.Driver.run(Driver.java:901)
-	at org.apache.hadoop.hive.cli.CliDriver.processLocalCmd(CliDriver.java:268)
-	at org.apache.hadoop.hive.cli.CliDriver.processCmd(CliDriver.java:220)
-	at org.apache.hadoop.hive.cli.CliDriver.processLine(CliDriver.java:423)
-	at org.apache.hadoop.hive.cli.CliDriver.executeDriver(CliDriver.java:792)
-	at org.apache.hadoop.hive.cli.CliDriver.run(CliDriver.java:686)
-	at org.apache.hadoop.hive.cli.CliDriver.main(CliDriver.java:625)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.hadoop.util.RunJar.main(RunJar.java:212)
-FAILED: ParseException line 1:0 cannot recognize input near 'exitl' '<EOF>' '<EOF>'
-hive> exit;
+hive> 
