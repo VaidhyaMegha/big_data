@@ -31,7 +31,7 @@
       <file leaf-file-name="analytics.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hql/analytics.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="161" max-vertical-offset="846">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="846">
               <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
@@ -42,17 +42,17 @@
         <entry file="file://$PROJECT_DIR$/hql/custom_udaf.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1476">
-              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectedComponents.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConnectedComponents.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1080292" vertical-offset="51" max-vertical-offset="1998">
-              <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1998">
+              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -68,23 +68,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cleanup.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hql/cleanup.sql">
+      <file leaf-file-name="hive.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shell/hive.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="378">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-              <folding>
-                <marker date="1418895218502" expanded="true" signature="445:485" placeholder="DROP FUNCTIO..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hive.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shell/hive.sh">
+      <file leaf-file-name="results-start-tez-client.log" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/results-start-tez-client.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="954">
-              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.5226209" vertical-offset="119491" max-vertical-offset="120132">
+              <caret line="6657" column="28" selection-start-line="6657" selection-start-column="28" selection-end-line="6657" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -95,7 +93,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="1597" max-vertical-offset="3384">
               <caret line="127" column="77" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,7 +103,7 @@
       <file leaf-file-name="LazyBinaryArray.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/0.12.0-cdh5.1.2/hive-exec-0.12.0-cdh5.1.2.jar!/org/apache/hadoop/hive/serde2/lazybinary/LazyBinaryArray.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.32" vertical-offset="0" max-vertical-offset="2286">
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="2286">
               <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
               <folding />
             </state>
@@ -113,7 +113,7 @@
       <file leaf-file-name="LazyBinaryNonPrimitive.class" pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/0.12.0-cdh5.1.2/hive-exec-0.12.0-cdh5.1.2.jar!/org/apache/hadoop/hive/serde2/lazybinary/LazyBinaryNonPrimitive.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.32" vertical-offset="0" max-vertical-offset="630">
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="630">
               <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
@@ -122,14 +122,14 @@
       </file>
       <file leaf-file-name="Notes.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Notes.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6875" vertical-offset="0" max-vertical-offset="504">
+            <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="504">
               <caret line="3" column="104" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="104" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
           </provider>
         </entry>
       </file>
@@ -147,11 +147,12 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/References.md" />
         <option value="$PROJECT_DIR$/hql/cleanup.sql" />
-        <option value="$PROJECT_DIR$/shell/hive.sh" />
         <option value="$PROJECT_DIR$/shell/big_data.sh" />
         <option value="$PROJECT_DIR$/Notes.md" />
         <option value="$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponentsWQUPC.java" />
         <option value="$PROJECT_DIR$/hql/custom_udaf.sql" />
+        <option value="$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java" />
+        <option value="$PROJECT_DIR$/shell/hive.sh" />
       </list>
     </option>
   </component>
@@ -216,56 +217,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="big_data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="big_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udaf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="big_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udaf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="big_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udaf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="udaf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -699,11 +650,12 @@
       <workItem from="1418867204625" duration="159000" />
       <workItem from="1418883154402" duration="17220000" />
       <workItem from="1418900591652" duration="14190000" />
+      <workItem from="1418928740383" duration="633000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242344000" />
+    <option name="totallyTimeSpent" value="242977000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="840" extended-state="6" />
@@ -822,13 +774,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/udf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1566">
-          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/udf/src/main/java/me/tingri/hive/udf/TransformRowWithHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="1224">
@@ -1092,46 +1037,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="792">
           <caret line="21" column="118" selection-start-line="21" selection-start-column="118" selection-end-line="21" selection-end-column="118" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/References.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="936">
           <caret line="45" column="63" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hql/cleanup.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <marker date="1418895218502" expanded="true" signature="445:485" placeholder="DROP FUNCTIO..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shell/hive.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="378">
+          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1145,14 +1077,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Notes.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6875" vertical-offset="0" max-vertical-offset="504">
+        <state vertical-scroll-proportion="0.0" vertical-offset="54" max-vertical-offset="504">
           <caret line="3" column="104" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="104" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hql/analytics.sql">
@@ -1165,7 +1097,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/0.12.0-cdh5.1.2/hive-exec-0.12.0-cdh5.1.2.jar!/org/apache/hadoop/hive/serde2/lazybinary/LazyBinaryArray.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.32" vertical-offset="0" max-vertical-offset="2286">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="2286">
           <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
           <folding />
         </state>
@@ -1173,7 +1105,7 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hive/hive-exec/0.12.0-cdh5.1.2/hive-exec-0.12.0-cdh5.1.2.jar!/org/apache/hadoop/hive/serde2/lazybinary/LazyBinaryNonPrimitive.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.32" vertical-offset="0" max-vertical-offset="630">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="630">
           <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
@@ -1183,6 +1115,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1597" max-vertical-offset="3384">
           <caret line="127" column="77" selection-start-line="127" selection-start-column="77" selection-end-line="127" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="774" max-vertical-offset="1998">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1190,15 +1132,23 @@
     <entry file="file://$PROJECT_DIR$/hql/custom_udaf.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="791" max-vertical-offset="1476">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/udaf/src/main/java/me/tingri/hive/udaf/ConnectedComponents.java">
+    <entry file="file://$PROJECT_DIR$/shell/hive.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1080292" vertical-offset="51" max-vertical-offset="1998">
-          <caret line="60" column="19" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="954">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/results-start-tez-client.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5226209" vertical-offset="119491" max-vertical-offset="120132">
+          <caret line="6657" column="28" selection-start-line="6657" selection-start-column="28" selection-end-line="6657" selection-end-column="28" />
           <folding />
         </state>
       </provider>
