@@ -64,9 +64,12 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
         public void iterate(AggregationBuffer agg, Object[] objects) throws HiveException {
             LOG.info("*********************************");
             LOG.info("Entering iterate Method");
+            LOG.info("Iterate Values"+ Arrays.toString(objects));
 
             int node0 = Integer.valueOf(String.valueOf(objects[0]));
             int node1 = Integer.valueOf(String.valueOf(objects[1]));
+
+            LOG.info("Node0 "+ node0 + " Node1 " + node1);
 
             int[][] list = ((Components) agg).buffer;
 
@@ -87,6 +90,12 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
             int[][] cur_list = ((Components) agg).buffer;
 
+            LOG.info("Lists Before a Merge ************");
+            LOG.info("Partial List" + partial_list.toString());
+            for(int[] element: cur_list)
+                LOG.info(Arrays.toString(element));
+
+
             for (int i=0; i < size; i++) {
                 int par_root = ((IntWritable) partial_list.get(i)).get();
 
@@ -97,6 +106,10 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
                     union(i, par_root, cur_list);
                 }
             }
+
+            LOG.info("Final List After a Merge ************");
+            for(int[] element: ((Components) agg).buffer)
+                LOG.info(Arrays.toString(element));
 
             LOG.info("Exiting merge Method");
         }
@@ -124,33 +137,25 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             int[] tree0 = findRoot(list, node0);
             int[] tree1 = findRoot(list, node1);
 
-            LOG.info("Tree0" + Arrays.toString(tree0));
-            LOG.info("Tree1" + Arrays.toString(tree1));
-
             // Weight the trees by their size
             // The larger tree's root becomes the root of the smaller tree
             // The larger tree's size is increased by the size of the smaller tree
             if(tree1 == tree0) return;
             else if(tree1[SIZE] >= tree0[SIZE]){
                 tree1[SIZE] += tree0[SIZE];
-                list[tree0[ROOT]] = tree1;
+                tree0[ROOT] = tree1[ROOT];
             } else {
                 tree0[SIZE] += tree1[SIZE];
-                list[tree1[ROOT]] = tree0;
+                tree1[ROOT] = tree0[ROOT];
             }
-
-            LOG.info("Tree0 After Union" + Arrays.toString(tree0));
-            LOG.info("Tree1 After Union" + Arrays.toString(tree1));
-
-            LOG.info("List After a Union ************");
-            for(int[] element: list)
-                LOG.info(Arrays.toString(element));
         }
 
         private int[] findRoot(int[][] list, int node){
-            if (list[node][ROOT] == node) return list[node];
+            int cur_root = list[node][ROOT];
+
+            if (cur_root == node) return list[node];
             else {
-                int[] tree = findRoot(list, list[node][ROOT]);
+                int[] tree = findRoot(list, cur_root);
 
                 //Compress the path by making all descendants of the root in this path
                 //point to root directly.
@@ -183,7 +188,6 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             else if (partial instanceof List) return (List) partial;
             else return ((LazyBinaryArray) partial).getList();
         }
-
 
         private void addNodeIfNotExists(int node, int[][] list) {
             if(list[node] == null) {

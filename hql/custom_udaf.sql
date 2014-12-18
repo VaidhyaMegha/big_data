@@ -49,29 +49,28 @@ from ( select  id as id1, node2
        where node1 = node ) new_table, nodes
 where node2 = node;
 
--- [0,6,2,2,5,5,6,5,6,5,10,10,5,0,0,0,0,0,0,0,0,0]
+-- [6,2,2,5,5,6,5,6,5,10,10,5]
 insert into table components
 SELECT components_wqupc(id1, id2) as cluster
 from edges;
 
--- N9	N5
--- N8	N11
--- N7	N11
+-- N9	N4
+-- N8	N8
+-- N7	N8
 -- N6	N5
--- N5	N4
--- N4	N5
--- N3	N4
--- N20	N5
+-- N5	N5
+-- N4	N4
+-- N3	N5
+-- N20	N4
 -- N2	N5
--- N11	N8
--- N10	N8
--- N1	N4
+-- N11	N11
+-- N10	N11
+-- N1	N5
 select table3.node, nodes.node as root from
-(select * from nodes LEFT OUTER JOIN
-  (select row_number() over() as node_id, root_id from
-    (select explode(root_array) as root_id from components) table1
-    where root_id!=0) table2
-  on nodes.id = table2.node_id) table3 JOIN nodes on (nodes.id = table3.root_id) ;
+(select * from nodes JOIN
+  (select posexplode(root_array) as (node_id, root_id) from components) table1
+  on nodes.id = table1.node_id) table3 JOIN nodes on (nodes.id = table3.root_id) ;
+
 
 
 

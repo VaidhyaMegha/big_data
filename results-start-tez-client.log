@@ -8,60 +8,60 @@ Setup
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 drop table if exists page_view
 OK
-Time taken: 3.267 seconds
+Time taken: 0.497 seconds
 
 drop table if exists apachelog
 OK
-Time taken: 0.065 seconds
+Time taken: 0.012 seconds
 
 drop table if exists apachelog_text
 OK
-Time taken: 0.069 seconds
+Time taken: 0.015 seconds
 
 drop table if exists apachelog_orc
 OK
-Time taken: 0.086 seconds
+Time taken: 0.011 seconds
 
 drop table if exists strange_string
 OK
-Time taken: 0.088 seconds
+Time taken: 0.012 seconds
 
 drop table if exists india_pow_gen
 OK
-Time taken: 0.066 seconds
+Time taken: 0.012 seconds
 
 drop table if exists nodes
 OK
-Time taken: 0.071 seconds
+Time taken: 1.333 seconds
 
 drop table if exists nodes_string
 OK
-Time taken: 0.082 seconds
+Time taken: 0.141 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.068 seconds
+Time taken: 0.146 seconds
 
 drop table if exists edges_string
 OK
-Time taken: 0.072 seconds
+Time taken: 0.117 seconds
 
 drop table if exists components
 OK
-Time taken: 0.087 seconds
+Time taken: 0.089 seconds
 
 
 DROP FUNCTION IF EXISTS rowWithHeader
 OK
-Time taken: 2.387 seconds
+Time taken: 0.489 seconds
 
 DROP FUNCTION IF EXISTS components
 OK
-Time taken: 0.01 seconds
+Time taken: 0.007 seconds
 
 DROP FUNCTION IF EXISTS components_wqupc
 OK
-Time taken: 0.009 seconds
+Time taken: 0.007 seconds
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -103,7 +103,7 @@ Time taken: 0.009 seconds
  T E S T S
 -------------------------------------------------------
 Running me.tingri.hive.udaf.ConnectedComponentsTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.316 sec
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
 
 Results :
 
@@ -120,9 +120,9 @@ Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 25.091s
-[INFO] Finished at: Thu Dec 18 05:03:54 EST 2014
-[INFO] Final Memory: 39M/290M
+[INFO] Total time: 4.563s
+[INFO] Finished at: Thu Dec 18 13:32:17 EST 2014
+[INFO] Final Memory: 41M/348M
 [INFO] ------------------------------------------------------------------------
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
@@ -133,41 +133,41 @@ Added resource: /home/sandeep/projects/big_data/udaf/target/connected_components
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents'
 OK
-Time taken: 4.232 seconds
+Time taken: 0.634 seconds
 
 create temporary function components_wqupc as 'me.tingri.hive.udaf.ConnectedComponentsWQUPC'
 OK
-Time taken: 0.046 seconds
+Time taken: 0.009 seconds
 
 
 CREATE TABLE edges_string(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 2.443 seconds
+Time taken: 0.454 seconds
 
 
 CREATE TABLE nodes_string(node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.212 seconds
+Time taken: 0.043 seconds
 
 
 CREATE TABLE edges(id1 INT, id2 INT)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.21 seconds
+Time taken: 0.039 seconds
 
 
 CREATE TABLE nodes(id INT, node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.229 seconds
+Time taken: 0.032 seconds
 
 
 CREATE TABLE components(root_array ARRAY<INT>)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.181 seconds
+Time taken: 0.034 seconds
 
 
 LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE edges_string
@@ -178,7 +178,7 @@ rmr: DEPRECATED: Please use 'rm -r' instead.
 Deleted hdfs://localhost:9000/user/hive/warehouse/edges_string
 Table default.edges_string stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
 OK
-Time taken: 3.51 seconds
+Time taken: 0.666 seconds
 
 
 SELECT components(node1, node2) from edges_string
@@ -186,13 +186,9 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
 Map 1: -/-	Reducer 2: 0/1	
-Map 1: 0/1	Reducer 2: 0/1	
-Map 1: 0/1	Reducer 2: 0/1	
-Map 1: 0/1	Reducer 2: 0/1	
-Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
 Map 1: 1/1	Reducer 2: 0/1	
@@ -200,7 +196,7 @@ Map 1: 1/1	Reducer 2: 1/1
 Status: Finished successfully
 OK
 {"N9":["N20","N4","N9"],"N5":["N1","N3","N5","N2","N6"],"N6":["N1","N3","N5","N2","N6"],"N7":["N7","N8"],"N8":["N7","N8"],"N1":["N1","N3","N5","N2","N6"],"N2":["N1","N3","N5","N2","N6"],"N3":["N1","N3","N5","N2","N6"],"N20":["N20","N4","N9"],"N4":["N20","N4","N9"],"N10":["N10","N11"],"N11":["N10","N11"]}
-Time taken: 38.34 seconds, Fetched: 1 row(s)
+Time taken: 9.603 seconds, Fetched: 1 row(s)
 
 
 INSERT  into table nodes_string
@@ -213,23 +209,18 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
 Map 1: -/-	Map 4: -/-	Reducer 3: 0/1	
-Map 1: -/-	Map 4: 0/1	Reducer 3: 0/1	
 Map 1: 0/1	Map 4: 0/1	Reducer 3: 0/1	
-Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
-Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
-Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
-Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
-Map 1: 0/1	Map 4: 1/1	Reducer 3: 0/1	
+Map 1: 1/1	Map 4: 0/1	Reducer 3: 0/1	
 Map 1: 1/1	Map 4: 1/1	Reducer 3: 0/1	
 Map 1: 1/1	Map 4: 1/1	Reducer 3: 1/1	
 Status: Finished successfully
 Loading data to table default.nodes_string
 Table default.nodes_string stats: [numFiles=1, numRows=12, totalSize=39, rawDataSize=27]
 OK
-Time taken: 21.456 seconds
+Time taken: 1.805 seconds
 
 
 Insert into table nodes
@@ -239,7 +230,7 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
 Map 1: -/-	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
@@ -249,7 +240,7 @@ Status: Finished successfully
 Loading data to table default.nodes
 Table default.nodes stats: [numFiles=1, numRows=12, totalSize=66, rawDataSize=54]
 OK
-Time taken: 5.249 seconds
+Time taken: 3.415 seconds
 
 
 Insert into table edges
@@ -262,20 +253,18 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
 Map 1: -/-	Map 2: -/-	Map 3: -/-	
-Map 1: -/-	Map 2: -/-	Map 3: 0/1	
 Map 1: 0/1	Map 2: 0/1	Map 3: 0/1	
 Map 1: 0/1	Map 2: 0/1	Map 3: 1/1	
-Map 1: 1/1	Map 2: 0/1	Map 3: 1/1	
 Map 1: 1/1	Map 2: 0/1	Map 3: 1/1	
 Map 1: 1/1	Map 2: 1/1	Map 3: 1/1	
 Status: Finished successfully
 Loading data to table default.edges
 Table default.edges stats: [numFiles=1, numRows=8, totalSize=37, rawDataSize=29]
 OK
-Time taken: 11.526 seconds
+Time taken: 1.439 seconds
 
 
 insert into table components
@@ -285,7 +274,7 @@ Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
 Map 1: -/-	Reducer 2: 0/1	
 Map 1: 0/1	Reducer 2: 0/1	
@@ -295,42 +284,54 @@ Status: Finished successfully
 Loading data to table default.components
 Table default.components stats: [numFiles=1, numRows=1, totalSize=46, rawDataSize=45]
 OK
-Time taken: 2.257 seconds
+Time taken: 0.929 seconds
 
 
 select table3.node, nodes.node as root from
-(select * from nodes LEFT OUTER JOIN
-  (select row_number() over() as node_id, root_id from
-    (select explode(root_array) as root_id from components) table1
-    where root_id!=0) table2
-  on nodes.id = table2.node_id) table3 JOIN nodes on (nodes.id = table3.root_id) 
+(select * from nodes JOIN
+  (select posexplode(root_array) as (node_id, root_id) from components) table1
+  on nodes.id = table1.node_id) table3 JOIN nodes on (nodes.id = table3.root_id) 
 Total jobs = 1
 Launching Job 1 out of 1
 
 
-Status: Running (application id: application_1418884283126_0078)
+Status: Running (application id: application_1418915482426_0038)
 
-Map 1: -/-	Map 2: -/-	Map 4: -/-	Reducer 3: 0/1	
-Map 1: 0/1	Map 2: 0/1	Map 4: 0/1	Reducer 3: 0/1	
-Map 1: 1/1	Map 2: 0/1	Map 4: 0/1	Reducer 3: 0/1	
-Map 1: 1/1	Map 2: 1/1	Map 4: 0/1	Reducer 3: 0/1	
-Map 1: 1/1	Map 2: 1/1	Map 4: 0/1	Reducer 3: 1/1	
-Map 1: 1/1	Map 2: 1/1	Map 4: 1/1	Reducer 3: 1/1	
+Map 1: -/-	Map 2: -/-	Map 3: -/-	
+Map 1: 0/1	Map 2: 0/1	Map 3: 0/1	
+Map 1: 1/1	Map 2: 1/1	Map 3: 0/1	
+Map 1: 1/1	Map 2: 1/1	Map 3: 1/1	
 Status: Finished successfully
 OK
-N9	N5
-N8	N11
-N7	N11
+N9	N4
+N8	N8
+N7	N8
 N6	N5
-N5	N4
-N4	N5
-N3	N4
-N20	N5
+N5	N5
+N4	N4
+N3	N5
+N20	N4
 N2	N5
-N11	N8
-N10	N8
-N1	N4
-Time taken: 4.093 seconds, Fetched: 12 row(s)
+N11	N11
+N10	N11
+N1	N5
+Time taken: 0.92 seconds, Fetched: 12 row(s)
+
+
+
+select root_array from components
+Total jobs = 1
+Launching Job 1 out of 1
+
+
+Status: Running (application id: application_1418915482426_0038)
+
+Map 1: -/-	
+Map 1: 1/1	
+Status: Finished successfully
+OK
+[0,6,2,2,5,5,6,5,6,5,10,10,5,0,0,0,0,0,0,0,0,0]
+Time taken: 0.334 seconds, Fetched: 1 row(s)
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
-hive> 
+hive> exit;

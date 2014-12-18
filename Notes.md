@@ -1,7 +1,7 @@
 Tracking User Logs
 ==================
 * Example of a command which searches, for a specific developer logged string in a udaf, in hadoop's user logs given application id
-  - `sudo grep -nri "Tree0"   ~/tools/hadoop/2.4.1/logs/userlogs/application_1418884283126_0041 | less`
+    - `sudo grep -nri "Tree0"   ~/tools/hadoop/2.4.1/logs/userlogs/application_1418884283126_0041 | less`
 
 
 Statistics Terms
