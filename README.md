@@ -17,6 +17,10 @@ Technology Stack
 * Tez Version : 0.5.1
 * Giraph Version : 1.1.0
 
+Algorithms
+----------
+* Weighted Quick Union With Path Compression : An attempt has been made to parallelize it in the form of a hive  UDAF.
+
 Hive features
 -------------
 * DDL - Create, show, drop, alter
