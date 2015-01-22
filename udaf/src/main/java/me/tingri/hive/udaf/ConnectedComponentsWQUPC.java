@@ -12,6 +12,7 @@ import org.apache.hadoop.hive.ql.udf.generic.AbstractGenericUDAFResolver;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFEvaluator;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFParameterInfo;
 import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryArray;
+import org.apache.hadoop.hive.serde2.objectinspector.ConstantObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
@@ -30,7 +31,6 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
     public static final Log LOG = LogFactory.getLog(ConnectedComponentsWQUPC.class.getName());
     private static final int ROOT = 0;
     private static final int SIZE = 1;
-    private static final int MAX_FILE_SIZE=22;
     private static final int NULL_INDICATOR =0;
 
     public GenericUDAFEvaluator getEvaluator(GenericUDAFParameterInfo info) throws SemanticException {
@@ -38,13 +38,28 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
     }
 
     public static class CCEvaluator extends GenericUDAFEvaluator {
-        public static class Components implements AggregationBuffer {
-            int[][] buffer = new int[MAX_FILE_SIZE][];
+        private int num_edges;
+
+        public class Components implements AggregationBuffer {
+            int[][] buffer;
         }
 
         @Override
         public ObjectInspector init(Mode m, ObjectInspector[] parameters) throws HiveException {
             super.init(m, parameters);
+
+            if ((m == Mode.PARTIAL1 || m == Mode.PARTIAL2 || m == Mode.COMPLETE)) {
+                if (!(parameters[0] instanceof ConstantObjectInspector)) {
+                    throw new HiveException("Size parameter must be constant." + m.toString());
+                }
+
+                ConstantObjectInspector posOI = (ConstantObjectInspector) parameters[0];
+
+                num_edges = ((IntWritable) posOI.getWritableConstantValue()).get();
+
+                System.out.println("Number of edges " + num_edges + m.toString());
+            }
+
             // return type goes here
             return ObjectInspectorFactory.getStandardListObjectInspector(
                     PrimitiveObjectInspectorFactory.javaIntObjectInspector);
@@ -52,12 +67,16 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
         @Override
         public AggregationBuffer getNewAggregationBuffer() throws HiveException {
-            return new Components();
+            Components agg = new Components();
+
+            agg.buffer = new int[num_edges][];
+
+            return agg;
         }
 
         @Override
         public void reset(AggregationBuffer agg) throws HiveException {
-            ((Components) agg).buffer = new int[MAX_FILE_SIZE][];
+            ((Components) agg).buffer = new int[num_edges][];
         }
 
         @Override
@@ -169,10 +188,10 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
         private Object getResult(Components agg) {
             int[][] cur_list = agg.buffer;
 
-            Integer[] list = new Integer[MAX_FILE_SIZE];
+            Integer[] list = new Integer[num_edges];
 
             //copy from current list of int[] data structure to list of roots data structure.
-            for (int i=0; i < MAX_FILE_SIZE; i++) {
+            for (int i=0; i < num_edges; i++) {
                 if(cur_list[i] != null) list[i] = findRoot(cur_list, i)[ROOT];
                 else list[i] = NULL_INDICATOR;
             }

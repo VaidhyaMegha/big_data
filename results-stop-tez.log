@@ -8,7 +8,7 @@ Setup
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/0.13.1/lib/hive-common-0.13.1.jar!/hive-log4j.properties
 drop table if exists page_view
 OK
-Time taken: 0.493 seconds
+Time taken: 0.489 seconds
 
 drop table if exists apachelog
 OK
@@ -20,11 +20,11 @@ Time taken: 0.01 seconds
 
 drop table if exists apachelog_orc
 OK
-Time taken: 0.011 seconds
+Time taken: 0.009 seconds
 
 drop table if exists strange_string
 OK
-Time taken: 0.011 seconds
+Time taken: 0.01 seconds
 
 drop table if exists india_pow_gen
 OK
@@ -32,19 +32,19 @@ Time taken: 0.01 seconds
 
 drop table if exists nodes
 OK
-Time taken: 1.164 seconds
+Time taken: 1.11 seconds
 
 drop table if exists nodes_string
 OK
-Time taken: 0.125 seconds
+Time taken: 0.083 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.102 seconds
+Time taken: 0.091 seconds
 
 drop table if exists edges_string
 OK
-Time taken: 0.075 seconds
+Time taken: 0.086 seconds
 
 drop table if exists components
 OK
@@ -53,7 +53,7 @@ Time taken: 0.082 seconds
 
 DROP FUNCTION IF EXISTS rowWithHeader
 OK
-Time taken: 0.342 seconds
+Time taken: 0.321 seconds
 
 DROP FUNCTION IF EXISTS components
 OK

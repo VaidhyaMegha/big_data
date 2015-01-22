@@ -51,7 +51,7 @@ where node2 = node;
 
 -- [6,2,2,5,5,6,5,6,5,10,10,5]
 insert into table components
-SELECT components_wqupc(id1, id2) as cluster
+SELECT components_wqupc(100, id1, id2) as cluster
 from edges;
 
 -- N9	N4
