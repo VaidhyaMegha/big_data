@@ -37,3 +37,12 @@ Hive features
 DataSets
 --------
 * India power generation stats for FEB-2013 from http://data.gov.in/
+
+TODO
+----
+* Hadoop upgrade
+* Tez upgrade
+* Kylin
+* Giraph
+* Drill
+* More SQL patterns
