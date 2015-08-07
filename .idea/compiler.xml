@@ -26,6 +26,9 @@
         <module name="udf" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="udaf" target="1.5" />
+      <module name="udf" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
-

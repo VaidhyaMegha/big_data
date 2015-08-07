@@ -1,5 +1,0 @@
-$ cat ~/projects/big_data/results-mr-client.log  | grep "Time taken" | cut -d' ' -f 3 | awk '{s+=$1} END {print s}'
-771.348
-$ cat ~/projects/big_data/results-tez-client.log  | grep "Time taken" | cut -d' ' -f 3 | awk '{s+=$1} END {print s}'
-94.055
-

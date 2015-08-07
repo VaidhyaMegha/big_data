@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bash
+
+export CUR_DIR=`pwd`
 
 cd $HADOOP_ROOT
 sudo chown -R $USER $HDP_VER
@@ -59,6 +61,19 @@ echo "<?xml version=\"1.0\"?>
  </property>
 </configuration>" >>  $HADOOP_CONF_DIR/hdfs-site.xml
 
+#  $HADOOP_CONF_DIR/hbase-site.xml
+rm  $HADOOP_CONF_DIR/hbase-site.xml
+touch  $HADOOP_CONF_DIR/hbase-site.xml
+echo "<configuration>
+  <property>
+    <name>hbase.rootdir</name>
+    <value>file:///home/testuser/hbase</value>
+  </property>
+  <property>
+    <name>hbase.zookeeper.property.dataDir</name>
+    <value>/home/testuser/zookeeper</value>
+  </property>
+</configuration>" >>  $HADOOP_CONF_DIR/hbase-site.xml
 
 if [ "$3" == "tez" ]; then
     #  $HADOOP_CONF_DIR/mapred-site.xml:
@@ -84,7 +99,7 @@ if [ "$3" == "tez" ]; then
     </configuration>" >>  $HADOOP_CONF_DIR/tez-site.xml
 
     # Enabling Tez as execution engine after checkign for a flag here
-    $HIVE_HOME/bin/hive -v -e "set hive.execution.engine=tez;"
+    hive -v -e "set hive.execution.engine=tez;"
 else
     #  $HADOOP_CONF_DIR/mapred-site.xml:
     rm  $HADOOP_CONF_DIR/mapred-site.xml
@@ -98,7 +113,8 @@ else
     </configuration>" >>  $HADOOP_CONF_DIR/mapred-site.xml
 fi
 
+cd ${CUR_DIR}
 
 # 5. Format namenode
 # This step is needed only for the first time. Doing it every time will result in loss of content on HDFS.
-bin/hdfs namenode -format
+hdfs namenode -format

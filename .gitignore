@@ -4,3 +4,5 @@
 nohup.out
 datasets/visualiq
 datasets/workshop
+*.log
+metastore_db/

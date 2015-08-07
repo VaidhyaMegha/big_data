@@ -24,9 +24,6 @@ export SHELL_HOME=$PROJECT_HOME/shell
 # Setup Environment Variables
 source $SHELL_HOME/env.sh
 
-# Move to HADOOP home
-cd $HADOOP_HOME
-
 if [ "$1" == "tutorial" ]; then
     echo "###############"
     echo "Configure"
@@ -103,9 +100,9 @@ else
                 source $SHELL_HOME/hive.sh
 
                 if [ "$3" == "tez" ]; then
-                    $HIVE_HOME/bin/hive -v --hiveconf hive.execution.engine=tez
+                    hive -v --hiveconf hive.execution.engine=tez
                 else
-                    $HIVE_HOME/bin/hive -v
+                    hive -v
                 fi
             fi
         fi

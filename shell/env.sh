@@ -6,10 +6,15 @@ export DATA_SETS_FOLDER=$PROJECT_HOME/datasets
 
 export HDP_VER=2.4.1
 export HIVE_VER=0.13.1
+export HBASE_VER=1.0.0
+export KYLIN_VER=0.7.1
 
 export HADOOP_ROOT=$TOOLS_HOME/hadoop
 export HADOOP_HOME=$HADOOP_ROOT/$HDP_VER
 export HIVE_HOME=$TOOLS_HOME/hive/$HIVE_VER
+export HBASE_HOME=$TOOLS_HOME/hbase/$HBASE_VER
+export KYLIN_HOME=$TOOLS_HOME/kylin/$KYLIN_VER
+
 
 export HADOOP_MAPRED_HOME=$HADOOP_HOME
 export HADOOP_COMMON_HOME=$HADOOP_HOME
@@ -24,7 +29,8 @@ export GIRAPH_JARS=:$(echo "$GIRAPH_HOME"/*.jar | tr ' ' ':'):$(echo "$GIRAPH_HO
 
 export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${GIRAPH_JARS}:${HADOOP_CLASSPATH}
 
-export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$GIRAPH_HOME/bin:$PATH
+
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$GIRAPH_HOME/bin:$HBASE_HOME/bin:$KYLIN_HOME/bin:$PATH
 
 export NAME_NODE_DATA_DIR=$TOOLS_HOME/hadoop/data/hdfs/namenode
 export DATA_NODE_DATA_DIR=$TOOLS_HOME/hadoop/data/hdfs/datanode
