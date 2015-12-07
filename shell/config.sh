@@ -94,7 +94,7 @@ if [ "$3" == "tez" ]; then
     <configuration>
        <property>
           <name>tez.lib.uris</name>
-          <value>\${fs.defaultFS}/apps/tez-0.4.0</value>
+          <value>\${fs.defaultFS}/apps/tez-0.8.2-SNAPSHOT/tez-0.8.2-SNAPSHOT.tar.gz</value>
        </property>
     </configuration>" >>  $HADOOP_CONF_DIR/tez-site.xml
 

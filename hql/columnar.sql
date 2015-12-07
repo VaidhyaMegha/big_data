@@ -1,7 +1,7 @@
 CREATE TABLE apachelog_text (
   host STRING,
   identity STRING,
-  user STRING,
+  user2 STRING,
   time STRING,
   request STRING,
   status STRING,
@@ -21,13 +21,13 @@ select distinct host from apachelog_text;
 select distinct status from apachelog_text;
 select distinct agent from apachelog_text;
 select distinct referer from apachelog_text;
-select distinct user from apachelog_text;
+select distinct user2 from apachelog_text;
 
 -- CTAS orc table from apachelog_text
 CREATE TABLE apachelog_orc
 ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t'
 stored as orc tblproperties ("orc.compress"="SNAPPY") AS
-select host, identity, user, time, request, status, size, referer, agent
+select host, identity, user2, time, request, status, size, referer, agent
 from apachelog_text ;
 
 -- Enabling vectorized query execution
@@ -37,4 +37,4 @@ select distinct host from apachelog_orc;
 select distinct status from apachelog_orc;
 select distinct agent from apachelog_orc;
 select distinct referer from apachelog_orc;
-select distinct user from apachelog_orc;
+select distinct user2 from apachelog_orc;

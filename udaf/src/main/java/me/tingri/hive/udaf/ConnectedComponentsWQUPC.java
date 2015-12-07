@@ -6,17 +6,18 @@ package me.tingri.hive.udaf;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hive.ql.exec.Description;
+import org.apache.hadoop.hive.ql.exec.MapredContext;
 import org.apache.hadoop.hive.ql.metadata.HiveException;
 import org.apache.hadoop.hive.ql.parse.SemanticException;
 import org.apache.hadoop.hive.ql.udf.generic.AbstractGenericUDAFResolver;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFEvaluator;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDAFParameterInfo;
 import org.apache.hadoop.hive.serde2.lazybinary.LazyBinaryArray;
-import org.apache.hadoop.hive.serde2.objectinspector.ConstantObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.mapred.JobConf;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,35 +32,42 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
     public static final Log LOG = LogFactory.getLog(ConnectedComponentsWQUPC.class.getName());
     private static final int ROOT = 0;
     private static final int SIZE = 1;
-    private static final int NULL_INDICATOR =0;
+    private static final int NULL_INDICATOR = 0;
+    private static int MAX_NUM_NODES = 110000000;
+    private static String MAX_NUM_NODES_CONFIG = "components_wqupc_max_num_nodes";
 
     public GenericUDAFEvaluator getEvaluator(GenericUDAFParameterInfo info) throws SemanticException {
         return new CCEvaluator();
     }
 
     public static class CCEvaluator extends GenericUDAFEvaluator {
-        private int num_edges;
 
-        public class Components implements AggregationBuffer {
-            int[][] buffer;
+        public void configure(MapredContext mapredContext) {
+            LOG.info("Configuring MAX_NUM_NODES");
+
+            JobConf jobConfig = mapredContext.getJobConf();
+            String maxNumberOfNodes = jobConfig.get(MAX_NUM_NODES_CONFIG);
+
+            if (maxNumberOfNodes != null) {
+                try {
+                    int num = Integer.parseInt(maxNumberOfNodes);
+
+                    if (num > 0) {
+                        MAX_NUM_NODES = num;
+                    } else {
+                        LOG.warn("Invalid value set for:" + MAX_NUM_NODES_CONFIG + ". Value provided is" + num);
+                        LOG.warn("Setting the max number of nodes to default:" + MAX_NUM_NODES);
+                    }
+                } catch (NumberFormatException nfe) {
+                    LOG.warn("Invalid number set for:" + MAX_NUM_NODES_CONFIG + ". Value provided is" + maxNumberOfNodes);
+                    LOG.warn("Setting the max number of nodes to default:" + MAX_NUM_NODES);
+                }
+            }
         }
 
         @Override
         public ObjectInspector init(Mode m, ObjectInspector[] parameters) throws HiveException {
             super.init(m, parameters);
-
-            if ((m == Mode.PARTIAL1 || m == Mode.PARTIAL2 || m == Mode.COMPLETE)) {
-                if (!(parameters[0] instanceof ConstantObjectInspector)) {
-                    throw new HiveException("Size parameter must be constant." + m.toString());
-                }
-
-                ConstantObjectInspector posOI = (ConstantObjectInspector) parameters[0];
-
-                num_edges = ((IntWritable) posOI.getWritableConstantValue()).get();
-
-                System.out.println("Number of edges " + num_edges + m.toString());
-            }
-
             // return type goes here
             return ObjectInspectorFactory.getStandardListObjectInspector(
                     PrimitiveObjectInspectorFactory.javaIntObjectInspector);
@@ -67,28 +75,24 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
         @Override
         public AggregationBuffer getNewAggregationBuffer() throws HiveException {
-            Components agg = new Components();
-
-            agg.buffer = new int[num_edges][];
-
-            return agg;
+            return new Components();
         }
 
         @Override
         public void reset(AggregationBuffer agg) throws HiveException {
-            ((Components) agg).buffer = new int[num_edges][];
+            ((Components) agg).buffer = new int[MAX_NUM_NODES][];
         }
 
         @Override
         public void iterate(AggregationBuffer agg, Object[] objects) throws HiveException {
             LOG.info("*********************************");
             LOG.info("Entering iterate Method");
-            LOG.info("Iterate Values"+ Arrays.toString(objects));
+            LOG.info("Iterate Values" + Arrays.toString(objects));
 
             int node0 = Integer.valueOf(String.valueOf(objects[0]));
             int node1 = Integer.valueOf(String.valueOf(objects[1]));
 
-            LOG.info("Node0 "+ node0 + " Node1 " + node1);
+            LOG.info("Node0 " + node0 + " Node1 " + node1);
 
             int[][] list = ((Components) agg).buffer;
 
@@ -111,11 +115,11 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
 
             LOG.info("Lists Before a Merge ************");
             LOG.info("Partial List" + partial_list.toString());
-            for(int[] element: cur_list)
+            for (int[] element : cur_list)
                 LOG.info(Arrays.toString(element));
 
 
-            for (int i=0; i < size; i++) {
+            for (int i = 0; i < size; i++) {
                 int par_root = ((IntWritable) partial_list.get(i)).get();
 
                 if (par_root != NULL_INDICATOR) {
@@ -127,7 +131,7 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             }
 
             LOG.info("Final List After a Merge ************");
-            for(int[] element: ((Components) agg).buffer)
+            for (int[] element : ((Components) agg).buffer)
                 LOG.info(Arrays.toString(element));
 
             LOG.info("Exiting merge Method");
@@ -141,7 +145,6 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             LOG.info("Exiting Terminate Partial Method");
             return results;
         }
-
 
         @Override
         public Object terminate(AggregationBuffer agg) throws HiveException {
@@ -159,8 +162,8 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             // Weight the trees by their size
             // The larger tree's root becomes the root of the smaller tree
             // The larger tree's size is increased by the size of the smaller tree
-            if(tree1 == tree0) return;
-            else if(tree1[SIZE] >= tree0[SIZE]){
+            if (tree1 == tree0) return;
+            else if (tree1[SIZE] >= tree0[SIZE]) {
                 tree1[SIZE] += tree0[SIZE];
                 tree0[ROOT] = tree1[ROOT];
             } else {
@@ -169,7 +172,7 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
             }
         }
 
-        private int[] findRoot(int[][] list, int node){
+        private int[] findRoot(int[][] list, int node) {
             int cur_root = list[node][ROOT];
 
             if (cur_root == node) return list[node];
@@ -188,15 +191,15 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
         private Object getResult(Components agg) {
             int[][] cur_list = agg.buffer;
 
-            Integer[] list = new Integer[num_edges];
+            Integer[] list = new Integer[MAX_NUM_NODES];
 
             //copy from current list of int[] data structure to list of roots data structure.
-            for (int i=0; i < num_edges; i++) {
-                if(cur_list[i] != null) list[i] = findRoot(cur_list, i)[ROOT];
+            for (int i = 0; i < MAX_NUM_NODES; i++) {
+                if (cur_list[i] != null) list[i] = findRoot(cur_list, i)[ROOT];
                 else list[i] = NULL_INDICATOR;
             }
 
-            LOG.info("Result" + Arrays.toString(list));
+            //LOG.info("Result" + Arrays.toString(list));
 
             return list;
         }
@@ -209,10 +212,14 @@ public class ConnectedComponentsWQUPC extends AbstractGenericUDAFResolver {
         }
 
         private void addNodeIfNotExists(int node, int[][] list) {
-            if(list[node] == null) {
+            if (list[node] == null) {
                 LOG.info("Node " + node + " does not exist yet");
                 list[node] = new int[]{node, 1};
             }
+        }
+
+        public static class Components implements AggregationBuffer {
+            int[][] buffer = new int[MAX_NUM_NODES][];
         }
     }
 }

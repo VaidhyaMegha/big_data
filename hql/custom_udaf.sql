@@ -2,6 +2,7 @@ ADD JAR ${env:PROJECT_HOME}/udaf/target/connected_components-0.1-jar-with-depend
 
 create temporary function components as 'me.tingri.hive.udaf.ConnectedComponents';
 create temporary function components_wqupc as 'me.tingri.hive.udaf.ConnectedComponentsWQUPC';
+set components_wqupc_max_num_nodes=100;
 
 CREATE TABLE edges_string(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
@@ -51,7 +52,7 @@ where node2 = node;
 
 -- [6,2,2,5,5,6,5,6,5,10,10,5]
 insert into table components
-SELECT components_wqupc(100, id1, id2) as cluster
+SELECT components_wqupc(id1, id2) as cluster
 from edges;
 
 -- N9	N4

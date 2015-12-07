@@ -6,3 +6,4 @@ datasets/visualiq
 datasets/workshop
 *.log
 metastore_db/
+/tez_binary_files

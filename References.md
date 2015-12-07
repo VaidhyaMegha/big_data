@@ -45,3 +45,5 @@ References
 * Giraph - Run - http://giraph.apache.org/quick_start.html#qs_section_5
 * Algorithms - Union Find - http://algs4.cs.princeton.edu/15uf/
 * Hive UDF with Parameters - https://blogs.oracle.com/datawarehousing/entry/three_little_hive_udfs_part2
+* Hive 'user' keyword - https://issues.apache.org/jira/browse/HIVE-10294
+* Hive variables - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+VariableSubstitution

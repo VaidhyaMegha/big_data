@@ -42,9 +42,9 @@ jps
 ############
 # Start HBase
 ############
-start-hbase.sh
+#start-hbase.sh
 
 ############
 # Start Kylin
 ############
-kylin.sh start
+#kylin.sh start

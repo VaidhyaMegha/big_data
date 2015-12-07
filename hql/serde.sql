@@ -1,7 +1,8 @@
+-- user is a keyword hence identifier is changed to user2
 CREATE TABLE apachelog (
   host STRING,
   identity STRING,
-  user STRING,
+  user2 STRING,
   time STRING,
   request STRING,
   status STRING,
@@ -21,4 +22,4 @@ select distinct host from apachelog;
 select distinct status from apachelog;
 select distinct agent from apachelog;
 select distinct referer from apachelog;
-select distinct user from apachelog;
+select distinct user2 from apachelog;
