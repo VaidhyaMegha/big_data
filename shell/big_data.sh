@@ -88,7 +88,7 @@ else
         fi
     else
         if [ "$1" == "client" ]; then
-            if [ "$2" == "pegasus" ]; then  
+            if [ "$2" == "pegasus" ]; then
                 echo "###############"
                 echo "# Setup and execute Pegasus"
                 echo "###############"

@@ -59,7 +59,11 @@
         <entry file="file://$PROJECT_DIR$/shell/big_data.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.42320442">
+<<<<<<< HEAD
               <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+=======
+              <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+>>>>>>> f226445aa6a8dbde905d87bee2a7757fded30a8a
               <folding />
             </state>
           </provider>
@@ -157,8 +161,13 @@
         <option value="$PROJECT_DIR$/shell/env.sh" />
         <option value="$PROJECT_DIR$/run.sh" />
         <option value="$PROJECT_DIR$/shell/pegasus.sh" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/References.md" />
         <option value="$PROJECT_DIR$/shell/big_data.sh" />
+=======
+        <option value="$PROJECT_DIR$/shell/big_data.sh" />
+        <option value="$PROJECT_DIR$/References.md" />
+>>>>>>> f226445aa6a8dbde905d87bee2a7757fded30a8a
       </list>
     </option>
   </component>
@@ -1038,12 +1047,20 @@
       <workItem from="1432231331057" duration="66000" />
       <workItem from="1438951427967" duration="4784000" />
       <workItem from="1449005568276" duration="3877000" />
+<<<<<<< HEAD
       <workItem from="1449506643084" duration="21375000" />
+=======
+      <workItem from="1449506643084" duration="21123000" />
+>>>>>>> f226445aa6a8dbde905d87bee2a7757fded30a8a
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="289382000" />
+=======
+    <option name="totallyTimeSpent" value="289130000" />
+>>>>>>> f226445aa6a8dbde905d87bee2a7757fded30a8a
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -1549,7 +1566,11 @@
     <entry file="file://$PROJECT_DIR$/shell/big_data.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42320442">
+<<<<<<< HEAD
           <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+=======
+          <caret line="90" column="42" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+>>>>>>> f226445aa6a8dbde905d87bee2a7757fded30a8a
           <folding />
         </state>
       </provider>
