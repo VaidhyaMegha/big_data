@@ -47,3 +47,12 @@ References
 * Hive UDF with Parameters - https://blogs.oracle.com/datawarehousing/entry/three_little_hive_udfs_part2
 * Hive 'user' keyword - https://issues.apache.org/jira/browse/HIVE-10294
 * Hive variables - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+VariableSubstitution
+
+
+Graph Processing:
+=================
+* PEGASUS - http://www.cs.cmu.edu/~pegasus/
+        
+        * Paper - http://www.cs.cmu.edu/~ukang/papers/PegasusICDM2009.pdf
+        * Getting Started - http://www.cs.cmu.edu/~pegasus/getting%20started.htm
+        

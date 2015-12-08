@@ -88,7 +88,12 @@ else
         fi
     else
         if [ "$1" == "client" ]; then
-            if [ "$2" == "giraph" ]; then
+            if [ "$2" == "pegasus" ]; then  
+                echo "###############"
+                echo "# Setup and execute Pegasus"
+                echo "###############"
+                source $SHELL_HOME/pegasus.sh
+            elif [ "$2" == "giraph" ]; then
                 echo "###############"
                 echo "# Setup and execute Giraph"
                 echo "###############"
