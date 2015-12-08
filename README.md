@@ -39,8 +39,6 @@ DataSets
 
 TODO
 ----
-* Hadoop upgrade
-* Tez upgrade
 * Kylin
 * Giraph
 * Drill
