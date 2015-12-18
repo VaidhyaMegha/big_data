@@ -9,5 +9,6 @@ hdfs dfs -mkdir /user/root
 hdfs dfs -chmod g+w /user/root
 
 pushd $PEGASUS_HOME
+make
 pegasus.sh
 popd
