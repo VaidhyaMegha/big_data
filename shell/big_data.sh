@@ -93,6 +93,11 @@ else
                 echo "# Setup and execute Pegasus"
                 echo "###############"
                 source $SHELL_HOME/pegasus.sh
+            elif [ "$2" == "mapreduce" ]; then
+                echo "###############"
+                echo "# Run MapReduce example and leave REPL prompt"
+                echo "###############"
+                source $SHELL_HOME/mr.sh
             elif [ "$2" == "giraph" ]; then
                 echo "###############"
                 echo "# Setup and execute Giraph"

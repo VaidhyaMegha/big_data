@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.avro:avro:1.7.6-cdh5.6.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.7.6-cdh5.6.1-SNAPSHOT/avro-1.7.6-cdh5.6.1-20151218.151559-47.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.7.6-cdh5.6.1-SNAPSHOT/avro-1.7.6-cdh5.6.1-20151218.151559-47-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/avro/avro/1.7.6-cdh5.6.1-SNAPSHOT/avro-1.7.6-cdh5.6.1-20151218.151559-47-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

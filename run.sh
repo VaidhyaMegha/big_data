@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage() { echo "Usage: $0 [-m <server|client|tutorial>] [-c <start|stop|pegasus|giraph>] [-e <mr|tez>]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-m <server|client|tutorial>] [-c <start|stop|mapreduce|pegasus|giraph>] [-e <mr|tez>]" 1>&2; exit 1; }
 
 # setting default values
 m="tutorial";
@@ -15,7 +15,7 @@ while getopts ":m:c:e:" o; do
             ;;
         c)
             c=${OPTARG}
-            ((c == "start" || c == "stop" || m == "pegasus" || c == "giraph")) || usage
+            ((c == "start" || c == "stop" || c == "pegasus" || c == "mapreduce" || c == "giraph")) || usage
             ;;
         e)
             e=${OPTARG}

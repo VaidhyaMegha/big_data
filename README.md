@@ -15,6 +15,7 @@ Technology Stack
 * Hadoop Version : 2.7.1
 * Hive Version : 1.2.1
 * Tez Version : 0.8.2-SNAPSHOT
+* PEGASUS : 2.0
 
 Algorithms
 ----------
