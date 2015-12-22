@@ -47,6 +47,9 @@ How-to use/run this project
 * Command to start hadoop
     
         sudo ./run.sh -m server -c start -e mr
+* Command to stop hadoop
+    
+        sudo ./run.sh -m server -c stop -e mr
 * Command to run wordcount MapReduce program and get hdfs REPL
         
         sudo ./run.sh -m client -c mapreduce -e mr
