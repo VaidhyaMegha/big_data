@@ -54,6 +54,7 @@ How-to use/run this project
         
         sudo ./run.sh -m client -c start -e mr
 * Command to run PEGASUS demo and get PEGASUS REPL
+        
         sudo ./run.sh -m client -c pegasus -e mr
 
 
