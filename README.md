@@ -24,7 +24,7 @@ Scope
     * Windowing and Analytics Functions
         - rank within a group
         - top 3 within a group
-* Leverage Tez execution engine library (use -tez option to run.sh to set tez)
+* Leverage Tez execution engine library (use "-e tez" option while running server and client commands)
 * Data warehouse patterns (and possibly anti-patterns)
 * MapReduce programs
 
@@ -47,9 +47,6 @@ How-to use/run this project
 * Command to start hadoop
     
         sudo ./run.sh -m server -c start -e mr
-* Command to stop hadoop
-    
-        sudo ./run.sh -m server -c stop -e mr
 * Command to run wordcount MapReduce program and get hdfs REPL
         
         sudo ./run.sh -m client -c mapreduce -e mr
@@ -59,7 +56,9 @@ How-to use/run this project
 * Command to run PEGASUS demo and get PEGASUS REPL
         
         sudo ./run.sh -m client -c pegasus -e mr
-
+* Command to stop hadoop
+    
+        sudo ./run.sh -m server -c stop -e mr
 
 Technology Stack
 ----------------
@@ -77,6 +76,7 @@ Algorithms
 DataSets
 --------
 * India power generation stats for FEB-2013 from http://data.gov.in/
+* Apache logs from http://tingri.me
 
 TODO
 ----

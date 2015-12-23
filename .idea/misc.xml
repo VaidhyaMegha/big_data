@@ -9,6 +9,7 @@
       <list>
         <option value="$PROJECT_DIR$/udf/pom.xml" />
         <option value="$PROJECT_DIR$/udaf/pom.xml" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
       </list>
     </option>
   </component>
@@ -32,4 +33,3 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
-
