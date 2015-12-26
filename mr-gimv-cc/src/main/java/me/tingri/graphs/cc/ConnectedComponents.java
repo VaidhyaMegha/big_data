@@ -53,13 +53,17 @@ public class ConnectedComponents extends Configured implements Tool {
 
         //TODO for debugging retain all intermediate vectors
 
+        long changed;
+        int i = 0;
+        FLAGS converged = FLAGS.NO;
+
        // Iteratively calculate neighbor with minimum id.
-        for (int i = 0; i < CONSTANTS.MAX_ITERATIONS; i++) {
+        while( i++ < CONSTANTS.MAX_ITERATIONS) {
             JobClient.runJob(getJoinConf(edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers));
             JobClient.runJob(getMergeConf(tempVectorPath, nextVectorPath, numOfReducers));
             RunningJob stateCheckJob = JobClient.runJob(getStateCheckConf(vecPath, nextVectorPath, numOfReducers));
 
-            long changed = stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
+            changed = stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
 
             System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
 
@@ -71,6 +75,7 @@ public class ConnectedComponents extends Configured implements Tool {
             // Stop when there are no more changes to vector
             if (changed == 0)   {
                 System.out.println("All the component ids converged. Finishing...");
+                converged = FLAGS.YES;
                 break;
             }
         }
@@ -78,6 +83,11 @@ public class ConnectedComponents extends Configured implements Tool {
         fs.rename(vecPath,outputPath);
 
         System.out.println("Summarizing connected components information...");
+
+        if(converged == FLAGS.YES)
+            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in" + outputPath );
+        else
+            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + outputPath );
 
        return 0;
     }
