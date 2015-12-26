@@ -49,7 +49,8 @@ public class ConnectedComponents extends Configured implements Tool {
 
         FileSystem fs = FileSystem.get(getConf());
 
-        //TODO Generate Vector
+        JobClient.runJob(getVectorGeneratorConf(edgePath, vecPath, makeSymmetric, numOfReducers));
+
         //TODO for debugging retain all intermediate vectors
 
        // Iteratively calculate neighbor with minimum id.
@@ -79,6 +80,28 @@ public class ConnectedComponents extends Configured implements Tool {
         System.out.println("Summarizing connected components information...");
 
        return 0;
+    }
+
+    private JobConf getVectorGeneratorConf(Path edgePath, Path vecPath, String makeSymmetric, int numOfReducers) {
+        JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
+        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR );
+        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        conf.set(CONSTANTS.MAKE_SYMMETRIC, makeSymmetric);
+
+        conf.setJobName("ConnectedComponents_Preparation_Vector_Generation");
+
+        conf.setMapperClass(VectorGeneratorMapper.class);
+        conf.setReducerClass(VectorGeneratorReducer.class);
+
+        FileInputFormat.setInputPaths(conf, edgePath);
+        FileOutputFormat.setOutputPath(conf, vecPath);
+
+        conf.setNumReduceTasks(numOfReducers);
+
+        conf.setOutputKeyClass(LongWritable.class);
+        conf.setOutputValueClass(Text.class);
+
+        return conf;
     }
 
 
@@ -126,7 +149,6 @@ public class ConnectedComponents extends Configured implements Tool {
 
     protected JobConf getStateCheckConf(Path vecPath, Path nextVectorPath, int numOfReducers) throws Exception {
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
 
         conf.setJobName("ConnectedComponents_StateCheck");
 
