@@ -56,7 +56,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
         String line_text = value.toString();
         String[] line = line_text.split(fieldSeparator);
 
-        if (line.length < 2)
+        if (line.length != 2)
             return;
 
         fromNode.set(Long.parseLong(line[0]));
@@ -65,7 +65,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
         if (line[1].startsWith(vectorIndicator)) {
             // No need to invert push it back as-is
             output.collect(fromNode, new Text(line[1]));
-        } else {
+    } else {
             toNode.set(Long.parseLong(line[1]));
 
             // invert dst and src so that matrix's (col, row) and vector's (row, col) fall on same reducer
