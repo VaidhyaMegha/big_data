@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TesVectorGeneratorMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/pom.xml" afterPath="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shell/pegasus.sh" afterPath="$PROJECT_DIR$/shell/pegasus.sh" />
     </list>
     <ignored path="big_data.iws" />
@@ -67,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -119,21 +115,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pegasus.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pegasus.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shell/pegasus.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.87016577">
+              <caret line="35" column="32" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results-pegasus-mr-client.log" pinned="false" current-in-tab="true">
+      <file leaf-file-name="results-pegasus-mr-client.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/results-pegasus-mr-client.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9587629">
-              <caret line="6724" column="22" selection-start-line="6724" selection-start-column="22" selection-end-line="6724" selection-end-column="22" />
+            <state vertical-scroll-proportion="-580.35486">
+              <caret line="7678" column="0" selection-start-line="7678" selection-start-column="0" selection-end-line="7678" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,11 +197,11 @@
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
-        <option value="$PROJECT_DIR$/shell/pegasus.sh" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TesVectorGeneratorMR.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
         <option value="$PROJECT_DIR$/results-pegasus-mr-client.log" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
+        <option value="$PROJECT_DIR$/shell/pegasus.sh" />
       </list>
     </option>
   </component>
@@ -239,8 +235,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="26" />
-    <option name="width" value="1920" />
-    <option name="height" value="1054" />
+    <option name="width" value="1600" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -1474,7 +1470,7 @@
       <workItem from="1449005568276" duration="3877000" />
       <workItem from="1449506643084" duration="21375000" />
       <workItem from="1451214801528" duration="618000" />
-      <workItem from="1451215428170" duration="23441000" />
+      <workItem from="1451215428170" duration="23887000" />
     </task>
     <servers />
   </component>
@@ -1511,11 +1507,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="313441000" />
+    <option name="totallyTimeSpent" value="313887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="26" width="1600" height="874" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1529,7 +1525,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25186765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="646" y="58" width="372" height="780" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3037323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="646" y="58" width="372" height="780" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48205128" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2066,24 +2062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shell/pegasus.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results-mapreduce-mr-client.log">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="8.419354">
@@ -2094,8 +2072,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/results-pegasus-mr-client.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9587629">
-          <caret line="6724" column="22" selection-start-line="6724" selection-start-column="22" selection-end-line="6724" selection-end-column="22" />
+        <state vertical-scroll-proportion="-580.35486">
+          <caret line="7678" column="0" selection-start-line="7678" selection-start-column="0" selection-end-line="7678" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shell/pegasus.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.87016577">
+          <caret line="35" column="32" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="32" />
           <folding />
         </state>
       </provider>

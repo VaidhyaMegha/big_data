@@ -106,7 +106,7 @@ public class ConnectedComponents extends Configured implements Tool {
         System.out.println("Summarizing connected components information...");
 
         if (converged == FLAGS.YES)
-            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in" + outputPath);
+            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in " + outputPath);
         else
             System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + outputPath);
 

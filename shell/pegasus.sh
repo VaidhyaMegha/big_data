@@ -29,11 +29,11 @@ make demo_ccmpt
 
 echo "New Output"
 echo "----------"
-hadoop dfs -cat  concmpt_new_output
+hadoop dfs -cat  concmpt_new_output/*
 
 echo "Old Output"
 echo "----------"
-hadoop dfs -cat  concmpt_curbm
+hadoop dfs -cat  concmpt_curbm/*
 
 pegasus.sh
 
