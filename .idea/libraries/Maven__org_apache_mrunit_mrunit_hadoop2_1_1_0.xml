@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="Maven: org.apache.mrunit:mrunit:1.1.0">
+  <library name="Maven: org.apache.mrunit:mrunit:hadoop2:1.1.0">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/apache/mrunit/mrunit/1.1.0/mrunit-1.1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/mrunit/mrunit/1.1.0/mrunit-1.1.0-hadoop2.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/org/apache/mrunit/mrunit/1.1.0/mrunit-1.1.0-javadoc.jar!/" />

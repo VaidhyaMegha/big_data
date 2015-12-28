@@ -45,7 +45,7 @@ public class ConnectedComponents extends Configured implements Tool {
         Path nextVectorPath = new Path(vecPath.toString() + "_next");
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
-        String makeSymmetric = ("makesym".equalsIgnoreCase(args[4])) ? "1" : "0";
+        String makeSymmetric = (CONSTANTS.MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
 
         FileSystem fs = FileSystem.get(getConf());
 
@@ -61,6 +61,7 @@ public class ConnectedComponents extends Configured implements Tool {
         while( i++ < CONSTANTS.MAX_ITERATIONS) {
             JobClient.runJob(getJoinConf(edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers));
             JobClient.runJob(getMergeConf(tempVectorPath, nextVectorPath, numOfReducers));
+
             RunningJob stateCheckJob = JobClient.runJob(getStateCheckConf(vecPath, nextVectorPath, numOfReducers));
 
             changed = stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);

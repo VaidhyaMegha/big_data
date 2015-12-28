@@ -39,6 +39,12 @@ import java.util.Set;
  * Created by Sandeep Kunkunuru on 12/23/15.
  */
 public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, Text,LongWritable,Text> {
+    private String vectorIndicator;
+
+    public void configure(JobConf conf) {
+        vectorIndicator = conf.get(CONSTANTS.VECTOR_INDICATOR);
+    }
+
     public void reduce(LongWritable key, Iterator<Text> values, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
         String componentId = "";
         Set<Long> fromNodes = new HashSet<Long>();
@@ -46,9 +52,9 @@ public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, 
         while (values.hasNext()) {
             String line =  values.next().toString();
 
-            if (line.startsWith(CONSTANTS.VECTOR_INDICATOR))    // component info
+            if (line.startsWith(vectorIndicator))    // component info
                 componentId = line;
-        else                                                    // edge line
+            else                                                    // edge line
                 fromNodes.add(Long.parseLong(line));
         }
 
