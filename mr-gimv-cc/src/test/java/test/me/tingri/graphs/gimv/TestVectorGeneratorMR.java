@@ -14,7 +14,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-public class TesVectorGeneratorMR {
+public class TestVectorGeneratorMR {
     MapDriver<LongWritable, Text, LongWritable,Text> mapDriver;
     ReduceDriver<LongWritable, Text,LongWritable,Text> reduceDriver;
     MapReduceDriver<LongWritable, Text, LongWritable, Text, LongWritable, Text> mapReduceDriver;

@@ -13,6 +13,7 @@ import java.util.Iterator;
 
 /**
  * Created by sandeep on 12/23/15.
+ * No explicit output is generated. As placeholders for future need LongWritable and Text are specified.
  */
 public class StateCheckReducer extends MapReduceBase implements Reducer<LongWritable, Text, LongWritable, Text> {
     public void reduce(LongWritable key, Iterator<Text> values, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {

@@ -36,6 +36,8 @@ import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
+import java.io.IOException;
+
 /**
  * Heavy rewrite of original source code
  * Created by Sandeep Kunkunuru on 12/23/15.
@@ -64,13 +66,14 @@ public class ConnectedComponents extends Configured implements Tool {
         Path vecPath = new Path(outputPath.toString() + "_WIP");
         Path tempVectorPath = new Path(vecPath.toString() + "_temp");
         Path nextVectorPath = new Path(vecPath.toString() + "_next");
+        Path stateCheckTempPath = new Path(vecPath.toString() + "_STATE_CHECK_TEMP");
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
         String makeSymmetric = (CONSTANTS.MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
 
         FileSystem fs = FileSystem.get(getConf());
 
-        JobClient.runJob(getVectorGeneratorConf(edgePath, vecPath, makeSymmetric, numOfReducers));
+        generateVector(fs, edgePath, vecPath, makeSymmetric, numOfReducers);
 
         //TODO for debugging retain all intermediate vectors
 
@@ -80,19 +83,15 @@ public class ConnectedComponents extends Configured implements Tool {
 
         // Iteratively calculate neighbor with minimum id.
         while (i++ < CONSTANTS.MAX_ITERATIONS) {
-            JobClient.runJob(getJoinConf(edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers));
-            JobClient.runJob(getMergeConf(tempVectorPath, nextVectorPath, numOfReducers));
+            join(fs, edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers);
 
-            RunningJob stateCheckJob = JobClient.runJob(getStateCheckConf(vecPath, nextVectorPath, numOfReducers));
+            merge(fs, tempVectorPath, nextVectorPath, numOfReducers);
 
-            changed = stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
+            changed = countChanged(fs, vecPath, nextVectorPath, stateCheckTempPath, numOfReducers);
 
             System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
 
-            // rotate directory
-            fs.delete(vecPath, true);
-            fs.delete(tempVectorPath, true);
-            fs.rename(nextVectorPath, vecPath);
+            rename(fs, nextVectorPath, vecPath);
 
             // Stop when there are no more changes to vector
             if (changed == 0) {
@@ -102,7 +101,7 @@ public class ConnectedComponents extends Configured implements Tool {
             }
         }
 
-        fs.rename(vecPath, outputPath);
+        rename(fs, vecPath, outputPath);
 
         System.out.println("Summarizing connected components information...");
 
@@ -114,7 +113,19 @@ public class ConnectedComponents extends Configured implements Tool {
         return 0;
     }
 
-    private JobConf getVectorGeneratorConf(Path edgePath, Path vecPath, String makeSymmetric, int numOfReducers) {
+    private void rename(FileSystem fs, Path newPath, Path path) throws IOException {
+        deleteIfExists(fs, path);
+        fs.rename(newPath, path);
+    }
+
+    private void deleteIfExists(FileSystem fs, Path path) throws IOException {
+        if(fs.exists(path))
+            fs.delete(path, true);
+    }
+
+    private RunningJob generateVector(FileSystem fs, Path edgePath, Path vecPath, String makeSymmetric, int numOfReducers) throws IOException {
+        deleteIfExists(fs, vecPath);
+
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
         conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
@@ -133,11 +144,13 @@ public class ConnectedComponents extends Configured implements Tool {
         conf.setOutputKeyClass(LongWritable.class);
         conf.setOutputValueClass(Text.class);
 
-        return conf;
+        return JobClient.runJob(conf);
     }
 
 
-    protected JobConf getJoinConf(Path edgePath, Path vecPath, Path tempVectorPath, String makeSymmetric, int numOfReducers) throws Exception {
+    protected RunningJob join(FileSystem fs, Path edgePath, Path vecPath, Path tempVectorPath, String makeSymmetric, int numOfReducers) throws Exception {
+        deleteIfExists(fs, tempVectorPath);
+
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
         conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
@@ -156,10 +169,12 @@ public class ConnectedComponents extends Configured implements Tool {
         conf.setOutputKeyClass(LongWritable.class);
         conf.setOutputValueClass(Text.class);
 
-        return conf;
+        return JobClient.runJob(conf);
     }
 
-    protected JobConf getMergeConf(Path tempVectorPath, Path nextVectorPath, int numOfReducers) throws Exception {
+    protected RunningJob merge(FileSystem fs, Path tempVectorPath, Path nextVectorPath, int numOfReducers) throws Exception {
+        deleteIfExists(fs, nextVectorPath);
+
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
 
@@ -176,10 +191,12 @@ public class ConnectedComponents extends Configured implements Tool {
         conf.setOutputKeyClass(LongWritable.class);
         conf.setOutputValueClass(Text.class);
 
-        return conf;
+        return JobClient.runJob(conf);
     }
 
-    protected JobConf getStateCheckConf(Path vecPath, Path nextVectorPath, int numOfReducers) throws Exception {
+    protected long countChanged(FileSystem fs, Path vecPath, Path nextVectorPath, Path stateCheckTempPath, int numOfReducers) throws Exception {
+        deleteIfExists(fs, stateCheckTempPath);
+
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
 
         conf.setJobName("ConnectedComponents_StateCheck");
@@ -188,13 +205,14 @@ public class ConnectedComponents extends Configured implements Tool {
         conf.setReducerClass(StateCheckReducer.class);
 
         FileInputFormat.setInputPaths(conf, vecPath, nextVectorPath);
-        FileOutputFormat.setOutputPath(conf, null);
+        FileOutputFormat.setOutputPath(conf, stateCheckTempPath);
 
         conf.setNumReduceTasks(numOfReducers);
 
         conf.setOutputKeyClass(LongWritable.class);
         conf.setOutputValueClass(Text.class);
 
-        return conf;
+        RunningJob stateCheckJob =  JobClient.runJob(conf);
+        return stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
     }
 }
