@@ -31,14 +31,14 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- //////////////////////////////////////////////////////////////////////
- // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
- //////////////////////////////////////////////////////////////////////
-
+ * //////////////////////////////////////////////////////////////////////
+ * // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
+ * //////////////////////////////////////////////////////////////////////
+ * <p/>
  * Heavy rewrite of original source code
  * Created by Sandeep Kunkunuru on 12/23/15.
  */
-public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, Text,LongWritable,Text> {
+public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, Text, LongWritable, Text> {
     private String vectorIndicator;
 
     public void configure(JobConf conf) {
@@ -50,7 +50,7 @@ public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, 
         Set<Long> fromNodes = new HashSet<Long>();
 
         while (values.hasNext()) {
-            String line =  values.next().toString();
+            String line = values.next().toString();
 
             if (line.startsWith(vectorIndicator))    // component info
                 componentId = line;

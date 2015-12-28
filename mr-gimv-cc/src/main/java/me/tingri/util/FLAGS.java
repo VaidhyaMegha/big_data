@@ -3,7 +3,7 @@ package me.tingri.util;
 /**
  * Created by sandeep on 12/23/15.
  */
-public enum FLAGS{
+public enum FLAGS {
     YES(1),
     CHANGED(1),
     UNCHANGED(0),
@@ -12,12 +12,11 @@ public enum FLAGS{
 
     private final int value;
 
-    public int getValue() {
-        return value;
-    }
-
-
     FLAGS(int value) {
         this.value = value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }

@@ -30,10 +30,10 @@ import org.apache.hadoop.mapred.*;
 import java.io.IOException;
 
 /**
- //////////////////////////////////////////////////////////////////////
- // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
- //////////////////////////////////////////////////////////////////////
-
+ * //////////////////////////////////////////////////////////////////////
+ * // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
+ * //////////////////////////////////////////////////////////////////////
+ * <p/>
  * Heavy rewrite of original source code
  * Created by Sandeep Kunkunuru on 12/23/15.
  */
@@ -49,7 +49,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
     public void configure(JobConf conf) {
         fieldSeparator = conf.get(CONSTANTS.FIELD_SEPARATOR);
         vectorIndicator = conf.get(CONSTANTS.VECTOR_INDICATOR);
-        makeSymmetric = (FLAGS.YES.getValue() == Integer.parseInt(conf.get(CONSTANTS.MAKE_SYMMETRIC))) ? FLAGS.YES: FLAGS.NO;
+        makeSymmetric = (FLAGS.YES.getValue() == Integer.parseInt(conf.get(CONSTANTS.MAKE_SYMMETRIC))) ? FLAGS.YES : FLAGS.NO;
     }
 
     public void map(LongWritable key, Text value, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
@@ -65,7 +65,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
         if (line[1].startsWith(vectorIndicator)) {
             // No need to invert push it back as-is
             output.collect(fromNode, new Text(line[1]));
-    } else {
+        } else {
             toNode.set(Long.parseLong(line[1]));
 
             // invert dst and src so that matrix's (col, row) and vector's (row, col) fall on same reducer

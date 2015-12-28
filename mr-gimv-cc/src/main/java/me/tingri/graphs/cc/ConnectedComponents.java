@@ -1,3 +1,23 @@
+/***********************************************************************
+ * PEGASUS: Peta-Scale Graph Mining System
+ * Authors: U Kang, Duen Horng Chau, and Christos Faloutsos
+ * <p/>
+ * This software is licensed under Apache License, Version 2.0 (the  "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p/>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p/>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * -------------------------------------------------------------------------
+ * File: ConCmpt.java
+ * - HCC: Find Connected Components of graph
+ * Version: 2.0
+ ***********************************************************************/
 package me.tingri.graphs.cc;
 
 import me.tingri.graphs.gimv.JoinMapper;
@@ -17,7 +37,8 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
- * Created by sandeep on 12/23/15.
+ * Heavy rewrite of original source code
+ * Created by Sandeep Kunkunuru on 12/23/15.
  */
 public class ConnectedComponents extends Configured implements Tool {
 
@@ -57,8 +78,8 @@ public class ConnectedComponents extends Configured implements Tool {
         int i = 0;
         FLAGS converged = FLAGS.NO;
 
-       // Iteratively calculate neighbor with minimum id.
-        while( i++ < CONSTANTS.MAX_ITERATIONS) {
+        // Iteratively calculate neighbor with minimum id.
+        while (i++ < CONSTANTS.MAX_ITERATIONS) {
             JobClient.runJob(getJoinConf(edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers));
             JobClient.runJob(getMergeConf(tempVectorPath, nextVectorPath, numOfReducers));
 
@@ -74,28 +95,28 @@ public class ConnectedComponents extends Configured implements Tool {
             fs.rename(nextVectorPath, vecPath);
 
             // Stop when there are no more changes to vector
-            if (changed == 0)   {
+            if (changed == 0) {
                 System.out.println("All the component ids converged. Finishing...");
                 converged = FLAGS.YES;
                 break;
             }
         }
 
-        fs.rename(vecPath,outputPath);
+        fs.rename(vecPath, outputPath);
 
         System.out.println("Summarizing connected components information...");
 
-        if(converged == FLAGS.YES)
-            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in" + outputPath );
+        if (converged == FLAGS.YES)
+            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in" + outputPath);
         else
-            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + outputPath );
+            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + outputPath);
 
-       return 0;
+        return 0;
     }
 
     private JobConf getVectorGeneratorConf(Path edgePath, Path vecPath, String makeSymmetric, int numOfReducers) {
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR );
+        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
         conf.set(CONSTANTS.MAKE_SYMMETRIC, makeSymmetric);
 
@@ -118,7 +139,7 @@ public class ConnectedComponents extends Configured implements Tool {
 
     protected JobConf getJoinConf(Path edgePath, Path vecPath, Path tempVectorPath, String makeSymmetric, int numOfReducers) throws Exception {
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR );
+        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
         conf.set(CONSTANTS.MAKE_SYMMETRIC, makeSymmetric);
 

@@ -29,14 +29,11 @@ import java.io.IOException;
 import java.util.Iterator;
 
 /**
- //////////////////////////////////////////////////////////////////////
- // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
- //////////////////////////////////////////////////////////////////////
-
+ * <p/>
  * Heavy rewrite of original source code
  * Created by Sandeep Kunkunuru on 12/23/15.
  */
-public class VectorGeneratorReducer extends MapReduceBase implements Reducer<LongWritable, Text,LongWritable,Text> {
+public class VectorGeneratorReducer extends MapReduceBase implements Reducer<LongWritable, Text, LongWritable, Text> {
     private String vectorIndicator;
 
     public void configure(JobConf conf) {

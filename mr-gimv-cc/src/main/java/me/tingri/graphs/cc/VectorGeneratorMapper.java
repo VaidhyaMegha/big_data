@@ -30,10 +30,7 @@ import org.apache.hadoop.mapred.*;
 import java.io.IOException;
 
 /**
- //////////////////////////////////////////////////////////////////////
- // STAGE 1: join matrix elements and vector elements using matrix.dst_id and vector.row_id
- //////////////////////////////////////////////////////////////////////
-
+ * <p/>
  * Heavy rewrite of original source code
  * Created by Sandeep Kunkunuru on 12/23/15.
  */
@@ -47,7 +44,7 @@ public class VectorGeneratorMapper extends MapReduceBase implements Mapper<LongW
 
     public void configure(JobConf conf) {
         fieldSeparator = conf.get(CONSTANTS.FIELD_SEPARATOR);
-        makeSymmetric = (FLAGS.YES.getValue() == Integer.parseInt(conf.get(CONSTANTS.MAKE_SYMMETRIC))) ? FLAGS.YES: FLAGS.NO;
+        makeSymmetric = (FLAGS.YES.getValue() == Integer.parseInt(conf.get(CONSTANTS.MAKE_SYMMETRIC))) ? FLAGS.YES : FLAGS.NO;
     }
 
     public void map(LongWritable key, Text value, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {

@@ -9,9 +9,16 @@ import java.io.IOException;
 import java.util.Iterator;
 
 /**
- * Created by sandeep on 12/23/15.
+ * ////////////////////////////////////////////////////////////////////////////////////////////////
+ * // STAGE 2: merge partial component ids.
+ * //  - Input: partial component ids
+ * //  - Output: combined component ids
+ * ////////////////////////////////////////////////////////////////////////////////////////////////
+ *
+ *  Heavy rewrite of original source code
+ * Created by Sandeep Kunkunuru on 12/23/15.
  */
-public class MergeReducer extends MapReduceBase implements Reducer<LongWritable, Text,LongWritable,Text> {
+public class MergeReducer extends MapReduceBase implements Reducer<LongWritable, Text, LongWritable, Text> {
     private String vectorIndicator;
 
     public void configure(JobConf conf) {
