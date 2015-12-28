@@ -24,7 +24,7 @@ public class StateCheckReducer extends MapReduceBase implements Reducer<LongWrit
             curNodeId = (curNodeId == -1 || nodeId == curNodeId) ? nodeId : curNodeId;
 
             if (curNodeId != nodeId) {
-                reporter.getCounter(FLAGS.CHANGED).increment(1);
+                reporter.incrCounter(FLAGS.CHANGED, 1);
                 break;
             }
         }
