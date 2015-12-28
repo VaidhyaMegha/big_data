@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestReduceMR.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorMapper.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorReducer.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorReducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/GIMVIdentityMapper.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/GIMVIdentityMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinMapper.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinReducer.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinReducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeMapper.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeReducer.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeReducer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/CONSTANTS.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/CONSTANTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/FLAGS.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/FLAGS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestReduceMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" />
     </list>
     <ignored path="big_data.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestReduceMR.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestReduceMR.java">
+      <file leaf-file-name="TestMergeMR.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5427136">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.5376106">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -217,6 +203,7 @@
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeReducer.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" />
       </list>
     </option>
   </component>
@@ -595,7 +582,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestReduceMR.testGIMVIdentityMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestMergeMR.testGIMVIdentityMapper" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="test.me.tingri.graphs.gimv.*" />
@@ -606,7 +593,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.me.tingri.graphs.gimv" />
-      <option name="MAIN_CLASS_NAME" value="test.me.tingri.graphs.gimv.TestReduceMR" />
+      <option name="MAIN_CLASS_NAME" value="test.me.tingri.graphs.gimv.TestMergeMR" />
       <option name="METHOD_NAME" value="testGIMVIdentityMapper" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -621,7 +608,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TestReduceMR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TestMergeMR" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="test.me.tingri.graphs.gimv.*" />
@@ -632,7 +619,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="test.me.tingri.graphs.gimv" />
-      <option name="MAIN_CLASS_NAME" value="test.me.tingri.graphs.gimv.TestReduceMR" />
+      <option name="MAIN_CLASS_NAME" value="test.me.tingri.graphs.gimv.TestMergeMR" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1396,16 +1383,16 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.TestJoinMR" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TestJoinMR.testReducer" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestReduceMR.testGIMVIdentityMapper" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestReduceMR" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestMergeMR.testGIMVIdentityMapper" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestMergeMR" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.test.me.tingri.graphs.gimv in mr-gimv-cc" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.test.me.tingri.graphs.gimv in mr-gimv-cc" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.TestJoinMR" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestReduceMR" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestReduceMR.testGIMVIdentityMapper" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestMergeMR" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestMergeMR.testGIMVIdentityMapper" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.TestJoinMR.testReducer" />
       </list>
     </recent_temporary>
@@ -1470,7 +1457,7 @@
       <workItem from="1449005568276" duration="3877000" />
       <workItem from="1449506643084" duration="21375000" />
       <workItem from="1451214801528" duration="618000" />
-      <workItem from="1451215428170" duration="12074000" />
+      <workItem from="1451215428170" duration="12127000" />
     </task>
     <servers />
   </component>
@@ -1507,11 +1494,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302074000" />
+    <option name="totallyTimeSpent" value="302127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1522,7 +1509,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25186765" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="646" y="58" width="372" height="780" />
@@ -2045,10 +2032,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestReduceMR.java">
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5427136">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.5376106">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
