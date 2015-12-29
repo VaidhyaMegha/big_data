@@ -53,7 +53,7 @@ How-to use/run this project
 * Command to run all hive scripts including connected components programs
         
         sudo ./run.sh -m client -c start -e mr
-* Command to run PEGASUS demo and get PEGASUS REPL
+* Command to run GIMV-CC, PEGASUS CC and get PEGASUS REPL
         
         sudo ./run.sh -m client -c pegasus -e mr
 * Command to stop hadoop
