@@ -51,7 +51,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     protected static int printUsage() {
-        System.out.println("ConnectedComponents <edge_path> <output_path> <# of nodes> <# of reducers> <makesym or nosym>");
+        System.out.println("ConnectedComponents <edge_path> <vector_path> <# of nodes> <# of reducers> <makesym or nosym>");
 
         ToolRunner.printGenericCommandUsage(System.out);
 
@@ -62,60 +62,58 @@ public class ConnectedComponents extends Configured implements Tool {
         if (args.length != 5) return printUsage();
 
         Path edgePath = new Path(args[0]);
-        Path outputPath = new Path(args[1]);
-        Path vecPath = new Path(outputPath.toString() + "_WIP");
-        Path tempVectorPath = new Path(vecPath.toString() + "_temp");
-        Path nextVectorPath = new Path(vecPath.toString() + "_next");
-        Path stateCheckTempPath = new Path(vecPath.toString() + "_STATE_CHECK_TEMP");
+        Path vecPath = new Path(args[1]);
+        Path curVectorPath = new Path(vecPath.toString() + "_WIP");
+        Path tempVectorPath = new Path(curVectorPath.toString() + "_temp");
+        Path nextVectorPath = new Path(curVectorPath.toString() + "_next");
+        Path stateCheckTempPath = new Path(curVectorPath.toString() + "_STATE_CHECK_TEMP");
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
         String makeSymmetric = (CONSTANTS.MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
 
         FileSystem fs = FileSystem.get(getConf());
 
-        generateVector(fs, edgePath, vecPath, makeSymmetric, numOfReducers);
+        //start from where we stopped i.e. if a vector_path is provided and it exists jump straight to loop
+        if(!fs.exists(vecPath))
+            generateVector(fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
+        else
+            rename(fs, vecPath, curVectorPath);
 
         //TODO for debugging retain all intermediate vectors
 
-        long changed;
-        int i = 0;
-        FLAGS converged = FLAGS.NO;
+        long changed = -1;
 
         // Iteratively calculate neighbor with minimum id.
-        while (i++ < CONSTANTS.MAX_ITERATIONS) {
-            join(fs, edgePath, vecPath, tempVectorPath, makeSymmetric, numOfReducers);
+        for (int i = 0; i < CONSTANTS.MAX_ITERATIONS; i++) {
+            join(fs, edgePath, curVectorPath, tempVectorPath, makeSymmetric, numOfReducers);
 
             merge(fs, tempVectorPath, nextVectorPath, numOfReducers);
 
-            changed = countChanged(fs, vecPath, nextVectorPath, stateCheckTempPath, numOfReducers);
+            changed = countChanged(fs, curVectorPath, nextVectorPath, stateCheckTempPath, numOfReducers);
 
             System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
 
-            rename(fs, nextVectorPath, vecPath);
+            rename(fs, nextVectorPath, curVectorPath);
 
             // Stop when there are no more changes to vector
             if (changed == 0) {
-                System.out.println("All the component ids converged. Finishing...");
-                converged = FLAGS.YES;
+                System.out.println("All the component ids converged.");
+                System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in " + vecPath);
                 break;
             }
         }
 
-        rename(fs, vecPath, outputPath);
+        rename(fs, curVectorPath, vecPath);
 
-        System.out.println("Summarizing connected components information...");
-
-        if (converged == FLAGS.YES)
-            System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in " + outputPath);
-        else
-            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + outputPath);
+        if (changed != 0)
+            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + vecPath);
 
         return 0;
     }
 
-    private void rename(FileSystem fs, Path newPath, Path path) throws IOException {
-        deleteIfExists(fs, path);
-        fs.rename(newPath, path);
+    private void rename(FileSystem fs, Path path, Path newPath) throws IOException {
+        deleteIfExists(fs, newPath);
+        fs.rename(path, newPath);
     }
 
     private void deleteIfExists(FileSystem fs, Path path) throws IOException {

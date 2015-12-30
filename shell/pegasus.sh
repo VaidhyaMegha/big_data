@@ -8,7 +8,7 @@ hdfs dfs -mkdir /user/root
 
 hdfs dfs -chmod g+w /user/root
 
-# Custom UDF
+# mr-gimv-cc
 pushd $PROJECT_HOME/mr-gimv-cc/
 mvn clean assembly:assembly
 popd

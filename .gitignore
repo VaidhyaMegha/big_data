@@ -1,7 +1,5 @@
 /udf/target
 /udaf/target
-/input
-/output
 nohup.out
 datasets/visualiq
 datasets/workshop
