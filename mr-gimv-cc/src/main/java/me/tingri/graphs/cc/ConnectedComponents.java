@@ -51,7 +51,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     protected static int printUsage() {
-        System.out.println("ConnectedComponents <edge_path> <vector_path> <# of nodes> <# of reducers> <makesym or nosym>");
+        System.out.println("ConnectedComponents <edge_path> <vector_path> <# of nodes> <# of reducers> <makesym or nosym> <restart>");
 
         ToolRunner.printGenericCommandUsage(System.out);
 
@@ -59,7 +59,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     public int run(String[] args) throws Exception {
-        if (args.length != 5) return printUsage();
+        if (args.length != 5 && args.length != 6) return printUsage();
 
         Path edgePath = new Path(args[0]);
         Path vecPath = new Path(args[1]);
@@ -73,11 +73,11 @@ public class ConnectedComponents extends Configured implements Tool {
 
         FileSystem fs = FileSystem.get(getConf());
 
-        //start from where we stopped i.e. if a vector_path is provided and it exists jump straight to loop
-        if(!fs.exists(vecPath))
-            generateVector(fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
-        else
+        //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
+        if(fs.exists(vecPath) && args.length == 6 && CONSTANTS.RESTART.equalsIgnoreCase(args[5]))
             rename(fs, vecPath, curVectorPath);
+        else
+            generateVector(fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
 
         //TODO for debugging retain all intermediate vectors
 

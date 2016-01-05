@@ -25,6 +25,9 @@ hdfs dfs -put catepillar_star.edge cc_edge
 hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.ConnectedComponents \
  cc_edge concmpt_new_output 16 3 makesym
 
+hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.ConnectedComponents \
+ cc_edge concmpt_new_output 16 3 makesym restart
+
 make demo_ccmpt
 
 echo "New Output"
