@@ -14,4 +14,6 @@ public class CONSTANTS {
     public static final String DEFAULT_VECTOR_INDICATOR = "v";
 
     public static final int MAX_ITERATIONS = 15;
+    public static final String SPACE = " ";
+    public static final String FAST = "fast";
 }

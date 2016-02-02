@@ -1,8 +1,8 @@
 package test.me.tingri.graphs.gimv;
 
 
-import me.tingri.graphs.cc.VectorGeneratorMapper;
-import me.tingri.graphs.cc.VectorGeneratorReducer;
+import me.tingri.graphs.gimv.VectorGeneratorMapper;
+import me.tingri.graphs.gimv.VectorGeneratorReducer;
 import me.tingri.util.CONSTANTS;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;

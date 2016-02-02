@@ -20,12 +20,8 @@
  ***********************************************************************/
 package me.tingri.graphs.cc;
 
-import me.tingri.graphs.gimv.JoinMapper;
-import me.tingri.graphs.gimv.JoinReducer;
-import me.tingri.graphs.gimv.MergeMapper;
-import me.tingri.graphs.gimv.MergeReducer;
+import me.tingri.graphs.gimv.*;
 import me.tingri.util.CONSTANTS;
-import me.tingri.util.FLAGS;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -35,8 +31,6 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
-
-import java.io.IOException;
 
 /**
  * Heavy rewrite of original source code
@@ -75,9 +69,9 @@ public class ConnectedComponents extends Configured implements Tool {
 
         //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
         if(fs.exists(vecPath) && args.length == 6 && CONSTANTS.RESTART.equalsIgnoreCase(args[5]))
-            rename(fs, vecPath, curVectorPath);
+            Utility.rename(fs, vecPath, curVectorPath);
         else
-            generateVector(fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
+            Utility.generateVector(new JobConf(getConf(), ConnectedComponents.class), fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
 
         //TODO for debugging retain all intermediate vectors
 
@@ -89,11 +83,11 @@ public class ConnectedComponents extends Configured implements Tool {
 
             merge(fs, tempVectorPath, nextVectorPath, numOfReducers);
 
-            changed = countChanged(fs, curVectorPath, nextVectorPath, stateCheckTempPath, numOfReducers);
+            changed = Utility.stateCheck(new JobConf(getConf(), ConnectedComponents.class), fs, curVectorPath, nextVectorPath, stateCheckTempPath, numOfReducers);
 
             System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
 
-            rename(fs, nextVectorPath, curVectorPath);
+            Utility.rename(fs, nextVectorPath, curVectorPath);
 
             // Stop when there are no more changes to vector
             if (changed == 0) {
@@ -103,7 +97,7 @@ public class ConnectedComponents extends Configured implements Tool {
             }
         }
 
-        rename(fs, curVectorPath, vecPath);
+        Utility.rename(fs, curVectorPath, vecPath);
 
         if (changed != 0)
             System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + vecPath);
@@ -111,43 +105,9 @@ public class ConnectedComponents extends Configured implements Tool {
         return 0;
     }
 
-    private void rename(FileSystem fs, Path path, Path newPath) throws IOException {
-        deleteIfExists(fs, newPath);
-        fs.rename(path, newPath);
-    }
-
-    private void deleteIfExists(FileSystem fs, Path path) throws IOException {
-        if(fs.exists(path))
-            fs.delete(path, true);
-    }
-
-    private RunningJob generateVector(FileSystem fs, Path edgePath, Path vecPath, String makeSymmetric, int numOfReducers) throws IOException {
-        deleteIfExists(fs, vecPath);
-
-        JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
-        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
-        conf.set(CONSTANTS.MAKE_SYMMETRIC, makeSymmetric);
-
-        conf.setJobName("ConnectedComponents_Preparation_Vector_Generation");
-
-        conf.setMapperClass(VectorGeneratorMapper.class);
-        conf.setReducerClass(VectorGeneratorReducer.class);
-
-        FileInputFormat.setInputPaths(conf, edgePath);
-        FileOutputFormat.setOutputPath(conf, vecPath);
-
-        conf.setNumReduceTasks(numOfReducers);
-
-        conf.setOutputKeyClass(LongWritable.class);
-        conf.setOutputValueClass(Text.class);
-
-        return JobClient.runJob(conf);
-    }
-
 
     protected RunningJob join(FileSystem fs, Path edgePath, Path vecPath, Path tempVectorPath, String makeSymmetric, int numOfReducers) throws Exception {
-        deleteIfExists(fs, tempVectorPath);
+        Utility.deleteIfExists(fs, tempVectorPath);
 
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
         conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
@@ -171,7 +131,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     protected RunningJob merge(FileSystem fs, Path tempVectorPath, Path nextVectorPath, int numOfReducers) throws Exception {
-        deleteIfExists(fs, nextVectorPath);
+        Utility.deleteIfExists(fs, nextVectorPath);
 
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
         conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
@@ -192,25 +152,4 @@ public class ConnectedComponents extends Configured implements Tool {
         return JobClient.runJob(conf);
     }
 
-    protected long countChanged(FileSystem fs, Path vecPath, Path nextVectorPath, Path stateCheckTempPath, int numOfReducers) throws Exception {
-        deleteIfExists(fs, stateCheckTempPath);
-
-        JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-
-        conf.setJobName("ConnectedComponents_StateCheck");
-
-        conf.setMapperClass(StateCheckMapper.class);
-        conf.setReducerClass(StateCheckReducer.class);
-
-        FileInputFormat.setInputPaths(conf, vecPath, nextVectorPath);
-        FileOutputFormat.setOutputPath(conf, stateCheckTempPath);
-
-        conf.setNumReduceTasks(numOfReducers);
-
-        conf.setOutputKeyClass(LongWritable.class);
-        conf.setOutputValueClass(Text.class);
-
-        RunningJob stateCheckJob =  JobClient.runJob(conf);
-        return stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
-    }
 }

@@ -39,7 +39,6 @@
             <version>2.6.0</version>
         </dependency>
 
-
         <!-- For unit testing -->
         <dependency>
             <groupId>org.apache.mrunit</groupId>

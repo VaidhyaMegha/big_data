@@ -18,7 +18,7 @@
  * - HCC: Find Connected Components of graph
  * Version: 2.0
  ***********************************************************************/
-package me.tingri.graphs.cc;
+package me.tingri.graphs.gimv;
 
 import me.tingri.util.CONSTANTS;
 import org.apache.hadoop.io.LongWritable;
