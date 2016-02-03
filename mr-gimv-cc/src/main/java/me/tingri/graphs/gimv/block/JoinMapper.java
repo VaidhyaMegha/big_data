@@ -19,7 +19,7 @@ import static me.tingri.util.CONSTANTS.*;
  * //  - Input: edge_file, component_ids_from_the_last_iteration
  * //  - Output: partial component ids
  */
-public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Text, Text, Text> {
+public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Text, LongWritable, Text> {
     protected short blockWidth;
     private String fieldSeparator;
     private String sepInValue;
@@ -45,7 +45,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
      *
      * @throws IOException
      */
-    public void map(LongWritable key, Text value, OutputCollector<Text, Text> output, Reporter reporter) throws IOException {
+    public void map(LongWritable key, Text value, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
         String line_text = value.toString();
         String[] line = line_text.split(fieldSeparator);
 
@@ -56,17 +56,17 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
         short inBlockRowIndex = (short) (Long.parseLong(line[0]) % blockWidth);
 
         if (line[1].startsWith(vectorIndicator)) {
-            output.collect(new Text(blockRowId + ""), new Text(inBlockRowIndex + sepInValue + line[1].substring(1)));
+            output.collect(new LongWritable(blockRowId), new Text(inBlockRowIndex + sepInValue + line[1].substring(1)));
         } else {
             long blockColId = Long.parseLong(line[1]) / blockWidth;
             long inBlockColIndex = Long.parseLong(line[1]) % blockWidth;
 
-            output.collect(new Text(blockColId + ""), new Text(blockRowId + fieldSeparator + inBlockColIndex + sepInValue + inBlockRowIndex + sepInValue + 1));
+            output.collect(new LongWritable(blockColId), new Text(blockRowId + fieldSeparator + inBlockColIndex + sepInValue + inBlockRowIndex + sepInValue + 1));
 
             // if make-symmetric-edge requirement is requested make inverse edge
             // self-loop is not required since reducer takes care of it
             if (makeSymmetric == FLAGS.YES && !line[0].equals(line[1]))
-                output.collect(new Text(blockRowId + ""), new Text(blockColId + fieldSeparator + inBlockRowIndex + sepInValue + inBlockColIndex + sepInValue + 1));
+                output.collect(new LongWritable(blockRowId), new Text(blockColId + fieldSeparator + inBlockRowIndex + sepInValue + inBlockColIndex + sepInValue + 1));
         }
     }
 }

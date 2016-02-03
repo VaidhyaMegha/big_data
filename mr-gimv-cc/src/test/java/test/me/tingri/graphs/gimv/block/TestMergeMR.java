@@ -1,4 +1,4 @@
-package test.me.tingri.graphs.gimv;
+package test.me.tingri.graphs.gimv.block;
 
 
 import me.tingri.graphs.gimv.MergeMapper;

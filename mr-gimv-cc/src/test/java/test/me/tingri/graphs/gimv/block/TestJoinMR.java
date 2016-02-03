@@ -1,8 +1,8 @@
-package test.me.tingri.graphs.gimv;
+package test.me.tingri.graphs.gimv.block;
 
 
-import me.tingri.graphs.gimv.MergeMapper;
-import me.tingri.graphs.gimv.MergeReducer;
+import me.tingri.graphs.gimv.block.JoinMapper;
+import me.tingri.graphs.gimv.block.JoinReducer;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.MapDriver;
@@ -13,41 +13,42 @@ import org.junit.Test;
 
 import java.io.IOException;
 
-import static me.tingri.util.CONSTANTS.DEFAULT_VECTOR_INDICATOR;
-import static me.tingri.util.CONSTANTS.VECTOR_INDICATOR;
+import static me.tingri.util.CONSTANTS.*;
 import static test.me.tingri.graphs.gimv.TESTDATA.*;
 
-public class TestMergeMR {
+public class TestJoinMR {
     MapDriver<LongWritable, Text, LongWritable,Text> mapDriver;
     ReduceDriver<LongWritable, Text,LongWritable,Text> reduceDriver;
     MapReduceDriver<LongWritable, Text, LongWritable, Text, LongWritable, Text> mapReduceDriver;
 
     @Before
     public void setUp() {
-        MergeMapper mapper = new MergeMapper();
-        MergeReducer reducer = new MergeReducer();
+        JoinMapper mapper = new JoinMapper();
+        JoinReducer reducer = new JoinReducer();
 
         mapDriver = MapDriver.newMapDriver(mapper);
         reduceDriver = ReduceDriver.newReduceDriver(reducer);
         mapReduceDriver = MapReduceDriver.newMapReduceDriver(mapper, reducer);
 
+        mapDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        mapDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
         mapDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
 
+
+        reduceDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        reduceDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
         reduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
 
+        mapReduceDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        mapReduceDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
         mapReduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
     }
 
     @Test
     public void testMapper() throws IOException {
-        testGIMVIdentityMapper();
-    }
+        mapDriver.withAll(getJoinMapperInput());
 
-    @Test
-    public void testGIMVIdentityMapper() throws IOException {
-        mapDriver.withAll(getMergeMapperInput());
-
-        mapDriver.withAllOutput(getJoinReducerOutput());
+        mapDriver.withAllOutput(getJoinMapperOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapDriver.runTest(false);
@@ -56,22 +57,22 @@ public class TestMergeMR {
     @Test
     public void testReducer() throws IOException {
 
-        reduceDriver.withAll(getMergeReducerInput());
+        reduceDriver.withAll(getJoinReducerInput());
 
-        reduceDriver.withAllOutput(getMergeReducerOutput());
+        reduceDriver.withAllOutput(getJoinReducerOutput());
 
-        //though code is deterministic it is not necessary to function. Hence accepting results in any order.
+        //since HashSet is used, results are non-deterministic. Hence order does not matter
         reduceDriver.runTest(false);
     }
 
 
     @Test
     public void testMapReduce() throws IOException {
-        mapReduceDriver.withAll(getMergeMapperInput());
+        mapReduceDriver.withAll(getJoinMapperInput());
 
-        mapReduceDriver.withAllOutput(getMergeReducerOutput());
+        mapReduceDriver.withAllOutput(getJoinReducerOutput());
 
-        //though code is deterministic it is not necessary to function. Hence accepting results in any order.
+        //since HashSet is used in reducer, results are non-deterministic. Hence order does not matter
         mapReduceDriver.runTest(false);
     }
 

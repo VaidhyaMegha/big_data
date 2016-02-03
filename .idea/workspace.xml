@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinReducer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeReducer.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/UnfoldMapper.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/README.md" afterPath="$PROJECT_DIR$/mr-gimv-cc/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/ConnectedComponentsBlock.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/ConnectedComponentsBlock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/GIMVUtility.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/GIMVUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/CONSTANTS.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/CONSTANTS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/FLAGS.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/FLAGS.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestJoinMR.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestMergeMR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" afterPath="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" />
     </list>
     <ignored path="big_data.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +35,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConnectedComponents.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java">
+      <file leaf-file-name="TestMergeMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="63" selection-start-line="105" selection-start-column="63" selection-end-line="105" selection-end-column="63" />
+              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestStateCheckMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestVectorGeneratorMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestMergeMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestMergeMR.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoinMapper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.07522124">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JoinMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java">
+      <file leaf-file-name="TestJoinMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestJoinMR.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+              <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinReducer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1443#1474#0" expanded="true" />
@@ -88,48 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.967742">
-              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MergeMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GIMVUtility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/GIMVUtility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#2971#2984#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MergeReducer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MergeReducer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80088496">
-              <caret line="45" column="44" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,23 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConnectedComponentsBlock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/ConnectedComponentsBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.7868853">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateCheckReducer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java">
+      <file leaf-file-name="TestJoinMR.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -184,18 +171,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/GIMVIdentityMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestReduceMR.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/VectorGeneratorReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/MergeReducer.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/StateCheckReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TesVectorGeneratorMR.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/TODO.md" />
         <option value="$PROJECT_DIR$/datasets/edges.tsv" />
@@ -204,7 +187,6 @@
         <option value="$PROJECT_DIR$/datasets/graphs/edges.tsv" />
         <option value="$PROJECT_DIR$/shell/mr.sh" />
         <option value="$PROJECT_DIR$/datasets/graphs/eccentricity/straight_line.tsv" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" />
         <option value="$PROJECT_DIR$/shell/pegasus.sh" />
         <option value="$PROJECT_DIR$/results-pegasus-mr-client.log" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/CCBlock.java" />
@@ -222,19 +204,24 @@
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/GIMVBlockUtility.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/GIMVUtility.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/VectorGeneratorReducer.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/Utility.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/CONSTANTS.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/util/FLAGS.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/UnfoldMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinReducer.java" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/GIMVUtility.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/ConnectedComponents.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/cc/block/ConnectedComponentsBlock.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeReducer.java" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/README.md" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestJoinMR.java" />
       </list>
     </option>
   </component>
@@ -397,6 +384,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gimv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mr-gimv-cc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gimv" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="block" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -653,6 +682,7 @@
       <recent name="me.tingri.graphs.gimv.block" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block" />
       <recent name="$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv" />
       <recent name="$PROJECT_DIR$/shell" />
       <recent name="$PROJECT_DIR$/hql" />
@@ -1610,7 +1640,7 @@
       <workItem from="1453228308670" duration="45000" />
       <workItem from="1453228380712" duration="8420000" />
       <workItem from="1454341894861" duration="661000" />
-      <workItem from="1454353875892" duration="48949000" />
+      <workItem from="1454353875892" duration="49419000" />
     </task>
     <servers />
   </component>
@@ -1647,7 +1677,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="401684000" />
+    <option name="totallyTimeSpent" value="402154000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -1759,33 +1789,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/results-mapreduce-mr-client.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.419354">
-          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.419355">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/TODO.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7419355">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/hadoop/hadoop-core/1.2.1/hadoop-core-1.2.1.jar!/org/apache/hadoop/fs/FileSystem.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.033334">
@@ -1835,23 +1838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17403315">
           <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2012,16 +1998,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/JoinMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2143,16 +2119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/GIMVUtility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2162,27 +2128,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2971#2984#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1443#1474#0" expanded="true" />
-            <element signature="e#1540#1561#0" expanded="true" />
-            <element signature="e#2437#2443#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2197,10 +2142,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TESTDATA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="28" selection-start-line="34" selection-start-column="28" selection-end-line="34" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestMergeMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestJoinMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestStateCheckMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/TestVectorGeneratorMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestMergeMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/MergeReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80088496">
-          <caret line="45" column="44" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1443#1474#0" expanded="true" />
+            <element signature="e#1540#1561#0" expanded="true" />
+            <element signature="e#2437#2443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/test/java/test/me/tingri/graphs/gimv/block/TestJoinMR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/src/main/java/me/tingri/graphs/gimv/block/JoinMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.07522124">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -3,7 +3,6 @@ package test.me.tingri.graphs.gimv;
 
 import me.tingri.graphs.cc.StateCheckMapper;
 import me.tingri.graphs.cc.StateCheckReducer;
-import me.tingri.util.CONSTANTS;
 import me.tingri.util.FLAGS;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -15,7 +14,10 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import static me.tingri.util.CONSTANTS.DEFAULT_VECTOR_INDICATOR;
+import static me.tingri.util.CONSTANTS.VECTOR_INDICATOR;
 import static org.junit.Assert.assertEquals;
+import static test.me.tingri.graphs.gimv.TESTDATA.*;
 
 public class TestStateCheckMR {
     MapDriver<LongWritable, Text, LongWritable,Text> mapDriver;
@@ -31,16 +33,16 @@ public class TestStateCheckMR {
         reduceDriver = ReduceDriver.newReduceDriver(reducer);
         mapReduceDriver = MapReduceDriver.newMapReduceDriver(mapper, reducer);
 
-        mapDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
-        reduceDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
-        mapReduceDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        mapDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        reduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        mapReduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
     }
 
     @Test
     public void testMapper() throws IOException {
-        mapDriver.withAll(TESTDATA.getStateCheckMapperInput());
+        mapDriver.withAll(getStateCheckMapperInput());
 
-        mapDriver.withAllOutput(TESTDATA.getStateCheckerMapperOutput());
+        mapDriver.withAllOutput(getStateCheckerMapperOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapDriver.runTest(false);
@@ -49,9 +51,9 @@ public class TestStateCheckMR {
     @Test
     public void testReducer() throws IOException {
 
-        reduceDriver.withAll(TESTDATA.getStateCheckReducerInput());
+        reduceDriver.withAll(getStateCheckReducerInput());
 
-        reduceDriver.withAllOutput(TESTDATA.getStateCheckReducerOutput());
+        reduceDriver.withAllOutput(getStateCheckReducerOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         reduceDriver.runTest(false);
@@ -61,9 +63,9 @@ public class TestStateCheckMR {
 
     @Test
     public void testMapReduce() throws IOException {
-        mapReduceDriver.withAll(TESTDATA.getStateCheckMapperInput());
+        mapReduceDriver.withAll(getStateCheckMapperInput());
 
-        mapReduceDriver.withAllOutput(TESTDATA.getStateCheckReducerOutput());
+        mapReduceDriver.withAllOutput(getStateCheckReducerOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapReduceDriver.runTest(false);

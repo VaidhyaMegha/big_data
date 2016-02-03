@@ -3,7 +3,6 @@ package test.me.tingri.graphs.gimv;
 
 import me.tingri.graphs.gimv.VectorGeneratorMapper;
 import me.tingri.graphs.gimv.VectorGeneratorReducer;
-import me.tingri.util.CONSTANTS;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.MapDriver;
@@ -13,6 +12,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
+
+import static me.tingri.util.CONSTANTS.*;
+import static test.me.tingri.graphs.gimv.TESTDATA.*;
 
 public class TestVectorGeneratorMR {
     MapDriver<LongWritable, Text, LongWritable,Text> mapDriver;
@@ -28,25 +30,25 @@ public class TestVectorGeneratorMR {
         reduceDriver = ReduceDriver.newReduceDriver(reducer);
         mapReduceDriver = MapReduceDriver.newMapReduceDriver(mapper, reducer);
 
-        mapDriver.getConfiguration().set(CONSTANTS.MAKE_SYMMETRIC,"1");
-        mapDriver.getConfiguration().set(CONSTANTS.FIELD_SEPARATOR,CONSTANTS.DEFAULT_FIELD_SEPARATOR);
-        mapDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        mapDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        mapDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
+        mapDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
 
 
-        reduceDriver.getConfiguration().set(CONSTANTS.MAKE_SYMMETRIC,"1");
-        reduceDriver.getConfiguration().set(CONSTANTS.FIELD_SEPARATOR,CONSTANTS.DEFAULT_FIELD_SEPARATOR);
-        reduceDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        reduceDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        reduceDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
+        reduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
 
-        mapReduceDriver.getConfiguration().set(CONSTANTS.MAKE_SYMMETRIC,"1");
-        mapReduceDriver.getConfiguration().set(CONSTANTS.FIELD_SEPARATOR,CONSTANTS.DEFAULT_FIELD_SEPARATOR);
-        mapReduceDriver.getConfiguration().set(CONSTANTS.VECTOR_INDICATOR,CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        mapReduceDriver.getConfiguration().set(MAKE_SYMMETRIC,"1");
+        mapReduceDriver.getConfiguration().set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
+        mapReduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
     }
 
     @Test
     public void testMapper() throws IOException {
-        mapDriver.withAll(TESTDATA.getVectorGeneratorMapperInput());
+        mapDriver.withAll(getVectorGeneratorMapperInput());
 
-        mapDriver.withAllOutput(TESTDATA.getVectorGeneratorMapperOutput());
+        mapDriver.withAllOutput(getVectorGeneratorMapperOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapDriver.runTest(false);
@@ -55,9 +57,9 @@ public class TestVectorGeneratorMR {
     @Test
     public void testReducer() throws IOException {
 
-        reduceDriver.withAll(TESTDATA.getVectorGeneratorReducerInput());
+        reduceDriver.withAll(getVectorGeneratorReducerInput());
 
-        reduceDriver.withAllOutput(TESTDATA.getVectorGeneratorReducerOutput());
+        reduceDriver.withAllOutput(getVectorGeneratorReducerOutput());
 
         //since HashSet is used, results are non-deterministic. Hence order does not matter
         reduceDriver.runTest(false);
@@ -66,9 +68,9 @@ public class TestVectorGeneratorMR {
 
     @Test
     public void testMapReduce() throws IOException {
-        mapReduceDriver.withAll(TESTDATA.getVectorGeneratorMapperInput());
+        mapReduceDriver.withAll(getVectorGeneratorMapperInput());
 
-        mapReduceDriver.withAllOutput(TESTDATA.getVectorGeneratorReducerOutput());
+        mapReduceDriver.withAllOutput(getVectorGeneratorReducerOutput());
 
         //since HashSet is used in reducer, results are non-deterministic. Hence order does not matter
         mapReduceDriver.runTest(false);
