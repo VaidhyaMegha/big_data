@@ -20,8 +20,10 @@
  ***********************************************************************/
 package me.tingri.graphs.cc;
 
-import me.tingri.graphs.gimv.*;
-import me.tingri.util.CONSTANTS;
+import me.tingri.graphs.gimv.JoinMapper;
+import me.tingri.graphs.gimv.JoinReducer;
+import me.tingri.graphs.gimv.MergeMapper;
+import me.tingri.graphs.gimv.MergeReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.FileSystem;
@@ -31,6 +33,9 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapred.*;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
+
+import static me.tingri.util.CONSTANTS.*;
+
 
 /**
  * Heavy rewrite of original source code
@@ -63,12 +68,12 @@ public class ConnectedComponents extends Configured implements Tool {
         Path stateCheckTempPath = new Path(curVectorPath.toString() + "_STATE_CHECK_TEMP");
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
-        String makeSymmetric = (CONSTANTS.MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
+        String makeSymmetric = (MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
 
         FileSystem fs = FileSystem.get(getConf());
 
         //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
-        if(fs.exists(vecPath) && args.length == 6 && CONSTANTS.RESTART.equalsIgnoreCase(args[5]))
+        if(fs.exists(vecPath) && args.length == 6 && RESTART.equalsIgnoreCase(args[5]))
             Utility.rename(fs, vecPath, curVectorPath);
         else
             Utility.generateVector(new JobConf(getConf(), ConnectedComponents.class), fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
@@ -78,7 +83,7 @@ public class ConnectedComponents extends Configured implements Tool {
         long changed = -1;
 
         // Iteratively calculate neighbor with minimum id.
-        for (int i = 0; i < CONSTANTS.MAX_ITERATIONS; i++) {
+        for (int i = 0; i < MAX_ITERATIONS; i++) {
             join(fs, edgePath, curVectorPath, tempVectorPath, makeSymmetric, numOfReducers);
 
             merge(fs, tempVectorPath, nextVectorPath, numOfReducers);
@@ -90,17 +95,15 @@ public class ConnectedComponents extends Configured implements Tool {
             Utility.rename(fs, nextVectorPath, curVectorPath);
 
             // Stop when there are no more changes to vector
-            if (changed == 0) {
-                System.out.println("All the component ids converged.");
-                System.out.println("Convergence has been achieved in " + i + " iterations. Final Results are in " + vecPath);
-                break;
-            }
+            if (changed == 0) break;
         }
 
         Utility.rename(fs, curVectorPath, vecPath);
 
         if (changed != 0)
-            System.out.println("Convergence has not been achieved in " + CONSTANTS.MAX_ITERATIONS + " iterations. Final Results are in" + vecPath);
+            System.out.println("Convergence has not been achieved in " + MAX_ITERATIONS + " iterations. Final Results are in" + vecPath);
+        else
+            System.out.println("Convergence has been achieved. Final Results are in " + vecPath);
 
         return 0;
     }
@@ -110,9 +113,9 @@ public class ConnectedComponents extends Configured implements Tool {
         Utility.deleteIfExists(fs, tempVectorPath);
 
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.FIELD_SEPARATOR, CONSTANTS.DEFAULT_FIELD_SEPARATOR);
-        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
-        conf.set(CONSTANTS.MAKE_SYMMETRIC, makeSymmetric);
+        conf.set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
+        conf.set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        conf.set(MAKE_SYMMETRIC, makeSymmetric);
 
         conf.setJobName("ConnectedComponents_Join");
 
@@ -134,7 +137,7 @@ public class ConnectedComponents extends Configured implements Tool {
         Utility.deleteIfExists(fs, nextVectorPath);
 
         JobConf conf = new JobConf(getConf(), ConnectedComponents.class);
-        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
+        conf.set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
 
         conf.setJobName("ConnectedComponents_Merge");
 

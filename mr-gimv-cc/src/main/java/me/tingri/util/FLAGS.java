@@ -6,7 +6,6 @@ package me.tingri.util;
 public enum FLAGS {
     YES(1),
     CHANGED(1),
-    UNCHANGED(0),
     NO(0);
 
 

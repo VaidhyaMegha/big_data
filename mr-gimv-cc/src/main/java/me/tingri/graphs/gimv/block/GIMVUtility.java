@@ -21,7 +21,6 @@
 
 package me.tingri.graphs.gimv.block;
 
-import me.tingri.util.CONSTANTS;
 import org.apache.hadoop.io.Text;
 
 import java.util.ArrayList;
@@ -29,15 +28,17 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
+import static me.tingri.util.CONSTANTS.SPACE;
+
 public class GIMVUtility {
 
     /**
      * convert strVal to array of VectorElem<Long>.
-     * strVal is msu(ROW-ID   VALUE)s. ex) 0 5 1 3
+     * strVal is msu(ROW-ID VALUE)s. ex) 0 5 1 3
      */
     public static ArrayList<VectorElem<Long>> parseVectorVal(String strVal) {
         ArrayList<VectorElem<Long>> arr = new ArrayList<VectorElem<Long>>();
-        final String[] tokens = strVal.split(CONSTANTS.SPACE);
+        final String[] tokens = strVal.split(SPACE);
 
         for (int i = 0; i < tokens.length; i += 2) {
             short row = Short.parseShort(tokens[i]);
@@ -51,12 +52,12 @@ public class GIMVUtility {
 
     /**
      * convert strVal to array of BlockElem<Integer>.
-     * strVal is (COL-ID     ROW-ID   VALUE)s. ex) 0 0 1 1 0 1 1 1 1
+     * strVal is (COL-ID ROW-ID VALUE)s. ex) 0 0 1 1 0 1 1 1 1
      * note the strVal is transposed. So we should transpose it to (ROW-ID   COL-ID ...) format.
      */
     public static ArrayList<BlockElem<Integer>> parseBlockVal(String strVal) {
         ArrayList<BlockElem<Integer>> arr = new ArrayList<BlockElem<Integer>>();
-        final String[] tokens = strVal.split(CONSTANTS.SPACE);
+        final String[] tokens = strVal.split(SPACE);
 
         for (int i = 0; i < tokens.length; i += 2) {
             short row = Short.parseShort(tokens[i + 1]);
@@ -102,21 +103,16 @@ public class GIMVUtility {
     }
 
     /**
-     * make Text format output by combining the prefix and vector elements.
+     * make Text format output by combining vector elements.
      */
-    public static Text formatVectorElemOutput(String prefix, ArrayList<VectorElem<Long>> vector) {
-        String cur_block_output = prefix;
-        int isFirst = 1;
+    public static Text formatVectorElemOutput(ArrayList<VectorElem<Long>> vector) {
+        StringBuilder output = new StringBuilder();
 
         if (vector != null && vector.size() > 0) {
-            for (VectorElem<Long> elem : vector) {
-                if (!cur_block_output.equals("") && isFirst == 0)
-                    cur_block_output += CONSTANTS.SPACE;
-                cur_block_output += elem.row + CONSTANTS.SPACE + elem.val;
-                isFirst = 0;
-            }
+            for (VectorElem<Long> elem : vector)
+                output.append(elem.row).append(SPACE).append(elem.val);
 
-            return new Text(cur_block_output);
+            return new Text(output.toString());
         } else {
             return new Text("");
         }
@@ -146,19 +142,5 @@ public class GIMVUtility {
         return 0;
     }
 
-    /**
-     * make an integer vector
-     */
-    public static ArrayList<VectorElem<Long>> makeIntVectors(long[] int_vals, int block_width) {
-        ArrayList<VectorElem<Long>> result_vector = new ArrayList<VectorElem<Long>>();
-
-        for (int i = 0; i < block_width; i++) {
-            if (int_vals[i] != -1) {
-                result_vector.add(new VectorElem<Long>((short) i, int_vals[i]));
-            }
-        }
-
-        return result_vector;
-    }
 }
 

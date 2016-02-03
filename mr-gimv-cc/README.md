@@ -1,6 +1,5 @@
 Change-log to original source code
 -------------------------------------
-* long instead of int to scale beyond ~2.1 billion
 * vector generation is done using MR instead of  local.
     * Iteration 1 is modified to generate Vector hence iterations are reduced by 1.
 * Join reduce is simplified to avoid self-loop checks
@@ -8,7 +7,10 @@ Change-log to original source code
 * Avoid summarize MR jobs .
 * Replace deprecated FileSystem api with new api calls.
 * Unit Test cases with graph containing edges 1--2, 2--5 and 3--4
-
+* long instead of int to scale beyond ~2.1 billion
+** block specific **
+* Preparation step is avoided. Matrix and Vector are retained in normal forms.
+* unfold is absorbed into Merge operation
 
 How-to use/run this module
 --------------------------
