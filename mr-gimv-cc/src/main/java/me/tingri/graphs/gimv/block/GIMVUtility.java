@@ -23,10 +23,7 @@ package me.tingri.graphs.gimv.block;
 
 import org.apache.hadoop.io.Text;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 import static me.tingri.util.CONSTANTS.SPACE;
 
@@ -110,9 +107,9 @@ public class GIMVUtility {
 
         if (vector != null && vector.size() > 0) {
             for (VectorElem<Long> elem : vector)
-                output.append(elem.row).append(SPACE).append(elem.val);
+                output.append(elem.row).append(SPACE).append(elem.val).append(SPACE);
 
-            return new Text(output.toString());
+            return new Text(output.toString().trim());
         } else {
             return new Text("");
         }

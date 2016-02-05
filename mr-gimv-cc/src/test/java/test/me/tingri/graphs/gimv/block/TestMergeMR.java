@@ -13,6 +13,7 @@ import org.junit.Test;
 
 import java.io.IOException;
 
+import static me.tingri.util.CONSTANTS.BLOCK_WIDTH;
 import static me.tingri.util.CONSTANTS.DEFAULT_VECTOR_INDICATOR;
 import static me.tingri.util.CONSTANTS.VECTOR_INDICATOR;
 import static test.me.tingri.graphs.gimv.TESTDATA.*;
@@ -32,10 +33,13 @@ public class TestMergeMR {
         mapReduceDriver = MapReduceDriver.newMapReduceDriver(mapper, reducer);
 
         mapDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        mapDriver.getConfiguration().set(BLOCK_WIDTH, DEFAULT_BLOCK_WIDTH);
 
         reduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        reduceDriver.getConfiguration().set(BLOCK_WIDTH, DEFAULT_BLOCK_WIDTH);
 
         mapReduceDriver.getConfiguration().set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        mapReduceDriver.getConfiguration().set(BLOCK_WIDTH, DEFAULT_BLOCK_WIDTH);
     }
 
     @Test
@@ -45,31 +49,31 @@ public class TestMergeMR {
 
     @Test
     public void testGIMVIdentityMapper() throws IOException {
-        mapDriver.withAll(getMergeMapperInput());
+        mapDriver.withAll(getBlockJoinReducerOutput());
 
-        mapDriver.withAllOutput(getJoinReducerOutput());
+        mapDriver.withAllOutput(getBlockJoinReducerOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapDriver.runTest(false);
     }
 
+
     @Test
     public void testReducer() throws IOException {
 
-        reduceDriver.withAll(getMergeReducerInput());
+        reduceDriver.withAll(getBlockMergeReducerInput());
 
-        reduceDriver.withAllOutput(getMergeReducerOutput());
+        reduceDriver.withAllOutput(getBlockMergeReducerOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         reduceDriver.runTest(false);
     }
 
-
     @Test
     public void testMapReduce() throws IOException {
-        mapReduceDriver.withAll(getMergeMapperInput());
+        mapReduceDriver.withAll(getBlockJoinReducerOutput());
 
-        mapReduceDriver.withAllOutput(getMergeReducerOutput());
+        mapReduceDriver.withAllOutput(getBlockMergeReducerOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapReduceDriver.runTest(false);

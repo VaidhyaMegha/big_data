@@ -31,7 +31,7 @@ public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, 
     /**
      * Input is of the below form:
      * vector: key=BLOCKID, value= (IN-BLOCK-INDEX VALUE)s
-     * edge: key=BLOCK-COLID, value=(BLOCK-ROWID    IN-BLOCK-COL IN-BLOCK-ROW VALUE)s
+     * edge: key=BLOCK-COLID, value=(BLOCK-ROWID    IN-BLOCK-COL IN-BLOCK-ROW)s VALUE is assumed to be 1
      * @throws IOException
      */
     public void reduce(LongWritable key, Iterator<Text> values, OutputCollector<LongWritable, Text> output, Reporter reporter) throws IOException {
@@ -46,7 +46,7 @@ public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, 
             // vector : IN-BLOCK-INDEX VALUE
             if (line.length == 1)
                 vectorArrBuffer.append(line_text).append(sepInValue);
-            else {                    // edge : BLOCK-ROWID		IN-BLOCK-COL IN-BLOCK-ROW VALUE
+            else {                    // edge : BLOCK-ROWID		IN-BLOCK-COL IN-BLOCK-ROW
                 long blockRowId = Long.parseLong(line[0]);
                 if (blockRowMap.containsKey(blockRowId))
                     blockRowMap.get(blockRowId).append(sepInValue).append(line[1]);

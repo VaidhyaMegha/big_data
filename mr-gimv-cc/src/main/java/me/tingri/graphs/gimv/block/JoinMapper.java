@@ -15,7 +15,7 @@ import static me.tingri.util.CONSTANTS.*;
  * //          Hash-join edge and vector by Vector.BLOCKROWID == Edge.BLOCKCOLID where
  * //          vector: key=BLOCKID, value= msu (IN-BLOCK-INDEX VALUE)s
  * //                                      moc
- * //          edge: key=BLOCK-ROW		BLOCK-COL, value=(IN-BLOCK-ROW IN-BLOCK-COL VALUE)s
+ * //          edge: key=BLOCK-ROW		BLOCK-COL, value=(IN-BLOCK-ROW IN-BLOCK-COL)s VALUE is assumed to be 1
  * //  - Input: edge_file, component_ids_from_the_last_iteration
  * //  - Output: partial component ids
  */
@@ -41,7 +41,7 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
      * <p/>
      * Output of the mapper task should be of the below form
      * vector: key=BLOCKID, value= (IN-BLOCK-INDEX VALUE)s
-     * edge: key=BLOCK-COLID, value=(BLOCK-ROWID    IN-BLOCK-COL IN-BLOCK-ROW VALUE)s
+     * edge: key=BLOCK-COLID, value=(BLOCK-ROWID    IN-BLOCK-COL IN-BLOCK-ROW)s VALUE is assumed to be 1
      *
      * @throws IOException
      */
@@ -61,12 +61,12 @@ public class JoinMapper extends MapReduceBase implements Mapper<LongWritable, Te
             long blockColId = Long.parseLong(line[1]) / blockWidth;
             long inBlockColIndex = Long.parseLong(line[1]) % blockWidth;
 
-            output.collect(new LongWritable(blockColId), new Text(blockRowId + fieldSeparator + inBlockColIndex + sepInValue + inBlockRowIndex + sepInValue + 1));
+            output.collect(new LongWritable(blockColId), new Text(blockRowId + fieldSeparator + inBlockColIndex + sepInValue + inBlockRowIndex));
 
             // if make-symmetric-edge requirement is requested make inverse edge
             // self-loop is not required since reducer takes care of it
             if (makeSymmetric == FLAGS.YES && !line[0].equals(line[1]))
-                output.collect(new LongWritable(blockRowId), new Text(blockColId + fieldSeparator + inBlockRowIndex + sepInValue + inBlockColIndex + sepInValue + 1));
+                output.collect(new LongWritable(blockRowId), new Text(blockColId + fieldSeparator + inBlockRowIndex + sepInValue + inBlockColIndex));
         }
     }
 }
