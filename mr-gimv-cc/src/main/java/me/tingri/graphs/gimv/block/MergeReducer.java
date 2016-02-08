@@ -8,16 +8,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import static me.tingri.graphs.gimv.block.GIMVUtility.*;
-import static me.tingri.util.CONSTANTS.*;
+import static me.tingri.graphs.gimv.block.GIMVUtility.parseVectorVal;
+import static me.tingri.util.CONSTANTS.BLOCK_WIDTH;
+import static me.tingri.util.CONSTANTS.VECTOR_INDICATOR;
 
 /**
  * Created by sandeep on 2/3/16.
- ////////////////////////////////////////////////////////////////////////////////////////////////
-// STAGE 2: merge partial comonent ids.
-//  - Input: partial component ids
-//  - Output: combined component ids
-////////////////////////////////////////////////////////////////////////////////////////////////
+ * ////////////////////////////////////////////////////////////////////////////////////////////////
+ * // STAGE 2: merge partial comonent ids.
+ * //  - Input: partial component ids
+ * //  - Output: combined component ids
+ * ////////////////////////////////////////////////////////////////////////////////////////////////
  */
 public class MergeReducer extends MapReduceBase implements Reducer<LongWritable, Text, LongWritable, Text> {
     protected int blockWidth;
@@ -44,6 +45,13 @@ public class MergeReducer extends MapReduceBase implements Reducer<LongWritable,
         long blockId = key.get();
 
         for (int i = 0; i < blockWidth; i++)
-            output.collect(new LongWritable(blockWidth * blockId + i), new Text(vectorIndicator + outValues[i]));
+            if (outValues[i] != -1) {
+                long selfValue = blockWidth * blockId + i;
+                if (outValues[i] <= selfValue) {
+                    output.collect(new LongWritable(selfValue), new Text(vectorIndicator + outValues[i]));
+                } else { //self-loop
+                    output.collect(new LongWritable(selfValue), new Text(vectorIndicator + selfValue));
+                }
+            }
     }
 }

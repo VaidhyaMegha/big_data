@@ -399,18 +399,53 @@ public class TESTDATA {
     public static List<Pair<LongWritable, Text>> getBlockJoinReducerOutput() {
         List<Pair<LongWritable, Text>> list = new ArrayList<Pair<LongWritable, Text>>();
 
-        list.add(new Pair<LongWritable, Text>(new LongWritable(0), new Text("1" + SPACE + "1")));
-        list.add(new Pair<LongWritable, Text>(new LongWritable(1), new Text("0" + SPACE + "2" + SPACE + "1" + SPACE + "3")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(0), new Text("1" + SPACE + "2")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(1), new Text("0" + SPACE + "1")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(1), new Text("0" + SPACE + "5" + SPACE + "1" + SPACE + "4")));
         list.add(new Pair<LongWritable, Text>(new LongWritable(2), new Text("0" + SPACE + "3" + SPACE + "1" + SPACE + "2")));
 
         return list;
     }
 
-    public static List<Pair<LongWritable, Text>> getBlockMergeReducerOutput() {
-        return null;
+    public static List<Pair<LongWritable, Text>> getBlockMergeMapperInput() {
+        List<Pair<LongWritable, Text>> list = new ArrayList<Pair<LongWritable, Text>>();
+
+        list.add(new Pair<LongWritable, Text>(new LongWritable(), new Text("0" + DEFAULT_FIELD_SEPARATOR + "1" + SPACE + "2")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(), new Text("1" + DEFAULT_FIELD_SEPARATOR + "0" + SPACE + "1")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(), new Text("1" + DEFAULT_FIELD_SEPARATOR + "0" + SPACE + "5" + SPACE + "1" + SPACE + "4")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(), new Text("2" + DEFAULT_FIELD_SEPARATOR + "0" + SPACE + "3" + SPACE + "1" + SPACE + "2")));
+
+        return list;
+    }
+
+    public static List<Pair<LongWritable, Text>> getBlockMergeMapperOutput() {
+        return getBlockJoinReducerOutput();
     }
 
     public static List<Pair<LongWritable, List<Text>>> getBlockMergeReducerInput() {
-        return null;
+        List<Pair<LongWritable, List<Text>>> list = new ArrayList<Pair<LongWritable, List<Text>>>();
+        List<Text> list0 = new ArrayList<Text>();
+
+        list0.add(new Text("1" + SPACE + "2"));
+
+        list.add(new Pair<LongWritable, List<Text>>(new LongWritable(0), list0));
+
+        List<Text> list1 = new ArrayList<Text>();
+        list1.add(new Text("0" + SPACE + "1"));
+        list1.add(new Text("0" + SPACE + "5" + SPACE + "1" + SPACE + "4"));
+
+        list.add(new Pair<LongWritable, List<Text>>(new LongWritable(1), list1));
+
+        List<Text> list2 = new ArrayList<Text>();
+
+        list2.add(new Text("0" + SPACE + "3" + SPACE + "1" + SPACE + "2"));
+
+        list.add(new Pair<LongWritable, List<Text>>(new LongWritable(2), list2));
+
+        return list;
+    }
+
+    public static List<Pair<LongWritable, Text>> getBlockMergeReducerOutput() {
+        return getMergeReducerOutput();
     }
 }

@@ -1,8 +1,8 @@
 package test.me.tingri.graphs.gimv.block;
 
 
-import me.tingri.graphs.gimv.MergeMapper;
-import me.tingri.graphs.gimv.MergeReducer;
+import me.tingri.graphs.gimv.block.MergeMapper;
+import me.tingri.graphs.gimv.block.MergeReducer;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.MapDriver;
@@ -49,9 +49,9 @@ public class TestMergeMR {
 
     @Test
     public void testGIMVIdentityMapper() throws IOException {
-        mapDriver.withAll(getBlockJoinReducerOutput());
+        mapDriver.withAll(getBlockMergeMapperInput());
 
-        mapDriver.withAllOutput(getBlockJoinReducerOutput());
+        mapDriver.withAllOutput(getBlockMergeMapperOutput());
 
         //though code is deterministic it is not necessary to function. Hence accepting results in any order.
         mapDriver.runTest(false);
@@ -71,7 +71,7 @@ public class TestMergeMR {
 
     @Test
     public void testMapReduce() throws IOException {
-        mapReduceDriver.withAll(getBlockJoinReducerOutput());
+        mapReduceDriver.withAll(getBlockMergeMapperInput());
 
         mapReduceDriver.withAllOutput(getBlockMergeReducerOutput());
 

@@ -35,7 +35,7 @@ public class GIMVUtility {
      */
     public static ArrayList<VectorElem<Long>> parseVectorVal(String strVal) {
         ArrayList<VectorElem<Long>> arr = new ArrayList<VectorElem<Long>>();
-        final String[] tokens = strVal.split(SPACE);
+        String[] tokens = strVal.split(SPACE);
 
         for (int i = 0; i < tokens.length; i += 2) {
             short row = Short.parseShort(tokens[i]);
@@ -52,9 +52,10 @@ public class GIMVUtility {
      * strVal is (COL-ID ROW-ID VALUE)s. ex) 0 0 1 1 0 1 1 1 1
      * note the strVal is transposed. So we should transpose it to (ROW-ID   COL-ID ...) format.
      */
-    public static ArrayList<BlockElem<Integer>> parseBlockVal(String strVal) {
+    public static ArrayList<BlockElem<Integer>> parseBlockVal(String strVal, int blockWidth) {
         ArrayList<BlockElem<Integer>> arr = new ArrayList<BlockElem<Integer>>();
-        final String[] tokens = strVal.split(SPACE);
+
+        String[] tokens = strVal.split(SPACE);
 
         for (int i = 0; i < tokens.length; i += 2) {
             short row = Short.parseShort(tokens[i + 1]);
@@ -67,36 +68,36 @@ public class GIMVUtility {
     }
 
     public static ArrayList<VectorElem<Long>> minBlockVector(ArrayList<BlockElem<Integer>> block,
-                                                                ArrayList<VectorElem<Long>> vector, int block_width, boolean isFastMethod) {
-        long[] out_vals = new long[block_width];
+                                                                ArrayList<VectorElem<Long>> vector, int blockWidth, boolean isFastMethod) {
+        long[] result = new long[blockWidth];
 
-        for (short i = 0; i < block_width; i++)
-            out_vals[i] = -1;
+        for (short i = 0; i < blockWidth; i++)
+            result[i] = -1;
 
         Map<Short, Long> vector_map = new HashMap<Short, Long>();
 
-        // initialize out_vals
+        // initialize result
         if (isFastMethod)
-            for (VectorElem<Long> v_elem : vector)
-                out_vals[v_elem.row] = v_elem.val;
+            for (VectorElem<Long> vElem : vector)
+                result[vElem.row] = vElem.val;
 
-        for (VectorElem<Long> v_elem : vector)
-            vector_map.put(v_elem.row, v_elem.val);
+        for (VectorElem<Long> vElem : vector)
+            vector_map.put(vElem.row, vElem.val);
 
 
-        for (BlockElem<Integer> b_elem : block) {
-            Long vector_val = vector_map.get(b_elem.col);
-            if (vector_val != null && (out_vals[b_elem.row] == -1 || out_vals[b_elem.row] > vector_val))
-                out_vals[b_elem.row] = vector_val;
+        for (BlockElem<Integer> bElem : block) {
+            Long vectorValue = vector_map.get(bElem.col);
+            if (vectorValue != null && (result[bElem.row] == -1 || result[bElem.row] > vectorValue))
+                result[bElem.row] = vectorValue;
         }
 
-        ArrayList<VectorElem<Long>> result_vector = new ArrayList<VectorElem<Long>>();
+        ArrayList<VectorElem<Long>> resultVector = new ArrayList<VectorElem<Long>>();
 
-        for (short i = 0; i < block_width; i++)
-            if (out_vals[i] != -1)
-                result_vector.add(new VectorElem<Long>(i, out_vals[i]));
+        for (short i = 0; i < blockWidth; i++)
+            if (result[i] != -1)
+                resultVector.add(new VectorElem<Long>(i, result[i]));
 
-        return result_vector.size() == 0 ? null : result_vector;
+        return resultVector.size() == 0 ? null : resultVector;
     }
 
     /**

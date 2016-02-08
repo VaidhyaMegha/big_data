@@ -60,7 +60,7 @@ public class JoinReducer extends MapReduceBase implements Reducer<LongWritable, 
 
         for (long blockRowId: blockRowMap.keySet()){
             blockRowIdArr.add(blockRowId);
-            blockArr.add(parseBlockVal(blockRowMap.get(blockRowId).toString()));
+            blockArr.add(parseBlockVal(blockRowMap.get(blockRowId).toString(), blockWidth));
         }
 
         if (vectorArr == null) // missing vector or block.
