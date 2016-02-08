@@ -28,14 +28,24 @@ hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri
 hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.ConnectedComponents \
  cc_edge concmpt_new_output 16 3 makesym restart
 
+hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.block.ConnectedComponentsBlock \
+ cc_edge concmpt_new_block_output 16 3 fast 2 makesym
+
+hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.block.ConnectedComponentsBlock \
+ cc_edge concmpt_new_block_output 16 3 fast 2 makesym restart
+
 make demo_ccmpt
 
-echo "New Output"
-echo "----------"
+echo "GIMV : base algorithm Output"
+echo "--------------------------------"
 hadoop dfs -cat  concmpt_new_output/*
 
-echo "Old Output"
-echo "----------"
+echo "GIMV : Block algorithm Output"
+echo "--------------------------------"
+hadoop dfs -cat  concmpt_new_block_output/*
+
+echo "GIM : Old Implementation Output"
+echo "--------------------------------"
 hadoop dfs -cat  concmpt_curbm/*
 
 pegasus.sh

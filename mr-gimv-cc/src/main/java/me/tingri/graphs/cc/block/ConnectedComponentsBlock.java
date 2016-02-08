@@ -67,8 +67,8 @@ public class ConnectedComponentsBlock extends Configured implements Tool {
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
         int recurDiagonalMult = (FAST.equalsIgnoreCase(args[4])) ? 1 : 0;
-        String makeSymmetric = (MAKE_SYMMETRIC.equalsIgnoreCase(args[5])) ? "1" : "0";
-        short blockWidth = Short.parseShort(args[6]);
+        short blockWidth = Short.parseShort(args[5]);
+        String makeSymmetric = (MAKE_SYMMETRIC.equalsIgnoreCase(args[6])) ? "1" : "0";
 
         System.out.println("\n-----===[PEGASUS: A Peta-Scale Graph Mining System]===-----\n");
         System.out.println("[PEGASUS] Computing connected component using block method. Reducers = " + numOfReducers + ", blockWidth = " + blockWidth);
@@ -77,10 +77,10 @@ public class ConnectedComponentsBlock extends Configured implements Tool {
         FileSystem fs = FileSystem.get(getConf());
 
         //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
-        if (fs.exists(vecPath) && args.length == 8 && RESTART.equalsIgnoreCase(args[7]))
-            Utility.rename(fs, vecPath, curVectorPath);
-        else
+        if (!fs.exists(vecPath) || args.length != 8 || !RESTART.equalsIgnoreCase(args[7]))
             Utility.generateVector(new JobConf(getConf(), ConnectedComponentsBlock.class), fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
+        else
+            Utility.rename(fs, vecPath, curVectorPath);
 
         // Iteratively calculate neighborhood function.
         for (int i = 0; i < MAX_ITERATIONS; i++) {
@@ -117,6 +117,7 @@ public class ConnectedComponentsBlock extends Configured implements Tool {
         conf.set(RECURSIVE_DIAG_MULT, "" + recurDiagonalMult);
         conf.set(FIELD_SEPARATOR, DEFAULT_FIELD_SEPARATOR);
         conf.set(VECTOR_INDICATOR, DEFAULT_VECTOR_INDICATOR);
+        conf.set(SEPARATOR_WITHIN_VALUE, SPACE);
         conf.set(MAKE_SYMMETRIC, makeSymmetric);
 
         conf.setJobName("CCBlock_join");

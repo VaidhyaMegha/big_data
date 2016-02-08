@@ -73,10 +73,10 @@ public class ConnectedComponents extends Configured implements Tool {
         FileSystem fs = FileSystem.get(getConf());
 
         //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
-        if(fs.exists(vecPath) && args.length == 6 && RESTART.equalsIgnoreCase(args[5]))
-            Utility.rename(fs, vecPath, curVectorPath);
-        else
+        if (!fs.exists(vecPath) || args.length != 6 || !RESTART.equalsIgnoreCase(args[5]))
             Utility.generateVector(new JobConf(getConf(), ConnectedComponents.class), fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
+        else
+            Utility.rename(fs, vecPath, curVectorPath);
 
         //TODO for debugging retain all intermediate vectors
 

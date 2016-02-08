@@ -58,7 +58,6 @@ public class Utility {
 
         conf.setMapperClass(StateCheckMapper.class);
         conf.setReducerClass(StateCheckReducer.class);
-        conf.setCombinerClass(StateCheckReducer.class);
 
         FileInputFormat.setInputPaths(conf, vecPath, nextVectorPath);
         FileOutputFormat.setOutputPath(conf, stateCheckTempPath);
