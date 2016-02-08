@@ -1,3 +1,4 @@
 
 * args4j for parsing commandline arguments
-        //TODO for debugging retain all intermediate vectors
+    * ToolRunner and args4j both solve similar problems -- ToolRunner is limited
+//TODO for debugging retain all intermediate vectors

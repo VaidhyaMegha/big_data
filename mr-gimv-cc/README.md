@@ -43,7 +43,7 @@ Sample  Input and Output
         10	14
         10	15
 
-* Output from rewrite - mr-gimv-cc
+* Output from rewrite - mr-gimv-cc base implementation
 
         0	v0
         3	v0
@@ -62,6 +62,25 @@ Sample  Input and Output
         11	v10
         14	v10
         
+* Output from rewrite - mr-gimv-cc block implementation
+
+        0	v0
+        1	v0
+        6	v0
+        7	v0
+        12	v10
+        13	v10
+        2	v0
+        3	v0
+        8	v0
+        9	v0
+        14	v10
+        15	v10
+        4	v0
+        5	v0
+        10	v10
+        11	v10
+                
 * Output from PEGASUS library
 
         0	msf0
@@ -80,8 +99,3 @@ Sample  Input and Output
         8	msf0
         11	msf10
         14	msf10
-
-        
-        
-        
-        
