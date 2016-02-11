@@ -1,5 +1,6 @@
 Big Data
 ========
+The purpose of this project is to explore hadoop ecosystem (ex: MapReduce, Hive) and solve specific problems.
 
 Scope
 -----
@@ -68,10 +69,20 @@ Technology Stack
 * Tez Version : 0.8.2-SNAPSHOT
 * PEGASUS : 2.0
 
-Algorithms
-----------
+Algorithms & Papers
+-------------------
 * Weighted Quick Union With Path Compression : An attempt has been made to parallelize it in the form of a hive  UDAF.
-* GIM-V based algorithms
+
+        * Union Find - http://algs4.cs.princeton.edu/15uf/
+        
+* GIM-V based algorithms - http://www.cs.cmu.edu/~pegasus/        
+                         
+        * Paper - http://www.cs.cmu.edu/~ukang/papers/PegasusICDM2009.pdf
+        * Getting Started - http://www.cs.cmu.edu/~pegasus/getting%20started.htm
+        
+* 'MapReduce' - programming model
+        
+        *  Paper and presentation - http://research.google.com/archive/mapreduce.html
 
 DataSets
 --------
