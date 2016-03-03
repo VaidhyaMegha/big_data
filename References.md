@@ -47,7 +47,9 @@ References
 * Hive UDF with Parameters - https://blogs.oracle.com/datawarehousing/entry/three_little_hive_udfs_part2
 * Hive 'user' keyword - https://issues.apache.org/jira/browse/HIVE-10294
 * Hive variables - https://cwiki.apache.org/confluence/display/Hive/LanguageManual+VariableSubstitution
-
+* HBASE quick start - http://hbase.apache.org/0.94/book/quickstart.html
+* HBASE quick start Psuedo - https://hbase.apache.org/book.html#quickstart_pseudo
+* HBASE Tutorial - http://www.tutorialspoint.com/hbase/
 
 Graph Processing:
 =================

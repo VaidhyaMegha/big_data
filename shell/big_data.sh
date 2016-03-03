@@ -84,11 +84,11 @@ else
                 echo "# Run MapReduce example and leave REPL prompt"
                 echo "###############"
                 source $SHELL_HOME/mr.sh
-            elif [ "$2" == "giraph" ]; then
+            elif [ "$2" == "hbase" ]; then
                 echo "###############"
-                echo "# Setup and execute Giraph"
+                echo "# Setup and execute HBASE"
                 echo "###############"
-                source $SHELL_HOME/giraph.sh
+                source $SHELL_HOME/hbase.sh
             else
                 echo "#######"
                 echo "# HIVE"

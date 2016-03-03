@@ -53,7 +53,7 @@ echo "---------------------------------"
 echo "Test graph used for WQUPC implementation in hive UDAF"
 cat datasets/graphs/edges.tsv
 
-hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.ConnectedComponents \
+hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.2.jar me.tingri.graphs.cc.ConnectedComponents \
  input/graphs/edges.tsv output/wqupc_test_graph 20 3 makesym
 
 echo "---Output----"
@@ -62,7 +62,7 @@ hdfs dfs -cat output/wqupc_test_graph/*
 echo "Radius is half of diameter --- straight line"
 cat datasets/graphs/eccentricity/straight_line.tsv
 
-hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.0-SNAPSHOT.jar me.tingri.graphs.cc.ConnectedComponents \
+hadoop jar $PROJECT_HOME/mr-gimv-cc/target/mr-gimv-cc-1.2.jar me.tingri.graphs.cc.ConnectedComponents \
  input/graphs/eccentricity/straight_line.tsv output/straight_line 12 3 makesym
 
 echo "---Output----"

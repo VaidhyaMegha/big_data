@@ -342,6 +342,10 @@ public class TESTDATA {
     public static List<Pair<LongWritable, Text>> getStateCheckReducerOutput() {
         List<Pair<LongWritable, Text>> list = new ArrayList<Pair<LongWritable, Text>>();
 
+        list.add(new Pair<LongWritable, Text>(new LongWritable(2), new Text(DEFAULT_VECTOR_INDICATOR + "1")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(4), new Text(DEFAULT_VECTOR_INDICATOR + "3")));
+        list.add(new Pair<LongWritable, Text>(new LongWritable(5), new Text(DEFAULT_VECTOR_INDICATOR + "2")));
+
         return list;
     }
 

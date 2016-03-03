@@ -4,6 +4,7 @@ import me.tingri.graphs.gimv.VectorGeneratorMapper;
 import me.tingri.graphs.gimv.VectorGeneratorReducer;
 import me.tingri.util.CONSTANTS;
 import me.tingri.util.FLAGS;
+import org.apache.hadoop.fs.ContentSummary;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
@@ -53,6 +54,7 @@ public class Utility {
     public static long stateCheck(JobConf conf, FileSystem fs, Path vecPath, Path nextVectorPath, Path stateCheckTempPath, int numOfReducers) throws Exception {
         deleteIfExists(fs, stateCheckTempPath);
 
+        conf.set(CONSTANTS.VECTOR_INDICATOR, CONSTANTS.DEFAULT_VECTOR_INDICATOR);
 
         conf.setJobName("ConnectedComponents_StateCheck");
 
@@ -68,6 +70,13 @@ public class Utility {
         conf.setOutputValueClass(Text.class);
 
         RunningJob stateCheckJob =  JobClient.runJob(conf);
-        return stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
+        long changed = stateCheckJob.getCounters().getCounter(FLAGS.CHANGED);
+
+        ContentSummary summary = fs.getContentSummary(stateCheckTempPath);
+        System.out.println(summary);
+
+        if(summary.getLength() !=0 && (changed == 0)) changed = -1; //Tez doesnt read counters instead returns 0
+
+        return changed;
     }
 }

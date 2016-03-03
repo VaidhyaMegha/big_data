@@ -8,7 +8,7 @@ export DATA_SETS_FOLDER=$PROJECT_HOME/datasets
 export HDP_VER=2.7.1
 export HIVE_VER=1.2.1
 export TEZ_VER=0.8.2-SNAPSHOT
-export HBASE_VER=1.1.2
+export HBASE_VER=1.2.0
 export KYLIN_VER=1.1.1
 
 export HADOOP_ROOT=$TOOLS_HOME/hadoop
@@ -25,6 +25,7 @@ export HADOOP_HDFS_HOME=$HADOOP_HOME
 export HADOOP_YARN_HOME=$HADOOP_HOME
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 export TEZ_CONF_DIR=$HADOOP_CONF_DIR
+export HBASE_CONF_DIR=$HADOOP_CONF_DIR
 export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
 export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 
@@ -32,14 +33,16 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/lib"
 #export GIRAPH_JARS=:$(echo "$GIRAPH_HOME"/*.jar | tr ' ' ':'):$(echo "$GIRAPH_HOME"/lib/*.jar | tr ' ' ':')
 
 #export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${GIRAPH_JARS}:${HADOOP_CLASSPATH}
-export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar:${HADOOP_CLASSPATH}
+export HBASE_CLASSPATH=${HBASE_HOME}/lib/*:${HBASE_CLASSPATH}
+export HADOOP_CLASSPATH=${JAVA_HOME}/lib/tools.jar:${HBASE_CLASSPATH}:${HADOOP_CLASSPATH}
 
 
 #export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$GIRAPH_HOME/bin:$HBASE_HOME/bin:$KYLIN_HOME/bin:$PATH
-export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$PEGASUS_HOME:$PATH
+export PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$HIVE_HOME/bin:$HBASE_HOME/bin:$PEGASUS_HOME:$PATH
 
 export NAME_NODE_DATA_DIR=$TOOLS_HOME/hadoop/data/hdfs/namenode
 export DATA_NODE_DATA_DIR=$TOOLS_HOME/hadoop/data/hdfs/datanode
+export ZOOKEEPER_DATA_DIR=$TOOLS_HOME/hadoop/data/zookeper
 
 export HQL_HOME=$PROJECT_HOME/hql
 
