@@ -42,8 +42,8 @@ jps
 ############
 # Start HBase
 ############
-#start-hbase.sh
-#jps
+start-hbase.sh
+jps
 #local-master-backup.sh start 2 3 5
 #jps
 #local-regionservers.sh start 2 3 4 5

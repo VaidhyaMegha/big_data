@@ -69,7 +69,7 @@ touch  $HADOOP_CONF_DIR/hbase-site.xml
 echo "<configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://localhost:8030/hbase</value>
+    <value>hdfs://localhost:9000/hbase</value>
   </property>
   <property>
    <name>hbase.cluster.distributed</name>
@@ -77,7 +77,7 @@ echo "<configuration>
   </property>
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>file:///$ZOOKEEPER_DATA_DIR</value>
+    <value>$ZOOKEEPER_DATA_DIR</value>
   </property>
 </configuration>" >>  $HADOOP_CONF_DIR/hbase-site.xml
 

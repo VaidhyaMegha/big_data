@@ -7,7 +7,7 @@ hive -v -f $HQL_HOME/cleanup.sql
 # stop HBase
 ############
 #local-regionservers.sh stop 2 3 4 5
-#stop-hbase.sh
+stop-hbase.sh
 
 ############
 # stop Kylin
