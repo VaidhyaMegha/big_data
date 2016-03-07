@@ -63,11 +63,12 @@ How-to use/run this project
 
 Technology Stack
 ----------------
-* OS Version : Ubuntu wily(15.10)
-* Hadoop Version : 2.7.1
-* Hive Version : 1.2.1
-* Tez Version : 0.8.2-SNAPSHOT
-* PEGASUS : 2.0
+* OS Version        : Ubuntu wily(15.10)
+* Hadoop Version    : 2.7.1
+* Hive Version      : 1.2.1
+* HBase Version     : 1.2.0
+* Tez Version       : 0.8.2-SNAPSHOT
+* PEGASUS           : 2.0
 
 Algorithms & Papers
 -------------------

@@ -1,4 +1,4 @@
-#!/bash
+#!/bin/bash
 
 export CUR_DIR=`pwd`
 
@@ -77,7 +77,7 @@ echo "<configuration>
   </property>
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>$ZOOKEEPER_DATA_DIR</value>
+    <value>file://$ZOOKEEPER_DATA_DIR</value>
   </property>
 </configuration>" >>  $HADOOP_CONF_DIR/hbase-site.xml
 
