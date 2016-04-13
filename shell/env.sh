@@ -8,7 +8,7 @@ export DATA_SETS_FOLDER=$PROJECT_HOME/datasets
 export HDP_VER=2.7.1
 export HIVE_VER=1.2.1
 export TEZ_VER=0.8.2-SNAPSHOT
-export HBASE_VER=1.2.0
+export HBASE_VER=0.98.18
 export KYLIN_VER=1.1.1
 
 export HADOOP_ROOT=$TOOLS_HOME/hadoop

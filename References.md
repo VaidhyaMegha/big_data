@@ -50,6 +50,17 @@ References
 * HBASE quick start - http://hbase.apache.org/0.94/book/quickstart.html
 * HBASE quick start Psuedo - https://hbase.apache.org/book.html#quickstart_pseudo
 * HBASE Tutorial - http://www.tutorialspoint.com/hbase/
+* Hive HBASE integration - https://cwiki.apache.org/confluence/display/Hive/HBaseIntegration
+        
+        Hive 1.x will remain compatible with HBase 0.98.x and lower versions. 
+        Hive 2.x will be compatible with HBase 1.x and higher. (See HIVE-10990 for details.) 
+        Consumers wanting to work with HBase 1.x using Hive 1.x will need to compile Hive 1.x stream code themselves.
+        
+        The hbase.mapred.output.outputtable property is optional; 
+        it's needed if you plan to insert data to the table (the property is used by hbase.mapreduce.TableOutputFormat)
+* jline 
+    - http://stackoverflow.com/questions/28997441/hive-startup-error-terminal-initialization-failed-falling-back-to-unsupporte
+    - https://cwiki.apache.org/confluence/display/Hive/Hive+on+Spark%3A+Getting+Started
 
 Graph Processing:
 =================

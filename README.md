@@ -66,7 +66,7 @@ Technology Stack
 * OS Version        : Ubuntu wily(15.10)
 * Hadoop Version    : 2.7.1
 * Hive Version      : 1.2.1
-* HBase Version     : 1.2.0
+* HBase Version     : 0.98.18 (changed from 1.2.0 as hive support)
 * Tez Version       : 0.8.2-SNAPSHOT
 * PEGASUS           : 2.0
 
