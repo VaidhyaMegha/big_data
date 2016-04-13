@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/udaf/pom.xml" />
         <option value="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
         <option value="$PROJECT_DIR$/hbase-mr/pom.xml" />
+        <option value="$PROJECT_DIR$/tez-gimv-cc/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -30,7 +32,7 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

@@ -81,6 +81,10 @@ Algorithms & Papers
         * Paper - http://www.cs.cmu.edu/~ukang/papers/PegasusICDM2009.pdf
         * Getting Started - http://www.cs.cmu.edu/~pegasus/getting%20started.htm
         
+* GIMV HBASE
+        
+        * Paper - Fast Graph Mining with HBase - http://datalab.snu.ac.kr/~ukang/papers/LeeSKunicorn.pdf
+        
 * 'MapReduce' - programming model
         
         *  Paper and presentation - http://research.google.com/archive/mapreduce.html

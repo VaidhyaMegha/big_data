@@ -22,17 +22,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="hbase-mr" />
         <module name="mr-gimv-cc" />
+        <module name="tez-gimv-cc" />
         <module name="udaf" />
         <module name="udf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="hbase-mr" target="1.5" />
-      <module name="mr-gimv-cc" target="1.5" />
-      <module name="udaf" target="1.5" />
-      <module name="udf" target="1.5" />
+      <module name="big_data" target="1.5" />
+      <module name="hbase-mr" target="1.7" />
+      <module name="mr-gimv-cc" target="1.7" />
+      <module name="tez-gimv-cc" target="1.7" />
+      <module name="udaf" target="1.7" />
+      <module name="udf" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

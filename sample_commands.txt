@@ -1,0 +1,5 @@
+
+    create 'edges', 'neighbors'
+    list 'edges'
+    exit
+    

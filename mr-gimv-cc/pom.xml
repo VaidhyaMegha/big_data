@@ -3,6 +3,11 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>me.tingri</groupId>
+        <artifactId>big_data</artifactId>
+        <version>0.2</version>
+    </parent>
 
     <groupId>me.tingri</groupId>
     <artifactId>mr-gimv-cc</artifactId>
@@ -15,7 +20,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>me.tingri.hive.udaf.ConnectedComponents</mainClass>
+                                <mainClass>me.tingri.graphs.cc.ConnectedComponents</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>
