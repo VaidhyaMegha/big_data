@@ -17,7 +17,14 @@ CREATE TABLE hbase_edges (node Int, neighbors map<string,Int>)
 WITH SERDEPROPERTIES (
   "hbase.columns.mapping" = ":key, neighbors:"
 )
-TBLPROPERTIES ("hbase.table.name" = "hbase_edges", "hbase.mapred.output.outputtable" = "hbase_edges");;
+TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges");
+
+CREATE TABLE hbase_components (node Int, component_id int)
+  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = ":key, component:id"
+)
+  TBLPROPERTIES ("hbase.table.name" = "h_components", "hbase.mapred.output.outputtable" = "h_components");
 
 
 LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE edges_string;
@@ -49,4 +56,9 @@ select node, neighbors from (
     SELECT id1 as node, map(cast(id2 as string), 1) as neighbors FROM edges
     UNION
     SELECT id2 as node, map(cast(id1 as string), 1) as neighbors FROM edges
+    UNION
+    SELECT id as node, map(cast(id as string), 1) as neighbors from nodes
   ) a;
+
+insert into table hbase_components
+select node, sort_array(map_keys(neighbors))[0] from hbase_edges;

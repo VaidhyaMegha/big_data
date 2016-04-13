@@ -13,7 +13,6 @@ hdfs dfs -chmod g+w /user/root
 if [ "$3" == "tez" ]; then
     # Teardown
     hive -v --hiveconf hive.execution.engine=tez -f  $HQL_HOME/hbase/cleanup.sql
-    hive
     #Simple
     hive -v --hiveconf hive.execution.engine=tez -f $HQL_HOME/hbase/hbase.sql
 else
@@ -29,3 +28,4 @@ else
 fi
 
 hbase shell
+

@@ -2,6 +2,7 @@
 
 # Teardown
 hive -v -f $HQL_HOME/cleanup.sql
+hive -v -f $HQL_HOME/hbase/cleanup.sql
 
 ############
 # stop HBase
