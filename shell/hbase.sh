@@ -10,6 +10,11 @@ hdfs dfs -chmod g+w /user/root
 
 # source $SHELL_HOME/hbase_sample.sh
 
+# Custom UDF
+pushd $PROJECT_HOME/udf/
+mvn clean assembly:assembly
+popd
+
 if [ "$3" == "tez" ]; then
     # Teardown
     hive -v --hiveconf hive.execution.engine=tez -f  $HQL_HOME/hbase/cleanup.sql
