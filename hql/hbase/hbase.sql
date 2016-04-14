@@ -23,6 +23,13 @@ WITH SERDEPROPERTIES (
 )
 TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges");
 
+CREATE TABLE hbase_temp (neighbors map<string,Int>, node Int)
+  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = "neighbors:, :key"
+)
+  TBLPROPERTIES ("hbase.table.name" = "h_temp", "hbase.mapred.output.outputtable" = "h_temp");
+
 CREATE TABLE hbase_components (node Int, component_id int)
   STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 WITH SERDEPROPERTIES (
@@ -82,8 +89,17 @@ select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
 -- Iterations ------
 
 -- Iteration 1 (Repeat and Rinse till convergence) each time components will be updated with new timestamp
-insert into table hbase_edges
-  SELECT node, map(cast(component_id as string), 1) as neighbors FROM hbase_components;
+-- while hbase_edges itself can be used temp table is used for readability
+-- join is forcably broken down into two steps since it seems lateral view cannot be applied in join.
+
+insert overwrite table hbase_temp
+  SELECT neighbors, component_id
+  FROM hbase_components, hbase_edges
+  where hbase_components.node = hbase_edges.node;
+
+insert overwrite table hbase_edges
+  select lv.node, map(cast(hbase_temp.node as string), 1) as neighbors
+  from hbase_temp lateral view explode(neighbors) lv as node, value;
 
 insert into table hbase_components
   select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
