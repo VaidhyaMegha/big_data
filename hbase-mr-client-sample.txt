@@ -1,0 +1,439 @@
+###############
+Setup
+###############
+###############
+# Setup and execute HBASE
+###############
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:20:08 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/13 23:20:09 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user/root
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:20:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/13 23:20:12 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+Deleted /user
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:20:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:20:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:20:18 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+~/projects/big_data/udf ~/projects/big_data
+[INFO] Scanning for projects...
+[WARNING] The POM for org.apache.maven.plugins:maven-enforce-plugin:jar:1.4 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-enforce-plugin:1.4: Plugin org.apache.maven.plugins:maven-enforce-plugin:1.4 or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-enforce-plugin:jar:1.4 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tingri_hive 0.1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ tingri_hive ---
+[INFO] Deleting /home/sandeep/projects/big_data/udf/target
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building tingri_hive 0.1
+[INFO] ------------------------------------------------------------------------
+[WARNING] The POM for org.apache.maven.plugins:maven-enforce-plugin:jar:1.4 is missing, no dependency information available
+[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-enforce-plugin:1.4: Plugin org.apache.maven.plugins:maven-enforce-plugin:1.4 or one of its dependencies could not be resolved: Failure to find org.apache.maven.plugins:maven-enforce-plugin:jar:1.4 in https://repo.maven.apache.org/maven2 was cached in the local repository, resolution will not be reattempted until the update interval of central has elapsed or updates are forced
+[INFO] 
+[INFO] >>> maven-assembly-plugin:2.4:assembly (default-cli) > package @ tingri_hive >>>
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+[INFO] 
+[INFO] --- buildnumber-maven-plugin:1.1:create (default) @ tingri_hive ---
+[INFO] Checking for local modifications: skipped.
+[INFO] Updating project files from SCM: skipped.
+[INFO] Executing: /bin/sh -c cd /home/sandeep/projects/big_data/udf && git rev-parse --verify HEAD
+[INFO] Working directory: /home/sandeep/projects/big_data/udf
+[INFO] Storing buildNumber: 10b2ee9f7899947a7e5add321b596dfc4bb21c6a at timestamp: 1460604024016
+[INFO] Executing: /bin/sh -c cd /home/sandeep/projects/big_data/udf && git rev-parse --verify HEAD
+[INFO] Working directory: /home/sandeep/projects/big_data/udf
+[INFO] Storing buildScmBranch: UNKNOWN
+[INFO] 
+[INFO] --- build-helper-maven-plugin:1.8:maven-version (maven-version) @ tingri_hive ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ tingri_hive ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sandeep/projects/big_data/udf/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ tingri_hive ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 2 source files to /home/sandeep/projects/big_data/udf/target/classes
+[WARNING] /home/sandeep/projects/big_data/udf/src/main/java/me/tingri/hive/udf/TransformRowWithHeader.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/sandeep/projects/big_data/udf/src/main/java/me/tingri/hive/udf/TransformRowWithHeader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ tingri_hive ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /home/sandeep/projects/big_data/udf/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ tingri_hive ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.8:test (default-test) @ tingri_hive ---
+[INFO] No tests to run.
+[INFO] Surefire report directory: /home/sandeep/projects/big_data/udf/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+There are no tests to run.
+
+Results :
+
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ tingri_hive ---
+[INFO] Building jar: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:test-jar (default) @ tingri_hive ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-tests.jar
+[INFO] 
+[INFO] <<< maven-assembly-plugin:2.4:assembly (default-cli) < package @ tingri_hive <<<
+[INFO] 
+[INFO] --- maven-assembly-plugin:2.4:assembly (default-cli) @ tingri_hive ---
+[WARNING] While downloading org.apache.commons:commons-io:1.3.2
+  This artifact has been relocated to commons-io:commons-io:1.3.2.
+  https://issues.sonatype.org/browse/MVNCENTRAL-244
+
+
+[INFO] Building jar: /home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.149 s
+[INFO] Finished at: 2016-04-13T23:20:30-04:00
+[INFO] Final Memory: 48M/544M
+[INFO] ------------------------------------------------------------------------
+~/projects/big_data
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/1.2.1/lib/hive-common-1.2.1.jar!/hive-log4j.properties
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+drop table if exists nodes
+OK
+Time taken: 2.298 seconds
+
+drop table if exists nodes_string
+OK
+Time taken: 0.098 seconds
+
+drop table if exists edges
+OK
+Time taken: 0.098 seconds
+
+drop table if exists edges_string
+OK
+Time taken: 0.245 seconds
+
+drop table if exists hbase_edges
+OK
+Time taken: 2.496 seconds
+
+drop table if exists hbase_components
+OK
+Time taken: 2.044 seconds
+
+Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/1.2.1/lib/hive-common-1.2.1.jar!/hive-log4j.properties
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+ADD JAR ${env:PROJECT_HOME}/udf/target/tingri_hive-0.1-jar-with-dependencies.jar
+Added [/home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar] to class path
+Added resources: [/home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar-with-dependencies.jar]
+
+
+create temporary function sortArrayofInts as 'me.tingri.hive.udf.SortArrayofInts'
+OK
+Time taken: 1.521 seconds
+
+
+CREATE TABLE edges_string(node1 STRING, node2 STRING)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 0.636 seconds
+
+
+CREATE TABLE nodes_string(node STRING)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 0.065 seconds
+
+
+CREATE TABLE edges(id1 Int, id2 Int)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 0.055 seconds
+
+
+CREATE TABLE nodes(id Int, node STRING)
+  ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
+OK
+Time taken: 0.046 seconds
+
+
+
+CREATE TABLE hbase_edges (node Int, neighbors map<string,Int>)
+  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = ":key, neighbors:"
+)
+TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges")
+OK
+Time taken: 1.361 seconds
+
+
+CREATE TABLE hbase_components (node Int, component_id int)
+  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = ":key, component:id"
+)
+  TBLPROPERTIES ("hbase.table.name" = "h_components", "hbase.mapred.output.outputtable" = "h_components")
+OK
+Time taken: 0.3 seconds
+
+
+
+LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE edges_string
+Loading data to table default.edges_string
+Table default.edges_string stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
+OK
+Time taken: 0.657 seconds
+
+
+INSERT  into table nodes_string
+select node FROM
+  (
+    select node1 as node from edges_string
+    UNION
+    select node2 as node from edges_string
+  ) new_table
+Query ID = root_20160413232113_4152881e-789b-4772-a299-710a54461aa6
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1460595102520_0073, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0073/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0073
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2016-04-13 23:21:20,649 Stage-1 map = 0%,  reduce = 0%
+2016-04-13 23:21:28,066 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 2.05 sec
+2016-04-13 23:21:35,936 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.78 sec
+MapReduce Total cumulative CPU time: 3 seconds 780 msec
+Ended Job = job_1460595102520_0073
+Loading data to table default.nodes_string
+Table default.nodes_string stats: [numFiles=1, numRows=12, totalSize=39, rawDataSize=27]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.78 sec   HDFS Read: 7596 HDFS Write: 115 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 780 msec
+OK
+Time taken: 23.807 seconds
+
+
+Insert into table nodes
+SELECT  row_number() over() as id, node
+from nodes_string
+Query ID = root_20160413232137_e0398b46-55de-4b9e-b274-7ae49f91f80b
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks not specified. Estimated from input data size: 1
+In order to change the average load for a reducer (in bytes):
+  set hive.exec.reducers.bytes.per.reducer=<number>
+In order to limit the maximum number of reducers:
+  set hive.exec.reducers.max=<number>
+In order to set a constant number of reducers:
+  set mapreduce.job.reduces=<number>
+Starting Job = job_1460595102520_0074, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0074/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0074
+Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
+2016-04-13 23:21:47,878 Stage-1 map = 0%,  reduce = 0%
+2016-04-13 23:21:53,297 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.52 sec
+2016-04-13 23:22:01,239 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.84 sec
+MapReduce Total cumulative CPU time: 3 seconds 840 msec
+Ended Job = job_1460595102520_0074
+Loading data to table default.nodes
+Table default.nodes stats: [numFiles=1, numRows=12, totalSize=66, rawDataSize=54]
+MapReduce Jobs Launched: 
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.84 sec   HDFS Read: 7514 HDFS Write: 135 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 840 msec
+OK
+Time taken: 25.722 seconds
+
+
+Insert into table edges
+select id1, id as id2
+from ( select  id as id1, node2
+       from edges_string, nodes
+       where node1 = node ) new_table, nodes
+where node2 = node
+Query ID = root_20160413232203_2a38e6d2-a3a5-4c3e-b3d7-31ac06f32505
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:22:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160413232203_2a38e6d2-a3a5-4c3e-b3d7-31ac06f32505.log
+2016-04-13 23:22:12	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-13 23:22:13	Dump the side-table for tag: 1 with group count: 12 into file: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-22-03_071_7714782854032042472-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable
+2016-04-13 23:22:13	Uploaded 1 File to: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-22-03_071_7714782854032042472-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable (530 bytes)
+2016-04-13 23:22:13	Dump the side-table for tag: 0 with group count: 6 into file: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-22-03_071_7714782854032042472-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable
+2016-04-13 23:22:13	Uploaded 1 File to: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-22-03_071_7714782854032042472-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable (423 bytes)
+2016-04-13 23:22:13	End of local task; Time Taken: 1.29 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460595102520_0075, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0075/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0075
+Hadoop job information for Stage-6: number of mappers: 1; number of reducers: 0
+2016-04-13 23:22:26,839 Stage-6 map = 0%,  reduce = 0%
+2016-04-13 23:22:33,316 Stage-6 map = 100%,  reduce = 0%, Cumulative CPU 3.46 sec
+MapReduce Total cumulative CPU time: 3 seconds 460 msec
+Ended Job = job_1460595102520_0075
+Loading data to table default.edges
+Table default.edges stats: [numFiles=1, numRows=8, totalSize=37, rawDataSize=29]
+MapReduce Jobs Launched: 
+Stage-Stage-6: Map: 1   Cumulative CPU: 3.46 sec   HDFS Read: 7676 HDFS Write: 106 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 460 msec
+OK
+Time taken: 31.941 seconds
+
+
+INSERT INTO TABLE hbase_edges
+select node, neighbors from (
+    SELECT id1 as node, map(cast(id2 as string), 1) as neighbors FROM edges
+    UNION ALL
+    SELECT id2 as node, map(cast(id1 as string), 1) as neighbors FROM edges
+    UNION ALL
+    SELECT id as node, map(cast(id as string), 1) as neighbors from nodes
+  ) a
+Query ID = root_20160413232235_4818b2b7-cae2-4e54-9f8e-e43c7dd85920
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460595102520_0076, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0076/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0076
+Hadoop job information for Stage-0: number of mappers: 2; number of reducers: 0
+2016-04-13 23:22:45,957 Stage-0 map = 0%,  reduce = 0%
+2016-04-13 23:22:56,630 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 12.92 sec
+MapReduce Total cumulative CPU time: 12 seconds 920 msec
+Ended Job = job_1460595102520_0076
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 2   Cumulative CPU: 12.92 sec   HDFS Read: 24215 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 12 seconds 920 msec
+OK
+Time taken: 22.709 seconds
+
+
+
+insert into table hbase_components
+select node, sortArrayofInts(map_keys(neighbors))[0] from hbase_edges
+Query ID = root_20160413232257_4f7235fd-4b4a-48ee-bcbc-c0b7b2e06575
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460595102520_0077, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0077/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0077
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-13 23:23:09,790 Stage-0 map = 0%,  reduce = 0%
+2016-04-13 23:23:17,551 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 5.7 sec
+MapReduce Total cumulative CPU time: 5 seconds 700 msec
+Ended Job = job_1460595102520_0077
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 5.7 sec   HDFS Read: 10978 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 5 seconds 700 msec
+OK
+Time taken: 21.067 seconds
+
+
+insert into table hbase_components
+select a.node, case when b.component_id < a.component_id then b.component_id else a.component_id end  from  hbase_components a, hbase_components b where a.component_id = b.node
+
+Query ID = root_20160413232318_bc28335f-0d8b-4a70-8e6d-2a764d7dc578
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/13 23:23:23 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160413232318_bc28335f-0d8b-4a70-8e6d-2a764d7dc578.log
+2016-04-13 23:23:24	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-13 23:23:26	Dump the side-table for tag: 0 with group count: 7 into file: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-23-18_823_8399261790482301495-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile20--.hashtable
+2016-04-13 23:23:26	Uploaded 1 File to: file:/tmp/root/16e7912b-eff8-4898-944e-63b9638998fa/hive_2016-04-13_23-23-18_823_8399261790482301495-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile20--.hashtable (430 bytes)
+2016-04-13 23:23:26	End of local task; Time Taken: 2.101 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460595102520_0078, Tracking URL = http://localhost:8088/proxy/application_1460595102520_0078/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460595102520_0078
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 0
+2016-04-13 23:23:40,133 Stage-2 map = 0%,  reduce = 0%
+2016-04-13 23:23:48,314 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 6.14 sec
+MapReduce Total cumulative CPU time: 6 seconds 140 msec
+Ended Job = job_1460595102520_0078
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1   Cumulative CPU: 6.14 sec   HDFS Read: 6391 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 6 seconds 140 msec
+OK
+Time taken: 30.721 seconds
+2016-04-13 23:23:58,800 INFO  [main] Configuration.deprecation: hadoop.native.lib is deprecated. Instead, use io.native.lib.available
+HBase Shell; enter 'help<RETURN>' for list of supported commands.
+Type "exit<RETURN>" to leave the HBase Shell
+Version 0.98.18-hadoop2, rc26c554ab3a8deecf890873bf6b1b4c90fa001dc, Fri Mar 18 19:19:59 PDT 2016
+
+hbase(main):001:0> list[23G[J[22G[J[21G[J[20G[Jscan ''[26Gh'[27G_'[28Gc'[29Go'[30Gm'[31Gp'[32Go'[33Gn'[34Ge'[35Gn'[36Gt'[37Gs'[38G[39G
+2016-04-13 23:25:16,034 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+ROW  COLUMN+CELL
+ 1 column=component:id, timestamp=1460604227949, value=1
+ 10 column=component:id, timestamp=1460604227949, value=10
+ 11 column=component:id, timestamp=1460604227949, value=10
+ 12 column=component:id, timestamp=1460604227949, value=5
+ 2 column=component:id, timestamp=1460604227949, value=2
+ 3 column=component:id, timestamp=1460604227949, value=2
+ 4 column=component:id, timestamp=1460604227949, value=4
+ 5 column=component:id, timestamp=1460604227949, value=5
+ 6 column=component:id, timestamp=1460604227949, value=1
+ 7 column=component:id, timestamp=1460604227949, value=7
+ 8 column=component:id, timestamp=1460604227949, value=1
+ 9 column=component:id, timestamp=1460604227949, value=4
+12 row(s) in 0.3800 seconds
+
+hbase(main):002:0> quit
