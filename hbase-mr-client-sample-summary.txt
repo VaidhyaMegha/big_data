@@ -1,0 +1,59 @@
+the same 4 groups  are identified as in WQUPC below
+of size 3 - (N9,N4,N20), 2-(N10,N11), 5-(N5, N3, N6, N1, N2), 2-(N7, N8)
+
+
+hbase(main):001:0> sa[21G[Jcan ''[26Gh'[27G_'[28Ge'[29Gd'[30Gg'[31Ge'[32Gs'[33G[34G[33G[32G'[J[32G[31G'[J[31G[30G'[J[30G[29G'[J[29G[28G'[J[28Gc'[29Go'[30Gm'[31Gp'[32Go'[33Gn'[34Ge'[35Gn'[36Gt'[37Gs'[38G[39G
+2016-04-14 04:28:36,848 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+ROW  COLUMN+CELL
+ 1 column=component:id, timestamp=1460622494511, value=1
+ 10 column=component:id, timestamp=1460622494511, value=10
+ 11 column=component:id, timestamp=1460622494511, value=10
+ 12 column=component:id, timestamp=1460622494511, value=4
+ 2 column=component:id, timestamp=1460622494511, value=2
+ 3 column=component:id, timestamp=1460622494511, value=2
+ 4 column=component:id, timestamp=1460622494511, value=4
+ 5 column=component:id, timestamp=1460622494511, value=4
+ 6 column=component:id, timestamp=1460622494511, value=1
+ 7 column=component:id, timestamp=1460622494511, value=4
+ 8 column=component:id, timestamp=1460622494511, value=1
+ 9 column=component:id, timestamp=1460622494511, value=4
+12 row(s) in 0.2930 seconds
+
+
+select * from nodes
+OK
+1	N9
+2	N8
+3	N7
+4	N6
+5	N5
+6	N4
+7	N3
+8	N20
+9	N2
+10	N11
+11	N10
+12	N1
+
+--------------------------------------------------------
+
+WQUPC results(Min. is not used here) the same 4 groups  are identified as below
+of size 3 - (N9,N4,N20), 2-(N10,N11), 5-(N5, N3, N6, N1, N2), 2-(N7, N8)
+-- N9	N4
+-- N8	N8
+-- N7	N8
+-- N6	N5
+-- N5	N5
+-- N4	N4
+-- N3	N5
+-- N20	N4
+-- N2	N5
+-- N11	N11
+-- N10	N11
+-- N1	N5
+
+the same nodes are part of the components in HBASE components table as in WQUPC results

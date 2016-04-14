@@ -9,35 +9,35 @@ SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:26:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-16/04/14 02:26:33 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+16/04/14 04:22:32 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/14 04:22:32 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
 Deleted /user/root
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:26:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-16/04/14 02:26:35 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
+16/04/14 04:22:33 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/14 04:22:34 INFO fs.TrashPolicyDefault: Namenode trash configuration: Deletion interval = 0 minutes, Emptier interval = 0 minutes.
 Deleted /user
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:26:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/14 04:22:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:26:37 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/14 04:22:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:26:39 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/04/14 04:22:38 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ~/projects/big_data/udf ~/projects/big_data
 [INFO] Scanning for projects...
 [WARNING] The POM for org.apache.maven.plugins:maven-enforce-plugin:jar:1.4 is missing, no dependency information available
@@ -64,7 +64,7 @@ SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
 [INFO] Updating project files from SCM: skipped.
 [INFO] Executing: /bin/sh -c cd /home/sandeep/projects/big_data/udf && git rev-parse --verify HEAD
 [INFO] Working directory: /home/sandeep/projects/big_data/udf
-[INFO] Storing buildNumber: 46d9215fa49be07d4aa69ba4d7d72fd95f496a4d at timestamp: 1460615203116
+[INFO] Storing buildNumber: 889257105347967c3af3a59a170253e7d562a706 at timestamp: 1460622162545
 [INFO] Executing: /bin/sh -c cd /home/sandeep/projects/big_data/udf && git rev-parse --verify HEAD
 [INFO] Working directory: /home/sandeep/projects/big_data/udf
 [INFO] Storing buildScmBranch: UNKNOWN
@@ -121,9 +121,9 @@ Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time: 7.114 s
-[INFO] Finished at: 2016-04-14T02:26:48-04:00
-[INFO] Final Memory: 49M/579M
+[INFO] Total time: 7.409 s
+[INFO] Finished at: 2016-04-14T04:22:47-04:00
+[INFO] Final Memory: 45M/387M
 [INFO] ------------------------------------------------------------------------
 ~/projects/big_data
 
@@ -135,27 +135,31 @@ SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
 drop table if exists nodes
 OK
-Time taken: 1.748 seconds
+Time taken: 2.364 seconds
 
 drop table if exists nodes_string
 OK
-Time taken: 0.084 seconds
+Time taken: 0.102 seconds
 
 drop table if exists edges
 OK
-Time taken: 0.08 seconds
+Time taken: 0.112 seconds
 
 drop table if exists edges_string
 OK
-Time taken: 0.078 seconds
+Time taken: 0.201 seconds
 
 drop table if exists hbase_edges
 OK
-Time taken: 0.033 seconds
+Time taken: 2.223 seconds
 
 drop table if exists hbase_components
 OK
-Time taken: 0.011 seconds
+Time taken: 1.493 seconds
+
+drop table if exists hbase_temp
+OK
+Time taken: 1.452 seconds
 
 Logging initialized using configuration in jar:file:/home/sandeep/tools/hive/1.2.1/lib/hive-common-1.2.1.jar!/hive-log4j.properties
 SLF4J: Class path contains multiple SLF4J bindings.
@@ -170,31 +174,31 @@ Added resources: [/home/sandeep/projects/big_data/udf/target/tingri_hive-0.1-jar
 
 create temporary function minArrayofInts as 'me.tingri.hive.udf.MinArrayofInts'
 OK
-Time taken: 1.067 seconds
+Time taken: 1.128 seconds
 
 
 CREATE TABLE edges_string(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.47 seconds
+Time taken: 0.492 seconds
 
 
 CREATE TABLE nodes_string(node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.042 seconds
+Time taken: 0.05 seconds
 
 
 CREATE TABLE edges(id1 Int, id2 Int)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.038 seconds
+Time taken: 0.043 seconds
 
 
 CREATE TABLE nodes(id Int, node STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
 OK
-Time taken: 0.035 seconds
+Time taken: 0.047 seconds
 
 
 
@@ -205,7 +209,17 @@ WITH SERDEPROPERTIES (
 )
 TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges")
 OK
-Time taken: 1.047 seconds
+Time taken: 1.068 seconds
+
+
+CREATE TABLE hbase_temp (neighbors map<string,Int>, node Int)
+  STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES (
+  "hbase.columns.mapping" = "neighbors:, :key"
+)
+  TBLPROPERTIES ("hbase.table.name" = "h_temp", "hbase.mapred.output.outputtable" = "h_temp")
+OK
+Time taken: 0.817 seconds
 
 
 CREATE TABLE hbase_components (node Int, component_id int)
@@ -215,7 +229,7 @@ WITH SERDEPROPERTIES (
 )
   TBLPROPERTIES ("hbase.table.name" = "h_components", "hbase.mapred.output.outputtable" = "h_components")
 OK
-Time taken: 0.244 seconds
+Time taken: 0.28 seconds
 
 
 
@@ -223,7 +237,7 @@ LOAD DATA LOCAL INPATH '${env:DATA_SETS_FOLDER}/edges.csv' OVERWRITE INTO TABLE 
 Loading data to table default.edges_string
 Table default.edges_string stats: [numFiles=1, numRows=0, totalSize=50, rawDataSize=0]
 OK
-Time taken: 0.61 seconds
+Time taken: 0.551 seconds
 
 
 INSERT  into table nodes_string
@@ -233,7 +247,7 @@ select node FROM
     UNION
     select node2 as node from edges_string
   ) new_table
-Query ID = root_20160414022709_694f59e3-6329-44fc-9a11-41b943251ff4
+Query ID = root_20160414042317_2b4398ae-b256-41a7-b901-7afe7d1fff07
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks not specified. Estimated from input data size: 1
@@ -243,27 +257,27 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1460612337240_0039, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0039/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0039
+Starting Job = job_1460612337240_0117, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0117/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0117
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2016-04-14 02:27:15,979 Stage-1 map = 0%,  reduce = 0%
-2016-04-14 02:27:20,267 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.37 sec
-2016-04-14 02:27:26,627 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.0 sec
-MapReduce Total cumulative CPU time: 3 seconds 0 msec
-Ended Job = job_1460612337240_0039
+2016-04-14 04:23:23,296 Stage-1 map = 0%,  reduce = 0%
+2016-04-14 04:23:28,581 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.36 sec
+2016-04-14 04:23:34,844 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.4 sec
+MapReduce Total cumulative CPU time: 3 seconds 400 msec
+Ended Job = job_1460612337240_0117
 Loading data to table default.nodes_string
 Table default.nodes_string stats: [numFiles=1, numRows=12, totalSize=39, rawDataSize=27]
 MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.0 sec   HDFS Read: 7596 HDFS Write: 115 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 0 msec
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.4 sec   HDFS Read: 7598 HDFS Write: 115 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 400 msec
 OK
-Time taken: 18.66 seconds
+Time taken: 18.345 seconds
 
 
 Insert into table nodes
 SELECT  row_number() over() as id, node
 from nodes_string
-Query ID = root_20160414022727_09d1ec9c-baec-464a-b468-6762ae8d560b
+Query ID = root_20160414042336_d6c2e57a-948b-44f8-8888-4debb9226511
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks not specified. Estimated from input data size: 1
@@ -273,21 +287,38 @@ In order to limit the maximum number of reducers:
   set hive.exec.reducers.max=<number>
 In order to set a constant number of reducers:
   set mapreduce.job.reduces=<number>
-Starting Job = job_1460612337240_0040, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0040/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0040
+Starting Job = job_1460612337240_0118, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0118/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0118
 Hadoop job information for Stage-1: number of mappers: 1; number of reducers: 1
-2016-04-14 02:27:36,698 Stage-1 map = 0%,  reduce = 0%
-2016-04-14 02:27:40,893 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.1 sec
-2016-04-14 02:27:46,162 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 2.86 sec
-MapReduce Total cumulative CPU time: 2 seconds 860 msec
-Ended Job = job_1460612337240_0040
+2016-04-14 04:23:44,836 Stage-1 map = 0%,  reduce = 0%
+2016-04-14 04:23:50,099 Stage-1 map = 100%,  reduce = 0%, Cumulative CPU 1.23 sec
+2016-04-14 04:23:54,303 Stage-1 map = 100%,  reduce = 100%, Cumulative CPU 3.33 sec
+MapReduce Total cumulative CPU time: 3 seconds 330 msec
+Ended Job = job_1460612337240_0118
 Loading data to table default.nodes
 Table default.nodes stats: [numFiles=1, numRows=12, totalSize=66, rawDataSize=54]
 MapReduce Jobs Launched: 
-Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 2.86 sec   HDFS Read: 7620 HDFS Write: 135 SUCCESS
-Total MapReduce CPU Time Spent: 2 seconds 860 msec
+Stage-Stage-1: Map: 1  Reduce: 1   Cumulative CPU: 3.33 sec   HDFS Read: 7618 HDFS Write: 135 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 330 msec
 OK
-Time taken: 19.472 seconds
+Time taken: 20.407 seconds
+
+
+select * from nodes
+OK
+1	N9
+2	N8
+3	N7
+4	N6
+5	N5
+6	N4
+7	N3
+8	N20
+9	N2
+10	N11
+11	N10
+12	N1
+Time taken: 0.051 seconds, Fetched: 12 row(s)
 
 
 Insert into table edges
@@ -296,39 +327,39 @@ from ( select  id as id1, node2
        from edges_string, nodes
        where node1 = node ) new_table, nodes
 where node2 = node
-Query ID = root_20160414022747_7f11de01-6ba2-4fa7-9fff-39e5f9d0f68c
+Query ID = root_20160414042356_c730faab-ce4c-4a2f-baed-361e05909f13
 Total jobs = 1
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/04/14 02:27:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-Execution log at: /tmp/root/root_20160414022747_7f11de01-6ba2-4fa7-9fff-39e5f9d0f68c.log
-2016-04-14 02:27:51	Starting to launch local task to process map join;	maximum memory = 477626368
-2016-04-14 02:27:52	Dump the side-table for tag: 1 with group count: 12 into file: file:/tmp/root/ec508cbc-d1cf-43a4-8be4-035e3acef542/hive_2016-04-14_02-27-47_400_5666458515575747357-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable
-2016-04-14 02:27:52	Uploaded 1 File to: file:/tmp/root/ec508cbc-d1cf-43a4-8be4-035e3acef542/hive_2016-04-14_02-27-47_400_5666458515575747357-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable (530 bytes)
-2016-04-14 02:27:52	Dump the side-table for tag: 0 with group count: 6 into file: file:/tmp/root/ec508cbc-d1cf-43a4-8be4-035e3acef542/hive_2016-04-14_02-27-47_400_5666458515575747357-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable
-2016-04-14 02:27:52	Uploaded 1 File to: file:/tmp/root/ec508cbc-d1cf-43a4-8be4-035e3acef542/hive_2016-04-14_02-27-47_400_5666458515575747357-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable (423 bytes)
-2016-04-14 02:27:52	End of local task; Time Taken: 1.145 sec.
+16/04/14 04:23:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160414042356_c730faab-ce4c-4a2f-baed-361e05909f13.log
+2016-04-14 04:24:00	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-14 04:24:01	Dump the side-table for tag: 1 with group count: 12 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-23-56_671_1051275379262335231-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable
+2016-04-14 04:24:01	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-23-56_671_1051275379262335231-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable (530 bytes)
+2016-04-14 04:24:01	Dump the side-table for tag: 0 with group count: 6 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-23-56_671_1051275379262335231-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable
+2016-04-14 04:24:01	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-23-56_671_1051275379262335231-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile10--.hashtable (423 bytes)
+2016-04-14 04:24:01	End of local task; Time Taken: 0.999 sec.
 Execution completed successfully
 MapredLocal task succeeded
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1460612337240_0041, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0041/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0041
+Starting Job = job_1460612337240_0119, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0119/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0119
 Hadoop job information for Stage-6: number of mappers: 1; number of reducers: 0
-2016-04-14 02:27:58,146 Stage-6 map = 0%,  reduce = 0%
-2016-04-14 02:28:03,413 Stage-6 map = 100%,  reduce = 0%, Cumulative CPU 3.04 sec
-MapReduce Total cumulative CPU time: 3 seconds 40 msec
-Ended Job = job_1460612337240_0041
+2016-04-14 04:24:06,320 Stage-6 map = 0%,  reduce = 0%
+2016-04-14 04:24:11,567 Stage-6 map = 100%,  reduce = 0%, Cumulative CPU 2.78 sec
+MapReduce Total cumulative CPU time: 2 seconds 780 msec
+Ended Job = job_1460612337240_0119
 Loading data to table default.edges
 Table default.edges stats: [numFiles=1, numRows=8, totalSize=37, rawDataSize=29]
 MapReduce Jobs Launched: 
-Stage-Stage-6: Map: 1   Cumulative CPU: 3.04 sec   HDFS Read: 7676 HDFS Write: 106 SUCCESS
-Total MapReduce CPU Time Spent: 3 seconds 40 msec
+Stage-Stage-6: Map: 1   Cumulative CPU: 2.78 sec   HDFS Read: 7676 HDFS Write: 106 SUCCESS
+Total MapReduce CPU Time Spent: 2 seconds 780 msec
 OK
-Time taken: 17.226 seconds
+Time taken: 16.093 seconds
 
 
 INSERT INTO TABLE hbase_edges
@@ -339,112 +370,453 @@ select node, neighbors from (
     UNION ALL
     SELECT id as node, map(cast(id as string), 1) as neighbors from nodes
   ) a
-Query ID = root_20160414022804_7a018562-04d7-42e8-bd33-43ac44087820
+Query ID = root_20160414042412_f556cdda-cbab-4c60-b527-ac8852b728f5
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1460612337240_0042, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0042/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0042
+Starting Job = job_1460612337240_0120, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0120/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0120
 Hadoop job information for Stage-0: number of mappers: 2; number of reducers: 0
-2016-04-14 02:28:14,120 Stage-0 map = 0%,  reduce = 0%
-2016-04-14 02:28:23,690 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 10.14 sec
-MapReduce Total cumulative CPU time: 10 seconds 140 msec
-Ended Job = job_1460612337240_0042
+2016-04-14 04:24:21,967 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:24:30,466 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 9.67 sec
+MapReduce Total cumulative CPU time: 9 seconds 670 msec
+Ended Job = job_1460612337240_0120
 MapReduce Jobs Launched: 
-Stage-Stage-0: Map: 2   Cumulative CPU: 10.14 sec   HDFS Read: 24563 HDFS Write: 0 SUCCESS
-Total MapReduce CPU Time Spent: 10 seconds 140 msec
+Stage-Stage-0: Map: 2   Cumulative CPU: 9.67 sec   HDFS Read: 24215 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 9 seconds 670 msec
 OK
-Time taken: 21.19 seconds
+Time taken: 18.789 seconds
 
 
 
 
 insert into table hbase_components
 select node, minArrayofInts(map_keys(neighbors)) from hbase_edges
-Query ID = root_20160414022825_0caa73bf-475f-4053-a344-7f1345282f8c
+Query ID = root_20160414042431_46386a79-b89a-42f1-8d3b-1dc5bcacff9b
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1460612337240_0043, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0043/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0043
+Starting Job = job_1460612337240_0121, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0121/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0121
 Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
-2016-04-14 02:28:34,480 Stage-0 map = 0%,  reduce = 0%
-2016-04-14 02:28:40,775 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.5 sec
-MapReduce Total cumulative CPU time: 4 seconds 500 msec
-Ended Job = job_1460612337240_0043
+2016-04-14 04:24:40,686 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:24:46,956 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 3.94 sec
+MapReduce Total cumulative CPU time: 3 seconds 940 msec
+Ended Job = job_1460612337240_0121
 MapReduce Jobs Launched: 
-Stage-Stage-0: Map: 1   Cumulative CPU: 4.5 sec   HDFS Read: 10850 HDFS Write: 0 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 500 msec
+Stage-Stage-0: Map: 1   Cumulative CPU: 3.94 sec   HDFS Read: 10850 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 3 seconds 940 msec
 OK
-Time taken: 16.033 seconds
+Time taken: 16.469 seconds
 
 
 
 
-insert into table hbase_edges
-select node, neighbors from (
-        SELECT node, map(cast(component_id as string), 1) as neighbors FROM hbase_components
-      ) a
-Query ID = root_20160414022841_c93760cf-a4aa-4844-872f-d0befb19ff0b
+
+insert overwrite table hbase_temp
+  SELECT neighbors, component_id
+  FROM hbase_components, hbase_edges
+  where hbase_components.node = hbase_edges.node
+Query ID = root_20160414042448_62d7ff34-9263-4f92-be5a-742f216e2cf7
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/14 04:24:50 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160414042448_62d7ff34-9263-4f92-be5a-742f216e2cf7.log
+2016-04-14 04:24:51	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-14 04:24:52	Dump the side-table for tag: 0 with group count: 12 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-24-48_039_8367386662035615293-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile20--.hashtable
+2016-04-14 04:24:52	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-24-48_039_8367386662035615293-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile20--.hashtable (500 bytes)
+2016-04-14 04:24:52	End of local task; Time Taken: 1.694 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0122, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0122/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0122
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 0
+2016-04-14 04:24:59,490 Stage-2 map = 0%,  reduce = 0%
+2016-04-14 04:25:05,757 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 5.07 sec
+MapReduce Total cumulative CPU time: 5 seconds 70 msec
+Ended Job = job_1460612337240_0122
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1   Cumulative CPU: 5.07 sec   HDFS Read: 7437 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 5 seconds 70 msec
+OK
+Time taken: 18.773 seconds
+
+
+insert overwrite table hbase_edges
+  select lv.node, map(cast(hbase_temp.node as string), 1) as neighbors
+  from hbase_temp lateral view explode(neighbors) lv as node, value
+Query ID = root_20160414042506_e47ebec5-dc58-432a-a01a-149a6f29daf5
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1460612337240_0044, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0044/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0044
+Starting Job = job_1460612337240_0123, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0123/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0123
 Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
-2016-04-14 02:28:51,414 Stage-0 map = 0%,  reduce = 0%
-2016-04-14 02:28:56,869 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.15 sec
-MapReduce Total cumulative CPU time: 4 seconds 150 msec
-Ended Job = job_1460612337240_0044
+2016-04-14 04:25:16,431 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:25:22,670 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.31 sec
+MapReduce Total cumulative CPU time: 4 seconds 310 msec
+Ended Job = job_1460612337240_0123
 MapReduce Jobs Launched: 
-Stage-Stage-0: Map: 1   Cumulative CPU: 4.15 sec   HDFS Read: 4171 HDFS Write: 0 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 150 msec
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.31 sec   HDFS Read: 5357 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 310 msec
 OK
-Time taken: 16.1 seconds
+Time taken: 16.932 seconds
+
+
+insert into table hbase_components
+  select node, minArrayofInts(map_keys(neighbors)) from hbase_edges
+Query ID = root_20160414042523_876a09e8-7d11-47db-8eee-cf281621519b
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0124, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0124/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0124
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:25:33,211 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:25:39,501 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.7 sec
+MapReduce Total cumulative CPU time: 4 seconds 700 msec
+Ended Job = job_1460612337240_0124
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.7 sec   HDFS Read: 4336 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 700 msec
+OK
+Time taken: 16.807 seconds
+
+
+
+insert overwrite table hbase_temp
+SELECT neighbors, component_id
+FROM hbase_components, hbase_edges
+where hbase_components.node = hbase_edges.node
+Query ID = root_20160414042540_550a35e9-024d-4662-a8af-6c1c6c4af93e
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/14 04:25:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160414042540_550a35e9-024d-4662-a8af-6c1c6c4af93e.log
+2016-04-14 04:25:43	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-14 04:25:45	Dump the side-table for tag: 0 with group count: 12 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-25-40_566_8646945629784087539-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile30--.hashtable
+2016-04-14 04:25:45	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-25-40_566_8646945629784087539-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile30--.hashtable (500 bytes)
+2016-04-14 04:25:45	End of local task; Time Taken: 1.961 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0125, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0125/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0125
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 0
+2016-04-14 04:25:51,855 Stage-2 map = 0%,  reduce = 0%
+2016-04-14 04:25:58,090 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 4.7 sec
+MapReduce Total cumulative CPU time: 4 seconds 700 msec
+Ended Job = job_1460612337240_0125
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1   Cumulative CPU: 4.7 sec   HDFS Read: 7437 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 700 msec
+OK
+Time taken: 18.599 seconds
+
+
+insert overwrite table hbase_edges
+select lv.node, map(cast(hbase_temp.node as string), 1) as neighbors
+from hbase_temp lateral view explode(neighbors) lv as node, value
+Query ID = root_20160414042559_4f515b20-2cdb-4c37-aab7-dbf8100ca20e
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0126, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0126/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0126
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:26:09,304 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:26:14,752 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.8 sec
+MapReduce Total cumulative CPU time: 4 seconds 800 msec
+Ended Job = job_1460612337240_0126
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.8 sec   HDFS Read: 5297 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 800 msec
+OK
+Time taken: 17.687 seconds
 
 
 insert into table hbase_components
 select node, minArrayofInts(map_keys(neighbors)) from hbase_edges
-Query ID = root_20160414022857_a005ad16-b534-4ec6-9d1a-a10aa7a8a782
+Query ID = root_20160414042616_ee15766a-8128-437f-b7ab-9484c794dd89
 Total jobs = 1
 Launching Job 1 out of 1
 Number of reduce tasks is set to 0 since there's no reduce operator
-Starting Job = job_1460612337240_0045, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0045/
-Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0045
+Starting Job = job_1460612337240_0127, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0127/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0127
 Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
-2016-04-14 02:29:07,521 Stage-0 map = 0%,  reduce = 0%
-2016-04-14 02:29:13,792 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.52 sec
-MapReduce Total cumulative CPU time: 4 seconds 520 msec
-Ended Job = job_1460612337240_0045
+2016-04-14 04:26:25,402 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:26:31,631 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.69 sec
+MapReduce Total cumulative CPU time: 4 seconds 690 msec
+Ended Job = job_1460612337240_0127
 MapReduce Jobs Launched: 
-Stage-Stage-0: Map: 1   Cumulative CPU: 4.52 sec   HDFS Read: 4360 HDFS Write: 0 SUCCESS
-Total MapReduce CPU Time Spent: 4 seconds 520 msec
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.69 sec   HDFS Read: 4336 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 690 msec
 OK
-Time taken: 16.899 seconds
-2016-04-14 02:29:18,061 INFO  [main] Configuration.deprecation: hadoop.native.lib is deprecated. Instead, use io.native.lib.available
+Time taken: 16.879 seconds
+
+
+insert overwrite table hbase_temp
+SELECT neighbors, component_id
+FROM hbase_components, hbase_edges
+where hbase_components.node = hbase_edges.node
+Query ID = root_20160414042633_7a241a69-6d17-4f42-ac53-4cb4a1b6409d
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/14 04:26:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160414042633_7a241a69-6d17-4f42-ac53-4cb4a1b6409d.log
+2016-04-14 04:26:36	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-14 04:26:38	Dump the side-table for tag: 0 with group count: 12 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-26-33_748_3002522950566282286-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile40--.hashtable
+2016-04-14 04:26:38	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-26-33_748_3002522950566282286-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile40--.hashtable (500 bytes)
+2016-04-14 04:26:38	End of local task; Time Taken: 1.76 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0128, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0128/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0128
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 0
+2016-04-14 04:26:44,636 Stage-2 map = 0%,  reduce = 0%
+2016-04-14 04:26:50,901 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 4.67 sec
+MapReduce Total cumulative CPU time: 4 seconds 670 msec
+Ended Job = job_1460612337240_0128
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1   Cumulative CPU: 4.67 sec   HDFS Read: 7437 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 670 msec
+OK
+Time taken: 18.234 seconds
+
+
+
+insert overwrite table hbase_edges
+select lv.node, map(cast(hbase_temp.node as string), 1) as neighbors
+from hbase_temp lateral view explode(neighbors) lv as node, value
+Query ID = root_20160414042651_be7a5294-912e-4138-bf8d-6a0e4a5ee171
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0129, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0129/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0129
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:27:01,477 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:27:07,694 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.57 sec
+MapReduce Total cumulative CPU time: 4 seconds 570 msec
+Ended Job = job_1460612337240_0129
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.57 sec   HDFS Read: 5357 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 570 msec
+OK
+Time taken: 16.773 seconds
+
+
+insert into table hbase_components
+select node, minArrayofInts(map_keys(neighbors)) from hbase_edges
+Query ID = root_20160414042708_30c943c5-71c7-4632-9e02-3676e756a150
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0130, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0130/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0130
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:27:18,429 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:27:24,672 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.08 sec
+MapReduce Total cumulative CPU time: 4 seconds 80 msec
+Ended Job = job_1460612337240_0130
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.08 sec   HDFS Read: 4336 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 80 msec
+OK
+Time taken: 17.008 seconds
+
+
+insert overwrite table hbase_temp
+SELECT neighbors, component_id
+FROM hbase_components, hbase_edges
+where hbase_components.node = hbase_edges.node
+Query ID = root_20160414042725_b70f7672-6164-4e29-87a7-43a655b5f67c
+Total jobs = 1
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+16/04/14 04:27:27 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Execution log at: /tmp/root/root_20160414042725_b70f7672-6164-4e29-87a7-43a655b5f67c.log
+2016-04-14 04:27:28	Starting to launch local task to process map join;	maximum memory = 477626368
+2016-04-14 04:27:30	Dump the side-table for tag: 0 with group count: 12 into file: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-27-25_779_8317109964562688495-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile50--.hashtable
+2016-04-14 04:27:30	Uploaded 1 File to: file:/tmp/root/316bfd03-fd9d-4e72-8117-cb1eddd0a406/hive_2016-04-14_04-27-25_779_8317109964562688495-1/-local-10001/HashTable-Stage-2/MapJoin-mapfile50--.hashtable (500 bytes)
+2016-04-14 04:27:30	End of local task; Time Taken: 1.735 sec.
+Execution completed successfully
+MapredLocal task succeeded
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0131, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0131/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0131
+Hadoop job information for Stage-2: number of mappers: 1; number of reducers: 0
+2016-04-14 04:27:36,627 Stage-2 map = 0%,  reduce = 0%
+2016-04-14 04:27:42,015 Stage-2 map = 100%,  reduce = 0%, Cumulative CPU 4.57 sec
+MapReduce Total cumulative CPU time: 4 seconds 570 msec
+Ended Job = job_1460612337240_0131
+MapReduce Jobs Launched: 
+Stage-Stage-2: Map: 1   Cumulative CPU: 4.57 sec   HDFS Read: 7437 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 570 msec
+OK
+Time taken: 17.31 seconds
+
+
+insert overwrite table hbase_edges
+select lv.node, map(cast(hbase_temp.node as string), 1) as neighbors
+from hbase_temp lateral view explode(neighbors) lv as node, value
+Query ID = root_20160414042743_dc31963a-40a5-4925-a404-b251f2cf71c9
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0132, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0132/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0132
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:27:52,454 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:27:58,675 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.37 sec
+MapReduce Total cumulative CPU time: 4 seconds 370 msec
+Ended Job = job_1460612337240_0132
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.37 sec   HDFS Read: 5357 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 370 msec
+OK
+Time taken: 16.667 seconds
+
+
+insert into table hbase_components
+select node, minArrayofInts(map_keys(neighbors)) from hbase_edges
+Query ID = root_20160414042759_2b7e02b8-392f-4106-9d86-e14236742c52
+Total jobs = 1
+Launching Job 1 out of 1
+Number of reduce tasks is set to 0 since there's no reduce operator
+Starting Job = job_1460612337240_0133, Tracking URL = http://localhost:8088/proxy/application_1460612337240_0133/
+Kill Command = /home/sandeep/tools/hadoop/2.7.1/bin/hadoop job  -kill job_1460612337240_0133
+Hadoop job information for Stage-0: number of mappers: 1; number of reducers: 0
+2016-04-14 04:28:09,658 Stage-0 map = 0%,  reduce = 0%
+2016-04-14 04:28:15,110 Stage-0 map = 100%,  reduce = 0%, Cumulative CPU 4.41 sec
+MapReduce Total cumulative CPU time: 4 seconds 410 msec
+Ended Job = job_1460612337240_0133
+MapReduce Jobs Launched: 
+Stage-Stage-0: Map: 1   Cumulative CPU: 4.41 sec   HDFS Read: 4336 HDFS Write: 0 SUCCESS
+Total MapReduce CPU Time Spent: 4 seconds 410 msec
+OK
+Time taken: 16.431 seconds
+2016-04-14 04:28:19,499 INFO  [main] Configuration.deprecation: hadoop.native.lib is deprecated. Instead, use io.native.lib.available
 HBase Shell; enter 'help<RETURN>' for list of supported commands.
 Type "exit<RETURN>" to leave the HBase Shell
 Version 0.98.18-hadoop2, rc26c554ab3a8deecf890873bf6b1b4c90fa001dc, Fri Mar 18 19:19:59 PDT 2016
 
-hbase(main):001:0> scan ''[26Gh'[27G_'[28Gc'[29Go'[30Gm'[31Gp'[32Go'[33Gn'[34Ge'[35Gn'[36Gt'[37Gs'[38G[39G
-2016-04-14 02:29:26,338 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+
+the same 4 groups  are identified as in WQUPC below
+of size 3 - (N9,N4,N20), 2-(N10,N11), 5-(N5, N3, N6, N1, N2), 2-(N7, N8)
+
+
+hbase(main):001:0> sa[21G[Jcan ''[26Gh'[27G_'[28Ge'[29Gd'[30Gg'[31Ge'[32Gs'[33G[34G[33G[32G'[J[32G[31G'[J[31G[30G'[J[30G[29G'[J[29G[28G'[J[28Gc'[29Go'[30Gm'[31Gp'[32Go'[33Gn'[34Ge'[35Gn'[36Gt'[37Gs'[38G[39G
+2016-04-14 04:28:36,848 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 ROW  COLUMN+CELL
- 1 column=component:id, timestamp=1460615352616, value=1
- 10 column=component:id, timestamp=1460615352616, value=10
- 11 column=component:id, timestamp=1460615352616, value=10
- 12 column=component:id, timestamp=1460615352616, value=5
- 2 column=component:id, timestamp=1460615352616, value=2
- 3 column=component:id, timestamp=1460615352616, value=2
- 4 column=component:id, timestamp=1460615352616, value=4
- 5 column=component:id, timestamp=1460615352616, value=5
- 6 column=component:id, timestamp=1460615352616, value=1
- 7 column=component:id, timestamp=1460615352616, value=7
- 8 column=component:id, timestamp=1460615352616, value=6
- 9 column=component:id, timestamp=1460615352616, value=4
-12 row(s) in 0.2770 seconds
+ 1 column=component:id, timestamp=1460622494511, value=1
+ 10 column=component:id, timestamp=1460622494511, value=10
+ 11 column=component:id, timestamp=1460622494511, value=10
+ 12 column=component:id, timestamp=1460622494511, value=4
+ 2 column=component:id, timestamp=1460622494511, value=2
+ 3 column=component:id, timestamp=1460622494511, value=2
+ 4 column=component:id, timestamp=1460622494511, value=4
+ 5 column=component:id, timestamp=1460622494511, value=4
+ 6 column=component:id, timestamp=1460622494511, value=1
+ 7 column=component:id, timestamp=1460622494511, value=4
+ 8 column=component:id, timestamp=1460622494511, value=1
+ 9 column=component:id, timestamp=1460622494511, value=4
+12 row(s) in 0.2930 seconds
 
-hbase(main):002:0> 
+
+select * from nodes
+OK
+1	N9
+2	N8
+3	N7
+4	N6
+5	N5
+6	N4
+7	N3
+8	N20
+9	N2
+10	N11
+11	N10
+12	N1
+
+WQUPC results(Min. is not used here) the same 4 groups  are identified as below
+of size 3 - (N9,N4,N20), 2-(N10,N11), 5-(N5, N3, N6, N1, N2), 2-(N7, N8)
+-- N9	N4
+-- N8	N8
+-- N7	N8
+-- N6	N5
+-- N5	N5
+-- N4	N4
+-- N3	N5
+-- N20	N4
+-- N2	N5
+-- N11	N11
+-- N10	N11
+-- N1	N5
+
+the same nodes are part of the components in HBASE components table as in WQUPC results
+
+hbase(main):002:0> scan 'h_components'[38G[37G'[J[37G[36G'[J[36G[35G'[J[35G[34G'[J[34G[33G'[J[33G[32G'[J[32G[31G'[J[31G[30G'[J[30G[29G'[J[29G[28G'[J[28Ge'[29Gd'[30Gg'[31Ge'[32Gs'[33G[34G
+ROW  COLUMN+CELL
+ 1 column=neighbors:1, timestamp=1460622477793, value=1
+ 1 column=neighbors:6, timestamp=1460622269298, value=1
+ 10 column=neighbors:10, timestamp=1460622477793, value=1
+ 10 column=neighbors:11, timestamp=1460622269298, value=1
+ 11 column=neighbors:10, timestamp=1460622477793, value=1
+ 11 column=neighbors:11, timestamp=1460622269323, value=1
+ 12 column=neighbors:12, timestamp=1460622269323, value=1
+ 12 column=neighbors:4, timestamp=1460622477793, value=1
+ 12 column=neighbors:5, timestamp=1460622477793, value=1
+ 12 column=neighbors:7, timestamp=1460622477793, value=1
+ 12 column=neighbors:9, timestamp=1460622269298, value=1
+ 2 column=neighbors:2, timestamp=1460622477793, value=1
+ 2 column=neighbors:3, timestamp=1460622269298, value=1
+ 3 column=neighbors:2, timestamp=1460622477793, value=1
+ 3 column=neighbors:3, timestamp=1460622269323, value=1
+ 4 column=neighbors:4, timestamp=1460622477793, value=1
+ 4 column=neighbors:9, timestamp=1460622269298, value=1
+ 5 column=neighbors:12, timestamp=1460622269298, value=1
+ 5 column=neighbors:4, timestamp=1460622477793, value=1
+ 5 column=neighbors:5, timestamp=1460622477793, value=1
+ 6 column=neighbors:1, timestamp=1460622477793, value=1
+ 6 column=neighbors:6, timestamp=1460622477793, value=1
+ 6 column=neighbors:8, timestamp=1460622269298, value=1
+ 7 column=neighbors:12, timestamp=1460622269298, value=1
+ 7 column=neighbors:4, timestamp=1460622477793, value=1
+ 7 column=neighbors:5, timestamp=1460622477793, value=1
+ 7 column=neighbors:7, timestamp=1460622477793, value=1
+ 8 column=neighbors:1, timestamp=1460622477793, value=1
+ 8 column=neighbors:6, timestamp=1460622477793, value=1
+ 8 column=neighbors:8, timestamp=1460622269323, value=1
+ 9 column=neighbors:12, timestamp=1460622269298, value=1
+ 9 column=neighbors:4, timestamp=1460622477793, value=1
+ 9 column=neighbors:5, timestamp=1460622477793, value=1
+ 9 column=neighbors:9, timestamp=1460622269323, value=1
+12 row(s) in 0.0820 seconds
+
+hbase(main):003:0> 
