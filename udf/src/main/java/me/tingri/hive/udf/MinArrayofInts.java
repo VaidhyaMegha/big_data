@@ -6,25 +6,22 @@ import org.apache.hadoop.hive.ql.metadata.HiveException;
 import org.apache.hadoop.hive.ql.udf.generic.GenericUDF;
 import org.apache.hadoop.hive.serde2.objectinspector.ListObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
-import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
-public class SortArrayofInts extends GenericUDF {
+public class MinArrayofInts extends GenericUDF {
     ListObjectInspector listOI;
 
     @Override
     public String getDisplayString(String[] arg0) {
-        return "SortArrayofInts(array,indexOfHeader)";
+        return "MinArrayofInts(array,indexOfHeader)";
     }
 
     @Override
     public ObjectInspector initialize(ObjectInspector[] arguments) throws UDFArgumentException {
         if (arguments.length != 1)
-            throw new UDFArgumentLengthException("SortArrayofInts only takes 1 arguments: List<T>");
+            throw new UDFArgumentLengthException("MinArrayofInts only takes 1 arguments: List<T>");
 
         ObjectInspector a = arguments[0];
 
@@ -33,7 +30,7 @@ public class SortArrayofInts extends GenericUDF {
 
         this.listOI = (ListObjectInspector) a;
 
-        return ObjectInspectorFactory.getStandardListObjectInspector(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
+        return PrimitiveObjectInspectorFactory.javaIntObjectInspector;
     }
 
     @Override
@@ -45,18 +42,10 @@ public class SortArrayofInts extends GenericUDF {
         // check for nulls
         if (list == null) return null;
 
-        Collections.sort(list, new CustomComparator());
+        long min = Long.parseLong(list.get(0).toString());
 
-        return list;
-    }
+        for(Object s: list) if ( min > Long.parseLong(s.toString())) min = Long.parseLong(s.toString());
 
-    class CustomComparator<T> implements Comparator<T> {
-
-        @Override
-        public int compare(T str1, T str2) {
-            long value = Long.parseLong(str1.toString())- Long.parseLong(str2.toString());
-
-            return value > 0 ? 1 : value == 0 ? 0 : -1;
-        }
+        return min;
     }
 }

@@ -1,6 +1,6 @@
 ADD JAR ${env:PROJECT_HOME}/udf/target/tingri_hive-0.1-jar-with-dependencies.jar;
 
-create temporary function sortArrayofInts as 'me.tingri.hive.udf.SortArrayofInts';
+create temporary function minArrayofInts as 'me.tingri.hive.udf.MinArrayofInts';
 
 CREATE TABLE edges_string(node1 STRING, node2 STRING)
   ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
@@ -64,7 +64,9 @@ select node, neighbors from (
     SELECT id as node, map(cast(id as string), 1) as neighbors from nodes
   ) a;
 
--- Preparation of Vector sort_array doesnt work as expected since map_keys return string of arrays and not ints
+-- Preparation of Vector ---
+
+-- sort_array doesnt work as expected since map_keys return string of arrays and not ints
 --      insert into table hbase_components
 --      select node, sort_array(map_keys(neighbors))[0] from hbase_edges;
 -- UDTF wont work in nested expressions
@@ -74,8 +76,18 @@ select node, neighbors from (
 -- ) he group by node;
 
 insert into table hbase_components
-select node, sortArrayofInts(map_keys(neighbors))[0] from hbase_edges;
+select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
+
+
+-- Iterations ------
 
 -- Iteration 1 (Repeat and Rinse till convergence) each time components will be updated with new timestamp
+insert into table hbase_edges
+select node, neighbors from (
+        SELECT node, map(cast(component_id as string), 1) as neighbors FROM hbase_components
+      ) a;
+
 insert into table hbase_components
-select a.node, case when b.component_id < a.component_id then b.component_id else a.component_id end  from  hbase_components a, hbase_components b where a.component_id = b.node
+select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
+
+-- For next set of iterations repeat the steps
