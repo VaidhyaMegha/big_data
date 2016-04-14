@@ -30,7 +30,7 @@ public class MinArrayofInts extends GenericUDF {
 
         this.listOI = (ListObjectInspector) a;
 
-        return PrimitiveObjectInspectorFactory.javaIntObjectInspector;
+        return PrimitiveObjectInspectorFactory.javaLongObjectInspector;
     }
 
     @Override
