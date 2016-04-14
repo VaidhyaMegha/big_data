@@ -83,11 +83,9 @@ select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
 
 -- Iteration 1 (Repeat and Rinse till convergence) each time components will be updated with new timestamp
 insert into table hbase_edges
-select node, neighbors from (
-        SELECT node, map(cast(component_id as string), 1) as neighbors FROM hbase_components
-      ) a;
+  SELECT node, map(cast(component_id as string), 1) as neighbors FROM hbase_components;
 
 insert into table hbase_components
-select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
+  select node, minArrayofInts(map_keys(neighbors)) from hbase_edges;
 
 -- For next set of iterations repeat the steps
