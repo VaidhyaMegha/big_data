@@ -15,7 +15,7 @@ public class MinArrayofInts extends GenericUDF {
 
     @Override
     public String getDisplayString(String[] arg0) {
-        return "MinArrayofInts(array,indexOfHeader)";
+        return "MinArrayofInts(array)";
     }
 
     @Override

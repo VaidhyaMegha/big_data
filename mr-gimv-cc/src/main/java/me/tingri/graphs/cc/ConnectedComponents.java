@@ -50,7 +50,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     protected static int printUsage() {
-        System.out.println("ConnectedComponents <edge_path> <vector_path> <# of nodes> <# of reducers> <makesym or nosym> <restart>");
+        System.out.println("ConnectedComponents <edge_path> <vector_path> <# of nodes> <# of reducers> <makesym or nosym> <restart> <state check cadence>");
 
         ToolRunner.printGenericCommandUsage(System.out);
 
@@ -58,7 +58,7 @@ public class ConnectedComponents extends Configured implements Tool {
     }
 
     public int run(String[] args) throws Exception {
-        if (args.length != 5 && args.length != 6) return printUsage();
+        if (args.length < 5 || args.length > 7) return printUsage();
 
         Path edgePath = new Path(args[0]);
         Path vecPath = new Path(args[1]);
@@ -69,11 +69,12 @@ public class ConnectedComponents extends Configured implements Tool {
         long numOfNodes = Long.parseLong(args[2]);
         int numOfReducers = Integer.parseInt(args[3]);
         String makeSymmetric = (MAKE_SYMMETRIC.equalsIgnoreCase(args[4])) ? "1" : "0";
+        int stateCheckCadence = (args.length == 7) ? Integer.parseInt(args[6]) :  STATE_CHECK_CADENCE;
 
         FileSystem fs = FileSystem.get(getConf());
 
         //start from where we stopped i.e. if a vector_path exists and restart is requested jump straight to loop
-        if (!fs.exists(vecPath) || args.length != 6 || !RESTART.equalsIgnoreCase(args[5]))
+        if (!fs.exists(vecPath) || args.length < 6 || !RESTART.equalsIgnoreCase(args[5]))
             Utility.generateVector(new JobConf(getConf(), ConnectedComponents.class), fs, edgePath, curVectorPath, makeSymmetric, numOfReducers);
         else
             Utility.rename(fs, vecPath, curVectorPath);
@@ -83,14 +84,15 @@ public class ConnectedComponents extends Configured implements Tool {
         long changed = -1;
 
         // Iteratively calculate neighbor with minimum id.
-        for (int i = 0; i < MAX_ITERATIONS; i++) {
+        for (int i = 1; i <= MAX_ITERATIONS; i++) {
             join(fs, edgePath, curVectorPath, tempVectorPath, makeSymmetric, numOfReducers);
 
             merge(fs, tempVectorPath, nextVectorPath, numOfReducers);
 
-            changed = Utility.stateCheck(new JobConf(getConf(), ConnectedComponents.class), fs, curVectorPath, nextVectorPath, stateCheckTempPath, numOfReducers);
-
-            System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
+            if(i % stateCheckCadence == 0) {
+                changed = Utility.stateCheck(new JobConf(getConf(), ConnectedComponents.class), fs, curVectorPath, nextVectorPath, stateCheckTempPath, numOfReducers);
+                System.out.println("Iteration " + i + " : changed = " + changed + ", unchanged = " + (numOfNodes - changed));
+            }
 
             Utility.rename(fs, nextVectorPath, curVectorPath);
 
