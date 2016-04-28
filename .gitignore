@@ -7,3 +7,4 @@ datasets/workshop
 metastore_db/
 /tez_binary_files
 /mr-gimv-cc/target
+/tez-sample/target

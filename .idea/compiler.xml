@@ -24,8 +24,10 @@
         <processorPath useClasspath="true" />
         <module name="mr-gimv-cc" />
         <module name="tez-gimv-cc" />
+        <module name="tez-sample" />
         <module name="udaf" />
         <module name="udf" />
+        <module name="zk_sample" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -33,8 +35,10 @@
       <module name="hbase-mr" target="1.7" />
       <module name="mr-gimv-cc" target="1.7" />
       <module name="tez-gimv-cc" target="1.7" />
-      <module name="udaf" target="1.7" />
-      <module name="udf" target="1.7" />
+      <module name="tez-sample" target="1.8" />
+      <module name="udaf" target="1.5" />
+      <module name="udf" target="1.5" />
+      <module name="zk_sample" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

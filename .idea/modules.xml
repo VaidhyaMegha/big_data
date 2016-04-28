@@ -6,9 +6,10 @@
       <module fileurl="file://$PROJECT_DIR$/hql/hive.iml" filepath="$PROJECT_DIR$/hql/hive.iml" />
       <module fileurl="file://$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" filepath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" />
       <module fileurl="file://$PROJECT_DIR$/shell/shell.iml" filepath="$PROJECT_DIR$/shell/shell.iml" />
-      <module fileurl="file://$PROJECT_DIR$/tez-gimv-cc/tez-gimv-cc.iml" filepath="$PROJECT_DIR$/tez-gimv-cc/tez-gimv-cc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tez-sample/tez-sample.iml" filepath="$PROJECT_DIR$/tez-sample/tez-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/udaf/udaf.iml" filepath="$PROJECT_DIR$/udaf/udaf.iml" />
       <module fileurl="file://$PROJECT_DIR$/udf/udf.iml" filepath="$PROJECT_DIR$/udf/udf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zk_sample/zk_sample.iml" filepath="$PROJECT_DIR$/zk_sample/zk_sample.iml" />
     </modules>
   </component>
 </project>
