@@ -8,3 +8,5 @@ metastore_db/
 /tez_binary_files
 /mr-gimv-cc/target
 /tez-sample/target
+/zk_sample/target
+/qcf/target

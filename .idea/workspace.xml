@@ -2,33 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$ListIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Digraph.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/DirectedDFS.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/GREP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/In.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/NFA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$ListIterator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdOut.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GREP.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GunZip.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/Utility.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$DataMonitorListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor$StreamWriter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -85,8 +58,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -1269,7 +1242,7 @@
       <workItem from="1461802317619" duration="939000" />
       <workItem from="1461803290268" duration="9325000" />
       <workItem from="1462206494922" duration="2012000" />
-      <workItem from="1462211031979" duration="16748000" />
+      <workItem from="1462211031979" duration="16801000" />
     </task>
     <servers />
   </component>
@@ -1306,7 +1279,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="661813000" />
+    <option name="totallyTimeSpent" value="661866000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1600" height="874" extended-state="6" />
@@ -1804,8 +1777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           <folding />
         </state>
       </provider>
