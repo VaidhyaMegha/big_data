@@ -12,8 +12,7 @@
     <version>0.2</version>
     <packaging>jar</packaging>
 
-    <name>tez-gimv-cc</name>
-    <url>http://maven.apache.org</url>
+    <name>tez-sample</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
