@@ -2,100 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/GIMV_HBASE.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/QCF-2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/QCF.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$ListIterator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Digraph.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/DirectedDFS.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/GREP.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/In.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/NFA.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$ListIterator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$Node.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdIn.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdOut.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GREP.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GunZip.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/Utility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$DataMonitorListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor$StreamWriter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__args4j_args4j_2_33.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jcraft_jsch_0_1_42.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_7_6_cdh5_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_6_0_cdh5_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_6_0_cdh5_7_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core4_4_0_1_incubating.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_6_1_26_cloudera_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mortbay_jetty_jetty_util_6_1_26_cloudera_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/tingri/access.log.6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datasets/tingri/access.log.6.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/qcf.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Bag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Digraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/DirectedDFS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/GREP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/In.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/NFA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Stack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/StdIn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/StdOut.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GREP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GunZip.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/src/main/java/me/tingri/zk/DataMonitor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/src/main/java/me/tingri/zk/Executor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_7_1.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_14.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_json_1_8.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_6_0_cdh5_7_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_0_cdh5_7_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_6_0_cdh5_7_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_0_cdh5_7_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_web_proxy_2_7_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_web_proxy_2_6_0_cdh5_7_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_1_0_incubating.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_htrace_htrace_core_3_2_0_incubating.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_7_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_jaxrs_1_7_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_8_8.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_8_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_xc_1_7_1.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_10.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$ListIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag$Node.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Bag.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Digraph.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/DirectedDFS.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/GREP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/In.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/NFA.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$ListIterator.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack$Node.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/Stack.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdIn.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/edu/princeton/cs/algs4/StdOut.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GREP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/GunZip.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/classes/me/tingri/qcf/Utility.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor$DataMonitorListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/DataMonitor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor$StreamWriter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/classes/me/tingri/zk/Executor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zk_sample/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hql/hbase/cleanup.sql" afterPath="$PROJECT_DIR$/hql/hbase/cleanup.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hql/hbase/hbase.sql" afterPath="$PROJECT_DIR$/hql/hbase/hbase.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" afterPath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tez-sample/pom.xml" afterPath="$PROJECT_DIR$/tez-sample/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tez-sample/tez-sample.iml" afterPath="$PROJECT_DIR$/tez-sample/tez-sample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udaf/udaf.iml" afterPath="$PROJECT_DIR$/udaf/udaf.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udf/udf.iml" afterPath="$PROJECT_DIR$/udf/udf.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zk_sample/pom.xml" afterPath="$PROJECT_DIR$/zk_sample/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zk_sample/zk_sample.iml" afterPath="$PROJECT_DIR$/zk_sample/zk_sample.iml" />
     </list>
     <ignored path="big_data.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -137,11 +72,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hbase.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hbase.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hql/hbase/hbase.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+            <state relative-caret-position="-877">
+              <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -221,16 +166,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -284,7 +219,6 @@
         <option value="$PROJECT_DIR$/shell/mr.sh" />
         <option value="$PROJECT_DIR$/zk_sample/src/main/java/Executor.java" />
         <option value="$PROJECT_DIR$/zk_sample/src/main/java/me/tingri/Executor.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/zk_sample/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/zk_sample/src/main/java/me/tingri/zk/DataMonitor.java" />
@@ -307,6 +241,7 @@
         <option value="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GunZip.java" />
         <option value="$PROJECT_DIR$/hql/hbase/cleanup.sql" />
         <option value="$PROJECT_DIR$/hql/hbase/hbase.sql" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -467,24 +402,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="qcf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="big_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="big_data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="qcf" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1352,7 +1269,7 @@
       <workItem from="1461802317619" duration="939000" />
       <workItem from="1461803290268" duration="9325000" />
       <workItem from="1462206494922" duration="2012000" />
-      <workItem from="1462211031979" duration="16399000" />
+      <workItem from="1462211031979" duration="16748000" />
     </task>
     <servers />
   </component>
@@ -1389,7 +1306,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="661464000" />
+    <option name="totallyTimeSpent" value="661813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1600" height="874" extended-state="6" />
@@ -1611,14 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1887,8 +1796,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hql/hbase/hbase.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="48" selection-start-line="0" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        <state relative-caret-position="-877">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
