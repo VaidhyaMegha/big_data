@@ -1,8 +1,10 @@
 package me.tingri.qcf;
 
-import edu.princeton.cs.algs4.NFA;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GREP {
 
@@ -10,14 +12,16 @@ public class GREP {
     private GREP() {
     }
 
-    public static void main(String[] args) {
-        String regexp = "(.*" + args[0] + ".*)";
+    public static List<String> search(String regex, Reader r) throws IOException {
+        String regexp = "(.*" + regex + ".*)";
+        BufferedReader bfr = new BufferedReader(r);
         NFA nfa = new NFA(regexp);
-        while (StdIn.hasNextLine()) {
-            String line = StdIn.readLine();
-            if (nfa.recognizes(line)) {
-                StdOut.println(line);
-            }
-        }
+        List<String> matches = new ArrayList<>();
+        String line;
+
+        while ((line = bfr.readLine()) != null)
+            if (nfa.recognizes(line)) matches.add(line);
+
+        return matches;
     }
 }
