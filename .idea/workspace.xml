@@ -2,65 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="827ccd81-5e44-4f10-9ea7-9c74a4ff318e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_applicationhistoryservice_2_6_0_cdh5_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/NFA.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/adt/Bag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/graph/DiGraph.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/graph/DirectedDFS.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/GREPTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/NFATest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_applicationhistoryservice_2_6_0_cdh5_7_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/datasets/tingri/access.log.6" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Bag.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Digraph.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/DirectedDFS.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/GREP.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/In.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/NFA.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/Stack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/StdIn.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/StdOut.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_hadoop_bundle_1_5_0_cdh5_7_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_twitter_parquet_hadoop_bundle_1_5_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_7_6_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_7_6_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_annotations_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_auth_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_client_2_6_0_mr1_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_client_2_6_0_mr1_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_common_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_core_2_6_0_mr1_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_core_2_6_0_mr1_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_hdfs_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_test_2_6_0_mr1_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_test_2_6_0_mr1_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_api_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_common_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_common_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_common_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_resourcemanager_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_resourcemanager_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_web_proxy_2_6_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hadoop_hadoop_yarn_server_web_proxy_2_6_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_annotations_1_2_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_annotations_1_2_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_common_1_2_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_common_1_2_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_protocol_1_2_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hbase_hbase_protocol_1_2_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_ant_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_ant_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_common_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_common_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_exec_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_exec_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_metastore_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_metastore_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_serde_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_serde_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_shims_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_hive_shims_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_0_23_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_0_23_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_common_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_common_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_scheduler_1_1_0_cdh5_7_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_hive_shims_hive_shims_scheduler_1_1_0_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libfb303_0_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libfb303_0_9_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_9_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_thrift_libthrift_0_9_3.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5_cdh5_7_0_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_5_cdh5_8_0.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GunZip.java" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/tingri/access.log.4.gz" afterPath="$PROJECT_DIR$/datasets/tingri/access.log.4.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/pom.xml" afterPath="$PROJECT_DIR$/qcf/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/qcf.iml" afterPath="$PROJECT_DIR$/qcf/qcf.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GREP.java" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GREP.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tez-sample/tez-sample.iml" afterPath="$PROJECT_DIR$/tez-sample/tez-sample.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udaf/udaf.iml" afterPath="$PROJECT_DIR$/udaf/udaf.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udf/udf.iml" afterPath="$PROJECT_DIR$/udf/udf.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/README.md" afterPath="$PROJECT_DIR$/qcf/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java" afterPath="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java" />
     </list>
     <ignored path="big_data.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,15 +58,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QCFTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QCFTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="105">
+              <caret line="11" column="10" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/qcf/README.md">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -191,16 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/graph/DiGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DirectedDFS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/graph/DirectedDFS.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -261,7 +208,6 @@
         <option value="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/DirectedDFS.java" />
         <option value="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/LinkedStack.java" />
         <option value="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/LinkedBag.java" />
-        <option value="$PROJECT_DIR$/qcf/README.md" />
         <option value="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/BinaryIn.java" />
         <option value="$PROJECT_DIR$/qcf/src/main/java/edu/princeton/cs/algs4/BinaryOut.java" />
         <option value="$PROJECT_DIR$/hql/hbase/cleanup.sql" />
@@ -291,6 +237,7 @@
         <option value="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/GREP.java" />
         <option value="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java" />
         <option value="$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java" />
+        <option value="$PROJECT_DIR$/qcf/README.md" />
       </list>
     </option>
   </component>
@@ -1316,7 +1263,7 @@
       <workItem from="1462991141230" duration="2478000" />
       <workItem from="1463150041212" duration="41000" />
       <workItem from="1463150168165" duration="1110000" />
-      <workItem from="1463158905605" duration="19588000" />
+      <workItem from="1463158905605" duration="25256000" />
     </task>
     <servers />
   </component>
@@ -1342,18 +1289,18 @@
     <history-entry file="QCFTest - 2016.05.15 at 19h 50m 57s.xml">
       <configuration name="QCFTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QCFTest_run - 2016.05.15 at 19h 23m 56s.xml">
-      <configuration name="QCFTest.run" configurationId="JUnit" />
+    <history-entry file="QCFTest - 2016.05.15 at 20h 27m 44s.xml">
+      <configuration name="QCFTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QCFTest_run - 2016.05.15 at 19h 26m 45s.xml">
-      <configuration name="QCFTest.run" configurationId="JUnit" />
+    <history-entry file="QCFTest - 2016.05.15 at 20h 45m 10s.xml">
+      <configuration name="QCFTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="QCFTest_run - 2016.05.15 at 19h 30m 27s.xml">
-      <configuration name="QCFTest.run" configurationId="JUnit" />
+    <history-entry file="QCFTest - 2016.05.15 at 21h 20m 04s.xml">
+      <configuration name="QCFTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="686841000" />
+    <option name="totallyTimeSpent" value="692509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1602" height="840" extended-state="6" />
@@ -1369,7 +1316,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3989305" sideWeight="0.50213444" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975152" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4013986" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4013986" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.49786553" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1517,16 +1464,6 @@
             <element signature="imports" expanded="true" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qcf/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zk_sample/src/main/java/me/tingri/zk/DataMonitor.java">
@@ -1849,12 +1786,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/qcf/src/test/java/test/me/tingri/qcf/QCFTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qcf/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

@@ -18,7 +18,7 @@ public class QCFTest {
         double diff = new QCF().run(new String[]{
                 "-inputFile","/home/sandeepkunkunuru/projects/big_data/datasets/tingri/access.log.4.gz",
                 "-outputFile","/tmp/access.log",
-                "-numOfTrials", "100",
+                "-numOfTrials", "1000",
                 "-regExp", "bot"});
 
         System.out.println("Time diff uncompressed - compressed : " + diff);
@@ -50,7 +50,7 @@ public class QCFTest {
         double diff = new QCF().run(new String[]{
                 "-inputFile","/home/sandeepkunkunuru/Downloads/weather_data.gz",
                 "-outputFile","/tmp/weather_data",
-                "-numOfTrials", "100",
+                "-numOfTrials", "10",
                 "-regExp", "DAY365"});
 
         System.out.println("Average Time diff uncompressed - compressed : " + diff);
