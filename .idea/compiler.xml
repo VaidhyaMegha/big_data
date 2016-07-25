@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <option name="DEFAULT_COMPILER" value="Javac" />
     <resourceExtensions />
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
@@ -12,6 +11,7 @@
       <entry name="!?*.flex" />
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
@@ -22,25 +22,22 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="connected_components" />
         <module name="mr-gimv-cc" />
         <module name="qcf" />
-        <module name="tez-gimv-cc" />
         <module name="tez-sample" />
-        <module name="udaf" />
-        <module name="udf" />
-        <module name="zk_sample" />
+        <module name="tingri_hive" />
+        <module name="zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="big_data" target="1.5" />
-      <module name="hbase-mr" target="1.7" />
+      <module name="connected_components" target="1.5" />
       <module name="mr-gimv-cc" target="1.5" />
       <module name="qcf" target="1.8" />
-      <module name="tez-gimv-cc" target="1.7" />
       <module name="tez-sample" target="1.8" />
-      <module name="udaf" target="1.5" />
-      <module name="udf" target="1.5" />
-      <module name="zk_sample" target="1.5" />
+      <module name="tingri_hive" target="1.5" />
+      <module name="zookeeper" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

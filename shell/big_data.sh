@@ -3,7 +3,7 @@ echo "###############"
 echo "Setup"
 echo "###############"
 # Environment variables that can not be pushed to env.sh are here.
-export USER=sandeep
+export USER=sandeepkunkunuru
 export PROJECT_HOME=/home/$USER/projects/big_data
 export SHELL_HOME=$PROJECT_HOME/shell
 
@@ -88,7 +88,7 @@ else
                 echo "###############"
                 echo "# Setup and execute HBASE"
                 echo "###############"
-                source $SHELL_HOME/hbase.sh
+                source $SHELL_HOME/hbase_sample.sh
             else
                 echo "#######"
                 echo "# HIVE"

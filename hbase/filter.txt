@@ -1,0 +1,15 @@
+create 'test', 'cf'
+list 'test'
+put 'test', 'row1', 'cf:a', 'value1'
+put 'test', 'row2', 'cf:b', 'value2'
+put 'test', 'row3', 'cf:c', 'value3'
+put 'test', 'row3', 'cf:col1', 'value_test'
+put 'test', 'row4', 'cf:d', 'value4'
+scan 'test'
+get 'test', 'row1'
+scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value3', true, true)"}
+scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value*', true, true)"}
+scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:value3', true, true)"}
+scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:va*', true, true)"}
+scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:.', true, true)"}
+exit
