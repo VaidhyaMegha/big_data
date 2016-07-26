@@ -5,7 +5,7 @@ export MAVEN_HOME=$TOOLS_HOME/maven
 export TEZ_BINARIES=$PROJECT_HOME/tez_binary_files
 export DATA_SETS_FOLDER=$PROJECT_HOME/datasets
 
-export HDP_VER=2.7.1
+export HDP_VER=2.7.2
 export HIVE_VER=1.2.1
 export TEZ_VER=0.8.2-SNAPSHOT
 export HBASE_VER=0.98.18

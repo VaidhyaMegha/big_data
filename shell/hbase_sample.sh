@@ -1,16 +1,26 @@
 #!/bin/bash
 
+hdfs dfs -rm -r /user/root
+hdfs dfs -rm -r /user
+
+hdfs dfs -mkdir /user
+hdfs dfs -mkdir /user/root
+
 hbase shell hbase/filter.txt
 
-hadoop jar ${HBASE_HOME}/lib/hbase-server-1.2.0.jar rowcounter test
+hadoop jar ${HBASE_HOME}/lib/hbase-server-0.98.18-hadoop2.jar rowcounter test
 
-echo "
-    disable 'test'
-    drop 'test'
-    exit
-    " > sample_commands.txt
+hbase shell hbase/dynamic_schema.txt
 
-hbase shell sample_commands.txt
+hdfs dfs -mkdir dyn_schema
+
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema1.csv dyn_schema
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema2.csv dyn_schema
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema3.csv dyn_schema
+
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2,cf3:1,cf3:2 test dyn_schema/schema1.csv
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,cf3:1,cf3:2 test dyn_schema/schema2.csv
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2 test dyn_schema/schema3.csv
 
 #echo "
 #    create 'edges', 'neighbors'

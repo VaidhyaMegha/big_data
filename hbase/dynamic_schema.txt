@@ -1,0 +1,5 @@
+disable 'test'
+drop 'test'
+create 'test', 'cf1', 'col2', 'cf3'
+list 'test'
+exit

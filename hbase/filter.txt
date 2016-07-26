@@ -1,3 +1,5 @@
+disable 'test'
+drop 'test'
 create 'test', 'cf'
 list 'test'
 put 'test', 'row1', 'cf:a', 'value1'
