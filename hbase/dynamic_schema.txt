@@ -1,5 +1,5 @@
-disable 'test'
-drop 'test'
-create 'test', 'cf1', 'col2', 'cf3'
-list 'test'
+disable 'dynamic_schema'
+drop 'dynamic_schema'
+create 'dynamic_schema', 'cf1', 'col2', 'cf3'
+list 'dynamic_schema'
 exit

@@ -72,10 +72,11 @@
   </dependencyManagement>
 
   <modules>
-    <module>mr-gimv-cc</module>
-    <module>tez-sample</module>
-    <module>udaf</module>
     <module>udf</module>
+    <module>udaf</module>
+    <module>mr-gimv-cc</module>
+    <module>hbase</module>
+    <module>tez-sample</module>
     <module>zk_sample</module>
     <module>qcf</module>
   </modules>

@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="connected_components" />
+        <module name="hbase" />
         <module name="mr-gimv-cc" />
         <module name="qcf" />
         <module name="tez-sample" />
@@ -33,6 +34,7 @@
     <bytecodeTargetLevel>
       <module name="big_data" target="1.5" />
       <module name="connected_components" target="1.5" />
+      <module name="hbase" target="1.8" />
       <module name="mr-gimv-cc" target="1.5" />
       <module name="qcf" target="1.8" />
       <module name="tez-sample" target="1.8" />

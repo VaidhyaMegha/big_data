@@ -1,17 +1,17 @@
-disable 'test'
-drop 'test'
-create 'test', 'cf'
-list 'test'
-put 'test', 'row1', 'cf:a', 'value1'
-put 'test', 'row2', 'cf:b', 'value2'
-put 'test', 'row3', 'cf:c', 'value3'
-put 'test', 'row3', 'cf:col1', 'value_test'
-put 'test', 'row4', 'cf:d', 'value4'
-scan 'test'
-get 'test', 'row1'
-scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value3', true, true)"}
-scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value*', true, true)"}
-scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:value3', true, true)"}
-scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:va*', true, true)"}
-scan 'test', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:.', true, true)"}
+disable 'filter_example'
+drop 'filter_example'
+create 'filter_example', 'cf'
+list 'filter_example'
+put 'filter_example', 'row1', 'cf:a', 'value1'
+put 'filter_example', 'row2', 'cf:b', 'value2'
+put 'filter_example', 'row3', 'cf:c', 'value3'
+put 'filter_example', 'row3', 'cf:col1', 'value_filter_example'
+put 'filter_example', 'row4', 'cf:d', 'value4'
+scan 'filter_example'
+get 'filter_example', 'row1'
+scan 'filter_example', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value3', true, true)"}
+scan 'filter_example', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'b', =, 'regexstring:value*', true, true)"}
+scan 'filter_example', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:value3', true, true)"}
+scan 'filter_example', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:va*', true, true)"}
+scan 'filter_example', {COLUMNS => ['cf'],  FILTER => "SingleColumnValueFilter('cf', 'c', =, 'regexstring:.', true, true)"}
 exit
