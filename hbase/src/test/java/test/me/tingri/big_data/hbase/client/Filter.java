@@ -39,7 +39,9 @@ public class Filter {
     public void complete() throws Exception {
         Configuration conf = HBaseConfiguration.create();
 
-
+        conf.set("hbase.zookeeper.property.clientPort", "2181");
+        conf.set("hbase.zookeeper.quorum", "10.99.135.31");
+        conf.set("zookeeper.znode.parent", "/hbase-unsecure");
 
         try {
             String tableName = "filter_example";

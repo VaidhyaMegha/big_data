@@ -79,6 +79,7 @@
     <module>tez-sample</module>
     <module>zk_sample</module>
     <module>qcf</module>
+      <module>spark</module>
   </modules>
 
 
