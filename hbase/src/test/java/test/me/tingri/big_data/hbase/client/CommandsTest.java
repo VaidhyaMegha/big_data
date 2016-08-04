@@ -18,7 +18,8 @@ public class CommandsTest {
             String tablename = "test3";
 
             Configuration conf = HBaseConfiguration.create();
-            Connection conn = ConnectionFactory.createConnection();
+
+            Connection conn = ConnectionFactory.createConnection(conf);
 
             COMMANDS.CREATE.run(conn, tablename, "grade", "course");
 

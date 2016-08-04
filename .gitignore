@@ -12,3 +12,5 @@ metastore_db/
 /zk_sample/target
 /qcf/target
 /spark/target
+/hbase/src/test/java/wip/
+/spark/src/main/java/wip/

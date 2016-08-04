@@ -43,7 +43,6 @@
             <artifactId>hbase-client</artifactId>
             <version>RELEASE</version>
         </dependency>
-
         <!-- HBASE END -->
 
         <!-- LIBRARIES START -->

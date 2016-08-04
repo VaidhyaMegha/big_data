@@ -38,7 +38,7 @@
       <module name="hbase" target="1.8" />
       <module name="mr-gimv-cc" target="1.5" />
       <module name="qcf" target="1.8" />
-      <module name="spark" target="1.5" />
+      <module name="spark" target="1.8" />
       <module name="tez-sample" target="1.8" />
       <module name="tingri_hive" target="1.5" />
       <module name="zookeeper" target="1.5" />
