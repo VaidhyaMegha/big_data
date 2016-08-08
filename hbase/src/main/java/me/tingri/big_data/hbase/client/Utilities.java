@@ -51,6 +51,9 @@ public class Utilities {
             kv.put("value", new String(CellUtil.cloneValue(cell)));
             kv.put("timestamp", String.valueOf(cell.getTimestamp()));
 
+            System.out.printf("%-20s column=%s:%s, timestamp=%s, value=%s\n", kv.get("row"), kv.get("family"),
+                    kv.get("column"), kv.get("timestamp"), kv.get("value"));
+
             record.add(kv);
         }
 
