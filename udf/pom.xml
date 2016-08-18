@@ -9,7 +9,6 @@
         <version>0.2</version>
     </parent>
 
-    <groupId>me.tingri</groupId>
     <artifactId>tingri_hive</artifactId>
     <version>0.1</version>
 

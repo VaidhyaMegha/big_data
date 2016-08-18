@@ -76,10 +76,11 @@
     <module>udaf</module>
     <module>mr-gimv-cc</module>
     <module>hbase</module>
+    <module>kafka</module>
+    <module>spark</module>
     <module>tez-sample</module>
     <module>zk_sample</module>
     <module>qcf</module>
-      <module>spark</module>
   </modules>
 
 

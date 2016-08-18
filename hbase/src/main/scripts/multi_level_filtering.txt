@@ -16,3 +16,4 @@ put 'cluster', 'server5', 'cluster:operation_456', '20160806'
 put 'cluster', 'server6', 'cluster:operations', '789'
 put 'cluster', 'server6', 'cluster:operation_789', '20160807'
 scan 'cluster'
+exit

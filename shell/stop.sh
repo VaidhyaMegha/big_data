@@ -20,4 +20,4 @@ hadoop-daemon.sh stop datanode
 yarn-daemon.sh stop resourcemanager
 yarn-daemon.sh stop nodemanager
 mr-jobhistory-daemon.sh stop historyserver
-
+kafka-server-stop.sh

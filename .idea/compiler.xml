@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="connected_components" />
         <module name="hbase" />
+        <module name="kafka" />
         <module name="mr-gimv-cc" />
         <module name="qcf" />
         <module name="spark" />
@@ -36,6 +37,7 @@
       <module name="big_data" target="1.5" />
       <module name="connected_components" target="1.5" />
       <module name="hbase" target="1.8" />
+      <module name="kafka" target="1.8" />
       <module name="mr-gimv-cc" target="1.5" />
       <module name="qcf" target="1.8" />
       <module name="spark" target="1.8" />

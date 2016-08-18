@@ -6,21 +6,21 @@ hdfs dfs -rm -r /user
 hdfs dfs -mkdir /user
 hdfs dfs -mkdir /user/root
 
-#hbase shell $PROJECT_HOME/hbase/src/main/scripts/filter.txt
-#
-#hadoop jar ${HBASE_HOME}/lib/hbase-server-0.98.18-hadoop2.jar rowcounter filter_example
-#
-#hbase shell $PROJECT_HOME/hbase/src/main/scripts/dynamic_schema.txt
-#
-#hdfs dfs -mkdir dyn_schema
-#
-#hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema1.csv dyn_schema
-#hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema2.csv dyn_schema
-#hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema3.csv dyn_schema
-#
-#hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2,cf3:1,cf3:2 dynamic_schema dyn_schema/schema1.csv
-#hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,cf3:1,cf3:2 dynamic_schema dyn_schema/schema2.csv
-#hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2 dynamic_schema dyn_schema/schema3.csv
+hbase shell $PROJECT_HOME/hbase/src/main/scripts/filter.txt
+
+hadoop jar ${HBASE_HOME}/lib/hbase-server-0.98.18-hadoop2.jar rowcounter filter_example
+
+hbase shell $PROJECT_HOME/hbase/src/main/scripts/dynamic_schema.txt
+
+hdfs dfs -mkdir dyn_schema
+
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema1.csv dyn_schema
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema2.csv dyn_schema
+hdfs dfs -put $PROJECT_HOME/datasets/hbase/schema3.csv dyn_schema
+
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2,cf3:1,cf3:2 dynamic_schema dyn_schema/schema1.csv
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,cf3:1,cf3:2 dynamic_schema dyn_schema/schema2.csv
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.separator=, -Dimporttsv.columns=HBASE_ROW_KEY,cf1:1,cf1:2,col2 dynamic_schema dyn_schema/schema3.csv
 
 hbase shell $PROJECT_HOME/hbase/src/main/scripts/multi_level_filtering.txt
 

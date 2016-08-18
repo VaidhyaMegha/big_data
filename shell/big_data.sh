@@ -89,6 +89,11 @@ else
                 echo "# Setup and execute HBASE"
                 echo "###############"
                 source $SHELL_HOME/hbase_sample.sh
+            elif [ "$2" == "kafka" ]; then
+                echo "###############"
+                echo "# execute kafka"
+                echo "###############"
+                source $SHELL_HOME/kafka.sh
             else
                 echo "#######"
                 echo "# HIVE"

@@ -7,7 +7,6 @@
         <version>0.2</version>
     </parent>
 
-    <groupId>me.tingri</groupId>
     <artifactId>tez-sample</artifactId>
     <version>0.2</version>
     <packaging>jar</packaging>

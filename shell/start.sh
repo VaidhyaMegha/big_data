@@ -53,3 +53,9 @@ jps
 # Start Kylin
 ############
 #kylin.sh start
+
+#############
+# Start Kafka (Zookeeper is already started by HBase
+############
+kafka-server-start.sh -daemon ${KAFKA_HOME}/config/server.properties
+jps
