@@ -9,33 +9,33 @@ SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:10:12 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:10:12 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 rm: `/user/root': No such file or directory
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:10:14 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:10:14 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 rm: `/user': No such file or directory
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:10:16 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:10:16 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:10:17 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:10:17 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:10:19 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:10:19 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 ~/projects/big_data/udf ~/projects/big_data
 [INFO] Scanning for projects...
 [INFO]
@@ -169,7 +169,7 @@ Time taken: 0.061 seconds
 CREATE TABLE hbase_edges (node BIGINT, neighbors map<string,BIGINT>, component map<string,BIGINT>)
   STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 WITH SERDEPROPERTIES (
-  "hbase.columns.mapping" = ":key, neighbors:, component:"
+  "hbase.colValues.mapping" = ":key, neighbors:, component:"
 )
 TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges")
 OK
@@ -261,7 +261,7 @@ SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-16/05/03 17:11:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/05/03 17:11:35 WARN me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 Execution log at: /tmp/root/root_20160503171132_ba1a075a-ed68-4281-a0df-6a1a94d7bf24.log
 2016-05-03 17:11:36	Starting to launch local task to process map join;	maximum memory = 477626368
 2016-05-03 17:11:37	Dump the side-table for tag: 1 with group count: 12 into file: file:/tmp/root/418944de-c727-4dfe-8828-e68318807c7a/hive_2016-05-03_17-11-32_005_2001629288984150577-1/-local-10003/HashTable-Stage-6/MapJoin-mapfile01--.hashtable
@@ -597,7 +597,7 @@ Type "exit<RETURN>" to leave the HBase Shell
 Version 0.98.18-hadoop2, rc26c554ab3a8deecf890873bf6b1b4c90fa001dc, Fri Mar 18 19:19:59 PDT 2016
 
 hbase(main):001:0> scan ''[26Gh'[27G_'[28Ge'[29Gd'[30Gg'[31Ge'[32Gs'[33G[34G
-2016-05-03 17:15:49,877 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2016-05-03 17:15:49,877 WARN  [main] me.tingri.datagen.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hbase/0.98.18/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: Found binding in [jar:file:/home/sandeep/tools/hadoop/2.7.1/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]

@@ -7,6 +7,7 @@
 /spark/target
 /hbase/target
 /kafka/target
+/datagen/target
 nohup.out
 datasets/workshop
 *.log

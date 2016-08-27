@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/big_data.iml" filepath="$PROJECT_DIR$/big_data.iml" />
       <module fileurl="file://$PROJECT_DIR$/udaf/connected_components.iml" filepath="$PROJECT_DIR$/udaf/connected_components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/datagen/datagen.iml" filepath="$PROJECT_DIR$/datagen/datagen.iml" />
       <module fileurl="file://$PROJECT_DIR$/hbase/hbase.iml" filepath="$PROJECT_DIR$/hbase/hbase.iml" />
       <module fileurl="file://$PROJECT_DIR$/kafka/kafka.iml" filepath="$PROJECT_DIR$/kafka/kafka.iml" />
       <module fileurl="file://$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" filepath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" />

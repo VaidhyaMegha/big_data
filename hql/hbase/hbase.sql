@@ -20,7 +20,7 @@ CREATE TABLE nodes(id BIGINT, node STRING)
 CREATE TABLE hbase_edges (node BIGINT, neighbors map<string,BIGINT>, component map<string,BIGINT>)
   STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
 WITH SERDEPROPERTIES (
-  "hbase.columns.mapping" = ":key, neighbors:, component:"
+  "hbase.colValues.mapping" = ":key, neighbors:, component:"
 )
 TBLPROPERTIES ("hbase.table.name" = "h_edges", "hbase.mapred.output.outputtable" = "h_edges");
 
