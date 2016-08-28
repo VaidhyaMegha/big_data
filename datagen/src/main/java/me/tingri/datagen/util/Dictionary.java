@@ -16,7 +16,7 @@ public class Dictionary {
     private static Properties prop = new Properties();
 
     static {
-        load(Dictionary.class.getClassLoader().getResourceAsStream("default_dictionary.properties"));
+        load(Dictionary.class.getClassLoader().getResourceAsStream(Constants.DEFAULT_DICTIONARY));
     }
 
     public static void load(InputStream input){

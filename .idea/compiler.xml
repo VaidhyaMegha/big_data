@@ -31,6 +31,7 @@
         <module name="spark" />
         <module name="tez-sample" />
         <module name="tingri_hive" />
+        <module name="util" />
         <module name="zookeeper" />
       </profile>
     </annotationProcessing>
@@ -45,6 +46,7 @@
       <module name="spark" target="1.8" />
       <module name="tez-sample" target="1.8" />
       <module name="tingri_hive" target="1.5" />
+      <module name="util" target="1.8" />
       <module name="zookeeper" target="1.5" />
     </bytecodeTargetLevel>
   </component>

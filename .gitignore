@@ -1,13 +1,4 @@
-/udf/target
-/udaf/target
-/mr-gimv-cc/target
-/tez-sample/target
-/zk_sample/target
-/qcf/target
-/spark/target
-/hbase/target
-/kafka/target
-/datagen/target
+/**/target
 nohup.out
 datasets/workshop
 *.log

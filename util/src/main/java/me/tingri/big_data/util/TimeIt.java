@@ -1,4 +1,4 @@
-package me.tingri.big_data;
+package me.tingri.big_data.util;
 import java.util.List;
 import java.util.concurrent.Callable;
 

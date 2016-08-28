@@ -5,58 +5,52 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3928955c-1bd1-4add-ae75-ca5d2589dc43" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/Generator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/models/Record.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/models/Type.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/util/Constants.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/util/Dictionary.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/util/RandomTextGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/me/tingri/datagen/util/RecordGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/test-classes/test/me/tingri/datagen/AppTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/test-classes/test/me/tingri/datagen/models/TypeTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/test-classes/test/me/tingri/datagen/util/DictionaryTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/test-classes/test/me/tingri/datagen/util/RecordGeneratorTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/References.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/datagen.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Record.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Type.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RandomTextGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/main/resources/sampleHeader.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/AppTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/models/TypeTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/DictionaryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/default_dictionary.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/dictionary.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/classes/sampleHeader.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/surefire-reports/TEST-me.tingri.AppTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/datagen/target/surefire-reports/me.tingri.AppTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_json_javax_json_api_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_json_1_0_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/util.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RandomTextGenerator.java" afterPath="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/RandomTextGenerator.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/TimeIt.java" afterPath="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/TimeIt.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java" afterPath="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/Utility.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datasets/tingri/access.log.6.txt" afterPath="$PROJECT_DIR$/datasets/tingri/access.log.6.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hbase-mr-client-sample.txt" afterPath="$PROJECT_DIR$/hbase-mr-client-sample.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/datagen.iml" afterPath="$PROJECT_DIR$/datagen/datagen.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/pom.xml" afterPath="$PROJECT_DIR$/datagen/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java" afterPath="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties" afterPath="$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties" afterPath="$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java" afterPath="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hbase/hbase.iml" afterPath="$PROJECT_DIR$/hbase/hbase.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hql/hbase/hbase.sql" afterPath="$PROJECT_DIR$/hql/hbase/hbase.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hbase/pom.xml" afterPath="$PROJECT_DIR$/hbase/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hbase/src/test/java/test/me/tingri/big_data/hbase/client/TestMultiLevelFiltering.java" afterPath="$PROJECT_DIR$/hbase/src/test/java/test/me/tingri/big_data/hbase/client/TestMultiLevelFiltering.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka/kafka.iml" afterPath="$PROJECT_DIR$/kafka/kafka.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kafka/pom.xml" afterPath="$PROJECT_DIR$/kafka/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" afterPath="$PROJECT_DIR$/mr-gimv-cc/mr-gimv-cc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mr-gimv-cc/pom.xml" afterPath="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/pom.xml" afterPath="$PROJECT_DIR$/qcf/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/qcf.iml" afterPath="$PROJECT_DIR$/qcf/qcf.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java" afterPath="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark/pom.xml" afterPath="$PROJECT_DIR$/spark/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spark/spark.iml" afterPath="$PROJECT_DIR$/spark/spark.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tez-sample/pom.xml" afterPath="$PROJECT_DIR$/tez-sample/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tez-sample/tez-sample.iml" afterPath="$PROJECT_DIR$/tez-sample/tez-sample.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udaf/connected_components.iml" afterPath="$PROJECT_DIR$/udaf/connected_components.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udaf/pom.xml" afterPath="$PROJECT_DIR$/udaf/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udf/pom.xml" afterPath="$PROJECT_DIR$/udf/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/udf/tingri_hive.iml" afterPath="$PROJECT_DIR$/udf/tingri_hive.iml" />
     </list>
     <ignored path="big_data.iws" />
@@ -73,6 +67,7 @@
     <ignored path="$PROJECT_DIR$/spark/target/" />
     <ignored path="$PROJECT_DIR$/kafka/target/" />
     <ignored path="$PROJECT_DIR$/datagen/target/" />
+    <ignored path="$PROJECT_DIR$/util/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,11 +92,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="dictionary.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default_dictionary.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="85" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Generator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+            <state relative-caret-position="284">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -109,8 +134,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default_dictionary.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties">
+      <file leaf-file-name="RecordGeneratorTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -119,67 +154,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dictionary.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java">
+      <file leaf-file-name="QCF.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="111">
+              <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintWriter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/PrintWriter.java">
+      <file leaf-file-name="Utility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/Utility.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1540">
-              <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-              <folding>
-                <element signature="e#2748#2749#0" expanded="true" />
-                <element signature="e#2780#2781#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BufferedWriter.java" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/BufferedWriter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
-              <folding>
-                <element signature="e#2279#2280#0" expanded="true" />
-                <element signature="e#2327#2328#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Record.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Record.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="506">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dictionary.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties">
+      <file leaf-file-name="TimeIt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/TimeIt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="426">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -188,20 +187,8 @@
       <file leaf-file-name="RecordGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sampleHeader.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/sampleHeader.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+            <state relative-caret-position="312">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -228,31 +215,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/hbase/src/main/scripts/multi_level_filtering.txt" />
-        <option value="$PROJECT_DIR$/hql/hive_hbase/cleanup.txt" />
-        <option value="$PROJECT_DIR$/datasets/workshop/t_master__lowes_foods.psv" />
-        <option value="$PROJECT_DIR$/hql/hive_hbase/integration.sql" />
-        <option value="$PROJECT_DIR$/hql/hive_hbase/setup.txt" />
-        <option value="$PROJECT_DIR$/shell/hive_hbase_integration.sh" />
-        <option value="$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/hbase/client/TestDelete.java" />
-        <option value="$PROJECT_DIR$/datasets/workshop/sample.psv" />
-        <option value="$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/hbase/client/DeleteHBaseRecords.java" />
-        <option value="$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Partitioner.java" />
         <option value="$PROJECT_DIR$/shell/env.sh" />
         <option value="$PROJECT_DIR$/shell/start.sh" />
         <option value="$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Topic.java" />
         <option value="$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Producer.java" />
         <option value="$PROJECT_DIR$/shell/big_data.sh" />
-        <option value="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
-        <option value="$PROJECT_DIR$/udaf/pom.xml" />
-        <option value="$PROJECT_DIR$/udf/pom.xml" />
-        <option value="$PROJECT_DIR$/tez-sample/pom.xml" />
-        <option value="$PROJECT_DIR$/hbase/pom.xml" />
-        <option value="$PROJECT_DIR$/kafka/pom.xml" />
         <option value="$PROJECT_DIR$/shell/kafka.sh" />
         <option value="$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Consumer.java" />
         <option value="$PROJECT_DIR$/shell/stop.sh" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/App.java" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/util/RandomTextGenerator.java" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/util/CONSTANTS.java" />
@@ -265,19 +235,36 @@
         <option value="$PROJECT_DIR$/datagen/References.md" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Type.java" />
         <option value="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/models/TypeTest.java" />
-        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java" />
         <option value="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/DictionaryTest.java" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/App.java" />
         <option value="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/AppTest.java" />
-        <option value="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java" />
-        <option value="$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties" />
         <option value="$PROJECT_DIR$/datagen/src/main/resources/sampleHeader.csv" />
-        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java" />
-        <option value="$PROJECT_DIR$/datagen/pom.xml" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Record.java" />
-        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java" />
         <option value="$PROJECT_DIR$/datagen/src/main/resources/sample.properties" />
         <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java" />
+        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RandomTextGenerator.java" />
+        <option value="$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties" />
+        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java" />
+        <option value="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/uil/Utility.java" />
+        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java" />
+        <option value="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/RandomTextGenerator.java" />
+        <option value="$PROJECT_DIR$/kafka/pom.xml" />
+        <option value="$PROJECT_DIR$/mr-gimv-cc/pom.xml" />
+        <option value="$PROJECT_DIR$/spark/pom.xml" />
+        <option value="$PROJECT_DIR$/udaf/pom.xml" />
+        <option value="$PROJECT_DIR$/udf/pom.xml" />
+        <option value="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/TimeIt.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/hbase/pom.xml" />
+        <option value="$PROJECT_DIR$/datagen/pom.xml" />
+        <option value="$PROJECT_DIR$/util/pom.xml" />
+        <option value="$PROJECT_DIR$/qcf/pom.xml" />
+        <option value="$PROJECT_DIR$/tez-sample/pom.xml" />
+        <option value="$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties" />
+        <option value="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/Utility.java" />
+        <option value="$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java" />
+        <option value="$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java" />
+        <option value="$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -294,6 +281,9 @@
         <option name="mavenHome" value="C:/tools/maven/3.3.9" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
@@ -372,6 +362,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -400,7 +392,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spark" />
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,7 +406,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spark" />
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -430,6 +440,62 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="udf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="udaf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tez-sample" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="spark" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -465,6 +531,18 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -493,6 +571,156 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="qcf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qcf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adt" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mr-gimv-cc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kafka" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hbase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hbase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hbase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big_data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hbase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -760,8 +988,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -773,7 +999,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/hbase/client/commands" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/util/src/main/java/me/tingri/big_data" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -790,15 +1016,16 @@
       <recent name="test.me.tingri.big_data.hbase" />
     </key>
     <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="me.tingri.datagen.util.Constants" />
       <recent name="me.tingri.util" />
       <recent name="me.tingri.big_data.hbase.client.Utilities" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="me.tingri.big_data.util" />
+      <recent name="me.tingri.big_data.uil" />
       <recent name="me.tingri.datagen" />
       <recent name="test.me.tingri" />
       <recent name="wip" />
-      <recent name="" />
-      <recent name="test.me.tingri.big_data.hbase.client" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\skunkunuru\IdeaProjects\big_data\datagen\src\main\resources" />
@@ -815,7 +1042,7 @@
       <recent name="$PROJECT_DIR$/hql/hive_hbase" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Generator">
+  <component name="RunManager" selected="JUnit.RecordGeneratorTest">
     <configuration default="false" name="DictionaryTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -911,6 +1138,32 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RecordGeneratorTest.records" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="test.me.tingri.datagen.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="datagen" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="test.me.tingri.datagen.util" />
+      <option name="MAIN_CLASS_NAME" value="test.me.tingri.datagen.util.RecordGeneratorTest" />
+      <option name="METHOD_NAME" value="records" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -1369,8 +1622,8 @@
     <configuration default="false" name="Generator" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="me.tingri.datagen.Generator" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-headerFile C:\Users\skunkunuru\IdeaProjects\big_data\datagen\src\main\resources\sampleHeader.csv -dictionary C:\Users\skunkunuru\IdeaProjects\big_data\datagen\src\main\resources\dictionary.properties -numOfRecords 100 -delimiter &quot;,&quot; -outputFile C:\Users\skunkunuru\IdeaProjects\big_data\datagen\sample.csv" />
+      <option name="VM_PARAMETERS" value="-Xmx5120m" />
+      <option name="PROGRAM_PARAMETERS" value="-headerFile C:\Users\skunkunuru\IdeaProjects\big_data\datagen\src\main\resources\sampleHeader.csv -dictionary C:\Users\skunkunuru\IdeaProjects\big_data\datagen\src\main\resources\dictionary.properties -numOfRecords 1000000 -delimiter &quot;,&quot; -outputFile C:\Users\skunkunuru\IdeaProjects\big_data\datagen\sample.csv" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/datagen" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1408,7 +1661,7 @@
       <envs />
       <method />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.Generator" />
       <item index="1" class="java.lang.String" itemvalue="Application.Client" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot._Producer" />
@@ -1416,13 +1669,15 @@
       <item index="4" class="java.lang.String" itemvalue="JUnit.TypeTest" />
       <item index="5" class="java.lang.String" itemvalue="JUnit.RecordGeneratorTest" />
       <item index="6" class="java.lang.String" itemvalue="JUnit.DictionaryTest.testGet" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.RecordGeneratorTest.records" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DictionaryTest.testGet" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RecordGeneratorTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TypeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DictionaryTest.get" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RecordGeneratorTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RecordGeneratorTest.records" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DictionaryTest.testGet" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TypeTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DictionaryTest.get" />
       </list>
     </recent_temporary>
   </component>
@@ -1487,34 +1742,35 @@
       <workItem from="1470918275433" duration="1792000" />
       <workItem from="1471524964967" duration="5823000" />
       <workItem from="1472258291410" duration="407000" />
-      <workItem from="1472309065583" duration="11378000" />
+      <workItem from="1472309065583" duration="22523000" />
+      <workItem from="1472406286914" duration="2744000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DictionaryTest_testGet - 2016.08.27 at 12h 49m 43s.xml">
-      <configuration name="DictionaryTest.testGet" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 01m 32s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DictionaryTest_testGet - 2016.08.27 at 12h 50m 10s.xml">
-      <configuration name="DictionaryTest.testGet" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 18m 58s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DictionaryTest_testGet - 2016.08.27 at 12h 55m 34s.xml">
-      <configuration name="DictionaryTest.testGet" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 19m 14s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RecordGeneratorTest - 2016.08.27 at 12h 45m 53s.xml">
-      <configuration name="RecordGeneratorTest" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 20m 38s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeTest - 2016.08.27 at 12h 17m 57s.xml">
-      <configuration name="TypeTest" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 21m 53s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeTest - 2016.08.27 at 12h 20m 10s.xml">
-      <configuration name="TypeTest" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 23m 33s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeTest - 2016.08.27 at 12h 23m 41s.xml">
-      <configuration name="TypeTest" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 25m 00s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TypeTest - 2016.08.27 at 12h 24m 02s.xml">
-      <configuration name="TypeTest" configurationId="JUnit" />
+    <history-entry file="RecordGeneratorTest_records - 2016.08.28 at 16h 27m 12s.xml">
+      <configuration name="RecordGeneratorTest.records" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TypeTest - 2016.08.27 at 12h 39m 44s.xml">
       <configuration name="TypeTest" configurationId="JUnit" />
@@ -1524,10 +1780,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119196000" />
+    <option name="totallyTimeSpent" value="133085000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1535,30 +1791,31 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32694477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25268242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2498618" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.69832987" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694477" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1583,103 +1840,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Partitioner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/udaf/udaf.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/udaf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/udf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tez-sample/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zk_sample/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hbase/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shell/kafka.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="97" selection-start-line="9" selection-start-column="97" selection-end-line="9" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/results-stop-mr.log" />
     <entry file="file://$PROJECT_DIR$/shell/stop.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1689,25 +1854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="103" selection-start-line="43" selection-start-column="103" selection-end-line="43" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="36" column="14" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RandomTextGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1612#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1715,7 +1861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1723,7 +1868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1430">
           <caret line="77" column="31" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1732,7 +1876,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="0">
             <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -1741,27 +1884,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/TimeIt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kafka/src/main/java/me.tingri.big_data.kafka.example/_Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
           <caret line="63" column="75" selection-start-line="63" selection-start-column="75" selection-end-line="63" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kafka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-484">
-          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1769,23 +1895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spark/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1793,7 +1902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="456" column="42" selection-start-line="456" selection-start-column="42" selection-end-line="456" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1801,7 +1909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="391" column="14" selection-start-line="391" selection-start-column="14" selection-end-line="391" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1809,7 +1916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1829,50 +1935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/qcf/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="36" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/Utility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="55" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Type.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/models/TypeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/DictionaryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1881,63 +1943,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="83" selection-start-line="14" selection-start-column="83" selection-end-line="14" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/AppTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#483#484#0" expanded="false" />
-            <element signature="e#536#537#0" expanded="false" />
-            <element signature="e#611#612#0" expanded="false" />
-            <element signature="e#645#646#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/sampleHeader.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Record.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1945,10 +1954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="86" column="11" selection-start-line="86" selection-start-column="11" selection-end-line="86" selection-end-column="11" />
-          <folding>
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2327#2328#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1956,32 +1961,246 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1540">
           <caret line="98" column="11" selection-start-line="98" selection-start-column="11" selection-end-line="98" selection-end-column="11" />
-          <folding>
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2780#2781#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/sampleHeader.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="153" column="17" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/models/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/BufferedOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/stream/BaseStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="116" column="6" selection-start-line="116" selection-start-column="6" selection-end-line="116" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/RandomTextGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="33" column="66" selection-start-line="33" selection-start-column="66" selection-end-line="33" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kafka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="45" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mr-gimv-cc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="712">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spark/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/udaf/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/udf/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbase/src/main/java/me/tingri/big_data/hbase/client/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-344">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbase/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qcf/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tez-sample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/models/TypeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="85" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/Utility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/qcf/src/main/java/me/tingri/qcf/QCF.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/util/src/main/java/me/tingri/big_data/util/TimeIt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/RecordGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="69" column="19" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
+        <state relative-caret-position="284">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/java/me/tingri/datagen/util/Dictionary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/default_dictionary.properties">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -1989,18 +2208,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datagen/src/main/resources/dictionary.properties">
+    <entry file="file://$PROJECT_DIR$/datagen/src/test/java/test/me/tingri/datagen/util/RecordGeneratorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

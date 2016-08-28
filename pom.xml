@@ -61,17 +61,12 @@
         <artifactId>tez-api</artifactId>
         <version>${tez.version}</version>
       </dependency>
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.11</version>
-        <scope>test</scope>
-      </dependency>
-
     </dependencies>
   </dependencyManagement>
 
   <modules>
+    <module>util</module>
+    <module>datagen</module>
     <module>udf</module>
     <module>udaf</module>
     <module>mr-gimv-cc</module>
@@ -81,7 +76,6 @@
     <module>tez-sample</module>
     <module>zk_sample</module>
     <module>qcf</module>
-    <module>datagen</module>
   </modules>
 
 

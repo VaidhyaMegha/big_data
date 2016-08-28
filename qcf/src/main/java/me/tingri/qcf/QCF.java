@@ -4,6 +4,8 @@ package me.tingri.qcf;
  * Created by sandeep on 5/2/16.
  */
 
+import me.tingri.big_data.util.TimeIt;
+import me.tingri.big_data.util.Utility;
 import org.kohsuke.args4j.Option;
 
 import java.io.*;
@@ -45,8 +47,8 @@ public class QCF {
         unzip();
 
         for (int i = 0; i < numOfTrials; i++) {
-            List<String> result1 = Utility.time(() -> searchUncompressedFile(regexp), timings1);
-            List<String> result2 = Utility.time(() -> searchCompressedFile(regexp), timings2);
+            List<String> result1 = TimeIt.time(() -> searchUncompressedFile(regexp), timings1);
+            List<String> result2 = TimeIt.time(() -> searchCompressedFile(regexp), timings2);
 
             System.out.println("First Result in uncompressed File : " + result1.get(0) );
             System.out.println("First Result in compressed File : " + result2.get(0) );

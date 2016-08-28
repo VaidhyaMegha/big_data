@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 
-package me.tingri.datagen.util;
+package me.tingri.big_data.util;
 
 import java.util.Random;
 
@@ -31,11 +31,11 @@ import java.util.Random;
  */
 public class RandomTextGenerator {
 
-    public static String generateText(int length, char[] permissibleCharacters) {
+    public static String generateText(int length, char[] typeChars) {
         Random rand = new Random();
         StringBuilder str = new StringBuilder();
 
-        while (str.length() < length) str.append(permissibleCharacters[rand.nextInt(permissibleCharacters.length)]);
+        while (str.length() < length) str.append(typeChars[rand.nextInt(typeChars.length)]);
 
         return str.toString();
     }

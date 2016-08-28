@@ -1,4 +1,4 @@
-package me.tingri.qcf;
+package me.tingri.big_data.util;
 
 import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
@@ -11,7 +11,7 @@ import java.util.concurrent.Callable;
  */
 public class Utility {
 
-    static boolean parseArgs(Object o, String[] args) {
+    public static boolean parseArgs(Object o, String[] args) {
         CmdLineParser cmdParser = new CmdLineParser(o);
 
         try {
@@ -24,17 +24,5 @@ public class Utility {
         }
 
         return true;
-    }
-
-    static <T> T time(Callable<T> task, List<Double> timings) {
-        T call = null;
-        try {
-            long startTime = System.currentTimeMillis();
-            call = task.call();
-            timings.add((System.currentTimeMillis() - startTime) / 1000d);
-        } catch (Exception e) {
-            //...
-        }
-        return call;
     }
 }

@@ -1,6 +1,6 @@
 package test.me.tingri.big_data.hbase.client;
 
-import me.tingri.big_data.TimeIt;
+import me.tingri.big_data.util.TimeIt;
 import me.tingri.big_data.hbase.client.Utilities;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;

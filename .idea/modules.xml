@@ -12,6 +12,7 @@
       <module fileurl="file://$PROJECT_DIR$/spark/spark.iml" filepath="$PROJECT_DIR$/spark/spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/tez-sample/tez-sample.iml" filepath="$PROJECT_DIR$/tez-sample/tez-sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/udf/tingri_hive.iml" filepath="$PROJECT_DIR$/udf/tingri_hive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/util/util.iml" filepath="$PROJECT_DIR$/util/util.iml" />
       <module fileurl="file://$PROJECT_DIR$/zk_sample/zookeeper.iml" filepath="$PROJECT_DIR$/zk_sample/zookeeper.iml" />
     </modules>
   </component>

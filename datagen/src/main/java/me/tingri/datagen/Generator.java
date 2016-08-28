@@ -1,19 +1,23 @@
 package me.tingri.datagen;
 
+import me.tingri.big_data.util.Utility;
 import me.tingri.datagen.models.Record;
+import me.tingri.datagen.util.Constants;
 import me.tingri.datagen.util.Dictionary;
 import me.tingri.datagen.util.RecordGenerator;
-import org.kohsuke.args4j.CmdLineException;
-import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.OutputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+import static me.tingri.datagen.util.Constants.*;
 
 /**
  * Hello world!
@@ -27,7 +31,7 @@ public class Generator {
     private String headerFile;
 
     @Option(name = "-numOfRecords", usage = "Number of Records")
-    private int numOfRecords;
+    private long numOfRecords;
 
     @Option(name = "-delimiter", usage = "Regular Expression to use as delimiter")
     private String delimiter;
@@ -40,34 +44,34 @@ public class Generator {
         new Generator().run(args);
     }
 
-    static boolean parseArgs(Object o, String[] args) {
-        CmdLineParser cmdParser = new CmdLineParser(o);
-
-        try {
-            // parse the options.
-            cmdParser.parseArgument(args);
-        } catch (CmdLineException e) {
-            cmdParser.printUsage(System.err);
-            System.err.println();
-            return false;
-        }
-
-        return true;
-    }
-
     private void run(String[] args) throws IOException {
-        if (!parseArgs(this, args)) return;
+        if (!Utility.parseArgs(this, args)) return;
 
         if (dictionary != null) Dictionary.load(dictionary);
 
-        Record[] records = RecordGenerator.records(readFile(headerFile, Charset.forName("UTF-8")), delimiter, numOfRecords);
+        Stream<Record> records;
 
-        writeFile(records);
+        if(numOfRecords < STREAM_BARRIER) {
+            Record[] recordArray = RecordGenerator.records(readFile(headerFile, Charset.forName(Constants.UTF8)), delimiter, (int) numOfRecords);
+            records = Arrays.stream(recordArray);
+        } else {
+            records = RecordGenerator.records(readFile(headerFile, Charset.forName(Constants.UTF8)), delimiter, numOfRecords);
+        }
+
+        writeFile(records.parallel());
     }
 
-    private void writeFile(Record[] records) throws IOException {
-        try(PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(outputFile)));) {
-            for (Record record : records) pw.println(record.value(delimiter));
+    private void writeFile(Stream<Record> records) throws IOException {
+        try(BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(outputFile), BUFFER_SIZE);) {
+            records.forEach((record) -> writeRecord(bos, record));
+        }
+    }
+
+    private void writeRecord(OutputStream os, Record record) {
+        try {
+            os.write((record.value(delimiter) + LINE_SEPARATOR).getBytes());
+        } catch (IOException e) {
+           throw new RuntimeException(e);
         }
     }
 
