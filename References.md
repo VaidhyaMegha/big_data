@@ -62,6 +62,27 @@ References
     - http://stackoverflow.com/questions/28997441/hive-startup-error-terminal-initialization-failed-falling-back-to-unsupporte
     - https://cwiki.apache.org/confluence/display/Hive/Hive+on+Spark%3A+Getting+Started
 
+* YARN Tuning - http://docs.hortonworks.com/HDPDocuments/HDP2/HDP-2.4.2/bk_installing_manually_book/content/determine-hdp-memory-config.html
+
+        
+        $ python yarn-utils.py -c 4 -m 24 -d 1 -k True
+         Using cores=4 memory=24GB disks=1 hbase=True
+         Profile: cores=4 memory=16384MB reserved=8GB usableMem=16GB disks=1
+         Num Container=3
+         Container Ram=5120MB
+         Used Ram=15GB
+         Unused Ram=8GB
+         yarn.scheduler.minimum-allocation-mb=5120
+         yarn.scheduler.maximum-allocation-mb=15360
+         yarn.nodemanager.resource.memory-mb=15360
+         mapreduce.map.memory.mb=5120
+         mapreduce.map.java.opts=-Xmx4096m
+         mapreduce.reduce.memory.mb=5120
+         mapreduce.reduce.java.opts=-Xmx4096m
+         yarn.app.mapreduce.am.resource.mb=5120
+         yarn.app.mapreduce.am.command-opts=-Xmx4096m
+         mapreduce.task.io.sort.mb=2048
+         
 Graph Processing:
 =================
 * PEGASUS - http://www.cs.cmu.edu/~pegasus/

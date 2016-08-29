@@ -38,7 +38,7 @@ public class Dictionary {
     }
 
     public static Type get(String arg) {
-        if (types.get(arg) == null) types.put(arg, new Type(prop.getProperty(arg)));
+        types.putIfAbsent(arg, new Type(prop.getProperty(arg)));
 
         return types.get(arg);
     }

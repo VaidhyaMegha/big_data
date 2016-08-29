@@ -28,7 +28,7 @@ public class RecordGenerator {
     public static Stream<Record> records(String header, String delimiter, long numOfRecords){
         String[] colNames = header.split(delimiter);
 
-        Stream<Record> records = Stream.generate(() -> {
+        return Stream.generate(() -> {
             String[] colValues = new String[colNames.length];
             for (int j = 0; j < colNames.length; j++) {
                 Type type = Dictionary.get(colNames[j]);
@@ -36,9 +36,7 @@ public class RecordGenerator {
                         type.get(Constants.CHARACTERS).toCharArray());
             }
             return new Record(colValues);
-        }).limit(numOfRecords);
-
-       return records;
+        }).parallel().limit(numOfRecords);
     }
 
 }

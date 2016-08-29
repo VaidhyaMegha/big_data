@@ -31,9 +31,7 @@ public class RecordGeneratorTest_1MM {
     public Record[] testGenerateRecords() {
         Record[] records = RecordGenerator.records("conversions,impressions,channel", ",", 1000000);
 
-        for (Record record: records){
-            assertNotNull("record" , record);
-        }
+        for (Record record: records) assertNotNull("record", record);
 
         return records;
     }
@@ -41,9 +39,8 @@ public class RecordGeneratorTest_1MM {
     public Stream<Record> testGenerateRecordStream() {
         Stream<Record> records = RecordGenerator.records("conversions,impressions,channel", ",", 1000000L);
 
-        records.forEach((record) -> {
-            assertNotNull("record" , record);
-        });
+        //consume sequentially
+        records.forEach((record) -> assertNotNull("record" , record));
 
         return records;
     }
@@ -51,9 +48,8 @@ public class RecordGeneratorTest_1MM {
     public Stream<Record> testGenerateParallelRecordStream() {
         Stream<Record> records = RecordGenerator.records("conversions,impressions,channel", ",", 1000000L);
 
-        records.parallel().forEach((record) -> {
-            assertNotNull("record" , record);
-        });
+        //consume in parallel
+        records.parallel().forEach((record) -> assertNotNull("record" , record));
 
         return records;
     }
