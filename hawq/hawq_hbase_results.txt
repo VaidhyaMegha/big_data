@@ -1,0 +1,150 @@
+[hbase@edge retail_demo]$ ./create_and_load_data_to_hbase.sh
++ hbase shell create_hbase_tables.txt
+0 row(s) in 2.8270 seconds
+
+0 row(s) in 2.2860 seconds
+
+0 row(s) in 2.2770 seconds
+
+0 row(s) in 2.2470 seconds
+
+0 row(s) in 4.2420 seconds
+
+0 row(s) in 2.2440 seconds
+
+0 row(s) in 2.2390 seconds
+
+0 row(s) in 2.2470 seconds
+
+0 row(s) in 2.2420 seconds
+
+0 row(s) in 1.2410 seconds
+
+0 row(s) in 1.2470 seconds
+
+0 row(s) in 1.2390 seconds
+
+0 row(s) in 1.2410 seconds
+
+0 row(s) in 1.2480 seconds
+
+0 row(s) in 1.2420 seconds
+
+0 row(s) in 1.2710 seconds
+
+0 row(s) in 1.2370 seconds
+
+0 row(s) in 1.2530 seconds
+
+0 row(s) in 1.2400 seconds
+
+0 row(s) in 4.2280 seconds
+
+0 row(s) in 1.2240 seconds
+
+0 row(s) in 1.2220 seconds
+
+0 row(s) in 1.2240 seconds
+
+0 row(s) in 1.2290 seconds
+
+0 row(s) in 1.2290 seconds
+
+0 row(s) in 1.2290 seconds
+
+0 row(s) in 1.2250 seconds
+
+TABLE
+customer_addresses_dim_hawq
+customers_dim_hawq
+date_dim_hawq
+email_addresses_dim_hawq
+order_lineitems_hawq
+orders_hawq
+payment_methods_hawq
+products_dim_hawq
+xx row(s) in 0.0200 seconds
+
++ hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=HBASE_ROW_KEY,cf1:Order_ID,cf1:order_item_id,cf1:Product_ID,cf1:Product_Name,cf1:Customer_ID,cf1:Store_ID,cf1:Item_Shipment_Status_Code,cf1:Order_Datetime,cf1:Ship_Datetime,cf1:Item_Return_Datetime,cf1:Item_Refund_Datetime,cf1:Product_Category_ID,cf1:Product_Category_Name,cf1:Payment_Method_Code,cf1:Tax_Amount,cf1:Item_Quantity,cf1:Item_Price,cf1:Discount_Amount,cf1:Coupon_Code,cf1:Coupon_Amount,cf1:Ship_Address_Line1,cf1:Ship_Address_Line2,cf1:Ship_Address_Line3,cf1:Ship_Address_City,cf1:Ship_Address_State,cf1:Ship_Address_Postal_Code,cf1:Ship_Address_Country,cf1:Ship_Phone_Number,cf1:Ship_Customer_Name,cf1:Ship_Customer_Email_Address,cf1:Ordering_Session_ID,cf1:Website_URL order_lineitems_hawq /retail_demo/order_lineitems/order_lineitems.tsv.gz
+...
+...
+...
+File Input Format Counters
+        Bytes Read=137780165
+File Output Format Counters
+        Bytes Written=0
+
+
+[gpadmin@edge retail_demo_sample]$ gpsql -f create_hawq_hbase_external_tables.sql
+psql:create_hawq_hbase_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.order_lineitems_hawq
+DROP SCHEMA
+CREATE SCHEMA
+psql:create_hawq_hbase_external_tables.sql:5: NOTICE:  table "order_lineitems_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+[gpadmin@edge retail_demo_sample]$ ./verify_hawq_tables.sh
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customers_dim_hawq;'
+ERROR:  relation "retail_demo.customers_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.customers_dim_hawq;
+                             ^
++ customers_dim_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.categories_dim_hawq;'
+ERROR:  relation "retail_demo.categories_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.categories_dim_hawq;
+                             ^
++ categories_dim_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.date_dim_hawq;'
+ERROR:  relation "retail_demo.date_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.date_dim_hawq;
+                             ^
++ date_dim_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.email_addresses_dim_hawq;'
+ERROR:  relation "retail_demo.email_addresses_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.email_addresses_dim_hawq;
+                             ^
++ email_addresses_dim_hawq=
+
+
+
+
+
+
+
+
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.order_lineitems_hawq;'
++ order_lineitems_hawq=512071
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.orders_hawq;'
+ERROR:  relation "retail_demo.orders_hawq" does not exist
+LINE 1: select count(*) from retail_demo.orders_hawq;
+                             ^
++ orders_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.payment_methods_hawq;'
+ERROR:  relation "retail_demo.payment_methods_hawq" does not exist
+LINE 1: select count(*) from retail_demo.payment_methods_hawq;
+                             ^
++ payment_methods_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.products_dim_hawq;'
+ERROR:  relation "retail_demo.products_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.products_dim_hawq;
+                             ^
++ products_dim_hawq=
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customer_addresses_dim_hawq;'
+ERROR:  relation "retail_demo.customer_addresses_dim_hawq" does not exist
+LINE 1: select count(*) from retail_demo.customer_addresses_dim_hawq...
+                             ^
++ customer_addresses_dim_hawq=
+        

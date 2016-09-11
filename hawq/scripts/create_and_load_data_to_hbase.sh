@@ -1,0 +1,5 @@
+#!/bin/bash -x
+
+hbase shell create_hbase_tables.txt
+
+hbase org.apache.hadoop.hbase.mapreduce.ImportTsv -Dimporttsv.columns=HBASE_ROW_KEY,cf1:Order_ID,cf1:order_item_id,cf1:Product_ID,cf1:Product_Name,cf1:Customer_ID,cf1:Store_ID,cf1:Item_Shipment_Status_Code,cf1:Order_Datetime,cf1:Ship_Datetime,cf1:Item_Return_Datetime,cf1:Item_Refund_Datetime,cf1:Product_Category_ID,cf1:Product_Category_Name,cf1:Payment_Method_Code,cf1:Tax_Amount,cf1:Item_Quantity,cf1:Item_Price,cf1:Discount_Amount,cf1:Coupon_Code,cf1:Coupon_Amount,cf1:Ship_Address_Line1,cf1:Ship_Address_Line2,cf1:Ship_Address_Line3,cf1:Ship_Address_City,cf1:Ship_Address_State,cf1:Ship_Address_Postal_Code,cf1:Ship_Address_Country,cf1:Ship_Phone_Number,cf1:Ship_Customer_Name,cf1:Ship_Customer_Email_Address,cf1:Ordering_Session_ID,cf1:Website_URL order_lineitems_hawq /retail_demo/order_lineitems/order_lineitems.tsv.gz
