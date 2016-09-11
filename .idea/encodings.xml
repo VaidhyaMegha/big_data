@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/datagen" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hawq" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hbase" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/kafka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mr-gimv-cc" charset="UTF-8" />

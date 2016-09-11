@@ -1,0 +1,133 @@
+[hive@edge ~]$ hive -f create_and_load_hive_tables.sql
+
+Logging initialized using configuration in file:/etc/hive/2.5.0.0-1245/0/hive-log4j.properties
+OK
+Time taken: 6.69 seconds
+OK
+Time taken: 0.105 seconds
+OK
+Time taken: 0.662 seconds
+OK
+Time taken: 0.707 seconds
+OK
+Time taken: 0.334 seconds
+OK
+Time taken: 0.363 seconds
+OK
+Time taken: 0.35 seconds
+OK
+Time taken: 0.256 seconds
+OK
+Time taken: 0.348 seconds
+OK
+Time taken: 0.384 seconds
+OK
+Time taken: 0.409 seconds
+Loading data to table retail_demo.order_lineitems_hive
+Table retail_demo.order_lineitems_hive stats: [numFiles=1, totalSize=137780165]
+OK
+Time taken: 1.134 seconds
+Loading data to table retail_demo.orders_hive
+Table retail_demo.orders_hive stats: [numFiles=1, totalSize=72797064]
+OK
+Time taken: 1.084 seconds
+Loading data to table retail_demo.products_dim_hive
+Table retail_demo.products_dim_hive stats: [numFiles=1, totalSize=23333203]
+OK
+Time taken: 1.066 seconds
+Loading data to table retail_demo.categories_dim_hive
+Table retail_demo.categories_dim_hive stats: [numFiles=1, totalSize=590]
+OK
+Time taken: 1.239 seconds
+Loading data to table retail_demo.email_addresses_dim_hive
+Table retail_demo.email_addresses_dim_hive stats: [numFiles=1, totalSize=7760971]
+OK
+Time taken: 1.24 seconds
+Loading data to table retail_demo.date_dim_hive
+Table retail_demo.date_dim_hive stats: [numFiles=1, totalSize=17772]
+OK
+Time taken: 1.151 seconds
+Loading data to table retail_demo.customers_dim_hive
+Table retail_demo.customers_dim_hive stats: [numFiles=1, totalSize=4646775]
+OK
+Time taken: 1.143 seconds
+Loading data to table retail_demo.payment_methods_hive
+Table retail_demo.payment_methods_hive stats: [numFiles=1, totalSize=99]
+OK
+Time taken: 1.024 seconds
+Loading data to table retail_demo.customer_addresses_dim_hive
+Table retail_demo.customer_addresses_dim_hive stats: [numFiles=1, totalSize=53995977]
+OK
+Time taken: 0.848 seconds
+
+
+
+
+
+
+
+
+
+[gpadmin@edge retail_demo_sample]$ gpsql -f create_hawq_hive_external_tables.sql
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.products_dim_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.payment_methods_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.email_addresses_dim_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.date_dim_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.customer_addresses_dim_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.orders_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.order_lineitems_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.customers_dim_hawq
+psql:create_hawq_hive_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.categories_dim_hawq
+DROP SCHEMA
+CREATE SCHEMA
+psql:create_hawq_hive_external_tables.sql:5: NOTICE:  table "categories_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:14: NOTICE:  table "customers_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:25: NOTICE:  table "order_lineitems_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:64: NOTICE:  table "orders_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:102: NOTICE:  table "customer_addresses_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:122: NOTICE:  table "date_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:135: NOTICE:  table "email_addresses_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:145: NOTICE:  table "payment_methods_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_hive_external_tables.sql:154: NOTICE:  table "products_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+
+
+
+
+
+[gpadmin@edge retail_demo_sample]$ ./verify_hawq_tables.sh
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customers_dim_hawq;'
++ customers_dim_hawq=401430
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.categories_dim_hawq;'
++ categories_dim_hawq=56
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.date_dim_hawq;'
++ date_dim_hawq=2922
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.email_addresses_dim_hawq;'
++ email_addresses_dim_hawq=401430
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.order_lineitems_hawq;'
++ order_lineitems_hawq=1024158
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.orders_hawq;'
++ orders_hawq=512071
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.payment_methods_hawq;'
++ payment_methods_hawq=5
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.products_dim_hawq;'
++ products_dim_hawq=698911
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customer_addresses_dim_hawq;'
++ customer_addresses_dim_hawq=1130639

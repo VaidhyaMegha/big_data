@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="connected_components" />
         <module name="datagen" />
+        <module name="hawq" />
         <module name="hbase" />
         <module name="kafka" />
         <module name="mr-gimv-cc" />
@@ -39,6 +40,7 @@
       <module name="big_data" target="1.5" />
       <module name="connected_components" target="1.5" />
       <module name="datagen" target="1.8" />
+      <module name="hawq" target="1.5" />
       <module name="hbase" target="1.8" />
       <module name="kafka" target="1.8" />
       <module name="mr-gimv-cc" target="1.5" />

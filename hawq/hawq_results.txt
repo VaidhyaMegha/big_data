@@ -1,0 +1,137 @@
+[hdfs@edge ~]$ ./load_sample_data_to_hdfs.sh
++ hdfs dfs -rm -r /retail_demo
+16/09/10 23:07:18 INFO fs.TrashPolicyDefault: Moved: 'hdfs://namenode:8020/retail_demo' to trash at: hdfs://namenode:8020/user/hdfs/.Trash/Current/retail_demo1473563238219
++ hdfs dfs -put retail_demo /
++ hdfs dfs -ls /retail_demo
+Found 11 items
+-rw-r--r--   3 hdfs hdfs          6 2016-09-10 23:07 /retail_demo/.gitignore
+-rw-r--r--   3 hdfs hdfs        590 2016-09-10 23:07 /retail_demo/categories_dim.tsv.gz
+-rw-r--r--   3 hdfs hdfs   53995977 2016-09-10 23:07 /retail_demo/customer_addresses_dim.tsv.gz
+-rw-r--r--   3 hdfs hdfs    4646775 2016-09-10 23:07 /retail_demo/customers_dim.tsv.gz
+-rw-r--r--   3 hdfs hdfs      17772 2016-09-10 23:07 /retail_demo/date_dim.tsv.gz
+-rw-r--r--   3 hdfs hdfs    7760971 2016-09-10 23:07 /retail_demo/email_addresses_dim.tsv.gz
+-rw-r--r--   3 hdfs hdfs        481 2016-09-10 23:07 /retail_demo/load_data_to_HDFS.sh
+-rw-r--r--   3 hdfs hdfs  137780165 2016-09-10 23:07 /retail_demo/order_lineitems.tsv.gz
+-rw-r--r--   3 hdfs hdfs   72797064 2016-09-10 23:07 /retail_demo/orders.tsv.gz
+-rw-r--r--   3 hdfs hdfs         99 2016-09-10 23:07 /retail_demo/payment_methods.tsv.gz
+-rw-r--r--   3 hdfs hdfs   23333203 2016-09-10 23:07 /retail_demo/products_dim.tsv.gz
++ hdfs fsck /retail_demo
+Connecting to namenode via http://namenode:50070/fsck?ugi=hdfs&path=%2Fretail_demo
+FSCK started by hdfs (auth:SIMPLE) from /10.0.14.27 for path /retail_demo at Sat Sep 10 23:07:33 EDT 2016
+.
+/retail_demo/.gitignore:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768398_27699. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/categories_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768399_27700. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/customer_addresses_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768400_27701. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/customers_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768401_27702. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/date_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768402_27703. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/email_addresses_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768403_27704. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/load_data_to_HDFS.sh:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768404_27705. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/order_lineitems.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768405_27706. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+
+/retail_demo/order_lineitems.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768406_27707. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/orders.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768407_27708. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/payment_methods.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768408_27709. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+.
+/retail_demo/products_dim.tsv.gz:  Under replicated BP-1013097960-10.0.14.24-1467043913236:blk_1073768409_27710. Target Replicas is 3 but found 2 live replica(s), 0 decommissioned replica(s) and 0 decommissioning replica(s).
+Status: HEALTHY
+ Total size:    300333103 B
+ Total dirs:    1
+ Total files:   11
+ Total symlinks:                0
+ Total blocks (validated):      12 (avg. block size 25027758 B)
+ Minimally replicated blocks:   12 (100.0 %)
+ Over-replicated blocks:        0 (0.0 %)
+ Under-replicated blocks:       12 (100.0 %)
+ Mis-replicated blocks:         0 (0.0 %)
+ Default replication factor:    3
+ Average block replication:     2.0
+ Corrupt blocks:                0
+ Missing replicas:              12 (33.333332 %)
+ Number of data-nodes:          3
+ Number of racks:               1
+FSCK ended at Sat Sep 10 23:07:33 EDT 2016 in 2 milliseconds
+
+
+The filesystem under path '/retail_demo' is HEALTHY
++ hdfs dfs -chmod -R 777 /retail_demo
+
+
+
+
+
+
+[gpadmin@edge ~]$ gpsql -f create_hawq_external_tables.sql
+create_hawq_external_tables.sql: No such file or directory
+[gpadmin@edge ~]$ cd retail_demo_sample/
+[gpadmin@edge retail_demo_sample]$ gpsql -f create_hawq_external_tables.sql
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.products_dim_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.payment_methods_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.email_addresses_dim_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.date_dim_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.customer_addresses_dim_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.orders_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.order_lineitems_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.customers_dim_hawq
+psql:create_hawq_external_tables.sql:1: NOTICE:  drop cascades to external table retail_demo.categories_dim_hawq
+DROP SCHEMA
+CREATE SCHEMA
+psql:create_hawq_external_tables.sql:5: NOTICE:  table "categories_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:14: NOTICE:  table "customers_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:25: NOTICE:  table "order_lineitems_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:64: NOTICE:  table "orders_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:102: NOTICE:  table "customer_addresses_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:122: NOTICE:  table "date_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:135: NOTICE:  table "email_addresses_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:145: NOTICE:  table "payment_methods_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+psql:create_hawq_external_tables.sql:154: NOTICE:  table "products_dim_hawq" does not exist, skipping
+DROP EXTERNAL TABLE
+CREATE EXTERNAL TABLE
+
+
+
+
+
+[gpadmin@edge retail_demo_sample]$ ./verify_hawq_tables.sh
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customers_dim_hawq;'
++ customers_dim_hawq=401430
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.categories_dim_hawq;'
++ categories_dim_hawq=56
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.date_dim_hawq;'
++ date_dim_hawq=2922
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.email_addresses_dim_hawq;'
++ email_addresses_dim_hawq=401430
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.order_lineitems_hawq;'
++ order_lineitems_hawq=1024158
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.orders_hawq;'
++ orders_hawq=512071
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.payment_methods_hawq;'
++ payment_methods_hawq=5
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.products_dim_hawq;'
++ products_dim_hawq=698911
+++ psql -h hawq_master -p 10432 -d template1 -Atc 'select count(*) from retail_demo.customer_addresses_dim_hawq;'
++ customer_addresses_dim_hawq=1130639
