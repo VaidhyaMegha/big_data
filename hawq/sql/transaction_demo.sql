@@ -43,4 +43,4 @@ template1=# update transaction_test set col1 = '456';
 ERROR:  Update append-only table statement not supported yet
 template1=# end;
 ROLLBACK
-template1=# 
+template1=#
